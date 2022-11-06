@@ -5,9 +5,11 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 
 ## Manned spaceflights
 * Population of space
-
 ![Population of Space](./plots/manned/spacepop-steps.svg)
 [Data source: J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/pop.html)
+* Human Spaceflight Missions, Astronauts, Rides
+![Human presence in space](./plots/manned/mannedflights-astronauts-rides-evas.svg)
+[Data source: J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/)
 
 ## Image optimization applied
 * [Scour](https://github.com/scour-project/scour)
