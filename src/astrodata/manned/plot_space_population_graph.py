@@ -105,7 +105,8 @@ if SPENT:
         label='Время, проведенное людьми в космосе')
     ax2.set_ylim(0, 177)
     ax2.set_ylabel('Проведенное время в космосе, человеко-лет', fontsize=14)
-plt.title(f'Перепись космического населения, {len(nums)} изменений. {MONTH} {YEAR} года')
+plt.title(f'Перепись космического населения, {len(nums)} изменений. Люди ' + \
+    f'провели в космосе {round(manyr_sums[-1], 1)} человеко-лет. {MONTH} {YEAR} года')
 ax.set_ylim(0, 20)
 ax.set_xlabel('Время, годы', fontsize=14)
 ax.set_ylabel('Человек в космосе', fontsize=14)
