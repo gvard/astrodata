@@ -16,6 +16,9 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 * Orbital and suborbital launches counts
 ![Orbital and suborbital launches counts](./plots/launches/launches-orb-suborb-100km.png)
 [Data source: J. McDowell, planet4589.org](https://planet4589.org/space/gcat/web/launch/)
+* Deep Space Launches
+![Deep space launches counts](./plots/launches/launches-orb-deep.svg)
+[Data source: J. McDowell, planet4589.org](https://planet4589.org/space/gcat/web/cat/)
 
 ## Image optimization applied
 * [Scour](https://github.com/scour-project/scour)
