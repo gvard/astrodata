@@ -3,6 +3,13 @@ Code for collecting and visualization of astronomical data
 
 All code and description are avaliable at [gvard.github.io](https://gvard.github.io/)
 
+## Supernova observations
+* History of supernovae observations by year
+![Supernovae observations](./plots/stars/sne_stats_bar_chart.svg)
+* Cumulative number of supernovae
+![Cumulative number of supernovae](./plots/stars/sne_total_number_log_plot.svg)
+[Data source: David Bishop, Latest Supernovae Archives](https://www.rochesterastronomy.org/snimages/archives.html)
+
 ## Manned spaceflights
 * Population of space
 ![Population of Space](./plots/manned/spacepop-steps.svg)
