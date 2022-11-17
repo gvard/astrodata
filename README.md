@@ -3,6 +3,11 @@ Code for collecting and visualization of astronomical data
 
 All code and description are avaliable at [gvard.github.io](https://gvard.github.io/)
 
+## Solar System objects
+* Near-Earth objects and Potentially Hazardous Asteroid statistics
+![NEOs and PHAs cumulative statistics](./plots/solarsystem/neo_pha_graph-2002.svg)
+[Data source: NASA Center for NEO Studies and IAU Minor Planet Center](https://cneos.jpl.nasa.gov/stats/)
+
 ## Supernova observations
 * History of supernovae observations by year
 ![Supernovae observations](./plots/stars/sne_stats_bar_chart.svg)
