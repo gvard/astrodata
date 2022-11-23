@@ -35,3 +35,5 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 ## Image optimization applied
 * [Scour](https://github.com/scour-project/scour)
 * [SVG Cleaner](https://github.com/RazrFalcon/svgcleaner)
+* [OptiPNG](https://optipng.sourceforge.net/), see [A guide to PNG optimization](https://optipng.sourceforge.net/pngtech/optipng.html)
+* [PNGOut](http://advsys.net/ken/utils.htm)
