@@ -20,15 +20,16 @@ from scour import scour
 
 
 def optimize_svg(tmp_pth, pth):
-    """Optimize svg file with scour (use pip to install it)."""
+    """Optimize svg file using scour"""
     with open(tmp_pth, 'rb') as inputfile, open(pth, 'wb') as outputfile:
         options = scour.generateDefaultOptions()
         options.enable_viewboxing = True
         options.strip_comments = True
         options.strip_ids = True
         options.remove_metadata = True
-        options.indent_type = 'none'
         options.shorten_ids = True
+        options.indent_type = 'none'
+        options.newlines = False
         scour.start(options, inputfile, outputfile)
 
 def get_table(url):
@@ -104,7 +105,6 @@ MONTH, YEAR = today.strftime("%B"), today.year
 
 # Graph settings
 nums, ylim_top_margin, FILENAME = rides_nums, 50, "mannedflights-astronauts-rides-evas_"
-# nums, ylim_top_margin, FILENAME = rides_nums, 50, "mannedflights-rides"
 # nums, ylim_top_margin, FILENAME = flights_nums, 15, "mannedflights"
 # nums, ylim_top_margin, FILENAME = flight_nums, 15, "mannedflights-astronauts"
 # nums, ylim_top_margin, FILENAME = evanums, 15, "mannedflights-evas"
@@ -117,17 +117,17 @@ private_spaceflights = [(2001, 4, 28), (2020, 5, 30), (2021, 7, 11),
 
 for ac in accidents:
     dat = datetime(year=ac[0], month=ac[1], day=ac[2])
-    plt.plot((dat, dat), (0, nums[-1]+ylim_top_margin), '--r')
+    plt.plot((dat, dat), (0, nums[-1]+ylim_top_margin), '--r') # 2500
 for ac in private_spaceflights:
     dat = datetime(year=ac[0], month=ac[1], day=ac[2])
-    plt.plot((dat, dat), (0, nums[-1]+ylim_top_margin), '--g')
+    plt.plot((dat, dat), (0, nums[-1]+ylim_top_margin), '--g') # 2500
 
 plt.plot(dates, nums, '.b', label='Количество посещений', ms=6)
 plt.plot(evadates, evanums, '.', label='Количество ВКД', color="brown", ms=6)
 plt.plot(flight_dates, flight_nums, '.k', label='Количество астронавтов', ms=6)
 plt.plot(dates, flights_nums, '.m', label='Количество космических полетов', ms=6)
-plt.xlim(dates[0]-tdlt, dates[-1]+tdlt)
-plt.ylim(0, nums[-1]+ylim_top_margin)
+plt.xlim(dates[0]-tdlt, dates[-1]+tdlt) # datetime(2060, 1, 1)
+plt.ylim(0, nums[-1]+ylim_top_margin) # 2500
 plt.legend(fontsize=13)
 
 # plt.title(f'Количество космических полетов. Всего {orb_num} орбитальных и ' + \

@@ -13,15 +13,16 @@ from scour import scour
 
 
 def optimize_svg(tmp_pth, pth):
-    """Optimize svg file with scour (use pip to install it)."""
+    """Optimize svg file using scour"""
     with open(tmp_pth, 'rb') as inputfile, open(pth, 'wb') as outputfile:
         options = scour.generateDefaultOptions()
         options.enable_viewboxing = True
         options.strip_comments = True
         options.strip_ids = True
         options.remove_metadata = True
-        options.indent_type = 'none'
         options.shorten_ids = True
+        options.indent_type = 'none'
+        options.newlines = False
         scour.start(options, inputfile, outputfile)
 
 

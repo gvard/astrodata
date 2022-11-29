@@ -16,15 +16,16 @@ from scour import scour
 
 
 def optimize_svg(tmp_pth, pth):
-    """Optimize svg file with scour (use pip to install it)."""
+    """Optimize svg file using scour"""
     with open(tmp_pth, 'rb') as inputfile, open(pth, 'wb') as outputfile:
         options = scour.generateDefaultOptions()
         options.enable_viewboxing = True
         options.strip_comments = True
         options.strip_ids = True
         options.remove_metadata = True
-        options.indent_type = 'none'
         options.shorten_ids = True
+        options.indent_type = 'none'
+        options.newlines = False
         scour.start(options, inputfile, outputfile)
 
 def get_table(url, local=False):
@@ -82,6 +83,7 @@ def get_data_array_deep(data, date_col=(106, 117), sort=True):
 
 
 BASE_URL = "https://planet4589.org/space/gcat/data/ldes/"
+SUBORB_POSTFIX, DEEP_POSTFIX = "", ""
 
 DATA_URL = BASE_URL + "O.html"
 data = get_table(DATA_URL)[1:]
@@ -100,9 +102,9 @@ print("Marginal launches:", len(dates_marg))
 
 SUBORB = False
 if SUBORB:
-    DATA_URL = BASE_URL + "S.html"
-    DATA_URL = "S.html"
-    suborb_data = get_table(DATA_URL, local=True)[1:]
+    SUBORB_POSTFIX = "-suborb-100km"
+    DATA_URL = BASE_URL + "S.html" # DATA_URL = "S.html"
+    suborb_data = get_table(DATA_URL, local=False)[1:] # local=True
     so_dates, so_nums, so_heights = [], [], []
     so_launches_num = 0
     no_altitude = 0
@@ -132,11 +134,11 @@ if SUBORB:
 DEEP = True
 if DEEP:
     DATA_URL = "https://planet4589.org/space/gcat/data/cat/deepcat.html"
-
     datt = get_table(DATA_URL)[1:]
     dates_deep = get_data_array_deep(datt)
     dates_only, names, nums_only = [], [], []
     unique_dtes = {}
+    # DEEP_POSTFIX = "-deep"
 
     for data, name, satnum in dates_deep:
         if data not in unique_dtes:
@@ -168,10 +170,10 @@ ax.xaxis.set_minor_locator(oneyear)
 if SUBORB:
     plt.plot(so_dates, so_nums, '.k',
     label='Каталогизированные суборбитальные запуски (апогей от 100 км)', ms=5)
+plt.plot(dates_marg, nums_marg, '.g', label='Граничные запуски', ms=2) #ms=5
 plt.plot(dates_deep, nums_deep, '.k', label='Запуски в глубокий космос', ms=5)
 plt.plot(dates, nums, '.b', label='Орбитальные ракетные запуски', ms=3) #ms=5
 plt.plot(dates_fail, nums_fail, '.r', label='Неудачные попытки', ms=3) #ms=5
-# plt.plot(dates_marg, nums_marg, '.g', label='Граничные запуски', ms=5)
 
 tdlt = timedelta(days=630)
 locale.setlocale(locale.LC_ALL, 'ru_RU')
@@ -182,18 +184,19 @@ if SUBORB:
     plt.xlim(so_dates[0]-tdlt, so_dates[-1]+tdlt)
     plt.ylim(-25, so_nums[-1]+500)
 else:
-    plt.xlim(dates[0]-tdlt, dates[-1]+tdlt)
-    plt.ylim(-25, nums_deep[-1]+100)
+    plt.xlim(dates[0]-tdlt, dates[-1]+tdlt) #+5*tdlt
+    plt.ylim(-5, nums_deep[-1]+190)
 plt.legend(fontsize=13)
 
-# plt.title(f'Рост числа суборбитальных и орбитальных запусков. Всего {len(dates)} ' + \
 plt.title(f'Рост числа запусков в глубокий космос. Всего {len(dates)} ' + \
-    f'орбитальных запусков, {len(nums_fail)} неудач, {len(nums_deep)} запусков в глубокий космос. {MONTH} {YEAR} года')
+f'орбитальных запусков, {len(nums_fail)} неудач, {len(nums_deep)} запусков в глубокий космос. {MONTH} {YEAR} года')
+# plt.title(f'Рост числа суборбитальных и орбитальных запусков. Всего {len(dates)} ' + \
+#f'орбитальных запусков, {len(nums_fail)} неудач и {len(so_nums)} суборбитальных запусков. {MONTH} {YEAR} года')
 plt.xlabel('Время, годы', fontsize=14)
 plt.ylabel('Количество запусков', fontsize=12)
 plt.grid(linestyle='dotted')
 
-FILENAME = 'launches-orb-deep' #suborb-100km
+FILENAME = f'launches-orb{DEEP_POSTFIX}{SUBORB_POSTFIX}'
 FILE_EXT = 'svg'
 plots_dir = os.path.join(os.pardir, os.pardir, os.pardir, 'plots', 'launches')
 tmp_pth = os.path.join(plots_dir, FILENAME+'_.'+FILE_EXT)
