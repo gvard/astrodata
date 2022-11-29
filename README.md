@@ -6,6 +6,7 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 ## Solar System objects
 * Near-Earth objects and Potentially Hazardous Asteroid statistics
 ![NEOs and PHAs cumulative statistics](./plots/solarsystem/neo_pha_graph-2002.svg)
+![PHAs cumulative statistics with successfully predicted asteroid impacts](./plots/solarsystem/pha_graph_predicted_impacts-2002.svg)
 [Data source: NASA Center for NEO Studies and IAU Minor Planet Center](https://cneos.jpl.nasa.gov/stats/)
 
 ## Supernova observations

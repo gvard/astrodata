@@ -1,5 +1,7 @@
 """Python script for plotting graph with statistics of near-Earth objects.
 Data taken from: https://cneos.jpl.nasa.gov/stats/totals.html
+List of successfully predicted asteroid impacts:
+https://en.wikipedia.org/wiki/Asteroid_impact_prediction#List_of_successfully_predicted_asteroid_impacts
 """
 
 from datetime import datetime
@@ -51,6 +53,7 @@ locale.setlocale(locale.LC_ALL, 'ru_RU')
 today = datetime.now()
 MONTH, YEAR = today.strftime("%B"), today.year
 
+YLIM  = (0, 2410) #(0, 30910)
 CROP = -12
 plt.plot(dats[:CROP], neo_nums[:CROP], '.-', label="Околоземные объекты", ms=2, lw=1)
 plt.plot(dats[:CROP], nea_nums[:CROP], '.-', label="Околоземные астероиды", ms=2, lw=1)
@@ -59,11 +62,19 @@ plt.plot(dats[:CROP], pha_nums[:CROP], '.-k', label="Потенциально о
 plt.plot(dats[:CROP], neakm_nums[:CROP], '.-', label="Околоземные астероиды от 1 км", ms=5, lw=2)
 plt.plot(dats[:CROP], phakm_nums[:CROP], '.-',
     label="Потенциально опасные астероиды от 1 км", ms=5, lw=2)
-# plt.ylim(0, 2340)
-plt.ylim(0, 30910)
+
+accidents = [(2008, 10, 6), (2014, 1, 1), (2018, 6, 2), (2019, 6, 22),
+    (2022, 3, 11), (2022, 11, 19)]
+
+for ac in accidents:
+    dat = datetime(year=ac[0], month=ac[1], day=ac[2])
+    plt.plot((dat, dat), YLIM, '--r')
+plt.plot((dat, dat), YLIM, '--r', label="Успешно предсказанные столкновения с Землей")
+
+plt.ylim(YLIM)
 plt.legend(fontsize=13)
 # plt.xlim(datetime(year=1990, month=1, day=1), datetime(year=2023, month=2, day=1))
-plt.xlim(datetime(year=2002, month=1, day=1), datetime(year=2023, month=1, day=1))
+plt.xlim(datetime(year=2002, month=1, day=1), datetime(year=2023, month=6, day=1))
 plt.title(f'Динамика открытий околоземных объектов. Всего {nea_nums[0]} ' + \
     f'околоземных и {pha_nums[0]} потенциально опасных астероидов. {MONTH} {YEAR} года',
     fontsize=14)
@@ -72,7 +83,7 @@ plt.ylabel('Совокупное количество открытых объе�
 plt.grid(linestyle='dotted')
 
 FILE_EXT = 'svg'
-FILENAME = 'neo_pha_graph-2002'
+FILENAME = 'neo_pha_graph-2002' # 'pha_graph_predicted_impacts-2002'
 plots_dir = os.path.join(os.pardir, os.pardir, os.pardir, 'plots', 'solarsystem')
 tmp_pth = os.path.join(plots_dir, FILENAME+'_.'+FILE_EXT)
 pth = os.path.join(plots_dir, FILENAME+'.'+FILE_EXT)
