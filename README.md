@@ -8,6 +8,8 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 ![NEOs and PHAs cumulative statistics](./plots/solarsystem/neo_pha_graph-2002.svg)
 ![PHAs cumulative statistics with successfully predicted asteroid impacts](./plots/solarsystem/pha_graph_predicted_impacts-2002.svg)
 [Data source: NASA Center for NEO Studies and IAU Minor Planet Center](https://cneos.jpl.nasa.gov/stats/)
+* Distribution of Solar System bodies by average distance to Sun
+![Distribution of minor planets by semi-major axis between Venus and Jupiter](https://gvard.github.io/solarsystem/images/mpc-ahist-202104.png)
 
 ## Supernova observations
 * History of supernovae observations by year
@@ -36,5 +38,5 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 ## Image optimization applied
 * [Scour](https://github.com/scour-project/scour)
 * [SVG Cleaner](https://github.com/RazrFalcon/svgcleaner)
-* [OptiPNG](https://optipng.sourceforge.net/), see [A guide to PNG optimization](https://optipng.sourceforge.net/pngtech/optipng.html)
+* [OptiPNG](https://optipng.sourceforge.net/), see [guide to PNG optimization](https://optipng.sourceforge.net/pngtech/optipng.html)
 * [PNGOut](http://advsys.net/ken/utils.htm)
