@@ -19,6 +19,10 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 ![Cumulative number of supernovae](./plots/stars/sne_total_number_log_plot.svg)
 [Data source: David Bishop, Latest Supernovae Archives](https://www.rochesterastronomy.org/snimages/archives.html)
 
+## Gamma-ray bursts observations
+![Number of gamma-ray bursts which have been localized within a few hours to days to less than 1 degree](./plots/stars/grbs_total_number_plot.svg)
+[Data source: Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html)
+
 ## Manned spaceflights
 * Population of space
 ![Population of Space](./plots/manned/spacepop-steps.svg)
