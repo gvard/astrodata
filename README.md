@@ -9,7 +9,7 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 ![PHAs cumulative statistics with successfully predicted asteroid impacts](./plots/solarsystem/pha_graph_predicted_impacts-2002.svg)
 [Data source: NASA Center for NEO Studies and IAU Minor Planet Center](https://cneos.jpl.nasa.gov/stats/)
 * Distribution of Solar System bodies by average distance to Sun
-![Distribution of minor planets by semi-major axis between Venus and Jupiter](https://gvard.github.io/solarsystem/images/mpc-ahist-202104.png)
+![Distribution of minor planets by semi-major axis between Venus and Jupiter (histogram of 8000 bins)](./plots/solarsystem/asteroids-hist-a0.7-5.4.png)
 [Data source: IAU Minor Planet Center, The MPC Orbit (MPCORB) Database](https://minorplanetcenter.net/iau/MPCORB.html)
 
 ## Supernova observations
