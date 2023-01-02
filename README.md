@@ -10,6 +10,7 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 [Data source: NASA Center for NEO Studies and IAU Minor Planet Center](https://cneos.jpl.nasa.gov/stats/)
 * Distribution of Solar System bodies by average distance to Sun
 ![Distribution of minor planets by semi-major axis between Venus and Jupiter (histogram of 8000 bins)](./plots/solarsystem/asteroids-hist-a0.7-5.4.png)
+![Distribution of minor planets by semi-major axis beyond Neptune (histogram of 900 bins)](./plots/solarsystem/asteroids-hist-a29-70.png)
 [Data source: IAU Minor Planet Center, The MPC Orbit (MPCORB) Database](https://minorplanetcenter.net/iau/MPCORB.html)
 
 ## Supernova observations
@@ -17,8 +18,8 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 ![Supernovae observations](./plots/stars/sne_stats_bar_chart.svg)
 * Cumulative number of supernovae
 ![Cumulative number of supernovae](./plots/stars/sne_transients_total_number_log_plot.svg)
-[Data source: David Bishop, Latest Supernovae Archives](https://www.rochesterastronomy.org/snimages/archives.html)
-[Data source: Transient Name Server stats](https://www.wis-tns.org/stats-maps)
+[Data source: David Bishop, Latest Supernovae Archives](https://www.rochesterastronomy.org/snimages/archives.html);
+[Transient Name Server stats](https://www.wis-tns.org/stats-maps)
 
 * History of transient observations by year from Transient Name Server
 ![Transient observations from Transient Name Server](./plots/stars/transient_stats_bar_chart.svg)
