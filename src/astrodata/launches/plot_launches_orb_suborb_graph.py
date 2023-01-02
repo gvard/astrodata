@@ -100,7 +100,7 @@ data = get_table(DATA_URL)[1:]
 dates_marg, nums_marg = get_data_array(data)
 print("Marginal launches:", len(dates_marg))
 
-SUBORB = False
+SUBORB = True
 if SUBORB:
     SUBORB_POSTFIX = "-suborb-100km"
     DATA_URL = BASE_URL + "S.html" # DATA_URL = "S.html"
@@ -170,10 +170,10 @@ ax.xaxis.set_minor_locator(oneyear)
 if SUBORB:
     plt.plot(so_dates, so_nums, '.k',
     label='Каталогизированные суборбитальные запуски (апогей от 100 км)', ms=5)
-plt.plot(dates_marg, nums_marg, '.g', label='Граничные запуски', ms=2) #ms=5
-plt.plot(dates_deep, nums_deep, '.k', label='Запуски в глубокий космос', ms=5)
-plt.plot(dates, nums, '.b', label='Орбитальные ракетные запуски', ms=3) #ms=5
-plt.plot(dates_fail, nums_fail, '.r', label='Неудачные попытки', ms=3) #ms=5
+plt.plot(dates_marg, nums_marg, '.g', label='Граничные запуски', ms=5) #ms=5
+# plt.plot(dates_deep, nums_deep, '.k', label='Запуски в глубокий космос', ms=5)
+plt.plot(dates, nums, '.b', label='Орбитальные ракетные запуски', ms=5) #ms=5
+plt.plot(dates_fail, nums_fail, '.r', label='Неудачные попытки', ms=5) #ms=5
 
 tdlt = timedelta(days=630)
 locale.setlocale(locale.LC_ALL, 'ru_RU')
@@ -190,14 +190,14 @@ plt.legend(fontsize=13)
 
 plt.title(f'Рост числа запусков в глубокий космос. Всего {len(dates)} ' + \
 f'орбитальных запусков, {len(nums_fail)} неудач, {len(nums_deep)} запусков в глубокий космос. {MONTH} {YEAR} года')
-# plt.title(f'Рост числа суборбитальных и орбитальных запусков. Всего {len(dates)} ' + \
-#f'орбитальных запусков, {len(nums_fail)} неудач и {len(so_nums)} суборбитальных запусков. {MONTH} {YEAR} года')
+plt.title(f'Рост числа суборбитальных и орбитальных запусков. Всего {len(dates)} ' + \
+f'орбитальных запусков, {len(nums_fail)} неудач и {len(so_nums)} суборбитальных запусков. {MONTH} {YEAR} года')
 plt.xlabel('Время, годы', fontsize=14)
 plt.ylabel('Количество запусков', fontsize=12)
 plt.grid(linestyle='dotted')
 
-FILENAME = f'launches-orb{DEEP_POSTFIX}{SUBORB_POSTFIX}'
-FILE_EXT = 'svg'
+FILENAME = f'launches-orb{DEEP_POSTFIX}{SUBORB_POSTFIX}z'
+FILE_EXT = 'png'
 plots_dir = os.path.join(os.pardir, os.pardir, os.pardir, 'plots', 'launches')
 tmp_pth = os.path.join(plots_dir, FILENAME+'_.'+FILE_EXT)
 pth = os.path.join(plots_dir, FILENAME+'.'+FILE_EXT)
