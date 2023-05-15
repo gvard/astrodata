@@ -53,3 +53,6 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 * [SVG Cleaner](https://github.com/RazrFalcon/svgcleaner)
 * [OptiPNG](https://optipng.sourceforge.net/), see [guide to PNG optimization](https://optipng.sourceforge.net/pngtech/optipng.html)
 * [PNGOut](http://advsys.net/ken/utils.htm)
+* [TinyPNG: WebP, PNG, JPEG optimization](https://tinypng.com/)
+* [Jpegoptim](https://www.kokkonen.net/tjko/projects.html), [for Windows](https://github.com/XhmikosR/jpegoptim-windows)
+* [JPEGoptim + OptiPNG + TinyPNG - оптимизация изображений](https://open-networks.ru/d/14-jpegoptim-optipng-tinypng-optimizaciya-izobrazenii)
