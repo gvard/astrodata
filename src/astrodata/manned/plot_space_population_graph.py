@@ -29,6 +29,17 @@ def optimize_svg(tmp_pth, pth):
         options.newlines = False
         scour.start(options, inputfile, outputfile)
 
+def unite_legends(axes):
+    """Hack to display legend over other plots
+    https://github.com/matplotlib/matplotlib/issues/3706#issuecomment-164265176
+    """
+    h, l = [], []
+    for ax in axes:
+        tmp = ax.get_legend_handles_labels()
+        h.extend(tmp[0])
+        l.extend(tmp[1])
+    return h, l
+
 def get_table(url, local=False):
     """Read ASCII data table from pre html element"""
     if local:
@@ -64,16 +75,9 @@ ax.xaxis.set_major_locator(years)
 ax.xaxis.set_minor_locator(mdates.YearLocator())
 ax.yaxis.set_major_locator(MultipleLocator(1))
 
-tdlt = timedelta(days=630)
-
 locale.setlocale(locale.LC_ALL, 'ru_RU')
 today = datetime.now()
 MONTH, YEAR = today.strftime("%B"), today.year
-
-accidents = [(1967, 1, 27), (1967, 4, 23), (1971, 6, 29), (1986, 1, 28),
-    (2003, 2, 1)]
-private_spaceflights = [(2001, 4, 28), (2020, 5, 30), (2021, 7, 11),
-    (2021, 7, 20), (2021, 9, 16)]
 
 METHOD = 'step' #stairs
 FILLED = True
@@ -86,14 +90,8 @@ elif METHOD == 'stairs':
     plt.stairs(nums, dats_stairs, fill=FILLED, alpha=0.9,
         color='b', lw=1, label='stairs()') # baseline=None
 
-for ac in accidents:
-    dat = datetime(year=ac[0], month=ac[1], day=ac[2])
-    plt.plot((dat, dat), (0, 20), '--r')
-for ac in private_spaceflights:
-    dat = datetime(year=ac[0], month=ac[1], day=ac[2])
-    plt.plot((dat, dat), (0, 20), '--g')
-
-plt.xlim(dats[0]-tdlt, dats[-1]+tdlt)
+tdlt = timedelta(days=300)
+plt.xlim(dats[0]-tdlt/2, dats[-1]+tdlt)
 # plt.xlim(datetime(year=1960, month=1, day=1), datetime(year=1987, month=1, day=1))
 # plt.xlim(datetime(year=1995, month=1, day=1), datetime(year=2023, month=1, day=1))
 # plt.xlim(datetime(year=2010, month=1, day=1), datetime(year=2023, month=1, day=1))
@@ -102,17 +100,45 @@ plt.xlim(dats[0]-tdlt, dats[-1]+tdlt)
 SPENT = 'spent-'
 if SPENT:
     ax2 = ax.twinx()
-    ax2.plot(dats + [today], manyr_sums, '--r', lw=4,
+    ax2.plot(dats + [today], manyr_sums, '--y', lw=4,
         label='Время, проведенное людьми в космосе')
-    ax2.set_ylim(0, 177)
+    ax2.set_ylim(0, manyr_sums[-1]+2.2)
     ax2.set_ylabel('Проведенное время в космосе, человеко-лет', fontsize=14)
-plt.title(f'Перепись космического населения, {len(nums)} изменений. Люди ' + \
-    f'провели в космосе {round(manyr_sums[-1], 1)} человеко-лет. {MONTH} {YEAR} года')
+ax.set_facecolor("none")
+ax.set_zorder(2)
 ax.set_ylim(0, 20)
 ax.set_xlabel('Время, годы', fontsize=14)
 ax.set_ylabel('Человек в космосе', fontsize=14)
-plt.grid(linestyle='dotted')
-plt.legend(fontsize=13)
+
+YLIM = 20
+TM = timedelta(weeks=48)
+accidents = [(1967, 1, 27, 'Пожар на «Аполлоне-1»', 1.2), (1967, 4, 23, '', 0),
+    (1971, 6, 29, 'Катастрофа «Союз-11»', 1.2),
+    (1986, 1, 28, 'Катастрофа «Челленджера»', 0.2),
+    (2003, 2, 1, 'Катастрофа «Колумбии»', 0.2)]
+private_spaceflights = [(2001, 4, 28, 'Деннис Тито, Союз ТМ-32'),
+    (2020, 5, 30, 'SpaceX DM-2'), (2021, 7, 11, 'VSS Unity 22'),
+    (2021, 7, 20, ''), (2021, 9, 16, '')]
+
+if accidents:
+    for ac in accidents:
+        dat = datetime(year=ac[0], month=ac[1], day=ac[2])
+        ax.plot((dat, dat), (0, YLIM), '--r')
+        ax.text(dat-TM, YLIM-ac[4], ac[3], rotation='vertical', va="top", fontsize=14,
+            zorder=0)
+if private_spaceflights:
+    for ac in private_spaceflights:
+        dat = datetime(year=ac[0], month=ac[1], day=ac[2])
+        ax.plot((dat, dat), (0, YLIM), '--g')
+        ax.text(dat-TM, YLIM-0.2, ac[3], rotation='vertical', va="top", fontsize=14,
+            zorder=0)
+
+handles, labels = unite_legends([ax, ax2])
+ax.legend(handles, labels, loc='upper left', fontsize=13)
+
+ax.grid(linestyle='dotted', axis='y')
+plt.title(f'Перепись космического населения, {len(nums)} изменений. Люди ' + \
+    f'провели в космосе {round(manyr_sums[-1], 1)} человеко-лет. {MONTH} {YEAR} года')
 
 FILENAME = 'spacepop-' + SPENT + METHOD # -accidents -privateflights
 if FILLED:
