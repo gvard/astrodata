@@ -89,19 +89,22 @@ DATA_URL = BASE_URL + "O.html"
 data = get_table(DATA_URL)[1:]
 dates, nums = get_data_array(data)
 print("Orbital launches:", len(dates))
-
 DATA_URL = BASE_URL + "F.html"
 data = get_table(DATA_URL)[1:]
 dates_fail, nums_fail = get_data_array(data)
 print("Launches failed:", len(dates_fail))
-
 DATA_URL = BASE_URL + "U.html"
 data = get_table(DATA_URL)[1:]
 dates_marg, nums_marg = get_data_array(data)
 print("Marginal launches:", len(dates_marg))
 
-SUBORB = True
+SUBORB = False
+DEEP = True
+
 if SUBORB:
+    FILE_EXT = 'png'
+    MS = 5
+    L_ORDER = [3, 1, 2, 0]
     SUBORB_POSTFIX = "-suborb-100km"
     DATA_URL = BASE_URL + "S.html" # DATA_URL = "S.html"
     suborb_data = get_table(DATA_URL, local=False)[1:] # local=True
@@ -131,14 +134,16 @@ if SUBORB:
     print(f"No apogee altitude data for {no_altitude} entries, {qm} questioned")
     print("Suborbital launches:", len(so_dates))
 
-DEEP = True
 if DEEP:
+    FILE_EXT = 'svg'
+    MS = 3
+    L_ORDER = [1, 2, 3, 0]
+    DEEP_POSTFIX = "-deep"
     DATA_URL = "https://planet4589.org/space/gcat/data/cat/deepcat.html"
     datt = get_table(DATA_URL)[1:]
     dates_deep = get_data_array_deep(datt)
     dates_only, names, nums_only = [], [], []
     unique_dtes = {}
-    # DEEP_POSTFIX = "-deep"
 
     for data, name, satnum in dates_deep:
         if data not in unique_dtes:
@@ -152,8 +157,8 @@ if DEEP:
     SAVE_LIST = False
     if SAVE_LIST:
         with open('deepcat.txt', 'w', encoding='utf-8') as f:
-            for dat in unique_dtes:
-                print(str(dat.date()), unique_dtes[dat], file=f)
+            for dat, space_objects_lst in unique_dtes.items():
+                print(str(dat.date()), space_objects_lst, file=f)
 
     dates_deep = list(unique_dtes.keys())
     nums_deep = range(1, len(dates_deep) + 1)
@@ -166,38 +171,35 @@ years = mdates.YearLocator(5)
 oneyear = mdates.YearLocator()
 ax.xaxis.set_major_locator(years)
 ax.xaxis.set_minor_locator(oneyear)
-
-if SUBORB:
-    plt.plot(so_dates, so_nums, '.k',
-    label='Каталогизированные суборбитальные запуски (апогей от 100 км)', ms=5)
-plt.plot(dates_marg, nums_marg, '.g', label='Граничные запуски', ms=5) #ms=5
-# plt.plot(dates_deep, nums_deep, '.k', label='Запуски в глубокий космос', ms=5)
-plt.plot(dates, nums, '.b', label='Орбитальные ракетные запуски', ms=5) #ms=5
-plt.plot(dates_fail, nums_fail, '.r', label='Неудачные попытки', ms=5) #ms=5
-
 tdlt = timedelta(days=630)
 locale.setlocale(locale.LC_ALL, 'ru_RU')
 today = datetime.now()
 MONTH, YEAR = today.strftime("%B"), today.year
 
+plt.plot(dates_marg, nums_marg, '.g', label='Граничные запуски', ms=MS) #ms=2
+plt.plot(dates, nums, '.b', label='Орбитальные ракетные запуски', ms=MS)
+plt.plot(dates_fail, nums_fail, '.r', label='Неудачные попытки', ms=MS)
 if SUBORB:
+    plt.plot(so_dates, so_nums, '.k',
+    label='Каталогизированные суборбитальные запуски (апогей от 100 км)', ms=5)
     plt.xlim(so_dates[0]-tdlt, so_dates[-1]+tdlt)
     plt.ylim(-25, so_nums[-1]+500)
-else:
+    plt.title(f'Рост числа суборбитальных и орбитальных запусков. Всего {len(dates)} ' + \
+    f'орбитальных запусков, {len(nums_fail)} неудач и {len(so_nums)} суборбитальных запусков. {MONTH} {YEAR} года')
+if DEEP:
+    plt.plot(dates_deep, nums_deep, '.k', label='Запуски в глубокий космос', ms=6)
     plt.xlim(dates[0]-tdlt, dates[-1]+tdlt) #+5*tdlt
     plt.ylim(-5, nums_deep[-1]+190)
-plt.legend(fontsize=13)
+    plt.title(f'Рост числа запусков в глубокий космос. Всего {len(dates)} ' + \
+    f'орбитальных запусков, {len(nums_fail)} неудач, {len(nums_deep)} запусков в глубокий космос. {MONTH} {YEAR} года')
 
-plt.title(f'Рост числа запусков в глубокий космос. Всего {len(dates)} ' + \
-f'орбитальных запусков, {len(nums_fail)} неудач, {len(nums_deep)} запусков в глубокий космос. {MONTH} {YEAR} года')
-plt.title(f'Рост числа суборбитальных и орбитальных запусков. Всего {len(dates)} ' + \
-f'орбитальных запусков, {len(nums_fail)} неудач и {len(so_nums)} суборбитальных запусков. {MONTH} {YEAR} года')
+handles, labels = plt.gca().get_legend_handles_labels()
+plt.legend([handles[idx] for idx in L_ORDER],[labels[idx] for idx in L_ORDER], fontsize=13)
 plt.xlabel('Время, годы', fontsize=14)
 plt.ylabel('Количество запусков', fontsize=12)
 plt.grid(linestyle='dotted')
 
-FILENAME = f'launches-orb{DEEP_POSTFIX}{SUBORB_POSTFIX}z'
-FILE_EXT = 'png'
+FILENAME = f'launches-orb{DEEP_POSTFIX}{SUBORB_POSTFIX}'
 plots_dir = os.path.join(os.pardir, os.pardir, os.pardir, 'plots', 'launches')
 tmp_pth = os.path.join(plots_dir, FILENAME+'_.'+FILE_EXT)
 pth = os.path.join(plots_dir, FILENAME+'.'+FILE_EXT)
