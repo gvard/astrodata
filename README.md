@@ -37,7 +37,7 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 [Data source: J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/pop.html)
 * Human Spaceflight Missions, Astronauts, Rides
 ![Human presence in space](./plots/manned/mannedflights-astronauts-rides-evas.svg)
-![Total duration of extravehicular activities](./plots/manned/evas-total-time.svg)
+![Total duration and numbers of extravehicular activities](./plots/manned/evas-total-time-counts.svg)
 [Data source: J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/)
 
 ## Space launches
