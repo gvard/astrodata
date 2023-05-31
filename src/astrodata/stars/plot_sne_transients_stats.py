@@ -142,6 +142,33 @@ for i, (year, snstats_url) in enumerate(snyears_urls):
 
 
 FILE_EXT = 'svg'
+TMP_FILENAME = 'sne_stats_bar_chart_.' + FILE_EXT
+FILENAME = 'sne_stats_bar_chart.' + FILE_EXT
+tmp_pth = os.path.join(STARS_DIR, TMP_FILENAME)
+pth = os.path.join(STARS_DIR, FILENAME)
+
+years[0] = f"до {min(1996, args.startyear)}"
+data = {'Сверхновые Latest Supernovae Archives': sns,
+'Сверхновые, обнаруженные любителями': snalt}
+df = pd.DataFrame(data, index=years)
+
+ax = df.plot(kind='bar', stacked=True, figsize=(16, 9), width=0.85, rot=0)
+plt.subplots_adjust(left=0.06, bottom=0.06, right=0.97, top=0.955)
+plt.xlabel('Годы', fontsize=14)
+plt.ylabel('Открытий сверхновых за год', fontsize=14)
+title = f'Статистика открытий сверхновых по годам, всего {all_sne[-1]} сверхновых.'
+plt.title(title+f' {MONTH} {YEAR} года', fontsize=16)
+plt.legend(fontsize=14, loc='upper left')
+ax.yaxis.set_minor_locator(MultipleLocator(500))
+ax.bar_label(ax.containers[-1])
+
+plt.savefig(tmp_pth, dpi=240)
+if FILE_EXT == 'svg':
+    optimize_svg(tmp_pth, pth)
+    os.remove(tmp_pth)
+
+
+FILE_EXT = 'svg'
 TOTAL_SNE_FILENAME = 'sne_transients_total_number_log_plot.' + FILE_EXT
 pth = os.path.join(STARS_DIR, TOTAL_SNE_FILENAME)
 TMP_FILENAME = 'sne_transients_total_number_log_plot_.' + FILE_EXT
