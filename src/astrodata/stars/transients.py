@@ -18,11 +18,11 @@ locale.setlocale(locale.LC_ALL, 'ru_RU')
 today = datetime.now()
 MONTH, YEAR = today.strftime("%B"), today.year
 
-def get_soup_request(url):
+def get_soup_request(url, parser='lxml'):
     """Get url, return BeautifulSoup object."""
     req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
     with request.urlopen(req) as html:
-        return BeautifulSoup(html, 'html.parser')
+        return BeautifulSoup(html, parser)
 
 def mk_sne_iau_lst(start_year=1996, end_year=2023):
     """Create list with sum of numbers before start_year as first item and

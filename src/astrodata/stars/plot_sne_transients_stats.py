@@ -38,7 +38,7 @@ def optimize_svg(tmp_path, path):
         scour.start(options, inputfile, outputfile)
 
 
-parser = argparse.ArgumentParser(description='Graph plotter script with number of people in space')
+parser = argparse.ArgumentParser(description='Graph plotter script with number of transients')
 parser.add_argument('-v', '--verbose', action='store_true', help='Print additional information')
 parser.add_argument('-y', '--startyear', type=int, default=2004,
     help='Set year to start. Default is 2004')
@@ -82,7 +82,6 @@ data = {'Сверхновые CBAT': SNE_IAU_LST,
 'Публичные транзиенты': data_to_plot_dct.values(),
 'Транзиенты не в публичном доступе': nums_diff_dct.values()}
 df = pd.DataFrame(data, index=labels)
-tot = df.sum(axis=1)
 
 ax = df.plot(kind='bar', stacked=True, figsize=(16, 9), color=COLORS, width=0.85, rot=0)
 plt.subplots_adjust(left=0.06, bottom=0.06, right=0.97, top=0.955)
