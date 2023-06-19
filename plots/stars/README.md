@@ -5,7 +5,7 @@
 ![Numbers of most common variable stars types in the current of the GCVS](./gcvs_types_distribution-combined-sorted-latest.svg)
 [Data source: General Catalog of Variable Stars, latest version](http://www.sai.msu.su/gcvs/gcvs/gcvs5/gcvs5.txt)
 ![Numbers of variable stars, SNe and transients](./variable-stars-count-graph.svg)
-[Data source: The International Variable Star Index (Watson+, 2006-2007)](http://www.sai.msu.su/gcvs/gcvs/gcvs5/gcvs5.txt)
+[Data source: The International Variable Star Index (Watson+, 2006-2007)](https://cdsarc.u-strasbg.fr/ftp/B/vsx/ReadMe)
 
 
 ## Supernova observations
