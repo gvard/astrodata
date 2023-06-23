@@ -5,6 +5,22 @@ https://cdsarc.u-strasbg.fr/ftp/B/gcvs/ReadMe
 General catalogue of variable stars: Version GCVS 5.1, 2017ARep...61...80S
 The 84th Name-List of Variable Stars. Globular Clusters (Third Part) and Novae, 2021PZ.....41....7S
 http://www.astronet.ru/db/varstars/msg/eid/PZ-41-007
+General Catalog of Variable Stars, 4th Ed. (GCVS4, Kholopov et al. 1985-1988): II/139B
+The fourth edition of the General Catalogue of Variable Stars supersedes the third edition
+(Kukarkin et al. 1969-1970: 20437 objects including 148 constant ones, resulting
+20289 variables), three supplements (Kukarkin et al. 1971, 1974, 1976) containing
+data for 5401 new variable stars and improved data for many earlier designated variables,
+and five namelists (62-66) published in the Information Bulletin of Variable Stars
+(Kukarkin et al. 1976; Kholopov et al. 1978, 1979, 1981a, 1981b), which included
+only cross identifications for 2619 new variables.
+https://cdsarc.cds.unistra.fr/viz-bin/cat/II/139B
+The Combined General Catalogue of Variable Stars, 4.1 Edition.
+General Catalogue of Variable Stars 4th Edition, Volumes I-III, (1998)
+https://cdsarc.cds.unistra.fr/viz-bin/cat/II/214A
+Combined General Catalog of Variable Stars (GCVS4.2, 2004 Ed.) (2004)
+https://cdsarc.cds.unistra.fr/viz-bin/cat/II/250
+General Catalog of Variable Stars (GCVS database, Version 2013 Apr.)
+http://www.sai.msu.su/gcvs/gcvs/iii/html/
 The International Variable Star Index (VSX)
 Watson+: 2006SASS...25...47W, 2007JAVSO..35..414W, 2015yCat....102027W
 https://cdsarc.u-strasbg.fr/ftp/B/vsx/ReadMe
@@ -94,9 +110,11 @@ vsx_dates.append(today)
 vsx_nums.append(vsx_vars/1000)
 
 gcvs_dates = [datetime.strptime(x, '%Y-%m-%d') for x in
-             ['2009-06-07', '2011-04-03', '2012-02-26', '2013-04-30',
+             ['1948-01-01', '1958-01-01', '1968-01-01', '1982-01-01', '1998-01-01',
+              '2004-01-01', '2009-06-07', '2011-04-03', '2012-02-26', '2013-04-30',
               '2016-12-31', '2018-09-17', '2020-07-06', '2022-03-31']]
-gcvs_nums = [41.639, 43.675, 45.835, 47.969, 52.011, 52.011, 54.979, 58.202]
+gcvs_nums = [10.762, 14.569, 20.289, 28.484, 31.918, 38.624, 41.639,
+             43.675, 45.835, 47.969, 52.011, 52.011, 54.979, 58.202]
 gcvs_dates.append(today)
 gcvs_nums.append(gcvs_nums[-1])
 
@@ -127,4 +145,31 @@ TMP_PTH = PLOT_PTH+'variable-stars-count-graph_.' + FILE_EXT
 plt.savefig(TMP_PTH, dpi=120)
 if FILE_EXT == 'svg':
     optimize_svg(TMP_PTH, PLOT_PTH+'variable-stars-count-graph.svg')
+    os.remove(TMP_PTH)
+
+fig, ax = plt.subplots(figsize=(16, 9))
+plt.ylim(0, 60)
+td = timedelta(weeks=60)
+plt.xlim(gcvs_dates[0]-td, today+td)
+plt.subplots_adjust(left=0.06, bottom=0.06, right=0.97, top=0.955)
+plt.plot(gcvs_dates, gcvs_nums, 'ob--', label="Общий Каталог Переменных Звезд")
+plt.plot([datetime(2021, 11, 26)], [58.035], '*r', ms=12,
+         label='Именованные переменные звезды в ОКПЗ, 58035 звезд')
+plt.title(f'Количество переменных звезд. Всего {vsx_vars} звезд в VSX, ' + \
+          f'{round(vsx_vars/9948644.04, 2)}% переменных звезд исследовано. ' + \
+          f'{MONTH} {YEAR} года', fontsize=16)
+plt.xlabel('Год', fontsize=14)
+plt.ylabel('Количество переменных звезд (тысяч)', fontsize=14)
+plt.legend(fontsize=14)
+ax.xaxis.set_major_locator(mdates.YearLocator(5))
+ax.xaxis.set_minor_locator(mdates.YearLocator(1))
+ax.yaxis.set_minor_locator(MultipleLocator(2))
+plt.grid(axis='y', which='major', linestyle='--')
+plt.grid(axis='x', which='major', linestyle=':')
+
+FNAME = 'gcvs-variable-stars-count-graph'
+TMP_PTH = f'{PLOT_PTH}{FNAME}_.{FILE_EXT}'
+plt.savefig(TMP_PTH, dpi=120)
+if FILE_EXT == 'svg':
+    optimize_svg(TMP_PTH, f'{PLOT_PTH}{FNAME}.{FILE_EXT}')
     os.remove(TMP_PTH)
