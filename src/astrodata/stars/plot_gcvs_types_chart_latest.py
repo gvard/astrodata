@@ -57,21 +57,21 @@ print('Типы выборки:', most_numerous_types_names, 'их количе�
     len(most_numerous_types_names), 'всего типов в статистике:',
     len(types_dct.keys()), 'всего звезд в каталоге:', sum(types_dct.values()))
 
-ax = df.plot(kind='bar', figsize=(16, 9), width=0.88, rot=45)
+ax = df.plot(kind='bar', figsize=(16, 9), width=0.88, rot=45, legend=False)
 
-plt.subplots_adjust(left=0.04, bottom=0.09, right=0.985, top=0.955)
-plt.xlabel('Типы переменных звезд', fontsize=14, labelpad=0)
-plt.ylabel('Количество переменных звезд', fontsize=14, labelpad=0)
-plt.title('Распределение по типам переменных звезд в текущей версии ОКПЗ. ' + \
-    f'{MONTH} {YEAR} года', fontsize=16)
-plt.legend(fontsize=14, loc='upper left')
+plt.subplots_adjust(left=0.051, bottom=0.102, right=0.985, top=0.955)
+plt.xlabel('Типы переменных звезд', fontsize=14)
+plt.ylabel('Количество переменных звезд', fontsize=14)
+plt.title('Распределение по типам переменных звезд в текущей версии ОКПЗ, ' + \
+    f'всего {sum(types_dct.values())} объектов. {MONTH} {YEAR} года', fontsize=15)
+# plt.legend(fontsize=14, loc='upper left')
 ax.bar_label(ax.containers[-1])
 
-FILE_EXT = 'svg'
+FILE_EXT = 'png'
 PLT_PTH = '../../../plots/stars/gcvs_types_distribution-combined-sorted-latest'
 tmp_pth = f'{PLT_PTH}_.{FILE_EXT}'
 pth = f'{PLT_PTH}.{FILE_EXT}'
-plt.savefig(tmp_pth, dpi=240)
+plt.savefig(tmp_pth, dpi=120)
 if FILE_EXT == 'svg':
     optimize_svg(tmp_pth, pth)
     os.remove(tmp_pth)

@@ -37,23 +37,22 @@ locale.setlocale(locale.LC_ALL, 'ru_RU')
 today = datetime.now()
 MONTH, YEAR = today.strftime("%B"), today.year
 
-print('Типы выборки:', df, 'их количество:',
-    len(df), 'всего типов в статистике:',
+print('Типы выборки:', df, 'их количество:', len(df), 'всего типов в статистике:',
     len(series.value_counts()), 'всего звезд в каталоге:', len(data))
 
-plt.subplots_adjust(left=0.051, bottom=0.09, right=0.985, top=0.955)
+plt.subplots_adjust(left=0.051, bottom=0.102, right=0.985, top=0.955)
 plt.xlabel('Типы переменных звезд', fontsize=14, labelpad=0)
 plt.ylabel('Количество переменных звезд', fontsize=14, labelpad=0)
-plt.title('Распределение по типам переменных звезд в текущей версии VSX. ' + \
-    f'{MONTH} {YEAR} года', fontsize=16)
+plt.title('Распределение по типам переменных звезд в текущей версии VSX, ' + \
+    f'всего {len(data)} объектов. {MONTH} {YEAR} года', fontsize=15)
 # plt.legend(fontsize=14, loc='upper left')
 ax.bar_label(ax.containers[-1], fontsize=8)
 
-FILE_EXT = 'svg'
+FILE_EXT = 'png'
 PLT_PTH = '../../../plots/stars/vsx_types_distribution-combined-sorted-latest'
 tmp_pth = f'{PLT_PTH}_.{FILE_EXT}'
 pth = f'{PLT_PTH}.{FILE_EXT}'
-plt.savefig(tmp_pth, dpi=240)
+plt.savefig(tmp_pth, dpi=120)
 if FILE_EXT == 'svg':
     optimize_svg(tmp_pth, pth)
     os.remove(tmp_pth)
