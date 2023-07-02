@@ -7,12 +7,14 @@
 [Data source: General Catalog of Variable Stars (Samus+, 2007-2017), vartype.txt](https://cdsarc.cds.unistra.fr/ftp/B/gcvs/vartype.txt)
 ![Numbers of most common variable stars types in the current version of the GCVS](./gcvs_types_distribution-combined-sorted-latest+.png "Numbers of most common variable stars types in the current version of the GCVS with stars belongs to several types of variability")
 [Data source: General Catalog of Variable Stars, latest version](http://www.sai.msu.su/gcvs/gcvs/gcvs5/gcvs5.txt),
-[Jupyter Notebook for plotting this chart](../../src/astrodata/stars/plot_vsx_types_chart_latest.ipynb)
+[Jupyter Notebook for plotting this chart](../../src/astrodata/stars/plot_gcvs_types_chart_latest.ipynb)
 ![Numbers of most common variable stars types in the current version of the VSX](./vsx_types_distribution-combined-sorted-latest+.png "Numbers of most common variable stars types in the current version of the VSX with stars belongs to several types of variability")
-[Data source: The International Variable Star Index (Watson+, 2006-2007)](https://cdsarc.cds.unistra.fr/viz-bin/cat/B/vsx)
+[Data source: The International Variable Star Index (Watson+, 2006-2007)](https://cdsarc.cds.unistra.fr/viz-bin/cat/B/vsx),
+[Jupyter Notebook for plotting this chart](../../src/astrodata/stars/plot_vsx_types_chart_latest.ipynb)
 ![Numbers of variable stars in the GCVS, from the first edition](./gcvs-variable-stars-count.svg "Numbers of variable stars in the GCVS, from the first edition")
 ![Numbers of variable stars, SNe and transients](./variable-stars-count-graph.svg "Numbers of variable stars (VSX and GCVS), SNe and transients")
-[Data source: The International Variable Star Index (Watson+, 2006-2007)](https://cdsarc.u-strasbg.fr/ftp/B/vsx/ReadMe)
+[Data source: The International Variable Star Index (Watson+, 2006-2007)](https://cdsarc.u-strasbg.fr/ftp/B/vsx/ReadMe),
+[python script with data for plotting this charts](../../src/astrodata/stars/plot_variable_stars_counts.py)
 
 ## Supernova observations
 
