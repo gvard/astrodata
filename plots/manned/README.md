@@ -8,6 +8,7 @@
 ![Human presence in space](./mannedflights-astronauts-rides-evas.svg "Human presence in space")
 [Data source: J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/)
 * Extravehicular activity
+![Total duration and numbers of extravehicular activities](./evas-total-time-counts.svg "Total duration and numbers of spacewalks (extravehicular activities)")
 ![Total number of extravehicular activities](./evas-total-counts.svg "Total number of spacewalks (extravehicular activities)")
 ![Total duration of extravehicular activities](./evas-total-time.svg "Total duration of spacewalks (extravehicular activities)")
 [Data source: J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/),
@@ -19,3 +20,5 @@ Note that EVA (spacewalk) at this data defines as an activity carried out in vac
 
 * [Scour](https://github.com/scour-project/scour)
 * [OptiPNG](https://optipng.sourceforge.net/), see [guide to PNG optimization](https://optipng.sourceforge.net/pngtech/optipng.html)
+
+For all manned spaceflights statistics related code see [this directory](../../src/astrodata/manned/)
