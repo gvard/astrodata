@@ -10,9 +10,10 @@ Data source: [NASA Center for NEO Studies and IAU Minor Planet Center, discovery
 Data source: [IAU Minor Planet Center, The MPC Orbit (MPCORB) Database](https://minorplanetcenter.net/iau/MPCORB.html),
 [break down of amateur discoveries](https://minorplanetcenter.net/iau/special/AmateurDiscoveries.txt)
 
-## Image optimization applied
+## Dependencies
 
-* [Scour](https://github.com/scour-project/scour)
-* [TinyPNG: WebP, PNG, JPEG optimization](https://tinypng.com/)
+* [Matplotlib](https://matplotlib.org/)
+* [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), [на русском языке](https://www.crummy.com/software/BeautifulSoup/bs4/doc.ru/)
+* [Scour - an SVG Optimizer / Cleaner](https://github.com/scour-project/scour)
 
 For all Solar System objects related images see [this directory](../../../plots/solarsystem/)
