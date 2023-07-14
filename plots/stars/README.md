@@ -2,7 +2,7 @@
 
 ## Variable stars statistics
 
-* Bar charts with numbers of variable stars types in the General Catalog of Variable Stars (GCVS).
+Bar charts with numbers of variable stars types in the General Catalog of Variable Stars (GCVS):
 ![Numbers of most common variable stars types in the GCVS](./gcvs_types_distribution-combined-sorted.svg "Numbers of most common variable stars types in the GCVS")
 [Data source: General Catalog of Variable Stars (Samus+, 2007-2017), vartype.txt](https://cdsarc.cds.unistra.fr/ftp/B/gcvs/vartype.txt)
 [python script with data for plotting this charts](../../src/astrodata/stars/plot_gcvs_types_chart.py)
@@ -29,9 +29,11 @@ See also [results of cross-matching of clusters members with VSX variables](./vs
 ![All known clusters in distance-age space](./clusters-dist-age-omg-annotated.png "All known open, globular clusters and moving groups in distance-age space with marked Pleiades, Hyades, Praesepe and Ruprecht 147")
 Data source: [Improving the open cluster census. II. An all-sky cluster catalogue with Gaia DR3](https://ui.adsabs.harvard.edu/abs/2023A%26A...673A.114H/abstract),
 [VizieR Online Data Catalog. Hunt+, 2023](https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A+A/673/A114).
-See also [Ruprecht 147: The Oldest Nearby Open Cluster as a New Benchmark for Stellar Astrophysics](https://ui.adsabs.harvard.edu/abs/2013AJ....145..134C/abstract)
+See also [Ruprecht 147: The Oldest Nearby Open Cluster as a New Benchmark for Stellar Astrophysics](https://ui.adsabs.harvard.edu/abs/2013AJ....145..134C/abstract).
+Code: [python script](../../src/astrodata/stars/plot_clusters_dist_age_distribution.py) and
+[Jupyter Notebook](../../src/astrodata/stars/plot_clusters_dist_age_distribution.ipynb) for plotting this chart
 
-## Supernova observations
+## Supernovae and other transients observations
 
 * History of supernovae observations by year
 ![Supernovae observations](./sne_stats_bar_chart.svg "Supernovae observations")

@@ -15,7 +15,9 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 ![Distribution of minor planets by semi-major axis beyond Neptune (histogram of 900 bins)](./plots/solarsystem/asteroids-hist-a29-70.png)
 [Data source: IAU Minor Planet Center, The MPC Orbit (MPCORB) Database](https://minorplanetcenter.net/iau/MPCORB.html)
 
-## Supernova observations
+See this links for all Solar System related [plots](./plots/solarsystem/) and [code](./src/astrodata/solarsystem/)
+
+## Supernovae and other transients observations
 
 * History of supernovae observations by year
 ![Supernovae observations](./plots/stars/sne_stats_bar_chart.svg)
@@ -34,6 +36,8 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 ![Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows](./plots/stars/grbs_stats_bar_chart.svg)
 [Data source: Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html)
 
+See this links for all stars related [plots](./plots/stars/) and [code](./src/astrodata/stars/)
+
 ## Manned spaceflights
 
 * Population of space
@@ -45,6 +49,8 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 ![Total duration and numbers of extravehicular activities](./plots/manned/evas-total-time-counts.svg)
 [Data source: J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/)
 
+See this links for all manned spaceflights related [plots](./plots/manned/) and [code](./src/astrodata/manned/)
+
 ## Space launches
 
 * Orbital and suborbital launches counts
@@ -53,6 +59,8 @@ All code and description are avaliable at [gvard.github.io](https://gvard.github
 * Deep Space Launches
 ![Deep space launches counts](./plots/launches/launches-orb-deep.svg)
 [Data source: J. McDowell, planet4589.org](https://planet4589.org/space/gcat/web/cat/)
+
+See this links for all space launches related [plots](./plots/launches/) and [code](./src/astrodata/launches/)
 
 ## Image optimization applied
 
