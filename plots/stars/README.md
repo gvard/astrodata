@@ -22,6 +22,15 @@
 [Data source: The International Variable Star Index (Watson+, 2006-2007)](https://cdsarc.u-strasbg.fr/ftp/B/vsx/ReadMe),
 [python script with data for plotting this charts](../../src/astrodata/stars/plot_variable_stars_counts.py)
 
+## Milky Way Clusters
+
+![Most common types of discovered variable stars in Milky Way clusters from the current version of the GCVS](./gcvs_types_distribution-xmatch-hunt2023-2s-combined-sorted-latest.png "Most common types of discovered variable stars in Milky Way clusters from the current version of the GCVS, cross-match with clusters members (Hunt+, 2023). Radius 2s")
+See also [results of cross-matching of clusters members with VSX variables](./vsx_types_distribution-xmatch-hunt2023-2s-combined-sorted-latest.png) and versions with other cross-matching radius.
+![All known clusters in distance-age space](./clusters-dist-age-omg-annotated.png "All known open, globular clusters and moving groups in distance-age space with marked Pleiades, Hyades, Praesepe and Ruprecht 147")
+Data source: [Improving the open cluster census. II. An all-sky cluster catalogue with Gaia DR3](https://ui.adsabs.harvard.edu/abs/2023A%26A...673A.114H/abstract),
+[VizieR Online Data Catalog. Hunt+, 2023](https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A+A/673/A114).
+See also [Ruprecht 147: The Oldest Nearby Open Cluster as a New Benchmark for Stellar Astrophysics](https://ui.adsabs.harvard.edu/abs/2013AJ....145..134C/abstract)
+
 ## Supernova observations
 
 * History of supernovae observations by year
