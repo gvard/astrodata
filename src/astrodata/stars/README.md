@@ -3,12 +3,14 @@
 ## Variable stars statistics
 
 Bar charts with numbers of variable stars types in the General Catalog of Variable Stars (GCVS):
-![Numbers of most common variable stars types in the GCVS](../../../plots/stars/gcvs_types_distribution-combined-sorted.svg "Numbers of most common variable stars types in the GCVS")
-Data source: [General Catalog of Variable Stars (Samus+, 2007-2017), vartype.txt](https://cdsarc.cds.unistra.fr/ftp/B/gcvs/vartype.txt)
-Code: [python script with data for plotting this charts](./plot_gcvs_types_chart.py)
 ![Numbers of most common variable stars types in the current version of the GCVS](../../../plots/stars/gcvs_types_distribution-combined-sorted-latest+.png "Numbers of most common variable stars types in the current version of the GCVS with stars belongs to several types of variability")
 Data source: [General Catalog of Variable Stars, latest version](http://www.sai.msu.su/gcvs/gcvs/gcvs5/gcvs5.txt),
 Code: [Jupyter Notebook for plotting this chart](./plot_gcvs_types_chart_latest.ipynb)
+
+See also [Numbers of most common variable stars types in the GCVS](../../../plots/stars/gcvs_types_distribution-combined-sorted.svg);
+Data source: [General Catalog of Variable Stars (Samus+, 2007-2017), vartype.txt](https://cdsarc.cds.unistra.fr/ftp/B/gcvs/vartype.txt).
+Code: [python script with data for plotting this charts](./plot_gcvs_types_chart.py)
+
 ![Numbers of most common variable stars types in the current version of the VSX](../../../plots/stars/vsx_types_distribution-combined-sorted-latest+.png "Numbers of most common variable stars types in the current version of the VSX with stars belongs to several types of variability")
 Data source: [The International Variable Star Index (Watson+, 2006-2007)](https://cdsarc.cds.unistra.fr/viz-bin/cat/B/vsx),
 Code: [Jupyter Notebook for plotting this chart](./plot_vsx_types_chart_latest.ipynb)
@@ -36,7 +38,9 @@ Code: [python script](./plot_clusters_dist_age_distribution.py) and
 ## Supernovae and other transients observations
 
 * History of supernovae observations by year
-![Supernovae observations](../../../plots/stars/sne_stats_bar_chart.svg "Supernovae observations")
+![Supernovae observations](../../../plots/stars/sne_stats_bar_chart.svg "Supernovae observations. Data from the Latest Supernovae Archives")
+![Increasing number of supernova discoveries, years 2015-2023](../../../plots/stars/sne_discoveries_numbers-2015-2023.png "Increasing number of supernova discoveries, years 2015-2023. Data from the Latest Supernovae Archives")
+Code: [python script with data for plotting this chart](./plot_sne_discoveries_numbers.py)
 * Cumulative number of supernovae
 ![Cumulative number of supernovae](../../../plots/stars/sne_transients_total_number_log_plot.svg "Cumulative number of supernovae")
 * History of transient observations by year from Transient Name Server
