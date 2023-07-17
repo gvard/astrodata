@@ -37,6 +37,7 @@ Code: [python script](../../src/astrodata/stars/plot_clusters_dist_age_distribut
 
 * History of supernovae observations by year
 ![Supernovae observations](./sne_stats_bar_chart.svg "Supernovae observations")
+![Increasing number of supernova discoveries, years 2015-2023](./sne_discoveries_numbers-2015-2023.png "Increasing number of supernova discoveries, years 2015-2023. Data from the Latest Supernovae Archives")
 * Cumulative number of supernovae
 ![Cumulative number of supernovae](./sne_transients_total_number_log_plot.svg "Cumulative number of supernovae")
 * History of transient observations by year from Transient Name Server
