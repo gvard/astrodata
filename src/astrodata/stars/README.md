@@ -54,7 +54,7 @@ Code: [python script with data for plotting this charts](./plot_sne_transients_s
 
 ![Number of gamma-ray bursts which have been localized within a few hours to days to less than 1 degree](../../../plots/stars/grbs_total_number_plot.png "Number of gamma-ray bursts which have been localized within a few hours to days to less than 1 degree")
 ![Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows](../../../plots/stars/grbs_stats_bar_chart.svg "Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows")
-Data source: [Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html).
+Data source: [Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html), [data as JSON](../../../data/stars/grbs-localized-stats.json).
 Code: [python script with data for plotting this charts](./plot_localized_grbs_stats.py)
 
 ## Dependencies
