@@ -18,11 +18,13 @@ locale.setlocale(locale.LC_ALL, 'ru_RU')
 today = datetime.now()
 MONTH, YEAR = today.strftime("%B"), today.year
 
+
 def get_soup_request(url, parser='lxml'):
     """Get url, return BeautifulSoup object."""
     req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
     with request.urlopen(req) as html:
         return BeautifulSoup(html, parser)
+
 
 def mk_sne_iau_lst(start_year=1996, end_year=2023):
     """Create list with sum of numbers before start_year as first item and
@@ -38,6 +40,7 @@ def mk_sne_iau_lst(start_year=1996, end_year=2023):
             sne_iau_lst.append(num)
     sne_iau_lst += (end_year-list(SNE_IAU_DCT)[-1])*[0]
     return sne_iau_lst
+
 
 def get_tns_stats():
     """Get info from Transient Name Server stats page."""
@@ -55,11 +58,13 @@ def get_tns_stats():
     stat_cat_all = stat_cat_all.findAll('div', {"class": "stat-row"})
     return stat_cat_pub, stat_cat_all
 
+
 def _yrnum(elm):
     """Get data from div elements of Transient Name Server stats page."""
     year = int(elm.find('div', {"class": "stat-row-left"}).text)
     num = int(elm.find('div', {"class": "stat-row-right"}).text)
     return year, num
+
 
 def get_tns_year_stats(year_stats):
     """Get Transient Name Server year stats: numbers of transients discovered
@@ -92,6 +97,7 @@ def get_tns_year_stats(year_stats):
     sne_final_dct[datetime(1996, 1, 1)] = _sum
     return nums, yr_ints, realdates, stats_dct, sne_final_dct
 
+
 def add_iau_sne(sne_final_dct):
     """Sum SNe numbers in CBAT list and transients from TNS server."""
     for year, dat in SNE_IAU_DCT.items():
@@ -101,6 +107,7 @@ def add_iau_sne(sne_final_dct):
         else:
             sne_final_dct[datetime(year+1, 1, 1)] = dat
     return sne_final_dct
+
 
 def mk_transient_total_numbers(total_dct):
     """Make list of transient total numbers."""
@@ -114,6 +121,7 @@ def mk_transient_total_numbers(total_dct):
         total_lst.append(_sum)
     return total_lst
 
+
 def _get_nums_before(stats_dct, start_year=1996):
     """Compute sum of all numbers before given year."""
     summ = 0
@@ -121,6 +129,7 @@ def _get_nums_before(stats_dct, start_year=1996):
         if year < start_year:
             summ += num
     return summ
+
 
 def mk_tns_data(stats_pub_dct, stats_all_dct, start_year=1996, end_year=2023):
     """Make final data sets of TNS year stats for plotting."""
@@ -138,6 +147,7 @@ def mk_tns_data(stats_pub_dct, stats_all_dct, start_year=1996, end_year=2023):
             nums_diff_dct[year] = 0
     return data_to_plot, nums_diff_dct
 
+
 def mk_urls_lst():
     """Make URLs list of Latest Supernovae Archives year stats pages."""
     snyears_urls = []
@@ -152,6 +162,7 @@ def mk_urls_lst():
     snyears_urls.append(('all', _yrurlstr('snimages/', 'all')))
     return snyears_urls
 
+
 def get_sn_stats(soup, end=23):
     """Get data from pre element and last modified date of
     Latest Supernovae Archives year stats page."""
@@ -159,6 +170,7 @@ def get_sn_stats(soup, end=23):
     # dt = datetime.strptime(lastmod_txt[:10], '%Y/%m/%d')
     pre = soup.find('pre').text
     return pre.splitlines()[1:end], lastmod_txt[:-5]
+
 
 def get_sn_count(txt):
     """Get supernova total count from Latest Supernovae Archives stats pages.
