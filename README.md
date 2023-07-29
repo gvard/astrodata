@@ -24,7 +24,9 @@ See this links for all Solar System related [plots](./plots/solarsystem/) and [c
 * Cumulative number of supernovae
 ![Cumulative number of supernovae](./plots/stars/sne_transients_total_number_log_plot.svg)
 [Data source: David Bishop, Latest Supernovae Archives](https://www.rochesterastronomy.org/snimages/archives.html);
-[Transient Name Server stats](https://www.wis-tns.org/stats-maps)
+[Transient Name Server stats](https://www.wis-tns.org/stats-maps).
+[Data as JSON](data/stars/sne-stats.json).
+[Displaying data in html page using JavaScript](https://gvard.github.io/stars/snstats/)
 
 * History of transient observations by year from Transient Name Server
 ![Transient observations from Transient Name Server](./plots/stars/transient_stats_bar_chart.svg)
@@ -34,7 +36,8 @@ See this links for all Solar System related [plots](./plots/solarsystem/) and [c
 
 ![Number of gamma-ray bursts which have been localized within a few hours to days to less than 1 degree](./plots/stars/grbs_total_number_plot.png)
 ![Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows](./plots/stars/grbs_stats_bar_chart.svg)
-[Data source: Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html), [data as JSON](data/stars/grbs-localized-stats.json)
+[Data source: Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html), [data as JSON](data/stars/grbs-localized-stats.json).
+[Displaying data in html page using JavaScript](https://gvard.github.io/grb/stats/)
 
 See this links for all stars related [plots](./plots/stars/), [code](./src/astrodata/stars/) and [data](./data/stars/)
 

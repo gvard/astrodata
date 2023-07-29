@@ -48,14 +48,17 @@ Code: [python script with data for plotting this chart](./plot_sne_discoveries_n
 Data sources: [David Bishop, Latest Supernovae Archives](https://www.rochesterastronomy.org/snimages/archives.html),
 [Transient Name Server stats](https://www.wis-tns.org/stats-maps),
 [Central Bureau for Astronomical Telegrams List of SNe](http://www.cbat.eps.harvard.edu/lists/Supernovae.html).
-Code: [python script with data for plotting this charts](./plot_sne_transients_stats.py)
+[Data as JSON](../../../data/stars/sne-stats.json).
+Code: [python script with data for plotting this charts](./plot_sne_transients_stats.py).
+[Displaying data in html page using JavaScript](https://gvard.github.io/stars/snstats/)
 
 ## Gamma-ray bursts observations
 
 ![Number of gamma-ray bursts which have been localized within a few hours to days to less than 1 degree](../../../plots/stars/grbs_total_number_plot.png "Number of gamma-ray bursts which have been localized within a few hours to days to less than 1 degree")
 ![Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows](../../../plots/stars/grbs_stats_bar_chart.svg "Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows")
 Data source: [Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html), [data as JSON](../../../data/stars/grbs-localized-stats.json).
-Code: [python script with data for plotting this charts](./plot_localized_grbs_stats.py)
+Code: [python script with data for plotting this charts](./plot_localized_grbs_stats.py).
+[Displaying data in html page using JavaScript](https://gvard.github.io/grb/stats/)
 
 ## Dependencies
 
