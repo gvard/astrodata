@@ -12,6 +12,7 @@ import os
 from datetime import datetime, timedelta
 import locale
 import argparse
+import json
 
 from scour import scour
 import matplotlib.pyplot as plt
@@ -21,7 +22,7 @@ import pandas as pd
 
 from transients import add_iau_sne, get_soup_request, get_sn_stats, get_sn_count, \
     get_tns_stats, get_tns_year_stats, mk_sne_iau_lst, mk_transient_total_numbers, \
-    mk_tns_data, mk_urls_lst
+    mk_tns_data, mk_urls_lst, today
 
 
 def optimize_svg(tmp_path, path):
@@ -41,12 +42,12 @@ def optimize_svg(tmp_path, path):
 parser = argparse.ArgumentParser(description='Graph plotter script with number of transients')
 parser.add_argument('-v', '--verbose', action='store_true', help='Print additional information')
 parser.add_argument('-y', '--startyear', type=int, default=2004,
-    help='Set year to start. Default is 2004')
+                    help='Set year to start. Default is 2004')
 args = parser.parse_args()
 
 locale.setlocale(locale.LC_ALL, 'ru_RU')
-today = datetime.now()
-MONTH, YEAR = today.strftime("%B"), today.year
+YEAR, MONTH, DAY = today.year, today.strftime("%B"), today.strftime("%d")
+MONTH2 = today.strftime("%m")
 COLORS = plt.rcParams['axes.prop_cycle'].by_key()['color']
 COLORS = [COLORS[3], COLORS[0], COLORS[1]]
 STARS_DIR = os.path.join(os.pardir, os.pardir, os.pardir, 'plots', 'stars')
@@ -59,7 +60,7 @@ total_dct = dict(sorted(sne_final_dct.items()))
 total_lst = mk_transient_total_numbers(total_dct)
 SNE_IAU_LST = mk_sne_iau_lst(args.startyear, YEAR)
 data_to_plot_dct, nums_diff_dct = mk_tns_data(stats_pub_dct, stats_all_dct,
-    start_year=args.startyear)
+                                              start_year=args.startyear)
 ALL_TNS = sum(data_to_plot_dct.values())
 
 FILE_EXT = 'svg'
@@ -75,12 +76,12 @@ YLABEL = 'Транзиентов за год'
 
 if args.verbose:
     tns_before_startyear = SNE_IAU_LST[0] + data_to_plot_dct[args.startyear-1]
-    print(labels[0] + f" года {SNE_IAU_LST[0]} сверхновых в CBAT, " + \
-        f"{data_to_plot_dct[args.startyear-1]} на TNS, всего {tns_before_startyear}")
+    print(labels[0] + f" года {SNE_IAU_LST[0]} сверхновых в CBAT, " +
+          f"{data_to_plot_dct[args.startyear-1]} на TNS, всего {tns_before_startyear}")
 
 data = {'Сверхновые CBAT': SNE_IAU_LST,
-'Публичные транзиенты': data_to_plot_dct.values(),
-'Транзиенты не в публичном доступе': nums_diff_dct.values()}
+        'Публичные транзиенты': data_to_plot_dct.values(),
+        'Транзиенты не в публичном доступе': nums_diff_dct.values()}
 df = pd.DataFrame(data, index=labels)
 
 ax = df.plot(kind='bar', stacked=True, figsize=(16, 9), color=COLORS, width=0.85, rot=0)
@@ -106,6 +107,9 @@ years, sns, snalt, all_sne = [], [], [], []
 years_dt = []
 all_sn_count, sn_amateur_count = 0, 0
 snyears_urls = mk_urls_lst()
+KEY = "-".join((str(YEAR), MONTH2, DAY))
+sne_stats_dct = {KEY: {}}
+
 for i, (year, snstats_url) in enumerate(snyears_urls):
     soup = get_soup_request(snstats_url)
     snstats[year], lastmod = get_sn_stats(soup)
@@ -114,8 +118,9 @@ for i, (year, snstats_url) in enumerate(snyears_urls):
     sn_amateur_count += sn_amateur
     if year == 1995:
         all_sne.append(all_sn_count)
-        print(f"До 1996г: {sn_num} сверхновых, {sne_final_dct[datetime(year+1, 1, 1)]}" + \
-              f" транзиентов, {sn_amateur} открыто любителями, {sn_13th} " + \
+        sne_stats_dct[KEY][1995] = (sn_num, sne_final_dct[datetime(year+1, 1, 1)], sn_amateur, sn_13th, lastmod)
+        print(f"До 1996г: {sn_num} сверхновых, {sne_final_dct[datetime(year+1, 1, 1)]}" +
+              f" транзиентов, {sn_amateur} открыто любителями, {sn_13th} " +
               f"ярче 13 зв. вел на {lastmod}")
         years.append(year)
         years_dt.append(datetime(year+1, 1, 1))
@@ -129,17 +134,17 @@ for i, (year, snstats_url) in enumerate(snyears_urls):
         else:
             tr_num = sne_final_dct.get(datetime(year+1, 1, 1))
             years_dt.append(datetime(year+1, 1, 1))
-        print(f"{year} год: {sn_num} сверхновых, {tr_num} транзиентов, {sn_amateur}" + \
-              f" открыто любителями, {sn_13th} ярче 13 зв. вел. Всего к концу года: " + \
-              f"{all_sn_count}, {total_lst[i]} транзиентов, {sn_amateur_count} любителями" + \
-              f" на {lastmod}")
+        sne_stats_dct[KEY][year] = (sn_num, tr_num, sn_amateur, sn_13th, lastmod)
+        print(f"{year} год: {sn_num} сверхновых, {tr_num} транзиентов, {sn_amateur}" +
+              f" открыто любителями, {sn_13th} ярче 13 зв. вел. Всего к концу года: " +
+              f"{all_sn_count}, {total_lst[i]} транзиентов, {sn_amateur_count} " +
+              f"любителями на {lastmod}")
         years.append(year)
         sns.append(sn_num - sn_amateur)
         snalt.append(sn_amateur)
     else:
-        print(f"Всего {sn_num}, а в сумме {all_sne[-1]} СН, {sn_amateur} открыто любителями," + \
+        print(f"Всего {sn_num}, а в сумме {all_sne[-1]} СН, {sn_amateur} открыто любителями," +
               f" {sn_13th} ярче 13 зв. величины на дату {lastmod}")
-
 
 FILE_EXT = 'svg'
 TMP_FILENAME = 'sne_stats_bar_chart_.' + FILE_EXT
@@ -149,7 +154,7 @@ pth = os.path.join(STARS_DIR, FILENAME)
 
 years[0] = f"до {min(1996, args.startyear)}"
 data = {'Сверхновые Latest Supernovae Archives': sns,
-'Сверхновые, обнаруженные любителями': snalt}
+        'Сверхновые, обнаруженные любителями': snalt}
 df = pd.DataFrame(data, index=years)
 
 ax = df.plot(kind='bar', stacked=True, figsize=(16, 9), width=0.85, rot=0)
@@ -180,12 +185,12 @@ ax.xaxis.set_major_locator(mdates.YearLocator(1))
 
 plt.plot(years_dt, all_sne, 'ok-', label="David Bishop, Latest Supernovae Archives")
 plt.plot(total_dct.keys(), total_lst, 'or-',
-    label="Transient Name Server, public + CBAT SNe before 2016")
+         label="Transient Name Server, public + CBAT SNe before 2016")
 plt.xlim(datetime(1995, 10, 1), today+timedelta(weeks=31.9))
 plt.ylim(1000, 150000)
 plt.yscale("log")
 plt.legend(fontsize=14)
-plt.title(f'Динамика вспышек сверхновых, всего {all_sne[-1]} сверхновых и {total_lst[-1]} ' + \
+plt.title(f'Динамика вспышек сверхновых, всего {all_sne[-1]} сверхновых и {total_lst[-1]} ' +
           f'транзиентов. {MONTH} {YEAR} года', fontsize=16)
 plt.xlabel('Время', fontsize=14)
 plt.ylabel('Количество открытых сверхновых', fontsize=14)
@@ -196,3 +201,15 @@ plt.savefig(tmp_pth, dpi=240)
 if FILE_EXT == 'svg':
     optimize_svg(tmp_pth, pth)
     os.remove(tmp_pth)
+
+JSON_FILENAME = "../../../data/stars/sne-stats.json"
+
+with open(JSON_FILENAME) as json_file:
+    data_from_json = json.load(json_file)
+    print(data)
+
+data_from_json.update(sne_stats_dct)
+
+with open(JSON_FILENAME, 'w', encoding='utf8') as json_file:
+    json.dump(data_from_json, json_file, indent=None, separators=(',', ': '),
+              ensure_ascii=False)
