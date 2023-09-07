@@ -74,3 +74,10 @@ See this links for all space launches related [plots](./plots/launches/) and [co
 * [TinyPNG: WebP, PNG, JPEG optimization](https://tinypng.com/)
 * [Jpegoptim](https://www.kokkonen.net/tjko/projects.html), [for Windows](https://github.com/XhmikosR/jpegoptim-windows)
 * [JPEGoptim + OptiPNG + TinyPNG - оптимизация изображений](https://open-networks.ru/d/14-jpegoptim-optipng-tinypng-optimizaciya-izobrazenii)
+
+## License
+
+[![Media content license: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg "Media content license: CC BY 4.0. Feel free to contact me for details")](https://creativecommons.org/licenses/by/4.0/)
+[![Software license: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg "Software license: GPL v3")](https://www.gnu.org/licenses/gpl-3.0)
+
+Feel free to contact me for details. It is possible to change the license for posting on web resources (in Wikimedia projects for example).
