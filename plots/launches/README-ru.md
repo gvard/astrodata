@@ -1,7 +1,7 @@
 # Space launches
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
-[![ru](https://img.shields.io/badge/lang-ru-green.svg)](README.ru.md)
+[![ru](https://img.shields.io/badge/lang-ru-green.svg)](README-ru.md)
 
 * Рост числа запусков в космос
 ![Орбитальные и суборбитальные запуски в космос с апогеем более 100 км](./launches-orb-suborb-100km-linfit-ru.png "Орбитальные и суборбитальные запуски в космос с апогеем более 100 км с линейной аппроксимацией. Красным отмечены неудачные попытки, зеленым - некаталогизированные граничные запуски")

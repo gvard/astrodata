@@ -1,7 +1,7 @@
 # Space launches
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
-[![ru](https://img.shields.io/badge/lang-ru-green.svg)](README.ru.md)
+[![ru](https://img.shields.io/badge/lang-ru-green.svg)](README-ru.md)
 
 * Orbital and suborbital launches counts
 ![Orbital and suborbital (apogee >100km) launches counts](./launches-orb-suborb-100km-linfit.png "Orbital and suborbital (apogee <100km) launches counts with linear regression fits. Special list of marginal (orbital-energy) launches and Orbital Launch Failures are also included")
