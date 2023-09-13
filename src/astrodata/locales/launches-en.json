@@ -1,0 +1,12 @@
+{
+  "title": "Increase in the number of rocket launches. ",
+  "yr": "",
+  "orb": ["Orbital rocket launches", "orbital launches"],
+  "fail": ["Failed to orbit", "fails"],
+  "marg": ["Uncataloged Orbital", "uncataloged"],
+  "deep": ["Deep space launches", "deep space launches"],
+  "so": ["Suborbital launches (apogee above", "suborbital launches"],
+  "km": "km",
+  "xlbl": "Time, years",
+  "ylbl": "Number of launches"
+}
