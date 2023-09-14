@@ -51,8 +51,8 @@ See this links for all stars related [plots](./plots/stars/), [code](./src/astro
 ![Time Spent by Humans in Space](./plots/manned/spacepop-spent-step-filled.svg "Time Spent by Humans in Space")
 [Data source: J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/pop.html)
 * Human Spaceflight Missions, Astronauts, Rides
-![Human presence in space](./plots/manned/mannedflights-astronauts-rides-evas.svg "Human presence in space")
-![Total duration and numbers of extravehicular activities](./plots/manned/evas-total-time-counts.svg "Total duration and numbers of extravehicular activities")
+![Human presence in space](./plots/manned/mannedflights-astronauts-rides-evas.png "Human presence in space")
+![Total duration and numbers of extravehicular activities](./plots/manned/evas-total-time-counts.png "Total duration and numbers of extravehicular activities")
 [Data source: J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/)
 
 See this links for all manned spaceflights related [plots](./plots/manned/) and [code](./src/astrodata/manned/)
