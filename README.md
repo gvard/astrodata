@@ -10,12 +10,12 @@ All code and description are available at [gvard.github.io](https://gvard.github
 ## Solar System objects
 
 * Near-Earth objects and Potentially Hazardous Asteroid statistics
-![NEOs and PHAs cumulative statistics](./plots/solarsystem/neo_pha_graph-2002.svg "NEOs and PHAs cumulative statistics")
-![PHAs cumulative statistics with successfully predicted asteroid impacts](./plots/solarsystem/pha_graph_predicted_impacts-2002.svg "PHAs cumulative statistics with successfully predicted asteroid impacts")
+![NEOs and PHAs cumulative statistics](./plots/solarsystem/neo_pha_graph-2002.png "NEOs and PHAs cumulative statistics")
+![PHAs cumulative statistics with successfully predicted asteroid impacts](./plots/solarsystem/pha_graph_predicted_impacts-2002.png "PHAs cumulative statistics with successfully predicted asteroid impacts")
 [Data source: NASA Center for NEO Studies and IAU Minor Planet Center](https://cneos.jpl.nasa.gov/stats/)
 * Distribution of Solar System bodies by average distance to Sun
-![Distribution of minor planets by semi-major axis between Venus and Jupiter (histogram of 8000 bins)](./plots/solarsystem/asteroids-hist-a0.7-5.4.png "Distribution of minor planets by semi-major axis between Venus and Jupiter (histogram of 8000 bins)")
-![Distribution of minor planets by semi-major axis beyond Neptune (histogram of 900 bins)](./plots/solarsystem/asteroids-hist-a29-70.png "Distribution of minor planets by semi-major axis beyond Neptune (histogram of 900 bins)")
+![Distribution of minor planets by semi-major axis between Venus and Jupiter (histogram of 8000 bins)](./plots/solarsystem/mpcorb-hist-a0.7-5.4.png "Distribution of minor planets by semi-major axis between Venus and Jupiter (histogram of 8000 bins)")
+![Distribution of minor planets by semi-major axis beyond Neptune (histogram of 900 bins)](./plots/solarsystem/mpcorb-hist-a29-70.png "Distribution of minor planets by semi-major axis beyond Neptune (histogram of 900 bins)")
 [Data source: IAU Minor Planet Center, The MPC Orbit (MPCORB) Database](https://minorplanetcenter.net/iau/MPCORB.html)
 
 See this links for all Solar System related [plots](./plots/solarsystem/) and [code](./src/astrodata/solarsystem/)
