@@ -4,8 +4,8 @@
 [![ru](https://img.shields.io/badge/lang-ru-green.svg)](README-ru.md)
 
 * Population of space
-![Population of Space](./spacepop-steps.svg "Population of Space")
-![Time Spent by Humans in Space](./spacepop-spent-step-filled.svg "Time Spent by Humans in Space")
+![Population of Space](./spacepop-steps.png "Population of Space")
+![Time Spent by Humans in Space](./spacepop-spent-steps-filled-ru.png "Time Spent by Humans in Space")
 Data source: [J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/pop.html)
 * Human Spaceflight Missions, Astronauts, Rides
 ![Human presence in space](./mannedflights-astronauts-rides-evas.png "Human presence in space")

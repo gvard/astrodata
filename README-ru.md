@@ -47,8 +47,8 @@
 ## Пилотируемые космические полеты
 
 * Население космоса
-![Население космоса](./plots/manned/spacepop-steps.svg "Население космоса")
-![Время, проведенное людьми в космосе](./plots/manned/spacepop-spent-step-filled.svg "Время, проведенное людьми в космосе")
+![Население космоса](./plots/manned/spacepop-steps-ru.png "Население космоса")
+![Время, проведенное людьми в космосе](./plots/manned/spacepop-spent-steps-filled-ru.png "Время, проведенное людьми в космосе")
 Источник данных: [J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/pop.html)
 * Пилотируемые космические миссии, количество космонавтов и посещений космоса
 ![Присутствие человека в космосе](./plots/manned/mannedflights-astronauts-rides-evas-ru.png "Присутствие человека в космосе")

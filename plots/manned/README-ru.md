@@ -4,8 +4,8 @@
 [![ru](https://img.shields.io/badge/lang-ru-green.svg)](README-ru.md)
 
 * Население космоса
-![Население космоса](./spacepop-steps.svg "Население космоса")
-![Время, проведенное людьми в космосе](./spacepop-spent-step-filled.svg "Время, проведенное людьми в космосе")
+![Население космоса](./spacepop-steps-ru.png "Население космоса")
+![Время, проведенное людьми в космосе](./spacepop-spent-steps-filled-ru.png "Время, проведенное людьми в космосе")
 Данные: [J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/pop.html)
 * Пилотируемые космические миссии, количество космонавтов и посещений космоса
 ![Присутствие человека в космосе](./mannedflights-astronauts-rides-evas-ru.png "Присутствие человека в космосе")
