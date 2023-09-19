@@ -1,5 +1,8 @@
 # Stars related code
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
+[![ru](https://img.shields.io/badge/lang-ru-green.svg)](README-ru.md)
+
 ## Variable stars statistics
 
 Bar charts with numbers of variable stars types in the General Catalog of Variable Stars (GCVS):
@@ -55,16 +58,17 @@ Code: [python script with data for plotting this charts](./plot_sne_transients_s
 ## Gamma-ray bursts observations
 
 ![Number of gamma-ray bursts which have been localized within a few hours to days to less than 1 degree](../../../plots/stars/grbs_total_number_plot.png "Number of gamma-ray bursts which have been localized within a few hours to days to less than 1 degree")
-![Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows](../../../plots/stars/grbs_stats_bar_chart.svg "Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows")
-Data source: [Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html), [data as JSON](../../../data/stars/grbs-localized-stats.json).
-Code: [python script with data for plotting this charts](./plot_localized_grbs_stats.py).
+![Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows](../../../plots/stars/grbs_stats_bar_chart.png "Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows")
+Data source: [Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html),
+[data as JSON](../../../data/stars/grbs-localized-stats.json).  
+Code: [python script with data for plotting this charts](./plot_localized_grbs_stats.py).  
 [Displaying data in html page using JavaScript](https://gvard.github.io/grb/stats/)
 
 ## Dependencies
 
 * [Matplotlib](https://matplotlib.org/)
 * [pandas](https://pandas.pydata.org/)
-* [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), [на русском языке](https://www.crummy.com/software/BeautifulSoup/bs4/doc.ru/)
+* [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), [on russian](https://www.crummy.com/software/BeautifulSoup/bs4/doc.ru/)
 * [Scour - an SVG Optimizer / Cleaner](https://github.com/scour-project/scour)
 
 For all stars related images see [this directory](../../../plots/stars/)

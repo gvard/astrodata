@@ -38,8 +38,9 @@ See this links for all Solar System related [plots](./plots/solarsystem/) and [c
 ## Gamma-ray bursts observations
 
 ![Number of gamma-ray bursts which have been localized within a few hours to days to less than 1 degree](./plots/stars/grbs_total_number_plot.png "Number of gamma-ray bursts which have been localized within a few hours to days to less than 1 degree")
-![Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows](./plots/stars/grbs_stats_bar_chart.svg "Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows")
-[Data source: Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html), [data as JSON](data/stars/grbs-localized-stats.json).
+![Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows](./plots/stars/grbs_stats_bar_chart.png "Gamma-ray bursts localized within a few hours to days to less than 1 degree: chart with number of optical afterglows")
+[Data source: Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html),
+[data as JSON](data/stars/grbs-localized-stats.json).  
 [Displaying data in html page using JavaScript](https://gvard.github.io/grb/stats/)
 
 See this links for all stars related [plots](./plots/stars/), [code](./src/astrodata/stars/) and [data](./data/stars/)

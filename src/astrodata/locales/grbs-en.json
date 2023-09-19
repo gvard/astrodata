@@ -1,0 +1,16 @@
+{
+  "title": "Statistics of gamma-ray bursts localized within a few hours to days to less than 1°",
+  "yr": "",
+  "event": ["events", "events"],
+  "total": "",
+  "grbs": ["GRBs", "GRBs"],
+  "lgrbs": "Localized GRBs",
+  "raag": "Radio AGs",
+  "ag": ["without afterglow", "with optical afterglow", "with optical afterglow"],
+  "rs": "GRBs with known redshift",
+  "xrag": "X-ray AGs",
+  "optag": "optical afterglow",
+  "xlbl": "Time, years",
+  "ylbl": "Number of localized gamma-ray bursts",
+  "ylbl2": "Gamma-ray bursts per year"
+}

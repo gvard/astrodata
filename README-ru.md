@@ -36,9 +36,10 @@
 
 ## Наблюдения гамма-всплесков
 
-![Количество гамма-всплесков, локализованных в первые часы и дни в пределах одного градуса](./plots/stars/grbs_total_number_plot.png "Количество гамма-всплесков, локализованных в первые часы и дни в пределах одного градуса")
-![Динамика открытий гамма-всплесков, локализованных в первые часы и дни в пределах одного градуса: график с количеством оптических послесвечений](./plots/stars/grbs_stats_bar_chart.svg)
-Источник данных: [Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html), [данные в формате JSON](data/stars/grbs-localized-stats.json).
+![Количество гамма-всплесков, локализованных в первые часы и дни в пределах одного градуса](./plots/stars/grbs_total_number_plot-ru.png "Количество гамма-всплесков, локализованных в первые часы и дни в пределах одного градуса")
+![Динамика открытий гамма-всплесков, локализованных в первые часы и дни в пределах одного градуса: график с количеством оптических послесвечений](./plots/stars/grbs_stats_bar_chart-ru.png)
+Источник данных: [Jochen Greiner; GRBs localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html),  
+[данные в формате JSON](data/stars/grbs-localized-stats.json).  
 [html страница для их отображения с кодом на JavaScript](https://gvard.github.io/grb/stats/)
 
 Все материалы по работе с данными о звездах:
