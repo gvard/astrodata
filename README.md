@@ -23,16 +23,16 @@ See this links for all Solar System related [plots](./plots/solarsystem/) and [c
 ## Supernovae and other transients observations
 
 * History of supernovae observations by year
-![Supernovae observations](./plots/stars/sne_stats_bar_chart.svg "Supernovae observations")
+![Supernovae observations](./plots/stars/sne_stats_bar_chart-ru.png "Supernovae observations")
 * Cumulative number of supernovae
-![Cumulative number of supernovae](./plots/stars/sne_transients_total_number_log_plot.svg "Cumulative number of supernovae")
+![Cumulative number of supernovae](./plots/stars/sne_transients_total_number_log_plot-ru.png "Cumulative number of supernovae")
 [Data source: David Bishop, Latest Supernovae Archives](https://www.rochesterastronomy.org/snimages/archives.html);
 [Transient Name Server stats](https://www.wis-tns.org/stats-maps).
 [Data as JSON](data/stars/sne-stats.json).
 [Displaying data in html page using JavaScript](https://gvard.github.io/stars/snstats/)
 
 * History of transient observations by year from Transient Name Server
-![Transient observations from Transient Name Server](./plots/stars/transient_stats_bar_chart.svg "Transient observations from Transient Name Server")
+![Transient observations from Transient Name Server](./plots/stars/transient_stats_bar_chart-ru.png "Transient observations from Transient Name Server")
 [Data source: Transient Name Server stats](https://www.wis-tns.org/stats-maps)
 
 ## Gamma-ray bursts observations

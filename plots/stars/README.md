@@ -41,13 +41,13 @@ Code: [python script](../../src/astrodata/stars/plot_clusters_dist_age_distribut
 ## Supernovae and other transients observations
 
 * History of supernovae observations by year
-![Supernovae observations](./sne_stats_bar_chart.svg "Supernovae observations. Data from the Latest Supernovae Archives")
+![Supernovae observations](./sne_stats_bar_chart-ru.png "Supernovae observations. Data from the Latest Supernovae Archives")
 ![Increasing number of supernova discoveries, years 2015-2023](./sne_discoveries_numbers-2015-2023.png "Increasing number of supernova discoveries, years 2015-2023. Data from the Latest Supernovae Archives")
 Code: [python script with data for plotting this charts](../../src/astrodata/stars/plot_sne_discoveries_numbers.py)
 * Cumulative number of supernovae
-![Cumulative number of supernovae](./sne_transients_total_number_log_plot.svg "Cumulative number of supernovae")
+![Cumulative number of supernovae](./sne_transients_total_number_log_plot-ru.png "Cumulative number of supernovae")
 * History of transient observations by year from Transient Name Server
-![Transient observations from Transient Name Server](./transient_stats_bar_chart.svg "Transient observations from Transient Name Server")
+![Transient observations from Transient Name Server](./transient_stats_bar_chart-ru.png "Transient observations from Transient Name Server")
 Data sources: [David Bishop, Latest Supernovae Archives](https://www.rochesterastronomy.org/snimages/archives.html),
 [Transient Name Server stats](https://www.wis-tns.org/stats-maps),
 [Central Bureau for Astronomical Telegrams List of SNe](http://www.cbat.eps.harvard.edu/lists/Supernovae.html).

@@ -22,16 +22,16 @@
 ## Наблюдения сверхновых и других транзиентов
 
 * Динамика открытий сверхновых по годам
-![Наблюдения сверхновых по годам](./plots/stars/sne_stats_bar_chart.svg "Наблюдения сверхновых по годам")
+![Наблюдения сверхновых по годам](./plots/stars/sne_stats_bar_chart-ru.png "Наблюдения сверхновых по годам")
 * Совокупное количество открытий сверхновых
-![Совокупное количество открытий сверхновых](./plots/stars/sne_transients_total_number_log_plot.svg "Совокупное количество открытий сверхновых в логарифмическом масштабе")
+![Совокупное количество открытий сверхновых](./plots/stars/sne_transients_total_number_log_plot-ru.png "Совокупное количество открытий сверхновых в логарифмическом масштабе")
 Источник данных: [David Bishop, Latest Supernovae Archives](https://www.rochesterastronomy.org/snimages/archives.html);
 [Статистика Transient Name Server](https://www.wis-tns.org/stats-maps).
 [Данные в формате JSON](data/stars/sne-stats.json).
 [html страница для их отображения с кодом на JavaScript](https://gvard.github.io/stars/snstats/)
 
 * Динамика наблюдения транзиентов по годам, данные Transient Name Server
-![Наблюдения транзиентов с Transient Name Server](./plots/stars/transient_stats_bar_chart.svg "Наблюдения транзиентов с Transient Name Server")
+![Наблюдения транзиентов с Transient Name Server](./plots/stars/transient_stats_bar_chart-ru.png "Наблюдения транзиентов с Transient Name Server")
 Источник данных: [статистика Transient Name Server](https://www.wis-tns.org/stats-maps)
 
 ## Наблюдения гамма-всплесков
