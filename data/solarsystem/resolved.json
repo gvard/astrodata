@@ -8,6 +8,7 @@
   "size": "696342±65",
   "mass": "1.9885E30",
   "deltav": ">21",
+  "desc": "В составе Солнца всего 1.48% элементов тяжелее Водорода и Гелия",
   "dens": 1.408
 },
 "Jupiter": {
@@ -42,6 +43,7 @@
   "mass": "8.681E25",
   "date": "13.03.1781",
   "deltav": ">8.49",
+  "desc": "Название планеты устоялось лишь спустя 70 лет после открытия. Среди предложений было имя Нептун.",
   "dens": 1.27
 },
 "Neptune": {
@@ -65,6 +67,7 @@
   "size": 6371.0,
   "mass": "5.972E24",
   "deltav": 0.0,
+  "desc": "Планета с самой большой плотностью в Солнечной системе. Здесь живет 8 миллиардов человек.",
   "dens": 5.5134
 },
 "Venus": {
@@ -87,6 +90,7 @@
   "size": "3389.5±0.2",
   "mass": "6.4171E23",
   "deltav": ">5.7",
+  "desc": "Известно не менее 240 метеоритов марсианского происхождения",
   "dens": 3.9335
 },
 "Ganymede": {
@@ -157,6 +161,7 @@
   "size": 1737.1,
   "mass": "7.342E22",
   "deltav": 6.3,
+  "desc": "Известно не менее 390 метеоритов с Луны и не менее 35 событий их падения (одно событие – много фрагментов).",
   "dens": 3.344
 },
 "Europa": {
@@ -183,7 +188,7 @@
   "deltav": ">7.7",
   "dens": 2.061
 },
-"134340 Pluto": {
+"Pluto": {
   "tags": ["dw", "tno", "he", "havesats", "visited", "flyby", "numbered", "named", "map"],
   "numnam": "134340 Pluto",
   "runame": "Плутон",
@@ -194,9 +199,10 @@
   "mass": "1.3E22",
   "date": "18.02.1930",
   "deltav": 12.7,
+  "desc": "Клайд Томбо открыл Плутон на снимках от 23 и 29 января 1930 г.",
   "dens": "1.854±0.006"
 },
-"136199 Eris": {
+"Eris": {
   "tags": ["dw", "tno", "havesats", "he", "dot", "numbered", "named"],
   "numnam": "136199 Eris",
   "runame": "Эрида",
@@ -209,7 +215,7 @@
   "deltav": 16.0,
   "dens": "2.43±0.05"
 },
-"136108 Haumea": {
+"Haumea": {
   "tags": ["dw", "tno", "havesats", "he", "dot", "numbered", "named", "rings"],
   "numnam": "136108 Haumea",
   "runame": "Хаумеа",
@@ -270,7 +276,7 @@
   "deltav": ">7.7",
   "dens": "1.088±0.013"
 },
-"136472 Makemake": {
+"Makemake": {
   "tags": ["dw", "tno", "havesats", "dot", "he", "numbered", "named"],
   "numnam": "136472 Makemake",
   "runame": "Макемаке",
@@ -283,7 +289,7 @@
   "deltav": 14.3,
   "dens": "1.7−2.1"
 },
-"225088 Gonggong": {
+"Gonggong": {
   "tags": ["tno", "havesats", "dot", "he", "numbered", "named"],
   "numnam": "225088 Gonggong",
   "runame": "Гун-гун",
@@ -294,6 +300,7 @@
   "mass": "1.75±0.07E21",
   "date": "17.07.2007",
   "deltav": 13.5,
+  "desc": "Был крупнейшим телом Солнечной системы без названия до 05.02.2020. В 2019 году находился в 88 а.е. от Солнца и продолжает удаляться со скоростью 1.1 км/с. Имеет спутник Сянлю.",
   "dens": "1.74±0.16"
 },
 "Charon": {
@@ -344,7 +351,7 @@
   "deltav": ">7.7",
   "dens": "1.478±0.003"
 },
-"50000 Quaoar": {
+"Quaoar": {
   "tags": ["tno", "havesats", "dot", "he", "numbered", "named", "rings"],
   "numnam": "50000 Quaoar",
   "runame": "Квавар",
@@ -355,6 +362,7 @@
   "mass": "1.4±0.2E21",
   "date": "05.06.2002",
   "deltav": 12.6,
+  "desc": "Кьюбивано, кандидат в карликовые планеты. Имеет спутник Вейвот",
   "dens": 1.7
 },
 "Tethys": {
@@ -369,7 +377,7 @@
   "deltav": ">7.7",
   "dens": "0.984±0.003"
 },
-"90377 Sedna": {
+"Sedna": {
   "tags": ["tno", "dot", "he", "numbered", "named"],
   "numnam": "90377 Sedna",
   "runame": "Седна",
@@ -380,7 +388,7 @@
   "date": "14.11.2003",
   "deltav": 10.1
 },
-"1 Ceres": {
+"Ceres": {
   "tags": ["mab", "dw", "he", "visited", "orbited", "animation", "map", "numbered", "named"],
   "numnam": "1 Ceres",
   "runame": "Церера",
@@ -393,7 +401,7 @@
   "deltav": 10.5,
   "dens": "2.162±0.008"
 },
-"(307261) 2002 MS4": {
+"2002 MS4": {
   "tags": ["tno", "dot", "he", "occultation", "numbered"],
   "numnam": "(307261) 2002 MS4",
   "runame": "2002 MS4",
@@ -402,9 +410,10 @@
   "url": "https://en.wikipedia.org/wiki/(307261)_2002_MS4",
   "size": "467±24",
   "date": "18.06.2002",
-  "deltav": 13.0
+  "deltav": 13.0,
+  "desc": "Из наблюдений покрытия звезд в 2019–2020 годах получены оценки размера 808 на 748 км"
 },
-"90482 Orcus": {
+"Orcus": {
   "tags": ["tno", "havesats", "dot", "he", "numbered", "named", "animation"],
   "numnam": "90482 Orcus",
   "runame": "Орк",
@@ -417,7 +426,7 @@
   "deltav": 13.2,
   "dens": "1.53±0.1"
 },
-"120347 Salacia": {
+"Salacia": {
   "tags": ["tno", "havesats", "dot", "he", "numbered", "named"],
   "numnam": "120347 Salacia",
   "runame": "Салация",
@@ -430,7 +439,7 @@
   "deltav": 13.9,
   "dens": "1.26−1.5"
 },
-"174567 Varda": {
+"Varda": {
   "tags": ["tno", "havesats", "dot", "he", "animation", "occultation", "numbered", "named"],
   "numnam": "174567 Varda",
   "runame": "Варда",
@@ -455,7 +464,7 @@
   "deltav": 16.0,
   "dens": "1.8−2.4"
 },
-"4 Vesta": {
+"Vesta": {
   "tags": ["mab", "animation", "visited", "orbited", "map", "numbered", "named"],
   "numnam": "4 Vesta",
   "runame": "Веста",
@@ -468,7 +477,7 @@
   "deltav": 9.4,
   "dens": "3.456±0.035"
 },
-"2 Pallas": {
+"Pallas": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
   "numnam": "2 Pallas",
   "runame": "Паллада",
@@ -479,6 +488,7 @@
   "mass": "2.11±0.26E20",
   "date": "28.03.1802",
   "deltav": 14.2,
+  "desc": "Третий по массе астероид Солнечной системы: 7% от массы пояса астероидов.",
   "dens": "2.92±0.08"
 },
 "Enceladus": {
@@ -505,7 +515,7 @@
   "deltav": ">7.7",
   "dens": "1.20±0.15"
 },
-"10 Hygiea": {
+"Hygiea": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
   "numnam": "10 Hygiea",
   "runame": "Гигея",
@@ -516,6 +526,7 @@
   "mass": "0.83±0.08E20",
   "date": "12.04.1849",
   "deltav": 10.5,
+  "desc": "4-й (по объему и массе) астероид Солнечной системы. Имеет близкую к сферической форму и может быть кандидатом в карликовые планеты.",
   "dens": "2.06±0.2"
 },
 "Proteus": {
@@ -554,7 +565,7 @@
   "deltav": ">7.7",
   "dens": 1.5
 },
-"704 Interamnia": {
+"Interamnia": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
   "numnam": "704 Interamnia",
   "runame": "Интерамния",
@@ -580,7 +591,7 @@
   "deltav": 10.6,
   "dens": "1.41±0.23"
 },
-"511 Davida": {
+"Davida": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
   "numnam": "511 Davida",
   "runame": "Давида",
@@ -605,7 +616,7 @@
   "deltav": ">7.7",
   "dens": "0.544±0.05"
 },
-"15 Eunomia": {
+"Eunomia": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
   "numnam": "15 Eunomia",
   "runame": "Эвномия",
@@ -618,7 +629,7 @@
   "deltav": 9.9,
   "dens": "2.96±0.21"
 },
-"3 Juno": {
+"Juno": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
   "numnam": "3 Juno",
   "runame": "Юнона",
@@ -631,7 +642,7 @@
   "deltav": 9.7,
   "dens": "3.15±0.28"
 },
-"10199 Chariklo": {
+"Chariklo": {
   "tags": ["centaur", "dot", "numbered", "named", "rings"],
   "numnam": "10199 Chariklo",
   "runame": "Харикло",
@@ -642,7 +653,7 @@
   "date": "15.02.1997",
   "deltav": 14.26
 },
-"16 Psyche": {
+"Psyche": {
   "tags": ["mab", "radar", "highcontrast", "numbered", "named"],
   "numnam": "16 Psyche",
   "runame": "Психея",
@@ -655,7 +666,7 @@
   "deltav": 10.0,
   "dens": "3.88±0.25"
 },
-"324 Bamberga": {
+"Bamberga": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
   "numnam": "324 Bamberga",
   "runame": "Бамберга",
@@ -668,7 +679,7 @@
   "deltav": 9.0,
   "dens": "1.67±0.16"
 },
-"7 Iris": {
+"Iris": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
   "numnam": "7 Iris",
   "runame": "Ирида",
@@ -705,7 +716,7 @@
   "deltav": ">7.7",
   "dens": 1.2
 },
-"6 Hebe": {
+"Hebe": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
   "numnam": "6 Hebe",
   "runame": "Геба",
@@ -730,7 +741,7 @@
   "deltav": ">7.7",
   "dens": "0.63±0.03"
 },
-"90 Antiope": {
+"Antiope": {
   "tags": ["mab", "binary", "highcontrast", "numbered", "named"],
   "numnam": "90 Antiope",
   "runame": "Антиопа",
@@ -743,7 +754,7 @@
   "deltav": 10.2,
   "dens": "1.25±0.05"
 },
-"15760 Albion": {
+"Albion": {
   "tags": ["tno", "dot", "numbered", "named", "animation"],
   "numnam": "15760 Albion",
   "runame": "Альбион",
@@ -752,7 +763,8 @@
   "url": "https://en.wikipedia.org/wiki/15760_Albion",
   "size": 84.0,
   "date": "30.08.1992",
-  "deltav": 12.3
+  "deltav": 12.3,
+  "desc": "Первый транснептуновый объект, открытый после Плутона и Харона. Дал название классическим объектам пояса Койпера – кьюбивано"
 },
 "Amalthea": {
   "tags": ["ju", "moon", "map"],
@@ -802,7 +814,7 @@
   "deltav": ">7.7",
   "dens": 1.63
 },
-"8 Flora": {
+"Flora": {
   "tags": ["mab", "innermb", "lightcurve", "numbered", "named"],
   "numnam": "8 Flora",
   "runame": "Флора",
@@ -815,7 +827,7 @@
   "deltav": 8.6,
   "dens": "2.4±1"
 },
-"216 Kleopatra": {
+"Kleopatra": {
   "tags": ["mab", "highcontrast", "havesats", "contactbinary", "numbered", "named", "model", "animation"],
   "numnam": "216 Kleopatra",
   "runame": "Клеопатра",
@@ -828,7 +840,7 @@
   "deltav": 9.9,
   "dens": "3.45±0.41"
 },
-"5 Astraea": {
+"Astraea": {
   "tags": ["mab", "lightcurve", "numbered", "named"],
   "numnam": "5 Astraea",
   "runame": "Астрея",
@@ -864,7 +876,7 @@
   "date": "05.03.1979",
   "deltav": ">7.7"
 },
-"21 Lutetia": {
+"Lutetia": {
   "tags": ["mab", "visited", "flyby", "map", "numbered", "named"],
   "numnam": "21 Lutetia",
   "runame": "Лютеция",
@@ -924,7 +936,7 @@
   "date": "02.01.1905",
   "deltav": ">7.7"
 },
-"253 Mathilde": {
+"Mathilde": {
   "tags": ["mab", "visited", "flyby", "animation", "map", "numbered", "named"],
   "numnam": "253 Mathilde",
   "runame": "Матильда",
@@ -983,7 +995,7 @@
   "date": "01.03.1980",
   "deltav": ">7.7"
 },
-"486958 Arrokoth": {
+"Arrokoth": {
   "tags": ["tno", "contactbinary", "visited", "flyby", "animation", "map", "numbered", "named"],
   "numnam": "486958 Arrokoth",
   "runame": "Аррокот",
@@ -996,7 +1008,7 @@
   "deltav": 12.378,
   "dens": 0.235
 },
-"243 Ida": {
+"Ida": {
   "tags": ["mab", "havesats", "binary", "visited", "animation", "flyby", "map", "numbered", "named"],
   "numnam": "243 Ida",
   "runame": "Ида",
@@ -1067,7 +1079,7 @@
   "date": "13.03.1980",
   "deltav": ">7.7"
 },
-"433 Eros": {
+"Eros": {
   "tags": ["neo", "visited", "orbited", "animation", "map", "numbered", "named"],
   "numnam": "433 Eros",
   "runame": "Эрос",
@@ -1114,7 +1126,7 @@
   "deltav": ">7.7",
   "dens": "1.471±0.166"
 },
-"951 Gaspra": {
+"Gaspra": {
   "tags": ["mab", "innermb", "visited", "flyby", "map", "numbered", "named"],
   "numnam": "951 Gaspra",
   "runame": "Гаспра",
@@ -1125,6 +1137,7 @@
   "mass": "2.5E16",
   "date": "30.07.1916",
   "deltav": 8.402,
+  "desc": "Первый посещенный космическим аппаратом (Галилео) астероид. Был посещен 29.10.1991, фото сделаны с расстояния 5300 км на скорости 8 км/с.",
   "dens": 2.7
 },
 "1P/Halley": {
@@ -1174,7 +1187,7 @@
   "deltav": ">11.1",
   "dens": 0.62
 },
-"(53319) 1999 JM8": {
+"1999 JM8": {
   "tags": ["neo", "pha", "radar", "radarimage", "numbered"],
   "numnam": "(53319) 1999 JM8",
   "runame": "1999 JM8",
@@ -1185,7 +1198,7 @@
   "date": "13.05.1999",
   "deltav": 7.86
 },
-"3200 Phaethon": {
+"Phaethon": {
   "tags": ["neo", "pha", "radar", "radarimage", "animation", "numbered", "named"],
   "numnam": "3200 Phaethon",
   "runame": "Фаэтон",
@@ -1209,7 +1222,7 @@
   "deltav": ">13",
   "dens": 0.3
 },
-"2867 Steins": {
+"Steins": {
   "tags": ["mab", "visited", "flyby", "map", "numbered", "named"],
   "numnam": "2867 Šteins",
   "runame": "Штейнс",
@@ -1220,7 +1233,7 @@
   "date": "04.11.1969",
   "deltav": 9.35
 },
-"5535 Annefrank": {
+"Annefrank": {
   "tags": ["mab", "visited", "flyby", "numbered", "named"],
   "numnam": "5535 Annefrank",
   "runame": "Аннафранк",
@@ -1229,7 +1242,8 @@
   "url": "https://en.wikipedia.org/wiki/5535_Annefrank",
   "size": 2.4,
   "date": "23.03.1942",
-  "deltav": 8.96
+  "deltav": 8.96,
+  "desc": "Фото астероида было получено КА Stardust 02.11.2002 с расстояния 3 км."
 },
 "Pallene": {
   "tags": ["sat", "moon", "lowcontrast"],
@@ -1253,9 +1267,10 @@
   "mass": "2.3E13",
   "date": "06.01.1978",
   "deltav": ">10.8",
+  "desc": "КА Stardust сблизился с ядром кометы 02.01.2004 с относительной скоростью 6.1 км/с. Фото сделано с расстояния 237 км.",
   "dens": 0.6
 },
-"3122 Florence": {
+"Florence": {
   "tags": ["neo", "pha", "havesats", "radarimage", "numbered", "named", "animation"],
   "numnam": "3122 Florence",
   "runame": "Флоренс",
@@ -1278,9 +1293,10 @@
   "mass": "9.98E12",
   "date": "20.09.1969",
   "deltav": ">9.8",
+  "desc": "Первые подробные фото получены КА Rosetta в промежуток 1–6 августа 2014 г.",
   "dens": "0.533±0.006"
 },
-"(285263) 1998 QE2": {
+"1998 QE2": {
   "tags": ["neo", "pha", "binary", "havesats", "radar", "radarimage", "numbered", "animation"],
   "numnam": "(285263) 1998 QE2",
   "runame": "1998 QE2",
@@ -1291,7 +1307,7 @@
   "date": "19.08.1998",
   "deltav": 7.4
 },
-"4179 Toutatis": {
+"Toutatis": {
   "tags": ["neo", "pha", "radar", "radarimage", "visited", "flyby", "numbered", "named", "animation"],
   "numnam": "4179 Toutatis",
   "runame": "Таутатис",
@@ -1304,7 +1320,7 @@
   "deltav": 6.59,
   "dens": 2.5
 },
-"288P (300163) 2006 VW139": {
+"2006 VW139": {
   "tags": ["mab", "co", "active", "dot", "binary", "numbered", "animation"],
   "numnam": "288P (300163) 2006 VW139",
   "runame": "2006 VW139",
@@ -1328,7 +1344,7 @@
   "deltav": ">7.7",
   "dens": "0.31±0.05"
 },
-"132524 APL": {
+"APL": {
   "tags": ["mab", "lowcontrast", "flyby", "numbered", "named"],
   "numnam": "132524 APL",
   "runame": "APL",
@@ -1351,7 +1367,7 @@
   "deltav": ">7.7",
   "dens": "0.5-2"
 },
-"(153591) 2001 SN263": {
+"2001 SN263": {
   "tags": ["neo", "pha", "havesats", "radar", "radarimage", "numbered"],
   "numnam": "(153591) 2001 SN263",
   "runame": "2001 SN263",
@@ -1364,7 +1380,7 @@
   "deltav": 6.1,
   "dens": "1.1±0.2"
 },
-"(52768) 1998 OR2": {
+"1998 OR2": {
   "tags": ["neo", "pha", "radar", "radarimage", "numbered", "animation"],
   "numnam": "(52768) 1998 OR2",
   "runame": "1998 OR2",
@@ -1375,7 +1391,7 @@
   "date": "24.07.1998",
   "deltav": 6.55
 },
-"(85989) 1999 JD6": {
+"1999 JD6": {
   "tags": ["neo", "pha", "contactbinary", "radar", "radarimage", "numbered", "animation"],
   "numnam": "(85989) 1999 JD6",
   "runame": "1999 JD6",
@@ -1386,7 +1402,7 @@
   "date": "12.05.1999",
   "deltav": 14.8
 },
-"1620 Geographos": {
+"Geographos": {
   "tags": ["neo", "pha", "radar", "lightcurve", "numbered", "named"],
   "numnam": "1620 Geographos",
   "runame": "Географ",
@@ -1410,7 +1426,7 @@
   "deltav": ">7.7",
   "dens": 0.5
 },
-"9969 Braille": {
+"Braille": {
   "tags": ["mab", "lowcontrast", "visited", "flyby", "numbered", "named"],
   "numnam": "9969 Braille",
   "runame": "Брайль",
@@ -1423,7 +1439,7 @@
   "deltav": 10.93,
   "dens": 3.9
 },
-"4769 Castalia": {
+"Castalia": {
   "tags": ["neo", "pha", "contactbinary", "radar", "model", "numbered", "named", "animation"],
   "numnam": "4769 Castalia",
   "runame": "Касталия",
@@ -1432,7 +1448,8 @@
   "url": "https://en.wikipedia.org/wiki/4769_Castalia",
   "size": 0.7,
   "date": "09.08.1989",
-  "deltav": 8.5
+  "deltav": 8.5,
+  "desc": "Первый астероид, для которого была рассчитана трехмерная модель по радиолакационным данным"
 },
 "Dactyl": {
   "tags": ["mab", "binary", "visited", "flyby", "satellite", "map", "named"],
@@ -1442,7 +1459,8 @@
   "url": "https://en.wikipedia.org/wiki/243_Ida#Dactyl",
   "size": 0.7,
   "date": "17.02.1994",
-  "deltav": 10.3
+  "deltav": 10.3,
+  "desc": "Спутник астероида Ида, обнаружен 17.02.1994 на снимках АМС Галилео от 28 августа 1993 г. Стал первым прямым доказательством существования лун у астероидов."
 },
 "2016 AJ193": {
   "tags": ["neo", "pha", "radar", "radarimage", "animation"],
@@ -1454,7 +1472,7 @@
   "date": "17.05.2010",
   "deltav": 10.58
 },
-"(214869) 2007 PA8": {
+"2007 PA8": {
   "tags": ["neo", "pha", "radar", "radarimage", "numbered"],
   "numnam": "(214869) 2007 PA8",
   "runame": "2007 PA8",
@@ -1465,7 +1483,7 @@
   "date": "09.08.2007",
   "deltav": 6.812
 },
-"66391 Moshup": {
+"Moshup": {
   "tags": ["neo", "pha", "binary", "radar", "highcontrast", "numbered", "named"],
   "numnam": "66391 Moshup",
   "runame": "Мошап",
@@ -1489,7 +1507,7 @@
   "date": "15.03.1986",
   "deltav": ">13"
 },
-"(29075) 1950 DA": {
+"1950 DA": {
   "tags": ["neo", "pha", "radar", "radarimage", "numbered", "animation"],
   "numnam": "(29075) 1950 DA",
   "runame": "1950 DA",
@@ -1500,6 +1518,7 @@
   "mass": "4E12",
   "date": "23.02.1950",
   "deltav": 6.994,
+  "desc": "Имеет вероятность столкновения с Землей в 2880 году.",
   "dens": 3.5
 },
 "P/2016 BA14 (PanSTARRS)": {
@@ -1512,7 +1531,7 @@
   "date": "21.01.2016",
   "deltav": 8.852
 },
-"(163899) 2003 SD220": {
+"2003 SD220": {
   "tags": ["neo", "pha", "radar", "radarimage", "numbered"],
   "numnam": "(163899) 2003 SD220",
   "runame": "2003 SD220",
@@ -1534,7 +1553,7 @@
   "deltav": 7.562,
   "dens": "0.6−1.2"
 },
-"(7335) 1989 JA": {
+"1989 JA": {
   "tags": ["neo", "pha", "numbered", "havesats", "radar", "radarimage", "animation"],
   "numnam": "(7335) 1989 JA",
   "runame": "1989 JA",
@@ -1545,7 +1564,7 @@
   "date": "01.05.1989",
   "deltav": 7.131
 },
-"162173 Ryugu": {
+"Ryugu": {
   "tags": ["neo", "pha", "visited", "orbited", "numbered", "animation", "map", "named"],
   "numnam": "162173 Ryugu",
   "runame": "Рюгу",
@@ -1556,6 +1575,7 @@
   "mass": "4.5E11",
   "date": "10.05.1999",
   "deltav": 4.663,
+  "desc": "Миссия Hayabusa2 прибыла к астероиду 27.06.2018.",
   "dens": "1.19±0.03"
 },
 "2014 JO25": {
@@ -1568,7 +1588,7 @@
   "date": "05.05.2014",
   "deltav": 13.173
 },
-"152830 Dinkinesh": {
+"Dinkinesh": {
   "tags": ["mba", "havesats", "binary", "visited", "flyby", "numbered", "named"],
   "numnam": "152830 Dinkinesh",
   "runame": "Динкинеш",
@@ -1577,9 +1597,10 @@
   "url": "https://en.wikipedia.org/wiki/152830_Dinkinesh",
   "size": 0.395,
   "date": "04.11.1999",
-  "deltav": 8.6
+  "deltav": 8.6,
+  "desc": "Цель миссии Lucy"
 },
-"65803 Didymos": {
+"Didymos": {
   "tags": ["neo", "pha", "havesats", "binary", "radar", "visited", "flyby", "map", "numbered", "named"],
   "numnam": "65803 Didymos",
   "runame": "Дидим",
@@ -1590,6 +1611,7 @@
   "mass": "5.4E11",
   "date": "11.04.1996",
   "deltav": 5.162,
+  "desc": "Цель миссии DART.",
   "dens": "2.4±0.3"
 },
 "Aegaeon": {
@@ -1614,7 +1636,7 @@
   "date": "10.10.2015",
   "deltav": 15.747
 },
-"(136617) 1994 CC": {
+"1994 CC": {
   "tags": ["neo", "pha", "havesats", "radar", "radarimage", "animation", "numbered"],
   "numnam": "(136617) 1994 CC",
   "runame": "1994 CC",
@@ -1635,7 +1657,7 @@
   "date": "19.04.2015",
   "deltav": 6.4
 },
-"101955 Bennu": {
+"Bennu": {
   "tags": ["neo", "pha", "radar", "visited", "orbited", "animation", "numbered", "named", "map"],
   "numnam": "101955 Bennu",
   "runame": "Бенну",
@@ -1646,9 +1668,10 @@
   "mass": "7.329E10",
   "date": "11.09.1999",
   "deltav": 5.096,
+  "desc": "Имеет высокую вероятность столкновения с Землей в 2175–2199 гг. 03.12.2018 к астероиду приблизился КА OSIRIS-REx.",
   "dens": "1.190±0.013"
 },
-"(436724) 2011 UW158": {
+"2011 UW158": {
   "tags": ["neo", "pha", "radar", "radarimage", "animation", "numbered"],
   "numnam": "(436724) 2011 UW158",
   "runame": "2011 UW158",
@@ -1659,7 +1682,7 @@
   "date": "25.10.2011",
   "deltav": 5.189
 },
-"(33342) 1998 WT24": {
+"1998 WT24": {
   "tags": ["neo", "pha", "radar", "radarimage", "animation", "numbered"],
   "numnam": "(33342) 1998 WT24",
   "runame": "1998 WT24",
@@ -1671,7 +1694,7 @@
   "date": "25.11.1998",
   "deltav": 10.865
 },
-"(308635) 2005 YU55": {
+"2005 YU55": {
   "tags": ["neo", "pha", "radarimage", "numbered"],
   "numnam": "(308635) 2005 YU55",
   "runame": "2005 YU55",
@@ -1682,7 +1705,7 @@
   "date": "28.12.2005",
   "deltav": 6.9
 },
-"25143 Itokawa": {
+"Itokawa": {
   "tags": ["neo", "pha", "contactbinary", "visited", "orbited", "numbered", "named", "map", "radar"],
   "numnam": "25143 Itokawa",
   "runame": "Итокава",
@@ -1693,9 +1716,10 @@
   "mass": "3.51±0.1E10",
   "date": "26.09.1998",
   "deltav": 4.637,
+  "desc": "Посещен миссией Хаябуса в октябре 2005 г. Капсула с ~1500 частицами астероида (почти все менее 10 мкм) приземлилась в Австралии 13.06.2010",
   "dens": "1.9±0.13"
 },
-"99942 Apophis": {
+"Apophis": {
   "tags": ["neo", "pha", "lightcurve", "numbered", "named"],
   "numnam": "99942 Apophis",
   "runame": "Апофис",
@@ -1706,9 +1730,10 @@
   "mass": "6.1E10",
   "date": "19.06.2004",
   "deltav": 5.688,
+  "desc": "Больше не потенциально опасный астероид. До 2013 г. вероятность столкновения была сильно переоценена.",
   "dens": "2.6−3.2"
 },
-"4660 Nereus": {
+"Nereus": {
   "tags": ["neo", "pha", "radar", "radarimage", "animation", "numbered", "named"],
   "numnam": "4660 Nereus",
   "runame": "Нерей",
@@ -1729,7 +1754,7 @@
   "date": "23.04.2014",
   "deltav": 12.229
 },
-"(357439) 2004 BL86": {
+"2004 BL86": {
   "tags": ["neo", "pha", "radar", "radarimage", "havesats", "animation", "numbered"],
   "numnam": "(357439) 2004 BL86",
   "runame": "2004 BL86",
@@ -1772,7 +1797,7 @@
   "date": "26.01.2017",
   "deltav": 6.542
 },
-"(367789) 2011 AG5": {
+"2011 AG5": {
   "tags": ["neo", "pha", "radar", "radarimage", "numbered", "animation"],
   "numnam": "(367789) 2011 AG5",
   "runame": "2011 AG5",
