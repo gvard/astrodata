@@ -186,7 +186,8 @@
   "mass": "2.14E22",
   "date": "10.10.1846",
   "deltav": ">7.7",
-  "dens": 2.061
+  "dens": 2.061,
+  "imgdat": "25.08.1989"
 },
 "Pluto": {
   "tags": ["dw", "tno", "he", "havesats", "visited", "flyby", "numbered", "named", "map"],
@@ -200,7 +201,8 @@
   "date": "18.02.1930",
   "deltav": 12.7,
   "desc": "Клайд Томбо открыл Плутон на снимках от 23 и 29 января 1930 г.",
-  "dens": "1.854±0.006"
+  "dens": "1.854±0.006",
+  "imgdat": "14.07.2015"
 },
 "Eris": {
   "tags": ["dw", "tno", "havesats", "he", "dot", "numbered", "named"],
@@ -295,6 +297,7 @@
   "runame": "Гун-гун",
   "imgnam": "Gonggong.jpg",
   "number": 225088,
+  "des": "2007 OR10",
   "url": "https://en.wikipedia.org/wiki/225088_Gonggong",
   "size": "615±25",
   "mass": "1.75±0.07E21",
@@ -313,7 +316,8 @@
   "mass": "1.59±0.015E21",
   "date": "13.04.1978",
   "deltav": ">7.7",
-  "dens": "1.702±0.017"
+  "dens": "1.702±0.017",
+  "imgdat": "14.07.2015"
 },
 "Umbriel": {
   "tags": ["ur", "he", "moon", "map"],
@@ -399,7 +403,8 @@
   "mass": "9.3835E20",
   "date": "01.01.1801",
   "deltav": 10.5,
-  "dens": "2.162±0.008"
+  "dens": "2.162±0.008",
+  "imgdat": "04.05.2015"
 },
 "2002 MS4": {
   "tags": ["tno", "dot", "he", "occultation", "numbered"],
@@ -407,6 +412,7 @@
   "runame": "2002 MS4",
   "imgnam": "2002MS4.png",
   "number": 307261,
+  "des": "2002 MS4",
   "url": "https://en.wikipedia.org/wiki/(307261)_2002_MS4",
   "size": "467±24",
   "date": "18.06.2002",
@@ -452,9 +458,9 @@
   "deltav": 13.4,
   "dens": "1.23−1.78"
 },
-"Dysnomia (moon)": {
+"Dysnomia": {
   "tags": ["dwmoon", "tno", "he", "dot"],
-  "numnam": "Dysnomia (moon)",
+  "numnam": "Dysnomia",
   "runame": "Дисномия",
   "imgnam": "Eris.jpg",
   "url": "https://en.wikipedia.org/wiki/Dysnomia_(moon)",
@@ -475,7 +481,8 @@
   "mass": "2.59E20",
   "date": "29.03.1807",
   "deltav": 9.4,
-  "dens": "3.456±0.035"
+  "dens": "3.456±0.035",
+  "imgdat": "23.07.2011"
 },
 "Pallas": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
@@ -760,6 +767,7 @@
   "runame": "Альбион",
   "imgnam": "Albion.gif",
   "number": 15760,
+  "des": "1992 QB1",
   "url": "https://en.wikipedia.org/wiki/15760_Albion",
   "size": 84.0,
   "date": "30.08.1992",
@@ -961,7 +969,7 @@
   "deltav": ">7.7"
 },
 "Hydra": {
-  "tags": ["pl", "dwmoon"],
+  "tags": ["pl", "dwmoon", "flyby"],
   "numnam": "Hydra",
   "runame": "Гидра",
   "imgnam": "Hydra.jpg",
@@ -970,10 +978,11 @@
   "mass": "4.8±4.2E16",
   "date": "15.05.2005",
   "deltav": ">7.7",
-  "dens": 2.13
+  "dens": 2.13,
+  "imgdat": "14.07.2015"
 },
 "Nix": {
-  "tags": ["pl", "dwmoon"],
+  "tags": ["pl", "dwmoon", "flyby"],
   "numnam": "Nix",
   "runame": "Никс",
   "imgnam": "Nix.jpg",
@@ -982,7 +991,8 @@
   "mass": "4.5±4E16",
   "date": "15.05.2005",
   "deltav": ">7.7",
-  "dens": 1.37
+  "dens": 1.37,
+  "imgdat": "14.07.2015"
 },
 "Helene": {
   "tags": ["sat", "moon"],
@@ -1001,12 +1011,14 @@
   "runame": "Аррокот",
   "imgnam": "Arrokoth.jpg",
   "number": 486958,
+  "des": "2014 MU69",
   "url": "https://en.wikipedia.org/wiki/486958_Arrokoth",
   "size": "15.85±0.25",
   "mass": "1.25E16",
   "date": "26.06.2014",
   "deltav": 12.378,
-  "dens": 0.235
+  "dens": 0.235,
+  "imgdat": "01.01.2019"
 },
 "Ida": {
   "tags": ["mab", "havesats", "binary", "visited", "animation", "flyby", "map", "numbered", "named"],
@@ -1090,7 +1102,8 @@
   "mass": "6.69±E15",
   "date": "13.08.1898",
   "deltav": 6.112,
-  "dens": "2.67±0.03"
+  "dens": "2.67±0.03",
+  "imgdat": "29.02.2000"
 },
 "Adrastea": {
   "tags": ["ju", "moon", "lowcontrast"],
@@ -1112,7 +1125,8 @@
   "size": 6.33,
   "mass": "1.65E16",
   "date": "28.06.2011",
-  "deltav": 12.7
+  "deltav": 12.7,
+  "imgdat": "14.07.2015"
 },
 "Deimos": {
   "tags": ["mar", "moon", "map"],
@@ -1153,7 +1167,7 @@
   "dens": 0.6
 },
 "Styx": {
-  "tags": ["pl", "lowcontrast", "dwmoon"],
+  "tags": ["pl", "lowcontrast", "dwmoon", "flyby"],
   "numnam": "Styx",
   "runame": "Стикс",
   "imgnam": "Styx.jpg",
@@ -1161,7 +1175,8 @@
   "size": 5.5,
   "mass": "7.5E15",
   "date": "26.06.2012",
-  "deltav": 12.7
+  "deltav": 12.7,
+  "imgdat": "13.07.2015"
 },
 "Daphnis": {
   "tags": ["sat", "moon"],
@@ -1193,6 +1208,7 @@
   "runame": "1999 JM8",
   "imgnam": "1999JM8.jpg",
   "number": 53319,
+  "des": "1999 JM8",
   "url": "https://en.wikipedia.org/wiki/(53319)_1999_JM8",
   "size": 3.0,
   "date": "13.05.1999",
@@ -1294,7 +1310,8 @@
   "date": "20.09.1969",
   "deltav": ">9.8",
   "desc": "Первые подробные фото получены КА Rosetta в промежуток 1–6 августа 2014 г.",
-  "dens": "0.533±0.006"
+  "dens": "0.533±0.006",
+  "imgdat": "06.08.2014"
 },
 "1998 QE2": {
   "tags": ["neo", "pha", "binary", "havesats", "radar", "radarimage", "numbered", "animation"],
@@ -1302,6 +1319,7 @@
   "runame": "1998 QE2",
   "imgnam": "1998QE2.jpg",
   "number": 285263,
+  "des": "1998 QE2",
   "url": "https://en.wikipedia.org/wiki/(285263)_1998_QE2",
   "size": 1.6,
   "date": "19.08.1998",
@@ -1318,7 +1336,8 @@
   "mass": "5.05E13",
   "date": "04.01.1989",
   "deltav": 6.59,
-  "dens": 2.5
+  "dens": 2.5,
+  "imgdat": "13.12.2012"
 },
 "2006 VW139": {
   "tags": ["mab", "co", "active", "dot", "binary", "numbered", "animation"],
@@ -1326,15 +1345,16 @@
   "runame": "2006 VW139",
   "imgnam": "288P-2006VW139.gif",
   "number": 300163,
+  "des": "2006 VW139",
   "url": "https://en.wikipedia.org/wiki/(300163)_2006_VW139",
   "size": 1.5,
   "mass": "6.1E12",
   "date": "15.11.2006",
   "deltav": 9.9
 },
-"Methone (moon)": {
+"Methone": {
   "tags": ["sat", "moon"],
-  "numnam": "Methone (moon)",
+  "numnam": "Methone",
   "runame": "Мефона",
   "imgnam": "Methone.jpg",
   "url": "https://en.wikipedia.org/wiki/Methone_(moon)",
@@ -1353,7 +1373,8 @@
   "url": "https://en.wikipedia.org/wiki/132524_APL",
   "size": 1.25,
   "date": "09.05.2002",
-  "deltav": 8.77
+  "deltav": 8.77,
+  "imgdat": "13.06.2006"
 },
 "Polydeuces": {
   "tags": ["sat", "lowcontrast", "moon"],
@@ -1373,6 +1394,7 @@
   "runame": "2001 SN263",
   "imgnam": "2001SN263.jpg",
   "number": 153591,
+  "des": "2001 SN263",
   "url": "https://en.wikipedia.org/wiki/(153591)_2001_SN263",
   "size": 1.25,
   "mass": "9.17E12",
@@ -1386,6 +1408,7 @@
   "runame": "1998 OR2",
   "imgnam": "1998OR2.gif",
   "number": 52768,
+  "des": "1998 OR2",
   "url": "https://en.wikipedia.org/wiki/(52768)_1998_OR2",
   "size": 1.03,
   "date": "24.07.1998",
@@ -1397,6 +1420,7 @@
   "runame": "1999 JD6",
   "imgnam": "1999JD6.gif",
   "number": 85989,
+  "des": "1999 JD6",
   "url": "https://en.wikipedia.org/wiki/(85989)_1999_JD6",
   "size": 1.0,
   "date": "12.05.1999",
@@ -1437,7 +1461,8 @@
   "mass": "7.8E12",
   "date": "27.05.1992",
   "deltav": 10.93,
-  "dens": 3.9
+  "dens": 3.9,
+  "imgdat": "29.07.1999"
 },
 "Castalia": {
   "tags": ["neo", "pha", "contactbinary", "radar", "model", "numbered", "named", "animation"],
@@ -1460,13 +1485,15 @@
   "size": 0.7,
   "date": "17.02.1994",
   "deltav": 10.3,
-  "desc": "Спутник астероида Ида, обнаружен 17.02.1994 на снимках АМС Галилео от 28 августа 1993 г. Стал первым прямым доказательством существования лун у астероидов."
+  "desc": "Спутник астероида Ида, обнаружен 17.02.1994 на снимках АМС Галилео от 28 августа 1993 г. Стал первым прямым доказательством существования лун у астероидов.",
+  "imgdat": "28.08.1993"
 },
 "2016 AJ193": {
   "tags": ["neo", "pha", "radar", "radarimage", "animation"],
   "numnam": "2016 AJ193",
   "runame": "2016 AJ193",
   "imgnam": "2016AJ193.gif",
+  "des": "2016 AJ193",
   "url": "https://en.wikipedia.org/wiki/2016_AJ193",
   "size": "0.69±0.2",
   "date": "17.05.2010",
@@ -1478,6 +1505,7 @@
   "runame": "2007 PA8",
   "imgnam": "2007PA8.jpg",
   "number": 214869,
+  "des": "2007 PA8",
   "url": "https://en.wikipedia.org/wiki/(214869)_2007_PA8",
   "size": "0.68±0.04",
   "date": "09.08.2007",
@@ -1505,7 +1533,8 @@
   "size": "0.57±0.08",
   "mass": "3E11",
   "date": "15.03.1986",
-  "deltav": ">13"
+  "deltav": ">13",
+  "imgdat": "03.11.2010"
 },
 "1950 DA": {
   "tags": ["neo", "pha", "radar", "radarimage", "numbered", "animation"],
@@ -1513,6 +1542,7 @@
   "runame": "1950 DA",
   "imgnam": "1950DA.gif",
   "number": 29075,
+  "des": "1950 DA",
   "url": "https://en.wikipedia.org/wiki/(29075)_1950_DA",
   "size": 0.55,
   "mass": "4E12",
@@ -1537,6 +1567,7 @@
   "runame": "2003 SD220",
   "imgnam": "2003SD220.jpg",
   "number": 163899,
+  "des": "2003 SD220",
   "url": "https://en.wikipedia.org/wiki/(163899)_2003_SD220",
   "size": 0.5,
   "date": "29.09.2003",
@@ -1547,6 +1578,7 @@
   "numnam": "2017 YE5",
   "runame": "2017 YE5",
   "imgnam": "2017YE5.jpg",
+  "des": "2017 YE5",
   "url": "https://en.wikipedia.org/wiki/2017_YE5",
   "size": 0.5,
   "date": "21.12.2017",
@@ -1559,6 +1591,7 @@
   "runame": "1989 JA",
   "imgnam": "1989JA.gif",
   "number": 7335,
+  "des": "1989 JA",
   "url": "https://en.wikipedia.org/wiki/(7335)_1989_JA",
   "size": 0.45,
   "date": "01.05.1989",
@@ -1576,13 +1609,15 @@
   "date": "10.05.1999",
   "deltav": 4.663,
   "desc": "Миссия Hayabusa2 прибыла к астероиду 27.06.2018.",
-  "dens": "1.19±0.03"
+  "dens": "1.19±0.03",
+  "imgdat": "10.07.2018"
 },
 "2014 JO25": {
   "tags": ["neo", "pha", "contactbinary", "radar", "radarimage", "animation"],
   "numnam": "2014 JO25",
   "runame": "2014 JO25",
   "imgnam": "2014JO25.gif",
+  "des": "2014 JO25",
   "url": "https://en.wikipedia.org/wiki/2014_JO25",
   "size": 0.4,
   "date": "05.05.2014",
@@ -1598,7 +1633,8 @@
   "size": 0.395,
   "date": "04.11.1999",
   "deltav": 8.6,
-  "desc": "Цель миссии Lucy"
+  "desc": "Цель миссии Lucy",
+  "imgdat": "01.11.2023"
 },
 "Didymos": {
   "tags": ["neo", "pha", "havesats", "binary", "radar", "visited", "flyby", "map", "numbered", "named"],
@@ -1612,7 +1648,8 @@
   "date": "11.04.1996",
   "deltav": 5.162,
   "desc": "Цель миссии DART.",
-  "dens": "2.4±0.3"
+  "dens": "2.4±0.3",
+  "imgdat": "26.09.2022"
 },
 "Aegaeon": {
   "tags": ["sat", "moon", "lowcontrast"],
@@ -1631,6 +1668,7 @@
   "numnam": "2015 TB145",
   "runame": "2015 TB145",
   "imgnam": "2015TB145.gif",
+  "des": "2015 TB145",
   "url": "https://en.wikipedia.org/wiki/2015_TB145",
   "size": 0.325,
   "date": "10.10.2015",
@@ -1642,6 +1680,7 @@
   "runame": "1994 CC",
   "imgnam": "1994CC.gif",
   "number": 136617,
+  "des": "1994 CC",
   "url": "https://en.wikipedia.org/wiki/(136617)_1994_CC",
   "size": "0.31±0.03",
   "date": "03.02.1994",
@@ -1652,6 +1691,7 @@
   "numnam": "2015 HM10",
   "runame": "2015 HM10",
   "imgnam": "2015HM10.gif",
+  "des": "2015 HM10",
   "url": "https://en.wikipedia.org/wiki/2015_HM10",
   "size": 0.29,
   "date": "19.04.2015",
@@ -1669,7 +1709,8 @@
   "date": "11.09.1999",
   "deltav": 5.096,
   "desc": "Имеет высокую вероятность столкновения с Землей в 2175–2199 гг. 03.12.2018 к астероиду приблизился КА OSIRIS-REx.",
-  "dens": "1.190±0.013"
+  "dens": "1.190±0.013",
+  "imgdat": "02.12.2018"
 },
 "2011 UW158": {
   "tags": ["neo", "pha", "radar", "radarimage", "animation", "numbered"],
@@ -1677,6 +1718,7 @@
   "runame": "2011 UW158",
   "imgnam": "2011UW158.gif",
   "number": 436724,
+  "des": "2011 UW158",
   "url": "https://en.wikipedia.org/wiki/(436724)_2011_UW158",
   "size": "0.22±0.04",
   "date": "25.10.2011",
@@ -1688,6 +1730,7 @@
   "runame": "1998 WT24",
   "imgnam": "1998WT24.jpg",
   "number": 33342,
+  "des": "1998 WT24",
   "url": "https://en.wikipedia.org/wiki/(33342)_1998_WT24",
   "size": 0.205,
   "mass": "7.8E10",
@@ -1700,6 +1743,7 @@
   "runame": "2005 YU55",
   "imgnam": "2005YU55.jpg",
   "number": 308635,
+  "des": "2005 YU55",
   "url": "https://en.wikipedia.org/wiki/(308635)_2005_YU55",
   "size": 0.18,
   "date": "28.12.2005",
@@ -1717,7 +1761,8 @@
   "date": "26.09.1998",
   "deltav": 4.637,
   "desc": "Посещен миссией Хаябуса в октябре 2005 г. Капсула с ~1500 частицами астероида (почти все менее 10 мкм) приземлилась в Австралии 13.06.2010",
-  "dens": "1.9±0.13"
+  "dens": "1.9±0.13",
+  "imgdat": "28.12.2005"
 },
 "Apophis": {
   "tags": ["neo", "pha", "lightcurve", "numbered", "named"],
@@ -1749,6 +1794,7 @@
   "numnam": "2014 HQ124",
   "runame": "2014 HQ124",
   "imgnam": "2014HQ124.gif",
+  "des": "2014 HQ124",
   "url": "https://en.wikipedia.org/wiki/2014_HQ124",
   "size": 0.163,
   "date": "23.04.2014",
@@ -1760,6 +1806,7 @@
   "runame": "2004 BL86",
   "imgnam": "2004BL86.gif",
   "number": 357439,
+  "des": "2004 BL86",
   "url": "https://en.wikipedia.org/wiki/(357439)_2004_BL86",
   "size": 0.15,
   "date": "30.01.2004",
@@ -1770,6 +1817,7 @@
   "numnam": "2016 AZ8",
   "runame": "2016 AZ8",
   "imgnam": "2016AZ8.gif",
+  "des": "2016 AZ8",
   "url": "https://en.wikipedia.org/wiki/2016_AZ8",
   "size": 0.108,
   "date": "03.01.2016",
@@ -1782,16 +1830,18 @@
   "imgnam": "Dimorphos.gif",
   "url": "https://en.wikipedia.org/wiki/Dimorphos",
   "size": 0.085,
-  "mass": "5E9",
+  "mass": "4.3E9",
   "date": "20.11.2003",
   "deltav": 5.162,
-  "dens": "0.6−2.4"
+  "dens": "0.6−2.4",
+  "imgdat": "26.09.2022"
 },
 "2017 BQ6": {
   "tags": ["neo", "pha", "radar", "radarimage", "animation"],
   "numnam": "2017 BQ6",
   "runame": "2017 BQ6",
   "imgnam": "2017BQ6.gif",
+  "des": "2017 BQ6",
   "url": "https://en.wikipedia.org/wiki/2017_BQ6",
   "size": 0.078,
   "date": "26.01.2017",
@@ -1803,6 +1853,7 @@
   "runame": "2011 AG5",
   "imgnam": "2011AG5.gif",
   "number": 367789,
+  "des": "2011 AG5",
   "url": "https://en.wikipedia.org/wiki/(367789)_2011_AG5",
   "size": 0.07,
   "mass": "4E9",
