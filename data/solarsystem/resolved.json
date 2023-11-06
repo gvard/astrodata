@@ -1,6 +1,6 @@
 {
 "Sun": {
-  "tags": ["star", "he"],
+  "tags": ["star", "he", "flyby"],
   "numnam": "Sun",
   "runame": "Солнце",
   "imgnam": "Sun.jpg",
@@ -9,9 +9,11 @@
   "mass": "1.9885E30",
   "deltav": ">21",
   "desc": "В составе Солнца всего 1.48% элементов тяжелее Водорода и Гелия",
-  "dens": 1.408
+  "dens": 1.408,
+  "imgdat": "18.12.1610"
 },
 "Jupiter": {
+  "imgurl": "images/Jupiter-Voyager1.gif",
   "tags": ["pla", "he", "visited", "orbited", "rings"],
   "numnam": "Jupiter",
   "runame": "Юпитер",
@@ -20,7 +22,8 @@
   "size": "69911±6",
   "mass": "1.898E27",
   "deltav": "6.6-23.78",
-  "dens": 1.326
+  "dens": 1.326,
+  "imgdat": "1665-1711"
 },
 "Saturn": {
   "imgurl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Saturnoppositions-animated.gif",
@@ -32,9 +35,11 @@
   "size": "58232±6",
   "mass": "5.6834E26",
   "deltav": ">7.71",
-  "dens": 0.687
+  "dens": 0.687,
+  "imgdat": "1655-1676"
 },
 "Uranus": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Uranus_Final_Image.jpg/198px-Uranus_Final_Image.jpg",
   "tags": ["pla", "he", "visited", "flyby", "rings"],
   "numnam": "Uranus",
   "runame": "Уран",
@@ -45,7 +50,8 @@
   "date": "13.03.1781",
   "deltav": ">8.49",
   "desc": "Название планеты устоялось лишь спустя 70 лет после открытия. Среди предложений было имя Нептун.",
-  "dens": 1.27
+  "dens": 1.27,
+  "imgdat": "25.01.1986"
 },
 "Neptune": {
   "tags": ["pla", "he", "visited", "flyby", "rings"],
@@ -57,7 +63,8 @@
   "mass": "1.024E26",
   "date": "23.09.1846",
   "deltav": 8.6,
-  "dens": 1.638
+  "dens": 1.638,
+  "imgdat": "20.08.1989"
 },
 "Earth": {
   "tags": ["pla", "he", "radar", "map"],
@@ -69,7 +76,8 @@
   "mass": "5.972E24",
   "deltav": 0.0,
   "desc": "Планета с самой большой плотностью в Солнечной системе. Здесь живет 8 миллиардов человек.",
-  "dens": 5.5134
+  "dens": 5.5134,
+  "imgdat": "26.07.1948"
 },
 "Venus": {
   "tags": ["pla", "he", "radar", "visited", "orbited", "map"],
@@ -80,7 +88,8 @@
   "size": "6051.8±1.0",
   "mass": "4.8675E24",
   "deltav": 6.79,
-  "dens": 5.243
+  "dens": 5.243,
+  "imgdat": "05.02.1974"
 },
 "Mars": {
   "tags": ["pla", "he", "radar", "visited", "orbited", "map"],
@@ -92,10 +101,11 @@
   "mass": "6.4171E23",
   "deltav": ">5.7",
   "desc": "Известно не менее 240 метеоритов марсианского происхождения",
-  "dens": 3.9335
+  "dens": 3.9335,
+  "imgdat": "15.07.1965"
 },
 "Ganymede": {
-  "tags": ["ju", "he", "moon", "map"],
+  "tags": ["ju", "he", "moon", "map", "visited"],
   "numnam": "Ganymede",
   "runame": "Ганимед",
   "imgnam": "Ganymede.jpg",
@@ -104,9 +114,11 @@
   "mass": "1.4819E23",
   "date": "13.03.1610",
   "deltav": 14.07,
-  "dens": 1.936
+  "dens": 1.936,
+  "imgdat": "01.07.1973"
 },
 "Titan": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Pntitan.jpg/264px-Pntitan.jpg",
   "tags": ["sat", "he", "moon", "radar", "visited", "map"],
   "numnam": "Titan",
   "runame": "Титан",
@@ -116,7 +128,8 @@
   "mass": "1.3452E23",
   "date": "25.03.1655",
   "deltav": ">7.7",
-  "dens": "1.8798±0.0044"
+  "dens": "1.8798±0.0044",
+  "imgdat": "02.09.1979"
 },
 "Mercury": {
   "tags": ["pla", "he", "radar", "visited", "orbited", "map"],
@@ -127,10 +140,11 @@
   "size": "2439.7±1.0",
   "mass": "3.3011E23",
   "deltav": 13.2,
-  "dens": 5.427
+  "dens": 5.427,
+  "imgdat": "29.03.1974"
 },
 "Callisto": {
-  "tags": ["ju", "he", "moon", "map"],
+  "tags": ["ju", "he", "moon", "map", "visited"],
   "numnam": "Callisto",
   "runame": "Каллисто",
   "imgnam": "Callisto.jpg",
@@ -139,10 +153,11 @@
   "mass": "1.0759E23",
   "date": "13.03.1610",
   "deltav": 12.42,
-  "dens": "1.8344±0.0034"
+  "dens": "1.8344±0.0034",
+  "imgdat": "05.03.1979"
 },
 "Io": {
-  "tags": ["ju", "he", "moon", "map"],
+  "tags": ["ju", "he", "moon", "map", "visited"],
   "numnam": "Io",
   "runame": "Ио",
   "imgnam": "Io.jpg",
@@ -151,7 +166,8 @@
   "mass": "8.932E22",
   "date": "13.03.1610",
   "deltav": ">7.7",
-  "dens": "3.528±0.006"
+  "dens": "3.528±0.006",
+  "imgdat": "05.03.1979"
 },
 "Moon": {
   "imgurl": "images/Moon-Tycho-crater.jpg",
@@ -164,10 +180,11 @@
   "mass": "7.342E22",
   "deltav": 6.3,
   "desc": "Известно не менее 390 метеоритов с Луны и не менее 35 событий их падения (одно событие – много фрагментов).",
-  "dens": 3.344
+  "dens": 3.344,
+  "imgdat": "07.10.1959"
 },
 "Europa": {
-  "tags": ["ju", "he", "moon", "map"],
+  "tags": ["ju", "he", "moon", "map", "visited"],
   "numnam": "Europa",
   "runame": "Европа",
   "imgnam": "Europa_moon.jpg",
@@ -176,7 +193,8 @@
   "mass": "4.7998E22",
   "date": "13.03.1610",
   "deltav": ">7.7",
-  "dens": "3.013±0.005"
+  "dens": "3.013±0.005",
+  "imgdat": "02.03.1979"
 },
 "Triton": {
   "tags": ["ne", "he", "moon", "visited", "flyby", "map"],
@@ -233,7 +251,7 @@
   "dens": "1.76−1.89"
 },
 "Titania": {
-  "tags": ["ur", "he", "moon", "map"],
+  "tags": ["ur", "he", "moon", "map", "visited", "flyby"],
   "numnam": "Titania",
   "runame": "Титания",
   "imgnam": "Titania.jpg",
@@ -242,10 +260,11 @@
   "mass": "3.4E21",
   "date": "11.01.1787",
   "deltav": ">7.7",
-  "dens": "1.711±0.005"
+  "dens": "1.711±0.005",
+  "imgdat": "24.01.1986"
 },
 "Rhea": {
-  "tags": ["sat", "he", "moon", "map"],
+  "tags": ["sat", "he", "moon", "map", "visited"],
   "numnam": "Rhea",
   "runame": "Рея",
   "imgnam": "Rhea.jpg",
@@ -254,10 +273,11 @@
   "mass": "2.307E21",
   "date": "23.12.1672",
   "deltav": ">7.7",
-  "dens": "1.236±0.005"
+  "dens": "1.236±0.005",
+  "imgdat": "25.08.1981"
 },
 "Oberon": {
-  "tags": ["ur", "he", "moon", "map"],
+  "tags": ["ur", "he", "moon", "map", "visited", "flyby"],
   "numnam": "Oberon",
   "runame": "Оберон",
   "imgnam": "Oberon.jpg",
@@ -266,11 +286,12 @@
   "mass": "3.08±0.09E21",
   "date": "11.01.1787",
   "deltav": ">7.7",
-  "dens": "1.63±0.05"
+  "dens": "1.63±0.05",
+  "imgdat": "24.01.1986"
 },
 "Iapetus": {
   "imgurl": "images/Iapetus-big.jpg",
-  "tags": ["sat", "he", "moon", "map"],
+  "tags": ["sat", "he", "moon", "map", "visited"],
   "numnam": "Iapetus",
   "runame": "Япет",
   "imgnam": "Iapetus.jpg",
@@ -279,7 +300,8 @@
   "mass": "1.81E21",
   "date": "25.10.1671",
   "deltav": ">7.7",
-  "dens": "1.088±0.013"
+  "dens": "1.088±0.013",
+  "imgdat": "22.08.1981"
 },
 "Makemake": {
   "tags": ["dw", "tno", "havesats", "dot", "he", "numbered", "named"],
@@ -325,7 +347,7 @@
   "imgdat": "14.07.2015"
 },
 "Umbriel": {
-  "tags": ["ur", "he", "moon", "map"],
+  "tags": ["ur", "he", "moon", "map", "visited", "flyby"],
   "numnam": "Umbriel",
   "runame": "Умбриэль",
   "imgnam": "Umbriel.jpg",
@@ -334,10 +356,11 @@
   "mass": "1.28±0.03E21",
   "date": "24.10.1851",
   "deltav": ">7.7",
-  "dens": "1.39±0.16"
+  "dens": "1.39±0.16",
+  "imgdat": "24.01.1986"
 },
 "Ariel": {
-  "tags": ["ur", "he", "moon", "map"],
+  "tags": ["ur", "he", "moon", "map", "visited", "flyby"],
   "numnam": "Ariel",
   "runame": "Ариэль",
   "imgnam": "Ariel.jpg",
@@ -346,10 +369,11 @@
   "mass": "1.25±0.02E21",
   "date": "24.10.1851",
   "deltav": ">7.7",
-  "dens": "1.592±0.15"
+  "dens": "1.592±0.15",
+  "imgdat": "24.01.1986"
 },
 "Dione": {
-  "tags": ["sat", "he", "moon", "map"],
+  "tags": ["sat", "he", "moon", "map", "visited"],
   "numnam": "Dione",
   "runame": "Диона",
   "imgnam": "Dione.jpg",
@@ -358,7 +382,8 @@
   "mass": "1.095E21",
   "date": "21.03.1684",
   "deltav": ">7.7",
-  "dens": "1.478±0.003"
+  "dens": "1.478±0.003",
+  "imgdat": "13.11.1980"
 },
 "Quaoar": {
   "tags": ["tno", "havesats", "dot", "he", "numbered", "named", "rings"],
@@ -375,7 +400,7 @@
   "dens": 1.7
 },
 "Tethys": {
-  "tags": ["sat", "he", "moon", "map"],
+  "tags": ["sat", "he", "moon", "map", "visited"],
   "numnam": "Tethys",
   "runame": "Тефия",
   "imgnam": "Tethys.jpg",
@@ -384,7 +409,8 @@
   "mass": "6.175E20",
   "date": "21.03.1684",
   "deltav": ">7.7",
-  "dens": "0.984±0.003"
+  "dens": "0.984±0.003",
+  "imgdat": "25.08.1981"
 },
 "Sedna": {
   "tags": ["tno", "dot", "he", "numbered", "named"],
@@ -508,7 +534,7 @@
   "dens": "2.92±0.08"
 },
 "Enceladus": {
-  "tags": ["sat", "he", "moon", "map"],
+  "tags": ["sat", "he", "moon", "map", "visited"],
   "numnam": "Enceladus",
   "runame": "Энцелад",
   "imgnam": "Enceladus.jpg",
@@ -517,10 +543,11 @@
   "mass": "1.08E20",
   "date": "28.08.1789",
   "deltav": ">7.7",
-  "dens": "1.609±0.005"
+  "dens": "1.609±0.005",
+  "imgdat": "26.08.1981"
 },
 "Miranda": {
-  "tags": ["ur", "he", "moon", "map"],
+  "tags": ["ur", "he", "moon", "map", "visited", "flyby"],
   "numnam": "Miranda",
   "runame": "Миранда",
   "imgnam": "Miranda.jpg",
@@ -529,7 +556,8 @@
   "mass": "0.66±0.08E20",
   "date": "16.02.1948",
   "deltav": ">7.7",
-  "dens": "1.20±0.15"
+  "dens": "1.20±0.15",
+  "imgdat": "24.01.1986"
 },
 "Hygiea": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
@@ -546,7 +574,7 @@
   "dens": "2.06±0.2"
 },
 "Proteus": {
-  "tags": ["ne", "moon", "map"],
+  "tags": ["ne", "moon", "map", "visited", "flyby"],
   "numnam": "Proteus",
   "runame": "Протей",
   "imgnam": "Proteus.jpg",
@@ -555,10 +583,11 @@
   "mass": "4.4E19",
   "date": "16.06.1989",
   "deltav": ">7.7",
-  "dens": 1.3
+  "dens": 1.3,
+  "imgdat": "25.08.1989"
 },
 "Mimas": {
-  "tags": ["sat", "he", "moon", "map"],
+  "tags": ["sat", "he", "moon", "map", "visited"],
   "numnam": "Mimas",
   "runame": "Мимас",
   "imgnam": "Mimas.jpg",
@@ -567,10 +596,11 @@
   "mass": "3.749E19",
   "date": "17.09.1789",
   "deltav": ">7.7",
-  "dens": "1.1479±0.007"
+  "dens": "1.1479±0.007",
+  "imgdat": "12.11.1980"
 },
 "Nereid": {
-  "tags": ["ne", "lowcontrast", "moon"],
+  "tags": ["ne", "lowcontrast", "moon", "visited", "flyby"],
   "numnam": "Nereid",
   "runame": "Нереида",
   "imgnam": "Nereid.jpg",
@@ -579,7 +609,8 @@
   "mass": "3.09E19",
   "date": "01.05.1949",
   "deltav": ">7.7",
-  "dens": 1.5
+  "dens": 1.5,
+  "imgdat": "24.08.1989"
 },
 "Interamnia": {
   "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/704_Interamnia_VLT_%282021%29%2C_deconvolved.pdf/page1-296px-704_Interamnia_VLT_%282021%29%2C_deconvolved.pdf.jpg",
@@ -623,7 +654,7 @@
   "dens": "1.92±0.53"
 },
 "Hyperion": {
-  "tags": ["sat", "moon", "map"],
+  "tags": ["sat", "moon", "map", "visited"],
   "numnam": "Hyperion",
   "runame": "Гиперион",
   "imgnam": "Hyperion.jpg",
@@ -632,7 +663,8 @@
   "mass": "5.62±0.05E18",
   "date": "16.09.1848",
   "deltav": ">7.7",
-  "dens": "0.544±0.05"
+  "dens": "0.544±0.05",
+  "imgdat": "25.09.2005"
 },
 "Eunomia": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
@@ -658,7 +690,8 @@
   "mass": "2.7±0.2E19",
   "date": "01.09.1804",
   "deltav": 9.7,
-  "dens": "3.15±0.28"
+  "dens": "3.15±0.28",
+  "imgdat": "06.08.2003"
 },
 "Chariklo": {
   "tags": ["centaur", "dot", "numbered", "named", "rings"],
@@ -711,7 +744,7 @@
   "dens": "3.2±0.74"
 },
 "Phoebe": {
-  "tags": ["sat", "moon", "map"],
+  "tags": ["sat", "moon", "map", "visited"],
   "numnam": "Phoebe",
   "runame": "Феба",
   "imgnam": "Phoebe.jpg",
@@ -720,10 +753,11 @@
   "mass": "8.29±0.01E18",
   "date": "16.08.1898",
   "deltav": ">7.7",
-  "dens": "1.638±0.033"
+  "dens": "1.638±0.033",
+  "imgdat": "11.06.2004"
 },
 "Larissa": {
-  "tags": ["ne", "moon"],
+  "tags": ["ne", "moon", "visited", "flyby"],
   "numnam": "Larissa",
   "runame": "Ларисса",
   "imgnam": "Larissa.jpg",
@@ -732,7 +766,8 @@
   "mass": "4.2E18",
   "date": "24.05.1981",
   "deltav": ">7.7",
-  "dens": 1.2
+  "dens": 1.2,
+  "imgdat": "24.08.1989"
 },
 "Hebe": {
   "tags": ["mab", "highcontrast", "numbered", "named"],
@@ -745,10 +780,11 @@
   "mass": "1.27±0.13E19",
   "date": "01.07.1847",
   "deltav": 9.7,
-  "dens": "3.18±0.64"
+  "dens": "3.18±0.64",
+  "imgdat": "8-12.12.2014"
 },
 "Janus": {
-  "tags": ["sat", "moon", "map"],
+  "tags": ["sat", "moon", "map", "visited"],
   "numnam": "Janus",
   "runame": "Янус",
   "imgnam": "Janus.jpg",
@@ -757,7 +793,8 @@
   "mass": "1.898E18",
   "date": "15.12.1966",
   "deltav": ">7.7",
-  "dens": "0.63±0.03"
+  "dens": "0.63±0.03",
+  "imgdat": "25.08.1981"
 },
 "Antiope": {
   "tags": ["mab", "binary", "highcontrast", "numbered", "named"],
@@ -787,7 +824,7 @@
 },
 "Amalthea": {
   "imgurl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Amalthea.gif",
-  "tags": ["ju", "moon", "map"],
+  "tags": ["ju", "moon", "map", "visited"],
   "numnam": "Amalthea",
   "runame": "Амальтея",
   "imgnam": "Amalthea.jpg",
@@ -796,10 +833,11 @@
   "mass": "2.08±0.15E18",
   "date": "09.09.1892",
   "deltav": ">7.7",
-  "dens": "0.857±0.099"
+  "dens": "0.857±0.099",
+  "imgdat": "04.03.1979"
 },
 "Puck": {
-  "tags": ["ur", "moon", "map"],
+  "tags": ["ur", "moon", "map", "flyby"],
   "numnam": "Puck",
   "runame": "Пак",
   "imgnam": "Puck.jpg",
@@ -808,10 +846,11 @@
   "mass": "2.9E18",
   "date": "30.12.1985",
   "deltav": ">7.7",
-  "dens": 1.3
+  "dens": 1.3,
+  "imgdat": "24.01.1986"
 },
 "Despina": {
-  "tags": ["ne", "moon", "lowcontrast"],
+  "tags": ["ne", "moon", "lowcontrast", "flyby"],
   "numnam": "Despina",
   "runame": "Деспина",
   "imgnam": "Despina.jpg",
@@ -820,10 +859,11 @@
   "mass": "2.2E18",
   "date": "02.08.1989",
   "deltav": ">7.7",
-  "dens": 1.2
+  "dens": 1.2,
+  "imgdat": "24.08.1989"
 },
 "Himalia": {
-  "tags": ["ju", "moon", "dot"],
+  "tags": ["ju", "moon", "dot", "visited"],
   "numnam": "Himalia",
   "runame": "Гималия",
   "imgnam": "Himalia.png",
@@ -832,7 +872,8 @@
   "mass": "4.2±0.6E18",
   "date": "03.12.1904",
   "deltav": ">7.7",
-  "dens": 1.63
+  "dens": 1.63,
+  "imgdat": "19.12.2000"
 },
 "Flora": {
   "tags": ["mab", "innermb", "lightcurve", "numbered", "named"],
@@ -874,7 +915,7 @@
   "dens": 3.3
 },
 "Epimetheus": {
-  "tags": ["sat", "moon", "map"],
+  "tags": ["sat", "moon", "map", "visited"],
   "numnam": "Epimetheus",
   "runame": "Эпиметей",
   "imgnam": "Epimetheus.jpg",
@@ -883,10 +924,11 @@
   "mass": "5.27±0.01E17",
   "date": "18.12.1966",
   "deltav": ">7.7",
-  "dens": "0.640±0.062"
+  "dens": "0.640±0.062",
+  "imgdat": "12.11.1980"
 },
 "Thebe": {
-  "tags": ["ju", "moon", "map"],
+  "tags": ["ju", "moon", "map", "visited"],
   "numnam": "Thebe",
   "runame": "Фива",
   "imgnam": "Thebe.jpg",
@@ -894,7 +936,8 @@
   "size": "49.3±2",
   "mass": "4.3E17",
   "date": "05.03.1979",
-  "deltav": ">7.7"
+  "deltav": ">7.7",
+  "imgdat": "04.01.2000"
 },
 "Lutetia": {
   "tags": ["mab", "visited", "flyby", "map", "numbered", "named"],
@@ -907,10 +950,11 @@
   "mass": "1.7±0.02E18",
   "date": "15.11.1852",
   "deltav": 9.0,
-  "dens": "3.45±0.21"
+  "dens": "3.45±0.21",
+  "imgdat": "10.07.2010"
 },
 "Juliet": {
-  "tags": ["ur", "lowcontrast", "moon"],
+  "tags": ["ur", "lowcontrast", "moon", "flyby"],
   "numnam": "Juliet",
   "runame": "Джульетта",
   "imgnam": "Juliet.jpg",
@@ -919,10 +963,11 @@
   "mass": "5.6E17",
   "date": "03.01.1986",
   "deltav": ">7.7",
-  "dens": 1.3
+  "dens": 1.3,
+  "imgdat": "03.01.1986"
 },
 "Prometheus": {
-  "tags": ["sat", "moon"],
+  "tags": ["sat", "moon", "visited"],
   "numnam": "Prometheus",
   "runame": "Прометей",
   "imgnam": "Prometheus.jpg",
@@ -931,10 +976,11 @@
   "mass": "1.59±0.02E17",
   "date": "01.10.1980",
   "deltav": ">7.7",
-  "dens": "0.48±0.09"
+  "dens": "0.48±0.09",
+  "imgdat": "25.08.1981"
 },
 "Pandora": {
-  "tags": ["sat", "moon"],
+  "tags": ["sat", "moon", "visited"],
   "numnam": "Pandora",
   "runame": "Пандора",
   "imgnam": "Pandora.jpg",
@@ -943,10 +989,11 @@
   "mass": "1.37±0.02E17",
   "date": "01.10.1980",
   "deltav": ">7.7",
-  "dens": "0.49±0.06"
+  "dens": "0.49±0.06",
+  "imgdat": "05.09.2005"
 },
 "Elara": {
-  "tags": ["ju", "moon", "lowcontrast"],
+  "tags": ["ju", "moon", "lowcontrast", "visited"],
   "numnam": "Elara",
   "runame": "Элара",
   "imgnam": "Elara.png",
@@ -954,7 +1001,8 @@
   "size": "39.9±0.9",
   "mass": "8.66±0.6E17",
   "date": "02.01.1905",
-  "deltav": ">7.7"
+  "deltav": ">7.7",
+  "imgdat": "05.03.2007"
 },
 "Mathilde": {
   "imgurl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/253_Mathilde_Flyby.gif",
@@ -968,7 +1016,8 @@
   "mass": "1.03±0.04E17",
   "date": "12.11.1885",
   "deltav": 9.0,
-  "dens": 1.3
+  "dens": 1.3,
+  "imgdat": "27.06.1997"
 },
 "Metis": {
   "tags": ["ju", "lowcontrast", "moon"],
@@ -979,7 +1028,8 @@
   "size": "21.5±2",
   "mass": "1.2E17",
   "date": "04.03.1979",
-  "deltav": ">7.7"
+  "deltav": ">7.7",
+  "imgdat": "06.11.1997"
 },
 "Hydra": {
   "tags": ["pl", "dwmoon", "flyby"],
@@ -1008,7 +1058,7 @@
   "imgdat": "14.07.2015"
 },
 "Helene": {
-  "tags": ["sat", "moon"],
+  "tags": ["sat", "moon", "visited"],
   "numnam": "Helene",
   "runame": "Елена",
   "imgnam": "Helene.jpg",
@@ -1016,7 +1066,8 @@
   "size": "17.6±0.4",
   "mass": "1.139E16",
   "date": "01.03.1980",
-  "deltav": ">7.7"
+  "deltav": ">7.7",
+  "imgdat": "20.07.2007"
 },
 "Arrokoth": {
   "tags": ["tno", "contactbinary", "visited", "flyby", "animation", "map", "numbered", "named"],
@@ -1045,10 +1096,12 @@
   "mass": "4.2±6E16",
   "date": "29.09.1884",
   "deltav": 10.3,
-  "dens": "2.6±0.5"
+  "dens": "2.6±0.5",
+  "imgdat": "28.08.1993"
 },
 "Atlas": {
-  "tags": ["sat", "moon"],
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Cassini_Atlas_N00084634_CL.png",
+  "tags": ["sat", "moon", "visited"],
   "numnam": "Atlas",
   "runame": "Атлас",
   "imgnam": "Atlas.jpg",
@@ -1057,10 +1110,11 @@
   "mass": "6.60±0.45E15",
   "date": "01.10.1980",
   "deltav": ">7.7",
-  "dens": "0.46±0.11"
+  "dens": "0.46±0.11",
+  "imgdat": "12.06.2007"
 },
 "Pan": {
-  "tags": ["sat", "moon"],
+  "tags": ["sat", "moon", "visited"],
   "numnam": "Pan",
   "runame": "Пан",
   "imgnam": "Pan.jpg",
@@ -1069,10 +1123,11 @@
   "mass": "4.95±0.75E15",
   "date": "16.07.1990",
   "deltav": ">7.7",
-  "dens": "0.42±0.15"
+  "dens": "0.42±0.15",
+  "imgdat": "07.03.2017"
 },
 "Telesto": {
-  "tags": ["sat", "moon"],
+  "tags": ["sat", "moon", "visited"],
   "numnam": "Telesto",
   "runame": "Телесто",
   "imgnam": "Telesto.jpg",
@@ -1080,10 +1135,11 @@
   "size": "12.4±0.4",
   "mass": "4.046E15",
   "date": "08.04.1980",
-  "deltav": ">7.7"
+  "deltav": ">7.7",
+  "imgdat": "11.10.2005"
 },
 "Phobos": {
-  "tags": ["mar", "moon", "map"],
+  "tags": ["mar", "moon", "map", "visited"],
   "numnam": "Phobos",
   "runame": "Фобос",
   "imgnam": "Phobos.jpg",
@@ -1092,10 +1148,11 @@
   "mass": "1.0659E16",
   "date": "18.08.1877",
   "deltav": ">7.7",
-  "dens": 1.876
+  "dens": 1.876,
+  "imgdat": "29.11.1971"
 },
 "Calypso": {
-  "tags": ["sat", "moon"],
+  "tags": ["sat", "moon", "visited"],
   "numnam": "Calypso",
   "runame": "Калипсо",
   "imgnam": "Calypso.jpg",
@@ -1103,7 +1160,8 @@
   "size": "10.7±0.7",
   "mass": "2.548E15",
   "date": "13.03.1980",
-  "deltav": ">7.7"
+  "deltav": ">7.7",
+  "imgdat": "23.09.2005"
 },
 "Eros": {
   "imgurl": "https://nssdc.gsfc.nasa.gov/planetary/image/near_20000212_anim.gif",
@@ -1129,7 +1187,8 @@
   "size": "8.2±2",
   "mass": "2E15",
   "date": "08.07.1979",
-  "deltav": ">7.7"
+  "deltav": ">7.7",
+  "imgdat": "19.12.1996"
 },
 "Kerberos": {
   "tags": ["pl", "lowcontrast", "dwmoon", "flyby"],
@@ -1144,7 +1203,7 @@
   "imgdat": "14.07.2015"
 },
 "Deimos": {
-  "tags": ["mar", "moon", "map"],
+  "tags": ["mar", "moon", "map", "visited"],
   "numnam": "Deimos",
   "runame": "Деймос",
   "imgnam": "Deimos.jpg",
@@ -1153,7 +1212,8 @@
   "mass": "1.476E15",
   "date": "12.08.1877",
   "deltav": ">7.7",
-  "dens": "1.471±0.166"
+  "dens": "1.471±0.166",
+  "imgdat": "20.12.1971"
 },
 "Gaspra": {
   "tags": ["mab", "innermb", "visited", "flyby", "map", "numbered", "named"],
@@ -1167,9 +1227,11 @@
   "date": "30.07.1916",
   "deltav": 8.402,
   "desc": "Первый посещенный космическим аппаратом (Галилео) астероид. Был посещен 29.10.1991, фото сделаны с расстояния 5300 км на скорости 8 км/с.",
-  "dens": 2.7
+  "dens": 2.7,
+  "imgdat": "29.10.1991"
 },
 "1P/Halley": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Comet_Halley_close_up-cropped.jpg",
   "tags": ["co", "visited", "flyby"],
   "numnam": "1P/Halley",
   "runame": "Галлея",
@@ -1179,7 +1241,9 @@
   "mass": "2.2E14",
   "date": "25.12.1758",
   "deltav": ">29.8",
-  "dens": 0.6
+  "desc": "АМС Вега-1 передала первые изображения ядра кометы 4 марта 1986 года. Космический аппарат Джотто сблизился с кометой 14 марта на расстояние 596 км",
+  "dens": 0.6,
+  "imgdat": "04.03.1986"
 },
 "Styx": {
   "tags": ["pl", "lowcontrast", "dwmoon", "flyby"],
@@ -1194,7 +1258,7 @@
   "imgdat": "13.07.2015"
 },
 "Daphnis": {
-  "tags": ["sat", "moon"],
+  "tags": ["sat", "moon", "visited"],
   "numnam": "Daphnis",
   "runame": "Дафнис",
   "imgnam": "Daphnis.jpg",
@@ -1203,9 +1267,11 @@
   "mass": "7.79E13",
   "date": "01.05.2005",
   "deltav": ">7.7",
-  "dens": "0.34±0.26"
+  "dens": "0.34±0.26",
+  "imgdat": "16.01.2017"
 },
 "9P/Tempel": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Deep_Impact_HRI.jpeg/600px-Deep_Impact_HRI.jpegx",
   "tags": ["co", "jfc", "visited", "flyby"],
   "numnam": "9P/Tempel",
   "runame": "Темпель 1",
@@ -1215,7 +1281,8 @@
   "mass": "4.5E13",
   "date": "03.04.1867",
   "deltav": ">11.1",
-  "dens": 0.62
+  "dens": 0.62,
+  "imgdat": "04.07.2005"
 },
 "1999 JM8": {
   "imgurl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/1999jm8-01.jpg",
@@ -1228,7 +1295,8 @@
   "url": "https://en.wikipedia.org/wiki/(53319)_1999_JM8",
   "size": 3.0,
   "date": "13.05.1999",
-  "deltav": 7.86
+  "deltav": 7.86,
+  "imgdat": "26.08.1999"
 },
 "Phaethon": {
   "tags": ["neo", "pha", "radar", "radarimage", "animation", "numbered", "named"],
@@ -1240,7 +1308,8 @@
   "size": 2.9,
   "mass": "1.4E14",
   "date": "11.10.1983",
-  "deltav": 15.35
+  "deltav": 15.35,
+  "imgdat": "17.12.2017"
 },
 "19P/Borrelly": {
   "tags": ["co", "jfc", "visited", "flyby"],
@@ -1252,7 +1321,8 @@
   "mass": "2E13",
   "date": "28.12.1904",
   "deltav": ">13",
-  "dens": 0.3
+  "dens": 0.3,
+  "imgdat": "22.09.2001"
 },
 "Steins": {
   "tags": ["mab", "visited", "flyby", "map", "numbered", "named"],
@@ -1263,7 +1333,8 @@
   "url": "https://en.wikipedia.org/wiki/2867_%C5%A0teins",
   "size": "2.58±0.084",
   "date": "04.11.1969",
-  "deltav": 9.35
+  "deltav": 9.35,
+  "imgdat": "05.09.2008"
 },
 "Annefrank": {
   "tags": ["mab", "visited", "flyby", "numbered", "named"],
@@ -1275,7 +1346,8 @@
   "size": 2.4,
   "date": "23.03.1942",
   "deltav": 8.96,
-  "desc": "Фото астероида было получено КА Stardust 02.11.2002 с расстояния 3 км."
+  "desc": "Фото астероида было получено КА Stardust 02.11.2002 с расстояния 3 км.",
+  "imgdat": "02.11.2002"
 },
 "Pallene": {
   "tags": ["sat", "moon", "lowcontrast"],
@@ -1287,7 +1359,8 @@
   "mass": "2E13",
   "date": "06.01.1978",
   "deltav": ">7.7",
-  "dens": "0.25±0.09"
+  "dens": "0.25±0.09",
+  "imgdat": "16.10.2010"
 },
 "81P/Wild": {
   "tags": ["co", "jfc", "visited", "flyby"],
@@ -1300,7 +1373,8 @@
   "date": "06.01.1978",
   "deltav": ">10.8",
   "desc": "КА Stardust сблизился с ядром кометы 02.01.2004 с относительной скоростью 6.1 км/с. Фото сделано с расстояния 237 км.",
-  "dens": 0.6
+  "dens": 0.6,
+  "imgdat": "02.01.2004"
 },
 "Florence": {
   "tags": ["neo", "pha", "havesats", "radarimage", "numbered", "named", "animation"],
@@ -1370,7 +1444,8 @@
   "size": 1.5,
   "mass": "6.1E12",
   "date": "15.11.2006",
-  "deltav": 9.9
+  "deltav": 9.9,
+  "imgdat": "22.08.2016"
 },
 "Methone": {
   "tags": ["sat", "moon"],
@@ -1382,7 +1457,8 @@
   "mass": "8.992E12",
   "date": "01.06.2004",
   "deltav": ">7.7",
-  "dens": "0.31±0.05"
+  "dens": "0.31±0.05",
+  "imgdat": "20.05.2012"
 },
 "APL": {
   "tags": ["mab", "lowcontrast", "flyby", "numbered", "named"],
@@ -1406,7 +1482,8 @@
   "mass": "3E13",
   "date": "24.10.2004",
   "deltav": ">7.7",
-  "dens": "0.5-2"
+  "dens": "0.5-2",
+  "imgdat": "22.05.2006"
 },
 "2001 SN263": {
   "tags": ["neo", "pha", "havesats", "radar", "radarimage", "numbered"],
@@ -1468,7 +1545,8 @@
   "mass": "1.5E12",
   "date": "30.05.2007",
   "deltav": ">7.7",
-  "dens": 0.5
+  "dens": 0.5,
+  "imgdat": "30.01.2016"
 },
 "Braille": {
   "imgurl": "images/braillepair.png",
@@ -1532,7 +1610,8 @@
   "url": "https://en.wikipedia.org/wiki/(214869)_2007_PA8",
   "size": "0.68±0.04",
   "date": "09.08.2007",
-  "deltav": 6.812
+  "deltav": 6.812,
+  "imgdat": "31.10.2012"
 },
 "Moshup": {
   "tags": ["neo", "pha", "binary", "radar", "highcontrast", "numbered", "named"],
@@ -1545,7 +1624,8 @@
   "mass": "2.49±0.05E12",
   "date": "20.05.1999",
   "deltav": 21.374,
-  "dens": "1.97±0.24"
+  "dens": "1.97±0.24",
+  "imgdat": "25.05.2019"
 },
 "103P/Hartley": {
   "tags": ["co", "jfc", "radar", "visited", "flyby"],
@@ -1572,7 +1652,8 @@
   "date": "23.02.1950",
   "deltav": 6.994,
   "desc": "Имеет вероятность столкновения с Землей в 2880 году.",
-  "dens": 3.5
+  "dens": 3.5,
+  "imgdat": "04.03.2001"
 },
 "P/2016 BA14 (PanSTARRS)": {
   "tags": ["neo", "co", "jfc", "nec", "radar", "radarimage"],
@@ -1645,7 +1726,8 @@
   "url": "https://en.wikipedia.org/wiki/2014_JO25",
   "size": 0.4,
   "date": "05.05.2014",
-  "deltav": 13.173
+  "deltav": 13.173,
+  "imgdat": "19.04.2017"
 },
 "Dinkinesh": {
   "tags": ["mba", "havesats", "binary", "visited", "flyby", "numbered", "named"],
@@ -1685,7 +1767,8 @@
   "mass": "6E12",
   "date": "03.03.2009",
   "deltav": ">7.7",
-  "dens": "0.54±0.15"
+  "dens": "0.54±0.15",
+  "imgdat": "27.01.2010"
 },
 "2015 TB145": {
   "tags": ["neo", "pha", "radar", "radarimage", "animation"],
@@ -1825,7 +1908,8 @@
   "url": "https://en.wikipedia.org/wiki/2014_HQ124",
   "size": 0.163,
   "date": "23.04.2014",
-  "deltav": 12.229
+  "deltav": 12.229,
+  "imgdat": "08.06.2014"
 },
 "2004 BL86": {
   "tags": ["neo", "pha", "radar", "radarimage", "havesats", "animation", "numbered"],
@@ -1851,7 +1935,7 @@
   "deltav": 5.629
 },
 "Dimorphos": {
-  "tags": ["neo", "pha", "satellite", "binary", "radar", "animation", "visited", "flyby", "map", "named"],
+  "tags": ["neo", "pha", "satellite", "binary", "radar", "animation", "visited", "flyby", "impact", "map", "named"],
   "numnam": "Dimorphos",
   "runame": "Диморф",
   "imgnam": "Dimorphos.gif",
@@ -1872,7 +1956,8 @@
   "url": "https://en.wikipedia.org/wiki/2017_BQ6",
   "size": 0.078,
   "date": "26.01.2017",
-  "deltav": 6.542
+  "deltav": 6.542,
+  "imgdat": "07.02.2017"
 },
 "2011 AG5": {
   "tags": ["neo", "pha", "radar", "radarimage", "numbered", "animation"],
@@ -1885,6 +1970,7 @@
   "size": 0.07,
   "mass": "4E9",
   "date": "08.01.2011",
-  "deltav": 5.534
+  "deltav": 5.534,
+  "imgdat": "04.02.2023"
 }
 }
