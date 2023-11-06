@@ -23,6 +23,7 @@
   "dens": 1.326
 },
 "Saturn": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Saturnoppositions-animated.gif",
   "tags": ["pla", "he", "visited", "orbited", "animation", "rings"],
   "numnam": "Saturn",
   "runame": "Сатурн",
@@ -153,6 +154,7 @@
   "dens": "3.528±0.006"
 },
 "Moon": {
+  "imgurl": "images/Moon-Tycho-crater.jpg",
   "tags": ["ea", "he", "moon", "radar", "radarimage", "visited", "orbited", "map"],
   "numnam": "Moon",
   "runame": "Луна",
@@ -267,6 +269,7 @@
   "dens": "1.63±0.05"
 },
 "Iapetus": {
+  "imgurl": "images/Iapetus-big.jpg",
   "tags": ["sat", "he", "moon", "map"],
   "numnam": "Iapetus",
   "runame": "Япет",
@@ -292,6 +295,7 @@
   "dens": "1.7−2.1"
 },
 "Gonggong": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Xiangliu_orbiting_225088_Gonggong_%282009-2010%29.jpg/330px-Xiangliu_orbiting_225088_Gonggong_%282009-2010%29.jpg",
   "tags": ["tno", "havesats", "dot", "he", "numbered", "named"],
   "numnam": "225088 Gonggong",
   "runame": "Гун-гун",
@@ -307,6 +311,7 @@
   "dens": "1.74±0.16"
 },
 "Charon": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Charon-Neutral-Bright-Release.jpg/255px-Charon-Neutral-Bright-Release.jpg",
   "tags": ["pl", "tno", "he", "dwmoon", "visited", "flyby", "map"],
   "numnam": "Charon",
   "runame": "Харон",
@@ -407,6 +412,7 @@
   "imgdat": "04.05.2015"
 },
 "2002 MS4": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/2002_MS4_occultation_8_Aug_2020_EPSC2021-440.jpg/495px-2002_MS4_occultation_8_Aug_2020_EPSC2021-440.jpg",
   "tags": ["tno", "dot", "he", "occultation", "numbered"],
   "numnam": "(307261) 2002 MS4",
   "runame": "2002 MS4",
@@ -420,6 +426,7 @@
   "desc": "Из наблюдений покрытия звезд в 2019–2020 годах получены оценки размера 808 на 748 км"
 },
 "Orcus": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Orcus-Vanth.gif/330px-Orcus-Vanth.gif",
   "tags": ["tno", "havesats", "dot", "he", "numbered", "named", "animation"],
   "numnam": "90482 Orcus",
   "runame": "Орк",
@@ -446,6 +453,7 @@
   "dens": "1.26−1.5"
 },
 "Varda": {
+  "imgurl": "images/Varda-occultation-model.png",
   "tags": ["tno", "havesats", "dot", "he", "animation", "occultation", "numbered", "named"],
   "numnam": "174567 Varda",
   "runame": "Варда",
@@ -471,6 +479,7 @@
   "dens": "1.8−2.4"
 },
 "Vesta": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Vesta_Rotation.gif/180px-Vesta_Rotation.gif",
   "tags": ["mab", "animation", "visited", "orbited", "map", "numbered", "named"],
   "numnam": "4 Vesta",
   "runame": "Веста",
@@ -573,6 +582,7 @@
   "dens": 1.5
 },
 "Interamnia": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/704_Interamnia_VLT_%282021%29%2C_deconvolved.pdf/page1-296px-704_Interamnia_VLT_%282021%29%2C_deconvolved.pdf.jpg",
   "tags": ["mab", "highcontrast", "numbered", "named"],
   "numnam": "704 Interamnia",
   "runame": "Интерамния",
@@ -599,6 +609,7 @@
   "dens": "1.41±0.23"
 },
 "Davida": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/511_Davida_VLT_%282021%29%2C_deconvolved.pdf/page1-350px-511_Davida_VLT_%282021%29%2C_deconvolved.pdf.jpg",
   "tags": ["mab", "highcontrast", "numbered", "named"],
   "numnam": "511 Davida",
   "runame": "Давида",
@@ -775,6 +786,7 @@
   "desc": "Первый транснептуновый объект, открытый после Плутона и Харона. Дал название классическим объектам пояса Койпера – кьюбивано"
 },
 "Amalthea": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Amalthea.gif",
   "tags": ["ju", "moon", "map"],
   "numnam": "Amalthea",
   "runame": "Амальтея",
@@ -945,6 +957,7 @@
   "deltav": ">7.7"
 },
 "Mathilde": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/253_Mathilde_Flyby.gif",
   "tags": ["mab", "visited", "flyby", "animation", "map", "numbered", "named"],
   "numnam": "253 Mathilde",
   "runame": "Матильда",
@@ -1021,6 +1034,7 @@
   "imgdat": "01.01.2019"
 },
 "Ida": {
+  "imgurl": "images/Ida-big.gif",
   "tags": ["mab", "havesats", "binary", "visited", "animation", "flyby", "map", "numbered", "named"],
   "numnam": "243 Ida",
   "runame": "Ида",
@@ -1092,6 +1106,7 @@
   "deltav": ">7.7"
 },
 "Eros": {
+  "imgurl": "https://nssdc.gsfc.nasa.gov/planetary/image/near_20000212_anim.gif",
   "tags": ["neo", "visited", "orbited", "animation", "map", "numbered", "named"],
   "numnam": "433 Eros",
   "runame": "Эрос",
@@ -1203,6 +1218,7 @@
   "dens": 0.62
 },
 "1999 JM8": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/1999jm8-01.jpg",
   "tags": ["neo", "pha", "radar", "radarimage", "numbered"],
   "numnam": "(53319) 1999 JM8",
   "runame": "1999 JM8",
@@ -1300,6 +1316,7 @@
   "dens": 1.4
 },
 "67P/Churyumov-Gerasimenko": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/d/da/NavCam_Comet_67P_animation_20140806_%28cropped%29.gif",
   "tags": ["co", "jfc", "contactbinary", "visited", "orbited", "animation"],
   "numnam": "67P/Churyumov–Gerasimenko",
   "runame": "Чурюмова-",
@@ -1314,6 +1331,7 @@
   "imgdat": "06.08.2014"
 },
 "1998 QE2": {
+  "imgurl": "https://planetary.s3.amazonaws.com/web/assets/pictures/20130624_asteroid_1998_QE2_on_20130607.gif",
   "tags": ["neo", "pha", "binary", "havesats", "radar", "radarimage", "numbered", "animation"],
   "numnam": "(285263) 1998 QE2",
   "runame": "1998 QE2",
@@ -1326,6 +1344,7 @@
   "deltav": 7.4
 },
 "Toutatis": {
+  "imgurl": "images/Toutatis.webp",
   "tags": ["neo", "pha", "radar", "radarimage", "visited", "flyby", "numbered", "named", "animation"],
   "numnam": "4179 Toutatis",
   "runame": "Таутатис",
@@ -1340,6 +1359,7 @@
   "imgdat": "13.12.2012"
 },
 "2006 VW139": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/2006VW139.gif/390px-2006VW139.gif",
   "tags": ["mab", "co", "active", "dot", "binary", "numbered", "animation"],
   "numnam": "288P (300163) 2006 VW139",
   "runame": "2006 VW139",
@@ -1451,6 +1471,7 @@
   "dens": 0.5
 },
 "Braille": {
+  "imgurl": "images/braillepair.png",
   "tags": ["mab", "lowcontrast", "visited", "flyby", "numbered", "named"],
   "numnam": "9969 Braille",
   "runame": "Брайль",
@@ -1489,6 +1510,7 @@
   "imgdat": "28.08.1993"
 },
 "2016 AJ193": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Asteroid_2016_AJ193_-_PIA24564.jpg/320px-Asteroid_2016_AJ193_-_PIA24564.jpg",
   "tags": ["neo", "pha", "radar", "radarimage", "animation"],
   "numnam": "2016 AJ193",
   "runame": "2016 AJ193",
@@ -1500,6 +1522,7 @@
   "deltav": 10.58
 },
 "2007 PA8": {
+  "imgurl": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA16474.jpg",
   "tags": ["neo", "pha", "radar", "radarimage", "numbered"],
   "numnam": "(214869) 2007 PA8",
   "runame": "2007 PA8",
@@ -1598,6 +1621,7 @@
   "deltav": 7.131
 },
 "Ryugu": {
+  "imgurl": "images/Ryugu.gif",
   "tags": ["neo", "pha", "visited", "orbited", "numbered", "animation", "map", "named"],
   "numnam": "162173 Ryugu",
   "runame": "Рюгу",
@@ -1698,6 +1722,7 @@
   "deltav": 6.4
 },
 "Bennu": {
+  "imgurl": "images/Bennu.gif",
   "tags": ["neo", "pha", "radar", "visited", "orbited", "animation", "numbered", "named", "map"],
   "numnam": "101955 Bennu",
   "runame": "Бенну",
@@ -1725,6 +1750,7 @@
   "deltav": 5.189
 },
 "1998 WT24": {
+  "imgurl": "https://upload.wikimedia.org/wikipedia/commons/0/03/%2833342%29_1998_WT24_bistatic_radar_image.gif",
   "tags": ["neo", "pha", "radar", "radarimage", "animation", "numbered"],
   "numnam": "(33342) 1998 WT24",
   "runame": "1998 WT24",
@@ -1790,6 +1816,7 @@
   "deltav": 4.987
 },
 "2014 HQ124": {
+  "imgurl": "images/2014HQ124.jpg",
   "tags": ["neo", "pha", "contactbinary", "radar", "radarimage", "animation"],
   "numnam": "2014 HQ124",
   "runame": "2014 HQ124",
