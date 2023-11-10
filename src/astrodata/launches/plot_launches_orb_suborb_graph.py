@@ -24,6 +24,7 @@ from bs4 import BeautifulSoup
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+from matplotlib.ticker import MultipleLocator
 from matplotlib.dates import datestr2num, date2num
 from scour import scour
 
@@ -143,11 +144,14 @@ parser.add_argument("-e", "--height", type=int, default=100,
     help="Set apogee height in km for suborbital launches. Default is 100 km")
 parser.add_argument("-r", "--regressfit", action="store_true",
     help="Plot regression fit using Seaborn")
+parser.add_argument("-t", "--translate", action="store_true",
+    help="translate all inscriptions into Russian")
 
 args = parser.parse_args()
 
-
-LOC = "en_US"  # "ru_RU"
+LOC = "en_US"
+if args.translate:
+    LOC = "ru_RU"
 with open(f"../locales/launches-{LOC[:2]}.json", "r", encoding="utf8") as loc_file:
     msgs = json.load(loc_file)
 
@@ -260,6 +264,8 @@ years = mdates.YearLocator(5)
 oneyear = mdates.YearLocator()
 ax.xaxis.set_major_locator(years)
 ax.xaxis.set_minor_locator(oneyear)
+if args.deep:
+    ax.yaxis.set_minor_locator(MultipleLocator(20))
 tdlt = timedelta(days=630)
 locale.setlocale(locale.LC_ALL, LOC)
 today = datetime.now()
@@ -288,7 +294,7 @@ if args.suborb:
         plt.annotate(f"{round(y)}", xy=(x, y + 220), fontsize=12, ha="center")
 if args.orbital:
     plt.plot(dates, nums, ".b", label=msgs["orb"][0], ms=MS)
-    if args.regressfit:
+    if args.regressfit and not args.deep:
         seaborn.regplot(
             data=orb_df, x="datenum", y="value", ax=ax,
             truncate=False, color="darkgrey", line_kws={"linestyle": "--"},
@@ -300,7 +306,7 @@ if args.orbital:
         plt.annotate(f"{round(y)}", xy=(x, y + 220), fontsize=13, ha="center")
 if args.failed:
     plt.plot(dates_fail, nums_fail, ".r", label=msgs["fail"][0], ms=MS)
-    if args.regressfit:
+    if args.regressfit and not args.suborb:
         seaborn.regplot(
             data=fail_df, x="datenum", y="value", ax=ax,
             truncate=False, color="darkgrey", line_kws={"linestyle": "--"},
@@ -353,16 +359,20 @@ plt.xlim(xlim)
 plt.title(
     f"{TITLE}{ORB_TITL}{FAILD_TITL}{MARG_TITL}{DEEP_TITL}{SUBORB_TITL}. {MONTH} {YEAR} {YR}"
 )
-plt.legend(loc="upper left", fontsize=13)
+LEGLOC = "best"
+if args.deep:
+    LEGLOC = "upper center"
+plt.legend(loc=LEGLOC, fontsize=13)
 plt.xlabel(msgs["xlbl"], fontsize=14)
 plt.ylabel(msgs["ylbl"], fontsize=12)
 plt.grid(linestyle="dotted")
 
-REGR = "-regressfit" if args.regressfit else ""
+REGR = "-linfit" if args.regressfit else ""
 ORB_POSTFIX = "-orb" if args.orbital else ""
 SUBORB_POSTFIX = f"-suborb-{args.height}km{REGR}" if args.suborb else ""
 DEEP_POSTFIX = f"-deep{REGR}" if args.deep else ""
-FILENAME = f"launches{ORB_POSTFIX}{DEEP_POSTFIX}{SUBORB_POSTFIX}-{LOC}"
+LOC = "-ru" if args.translate else ""
+FILENAME = f"launches{ORB_POSTFIX}{DEEP_POSTFIX}{SUBORB_POSTFIX}{LOC}"
 plots_dir = os.path.join(os.pardir, os.pardir, os.pardir, "plots", "launches")
 tmp_pth = os.path.join(plots_dir, FILENAME + "_." + FILE_EXT)
 pth = os.path.join(plots_dir, FILENAME + "." + FILE_EXT)
