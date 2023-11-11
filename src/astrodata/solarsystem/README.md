@@ -16,7 +16,8 @@ Data source: [IAU Minor Planet Center, The MPC Orbit (MPCORB) Database](https://
 * Close approaches
 ![Asteroid close approaches at a distance of up to 1.1 LD](../../../plots/solarsystem/asteroid-close-approaches-1ld-ru.png)
 Data source: [Small-Body DataBase (SBDB) Close-Approach Data API](https://ssd-api.jpl.nasa.gov/doc/cad.html),
-[data query for D < 1.1 lunar distances after 2020-03-01 to H < 30 sorted by absolute magnitude H (mag)](https://ssd-api.jpl.nasa.gov/cad.api?dist-max=1.1LD&date-min=2020-03-01&h-max=30&sort=h)
+[data query for D < 1.1 lunar distances after 2020-03-01 to H < 30 sorted by absolute magnitude H (mag)](https://ssd-api.jpl.nasa.gov/cad.api?dist-max=1.1LD&date-min=2020-03-01&h-max=30&sort=h).  
+Code: [python script for plotting a chart with close asteroid approaches](./plot_close_approaches.py)
 
 ## Dependencies
 
