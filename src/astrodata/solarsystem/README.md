@@ -13,6 +13,11 @@ Data source: [NASA Center for NEO Studies and IAU Minor Planet Center, discovery
 Data source: [IAU Minor Planet Center, The MPC Orbit (MPCORB) Database](https://minorplanetcenter.net/iau/MPCORB.html),
 [break down of amateur discoveries](https://minorplanetcenter.net/iau/special/AmateurDiscoveries.txt)
 
+* Close approaches
+![Asteroid close approaches at a distance of up to 1.1 LD](../../../plots/solarsystem/asteroid-close-approaches-1ld-ru.png)
+Data source: [Small-Body DataBase (SBDB) Close-Approach Data API](https://ssd-api.jpl.nasa.gov/doc/cad.html),
+[data query for D < 1.1 lunar distances after 2020-03-01 to H < 30 sorted by absolute magnitude H (mag)](https://ssd-api.jpl.nasa.gov/cad.api?dist-max=1.1LD&date-min=2020-03-01&h-max=30&sort=h)
+
 ## Dependencies
 
 * [Matplotlib](https://matplotlib.org/)
