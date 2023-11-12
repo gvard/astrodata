@@ -12,13 +12,13 @@ Code: [python script for plotting graph with statistics of near-Earth objects](.
 ![Asteroid close approaches at a distance of up to 1.1 LD](../../../plots/solarsystem/asteroid-close-approaches-1ld-ru.png)
 Data source: [Small-Body DataBase (SBDB) Close-Approach Data API](https://ssd-api.jpl.nasa.gov/doc/cad.html),
 [data query for D < 1.1 lunar distances after 2020-03-01 to H < 30 sorted by absolute magnitude H (mag)](https://ssd-api.jpl.nasa.gov/cad.api?dist-max=1.1LD&date-min=2020-03-01&h-max=30&sort=h).
-See also [https://en.wikipedia.org/wiki/List_of_asteroid_close_approaches_to_Earth](List of asteroid close approaches to Earth)  
+See also [list of asteroid close approaches to Earth](https://en.wikipedia.org/wiki/List_of_asteroid_close_approaches_to_Earth)  
 Code: [python script for plotting a chart with close asteroid approaches](./plot_close_approaches.py)
 * Distribution of Solar System bodies by average distance to Sun
 ![Distribution of minor planets by semi-major axis between Venus and Jupiter](../../../plots/solarsystem/mpcorb-hist-a0.7-5.4.png "Distribution of minor planets by semi-major axis between Venus and Jupiter (histogram of 8000 bins)")
 ![Distribution of minor planets by semi-major axis beyond Neptune](../../../plots/solarsystem/mpcorb-hist-a29-70.png "Distribution of minor planets by semi-major axis beyond Neptune (histogram of 900 bins)")
 Data source: [IAU Minor Planet Center, The MPC Orbit (MPCORB) Database](https://minorplanetcenter.net/iau/MPCORB.html),
-[break down of amateur discoveries](https://minorplanetcenter.net/iau/special/AmateurDiscoveries.txt)
+[break down of amateur discoveries](https://minorplanetcenter.net/iau/special/AmateurDiscoveries.txt)  
 Code: [python script for plotting histograms with the distribution of Solar system objects along the semimajor axis](./plot_mpcorb_hist.py)
 
 ## Dependencies
