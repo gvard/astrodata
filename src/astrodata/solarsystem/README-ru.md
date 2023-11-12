@@ -12,6 +12,11 @@
 ![Распределение малых тел Солнечной системы по большой полуоси между за Нептуном](../../../plots/solarsystem/mpcorb-hist-a29-70.png "Распределение малых тел Солнечной системы по большой полуоси между за Нептуном (гистограмма из 900 столбцов)")
 Источник данных: [IAU Minor Planet Center, The MPC Orbit (MPCORB) Database](https://minorplanetcenter.net/iau/MPCORB.html),
 [Статистика открытий любителей и профессионалов по годам](https://minorplanetcenter.net/iau/special/AmateurDiscoveries.txt)
+* Сближения астероидов с Землей
+![Сближения астероидов с Землей на расстояние до 1.1 LD](../../../plots/solarsystem/asteroid-close-approaches-1ld-ru.png "Сближения астероидов с Землей на расстояние до 1.1 LD")
+Источник данных: [Small-Body DataBase (SBDB) Close-Approach Data API](https://ssd-api.jpl.nasa.gov/doc/cad.html),
+[запрос для D < 1.1 lunar distances после 2020-03-01 для H < 30, отсортированный по абсолютной звездной величине H](https://ssd-api.jpl.nasa.gov/cad.api?dist-max=1.1LD&date-min=2020-03-01&h-max=30&sort=h).  
+Code: [Скрипт на python для построения графика сближений астероидов с Землей](./plot_close_approaches.py)
 
 ## Зависимости
 
