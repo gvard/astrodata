@@ -118,6 +118,8 @@ parser.add_argument("-v", "--verbose", action="store_true",
                     help="Print additional information")
 parser.add_argument("-s", "--savedata", action="store_true",
                     help="Save data to JSON file")
+parser.add_argument("-t", "--translate", action="store_true",
+                    help="translate all inscriptions into Russian")
 args = parser.parse_args()
 
 soup = get_soup_request("https://www.mpe.mpg.de/~jcg/grbgen.html", "lxml")
@@ -133,7 +135,9 @@ years_s, gnums_s, opts_s = get_summary_grbs_stats(trs_summary)
 ) = parse_table(trs_all)
 
 DPI = 120
-LOC = "ru_RU"  # "en_US"  #
+LOC = "en_US"
+if args.translate:
+    LOC = "ru_RU"
 with open(f"../locales/grbs-{LOC[:2]}.json", "r", encoding="utf8") as loc_file:
     msgs = json.load(loc_file)
 locale.setlocale(locale.LC_ALL, LOC)
@@ -221,8 +225,8 @@ for i, year in enumerate(years_to_plot):
 opts = list(opts_dct.values())[::-1]
 
 FILE_EXT = "png"
-TMP_FILENAME = f"grbs_stats_bar_chart-{LOC[:2]}_." + FILE_EXT
-FILENAME = f"grbs_stats_bar_chart-{LOC[:2]}." + FILE_EXT
+TMP_FILENAME = f"grbs_stats_bar_chart-{LOC[:2]}_.{FILE_EXT}"
+FILENAME = f"grbs_stats_bar_chart-{LOC[:2]}.{FILE_EXT}"
 tmp_pth = os.path.join(PLOTS_DIR, TMP_FILENAME)
 pth = os.path.join(PLOTS_DIR, FILENAME)
 

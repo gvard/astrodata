@@ -23,15 +23,15 @@ PL = {
 }
 
 
-def plot_vert_pla(b1, b2, off=0.6):
+def plot_vert_pla(b1, b2, off=0.6, ash=0.02, veroff=10, ve=True):
     """Plot vertical lines and its text descriptions for planets, dwarf planets
     and largest tran-Neptunian objects.
     """
     dark_magenta = "#808"
     plt.plot([PL["ve"]["a"], PL["ve"]["a"]], [b1, b2], "--c")
     plt.text(
-        PL["ve"]["a"] + 0.02,
-        b2 - 10,
+        PL["ve"]["a"] + ash,
+        b2 - veroff,
         PL["ve"]["n"],
         c="c",
         rotation="vertical",
@@ -40,8 +40,8 @@ def plot_vert_pla(b1, b2, off=0.6):
     )
     plt.plot([PL["ea"]["a"], PL["ea"]["a"]], [b1, b2], "--b")
     plt.text(
-        PL["ea"]["a"] + 0.02,
-        b2 - 10,
+        PL["ea"]["a"] + ash,
+        b2 - veroff,
         PL["ea"]["n"],
         c="b",
         rotation="vertical",
@@ -50,27 +50,28 @@ def plot_vert_pla(b1, b2, off=0.6):
     )
     plt.plot([PL["ma"]["a"], PL["ma"]["a"]], [b1, b2], "--r")
     plt.text(
-        PL["ma"]["a"] + 0.02,
-        b2 - 10,
+        PL["ma"]["a"] + ash,
+        b2 - veroff,
         PL["ma"]["n"],
         c="r",
         rotation="vertical",
         va="top",
         fontsize=14,
     )
-    plt.text(
-        1.89,
-        500,
-        "Семейство Венгрии",
-        c="#45714E",
-        rotation="vertical",
-        va="top",
-        fontsize=14,
-    )
+    if ve:
+        plt.text(
+            1.89,
+            500,
+            "Семейство Венгрии",
+            c="#45714E",
+            rotation="vertical",
+            va="top",
+            fontsize=14,
+        )
     plt.plot([PL["ce"]["a"], PL["ce"]["a"]], [b1, b2], "--m")
     plt.text(
         PL["ce"]["a"] - 0.07,
-        b2 - 10,
+        b2 - veroff,
         PL["ce"]["n"],
         c="m",
         rotation="vertical",
@@ -80,7 +81,7 @@ def plot_vert_pla(b1, b2, off=0.6):
     plt.plot([PL["ju"]["a"], PL["ju"]["a"]], [b1, b2], "--", color="brown")
     plt.text(
         PL["ju"]["a"] + 0.02,
-        b2 - 10,
+        b2 - veroff,
         PL["ju"]["n"],
         c="brown",
         rotation="vertical",
@@ -161,7 +162,7 @@ def plot_vert_pla(b1, b2, off=0.6):
     )
 
 
-def plot_vert_resonances(b1, b2, off=0.6, lw=0.7, plot_tno=False):
+def plot_vert_resonances(b1, b2, off=0.6, veroff=10, lw=0.7, plot_tno=False):
     """Plot vertical lines and its text descriptions for Kirkwood gaps and other
     resonanses with Solar system planets.
     """
@@ -175,7 +176,7 @@ def plot_vert_resonances(b1, b2, off=0.6, lw=0.7, plot_tno=False):
         (3.972, "Семейство Хильды, 3:2"),
     ):
         plt.plot([a, a], [b1, b2], "--k", lw=lw)
-        plt.text(a + 0.02, b2 - 10, b, rotation="vertical", va="top", fontsize=14)
+        plt.text(a + 0.02, b2 - veroff, b, rotation="vertical", va="top", fontsize=14)
     if plot_tno:
         for a, b in ((36.5, "3:4"), (43.92, "4:7"), (47.8, "1:2"), (55.4, "2:5")):
             plt.plot([a, a], [b1, b2], "--k", lw=lw)
