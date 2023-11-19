@@ -22,8 +22,8 @@ Data source: [Переменные звезды, открытые ученика
 ![Numbers of most common variable stars types in the current versions of the GCVS and VSX](./var_types_distribution-gcvs-sorted.png "Numbers of most common variable stars types in the current versions of the GCVS and VSX")
 ![Numbers of most common variable stars types in the current versions of the VSX and GCVS](./var_types_distribution-vsx-sorted.png "Numbers of most common variable stars types in the current versions of the VSX and GCVS")
 Code: [Jupyter Notebook for plotting this charts](../../src/astrodata/stars/plot_variable_stars_types_grouped_chart.ipynb)
-![Numbers of variable stars in the GCVS, from the first edition](./gcvs-variable-stars-count.svg "Numbers of variable stars in the GCVS, from the first edition")
-![Numbers of variable stars, SNe and transients](./variable-stars-count-graph.svg "Numbers of variable stars (VSX and GCVS), SNe and transients")
+![Numbers of variable stars in the GCVS, from the first edition](./gcvs-variable-stars-counts-ru.png "Numbers of variable stars in the GCVS, from the first edition")
+![Numbers of variable stars, SNe and transients](./variable-stars-counts-ru.png "Numbers of variable stars (VSX and GCVS), SNe and transients")
 Data source: [The International Variable Star Index (Watson+, 2006-2007)](https://cdsarc.u-strasbg.fr/ftp/B/vsx/ReadMe),
 Code: [python script with data for plotting this charts](../../src/astrodata/stars/plot_variable_stars_counts.py)
 
