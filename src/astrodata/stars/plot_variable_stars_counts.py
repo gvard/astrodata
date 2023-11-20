@@ -4,7 +4,10 @@ General Catalogue of Variable Stars (Samus+, 2007-2017)
 https://cdsarc.u-strasbg.fr/ftp/B/gcvs/ReadMe
 General catalogue of variable stars: Version GCVS 5.1, 2017ARep...61...80S
 The 84th Name-List of Variable Stars. Globular Clusters (Third Part) and Novae, 2021PZ.....41....7S
+Peremennye Zvezdy (Variable Stars) 41, No. 7, 2021
 http://www.astronet.ru/db/varstars/msg/eid/PZ-41-007
+The 85th Name-list of Variable Stars, Peremennye Zvezdy (Variable Stars) 43, No. 9, 2023
+http://www.astronet.ru/db/varstars/msg/1911622
 General Catalog of Variable Stars, 4th Ed. (GCVS4, Kholopov et al. 1985-1988): II/139B
 The fourth edition of the General Catalogue of Variable Stars supersedes the third edition
 (Kukarkin et al. 1969-1970: 20437 objects including 148 constant ones, resulting
@@ -164,8 +167,13 @@ plt.subplots_adjust(left=0.06, bottom=0.06, right=0.97, top=0.955)
 plt.plot(vsx_dates, vsx_nums, ".r--", label="AAVSO International Variable Star Index")
 plt.plot(gcvs_dates, gcvs_nums, "ob--", label="Общий Каталог Переменных Звезд")
 plt.plot(
-    [datetime(2021, 11, 26)], [58.035], "*g", ms=12,
-    label="Именованные переменные звезды в ОКПЗ, 58035 звезд",
+    [datetime(2021, 11, 26)], [58.035], "*g", ms=12, markeredgecolor="k", markeredgewidth=0.7,
+    # label="Именованные переменные звезды в ОКПЗ, 58035 звезд",
+)
+NAMED = 59102
+plt.plot(
+    [datetime(2023, 10, 25)], [NAMED/1000], "*g", ms=12, markeredgecolor="k", markeredgewidth=0.7,
+    label=f"Именованные переменные звезды в ОКПЗ, {NAMED} звезды",
 )
 plt.plot(
     [datetime(2023, 6, 4)], [124.100], "*k", ms=12,
@@ -204,8 +212,12 @@ plt.xlim(gcvs_dates[0] - td, today + td)
 plt.subplots_adjust(left=0.06, bottom=0.06, right=0.97, top=0.955)
 plt.plot(gcvs_dates, gcvs_nums, "ob--", label="Общий Каталог Переменных Звезд")
 plt.plot(
-    [datetime(2021, 11, 26)], [58.035], "*r", ms=12,
-    label="Именованные переменные звезды в ОКПЗ, 58035 звезд",
+    [datetime(2021, 11, 26)], [58.035], "*r", ms=12, markeredgecolor="k", markeredgewidth=0.7,
+    # label="Именованные переменные звезды в ОКПЗ, 58035 звезд",
+)
+plt.plot(
+    [datetime(2023, 10, 25)], [NAMED/1000], "*r", ms=12, markeredgecolor="k", markeredgewidth=0.7,
+    label=f"Именованные переменные звезды в ОКПЗ, {NAMED} звезды",
 )
 plt.title(
     f"Количество переменных звезд. Всего {vsx_vars} объектов в VSX и {int(gcvs_nums[-1] * 1000)} в ОКПЗ. "
