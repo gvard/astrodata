@@ -139,6 +139,7 @@ gcvs_dates = [
         "2004-01-01", "2009-06-07",
         "2011-04-03", "2012-02-26", "2013-04-30", "2016-12-31", "2018-09-17",
         "2020-07-06", "2022-03-31",
+        "2023-11-10",
     ]
 ]
 gcvs_nums = [
@@ -150,9 +151,10 @@ gcvs_nums = [
     38.624, 41.639,
     43.675, 45.835, 47.969, 52.011, 52.011,
     54.979, 58.202,
+    59.279,
 ]
-gcvs_dates.append(today)
-gcvs_nums.append(gcvs_nums[-1])
+# gcvs_dates.append(today)
+# gcvs_nums.append(gcvs_nums[-1])
 
 fig, ax = plt.subplots(figsize=(16, 9))
 plt.ylim(0, vsx_nums[-1] + 60)
@@ -167,7 +169,11 @@ plt.plot(
 )
 plt.plot(
     [datetime(2023, 6, 4)], [124.100], "*k", ms=12,
-    label="Транзиенты и вспышки сверхновых, >121700 вспышек и >124100 транзиентов",
+    # label="Транзиенты и вспышки сверхновых, >121700 вспышек и >124100 транзиентов",
+)
+plt.plot(
+    [datetime(2023, 11, 20)], [134.393], "*k", ms=12,
+    label="Транзиенты и вспышки сверхновых, более 134300 транзиентов",
 )
 plt.title(
     f"Количество переменных звезд. Всего {vsx_vars} звезд в VSX, "
@@ -192,7 +198,7 @@ if FILE_EXT == "svg":
     os.remove(TMP_PTH)
 
 fig, ax = plt.subplots(figsize=(16, 9))
-plt.ylim(0, 60)
+plt.ylim(0, 62)
 td = timedelta(weeks=60)
 plt.xlim(gcvs_dates[0] - td, today + td)
 plt.subplots_adjust(left=0.06, bottom=0.06, right=0.97, top=0.955)
@@ -202,8 +208,7 @@ plt.plot(
     label="Именованные переменные звезды в ОКПЗ, 58035 звезд",
 )
 plt.title(
-    f"Количество переменных звезд. Всего {vsx_vars} звезд в VSX, "
-    + f"{round(vsx_vars/9948644.04, 2)}% переменных звезд исследовано. "
+    f"Количество переменных звезд. Всего {vsx_vars} объектов в VSX и {int(gcvs_nums[-1] * 1000)} в ОКПЗ. "
     + f"{MONTH} {YEAR} года", fontsize=16,
 )
 plt.xlabel("Год", fontsize=14)

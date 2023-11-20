@@ -203,13 +203,13 @@ for i, tr in enumerate(data[3:]):
         "recop": int(tds[4].text),
     })
 
-dataj = dataj[::-1]
 mjds = mjds[::-1]
 nums = nums[::-1]
 orbnums = orbnums[::-1]
 recsnums = recsnums[::-1]
 reconums = reconums[::-1]
 reconums.append(reconums[-1])
+recsnums.append(recsnums[-1])
 dats = dats[::-1]
 for i, nn in enumerate(nums):
     if i:
@@ -217,6 +217,10 @@ for i, nn in enumerate(nums):
     manyr_sums.append(sum(manyrs))
 manyrs.append((Time.now().mjd - mjds[i - 1]) * nums[i - 1] / 365.2425)
 manyr_sums.append(sum(manyrs))
+
+# For reverse chronological order comment this lines:
+dataj = dataj[::-1]
+datac = datac[::-1]
 
 fig, ax = plt.subplots(figsize=(16, 9))
 fig.subplots_adjust(0.048, 0.06, 0.94, 0.97)  # 0.99
@@ -249,8 +253,10 @@ if not args.method:
     else:
         ax.step(data_to_plot, nums_to_plot, "b", where="post", lw=LW,
                 label="Число людей в космосе (высота >80 км)")
+    ax.step(dats_rec, recsnums, "--", where="post", lw=2.5, color="darkorange",
+            label="Рекордное число людей на высоте более 80.5 км", zorder=3)
     ax.step(dats_rec, reconums, "--k", where="post", lw=2.5,
-            label="Рекордное число людей на орбите")
+            label="Рекордное число людей на орбите", zorder=4)
 else:
     ax.stairs(nums, data_to_plot, fill=args.filled, alpha=1, color="b")  # baseline=None
 
@@ -269,14 +275,15 @@ if args.spent:
     ax2.set_ylabel(f'{msgs["ttimelbl"]}, {msgs["manyr"]}', fontsize=14)
 ax.set_facecolor("none")
 ax.set_zorder(1)
-YLIM = 20
+YSHIFT = 0.35
+YLIM = 20 + YSHIFT
 ax.set_ylim(0, YLIM)
 ax.set_xlabel(msgs["xlbl"], fontsize=14)
 ax.set_ylabel(msgs["ylbl3"], fontsize=14)
 
 TM = timedelta(weeks=48)
 TM_SHIFT = timedelta(weeks=12)
-SH, SH2 = 0.2, 1.9  # 1.2
+SH, SH2 = 0.2 + YSHIFT, 1.9 + YSHIFT
 accidents = [
     # (1960, 10, 24, 'Катастрофа на космодроме Байконур, МБР Р-16', SH, TM),
     (1961, 3, 23, msgs["fb"], SH2, -TM_SHIFT),
@@ -323,10 +330,11 @@ plt.title(
 METHD = "stairs" if args.method else "steps"
 FILENAME = f"spacepop-{'spent-' if args.spent else ''}{METHD}{'-filled' if args.filled else ''}"
 
+LOC = "-ru" if args.translate else ""
 FILE_EXT = "png"
 plots_dir = os.path.join(os.pardir, os.pardir, os.pardir, "plots", "manned")
-tmp_pth = os.path.join(plots_dir, f"{FILENAME}_.{FILE_EXT}")
-pth = os.path.join(plots_dir, f"{FILENAME}.{FILE_EXT}")
+tmp_pth = os.path.join(plots_dir, f"{FILENAME}{LOC}_.{FILE_EXT}")
+pth = os.path.join(plots_dir, f"{FILENAME}{LOC}.{FILE_EXT}")
 plt.savefig(tmp_pth, dpi=120)
 
 if FILE_EXT == "svg":
