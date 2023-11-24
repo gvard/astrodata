@@ -15,7 +15,7 @@
 ![Total number of extravehicular activities](../../../plots/manned/evas-total-counts.svg "Total number of spacewalks (extravehicular activities)")
 ![Total duration of extravehicular activities](../../../plots/manned/evas-total-time.svg "Total duration of spacewalks (extravehicular activities)")
 [Data source: J. McDowell, planet4589.org](https://planet4589.org/space/astro/web/),
-[description and definitions](https://planet4589.org/space/astro/web/evas.html).
+[description and definitions](https://planet4589.org/space/astro/web/evas.html).  
 Note that EVA (spacewalk) at this data defines as an activity carried out in vacuum conditions
 (ambient pressure of less than 50 mbar or 5 kPa) protected at most by a spacesuit.
 

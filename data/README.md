@@ -25,7 +25,7 @@
 * [Supernovae statistics](./stars/sne-stats.json).
   Data source:
   [Bright Supernova - archives](https://rochesterastronomy.org/snimages/archives.html) by David Bishop,
-  [arXiv:1103.5165](https://arxiv.org/abs/1103.5165);
+  see [Supernova Discoveries 2010–2011: Statistics and Trends, arXiv:1103.5165](https://arxiv.org/abs/1103.5165);
   see [SNe stats page](https://gvard.github.io/stars/snstats/) for data usage example
 * [Numbers of gamma-ray bursts localized within a few hours to days to less than 1 degree](https://www.mpe.mpg.de/~jcg/grbgen.html) by Jochen Greiner,
   [data in JSON file](./stars/grbs-localized-stats.json),

@@ -22,10 +22,11 @@ Data source: [IAU Minor Planet Center, The MPC Orbit (MPCORB) Database](https://
 Code: [python script for plotting histograms with the distribution of Solar system objects along the semimajor axis](./plot_mpcorb_hist.py)
 * Distribution of minor planets by delta-v and travel time
 ![Distribution of minor planets by delta-v in semimajor axis range between 0.6 and 2.2](../../../plots/solarsystem/mpcprb-deltav-a0.6-2.2-ru.png "Distribution of minor planets by delta-v in semimajor axis range between 0.6 and 2.2 with marked spacecraft targets")
-![Distribution of minor planets by travel (transit) time in semimajor axis range between 0.6 and 2.2](../../../plots/solarsystem/mpcprb-tt-a0.6-2.2-ru.png "Distribution of minor planets by travel (transit) time in semimajor axis range between 0.6 and 2.2")  
+![Distribution of minor planets by travel (transit) time in semimajor axis range between 0.6 and 2.2](../../../plots/solarsystem/mpcprb-tt-a0.6-2.2-ru.png "Distribution of minor planets by travel (transit) time in semimajor axis range between 0.6 and 2.2 with marked spacecraft targets")  
 See [Ultra-low delta-v objects and the human exploration of asteroids (2011)](https://ui.adsabs.harvard.edu/abs/2011P%26SS...59.1408E/abstract).  
 Code adapted from [A Delta-V map of the known Main Belt Asteroids (2018)](https://ui.adsabs.harvard.edu/abs/2018AcAau.146...73T/abstract),
-[pdf](https://planet4589.org/jcm/pubs/sci/papers/2018/Taylor18.pdf), see [Main_Belt_Code_V3.py file from Dataverse](https://dataverse.harvard.edu/dataverse/ElvisMBA)
+[pdf](https://planet4589.org/jcm/pubs/sci/papers/2018/Taylor18.pdf), see [Main_Belt_Code_V3.py file from Dataverse](https://dataverse.harvard.edu/dataverse/ElvisMBA),
+[Earth-Approaching Asteroids as Targets for Exploration. Shoemaker, E.M. and Helin, E.F., 1978, NASA CP-2053, pp. 245-256 (1978)](https://ntrs.nasa.gov/api/citations/19780021079/downloads/19780021079.pdf)
 
 ## Dependencies
 

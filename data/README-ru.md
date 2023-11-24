@@ -13,7 +13,7 @@
 * [Население космоса](https://planet4589.org/space/astro/web/pop.html) (Jonathan McDowell);
   Данные в форматах [JSON](./space_population.json) и [CSV](./space_population.csv)
 
-## Solar System
+## Солнечная система
 
 * [Данные с параметрами пространственно разрешенных объектов Солнечной системы](./solarsystem/resolved.json),
   см. страницу [Семейный портрет Солнечной системы](https://gvard.github.io/solarsystem/resolved/) как пример использования данных
@@ -25,7 +25,7 @@
 * [Статистика сверхновых](./stars/sne-stats.json).
   Источник данных:
   [Bright Supernova - archives](https://rochesterastronomy.org/snimages/archives.html) (David Bishop),
-  [arXiv:1103.5165](https://arxiv.org/abs/1103.5165);
+  [Supernova Discoveries 2010–2011: Statistics and Trends, arXiv:1103.5165](https://arxiv.org/abs/1103.5165);
   см. страницу [статистики сверхновых](https://gvard.github.io/stars/snstats/) как пример использования данных
 * [Динамика открытий гамма-всплесков, локализованных в первые часы и дни в пределах одного градуса](https://www.mpe.mpg.de/~jcg/grbgen.html) (Jochen Greiner),
   [данные в формате JSON](./stars/grbs-localized-stats.json),

@@ -24,7 +24,7 @@ Data source: [Переменные звезды, открытые ученика
 Code: [Jupyter Notebook for plotting this charts](../../src/astrodata/stars/plot_variable_stars_types_grouped_chart.ipynb)
 ![Numbers of variable stars in the GCVS, from the first edition](./gcvs-variable-stars-counts-ru.png "Numbers of variable stars in the GCVS, from the first edition")
 ![Numbers of variable stars, SNe and transients](./variable-stars-counts-ru.png "Numbers of variable stars (VSX and GCVS), SNe and transients")
-Data source: [The International Variable Star Index (Watson+, 2006-2007)](https://cdsarc.u-strasbg.fr/ftp/B/vsx/ReadMe),
+Data source: [The International Variable Star Index (Watson+, 2006-2007)](https://cdsarc.u-strasbg.fr/ftp/B/vsx/ReadMe).
 Code: [python script with data for plotting this charts](../../src/astrodata/stars/plot_variable_stars_counts.py)
 
 ## Milky Way Clusters
