@@ -20,6 +20,11 @@ Code: [python script for plotting a chart with close asteroid approaches](./plot
 Data source: [IAU Minor Planet Center, The MPC Orbit (MPCORB) Database](https://minorplanetcenter.net/iau/MPCORB.html),
 [break down of amateur discoveries](https://minorplanetcenter.net/iau/special/AmateurDiscoveries.txt)  
 Code: [python script for plotting histograms with the distribution of Solar system objects along the semimajor axis](./plot_mpcorb_hist.py)
+* Distribution of largest numbered trans-Neptunian objects by absolute magnitude H
+![Distribution of largest numbered trans-Neptunian objects by absolute magnitude H](../../../plots/solarsystem/tno-a-h-ru.png "Distribution of largest numbered trans-Neptunian objects by semi-major axis and absolute magnitude H")
+Data: [MPC Web Service output as JSON file](../../../data/solarsystem/tno-largest.json).
+For parameters of unnumbered trans-Neptunian objects see [MPC Database Search](https://minorplanetcenter.net/db_search)  
+Code: see [MPC Web Service, mpc-fetch.py](https://minorplanetcenter.net/web_service/)
 * Distribution of minor planets by delta-v and travel time
 ![Distribution of minor planets by delta-v in semimajor axis range between 0.6 and 2.2](../../../plots/solarsystem/mpcprb-deltav-a0.6-2.2-ru.png "Distribution of minor planets by delta-v in semimajor axis range between 0.6 and 2.2 with marked spacecraft targets")
 ![Distribution of minor planets by travel (transit) time in semimajor axis range between 0.6 and 2.2](../../../plots/solarsystem/mpcprb-tt-a0.6-2.2-ru.png "Distribution of minor planets by travel (transit) time in semimajor axis range between 0.6 and 2.2 with marked spacecraft targets")  
