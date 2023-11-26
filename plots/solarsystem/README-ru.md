@@ -20,8 +20,9 @@
 Источник данных: [IAU Minor Planet Center, The MPC Orbit (MPCORB) Database](https://minorplanetcenter.net/iau/MPCORB.html),
 [Статистика открытий любителей и профессионалов по годам](https://minorplanetcenter.net/iau/special/AmateurDiscoveries.txt)  
 Код: [python script for plotting histograms with the distribution of Solar system objects along the semimajor axis](../../src/astrodata/solarsystem/plot_mpcorb_hist.py)
-* Распределение крупнейших нумерованных транснептуновых объектов по абсолютной зв. величине H
-![Распределение крупнейших нумерованных транснептуновых объектов по абсолютной зв. величине H](./tno-a-h-ru.png "Распределение крупнейших нумерованных транснептуновых объектов по большой полуоси и абсолютной зв. величине H")
+* Распределение крупнейших транснептуновых объектов по абсолютной зв. величине H
+![Распределение крупнейших нумерованных и ненумерованных транснептуновых объектов по абсолютной зв. величине H](./tno-a-h-ru.png "Распределение крупнейших нумерованных и ненумерованных транснептуновых объектов по большой полуоси и абсолютной зв. величине H")
+См. также [версию только для нумерованных транснептуновых объектов](./tno-a-h-numbered-ru.png).  
 Данные: [данные MPC Web Service в формате JSON](../../data/solarsystem/tno-largest.json).
 Для получения параметров ненумерованных транснептуновых объектов см. [поиск в базе данных MPC](https://minorplanetcenter.net/db_search)  
 Код: см. [MPC Web Service, mpc-fetch.py](https://minorplanetcenter.net/web_service/)
