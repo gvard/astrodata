@@ -23,6 +23,7 @@ Code: [python script for plotting histograms with the distribution of Solar syst
 * Distribution of largest trans-Neptunian objects by absolute magnitude H
 ![Distribution of largest numbered and unnumbered trans-Neptunian objects by absolute magnitude H](../../../plots/solarsystem/tno-a-h-ru.png "Distribution of largest numbered and unnumbered trans-Neptunian objects by semi-major axis and absolute magnitude H")
 See [version for only numbered trans-Neptunian objects](./tno-a-h-numbered-ru.png).  
+![Distribution of largest numbered trans-Neptunian objects by delta v](../../../plots/solarsystem/tno-a-deltav-numbered-ru.png "Distribution of largest numbered trans-Neptunian objects by semi-major axis and delta v")
 Data: [MPC Web Service output as JSON file](../../../data/solarsystem/tno-largest.json).
 For parameters of unnumbered trans-Neptunian objects see [MPC Database Search](https://minorplanetcenter.net/db_search)  
 Code: see [MPC Web Service, mpc-fetch.py](https://minorplanetcenter.net/web_service/)
