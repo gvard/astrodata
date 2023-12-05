@@ -16,6 +16,7 @@
 "telescope": "6-m Big Telescope Alt-azimuth",
 "diam": 6050,
 "f": 4,
+"altitude": 2080,
 "obs": "Special Astrophysical Observatory",
 "obscode": "115",
 "region": "RU-KC",
@@ -35,6 +36,19 @@
 "launch": "1990-04-24",
 "firstlight": "1990-05-20"
 },
+"Subaru": {
+"name": "Subaru Telescope",
+"runame": "Субару",
+"obs": "Mauna Kea Observatories",
+"obscode": "T09",
+"region": "US-HI",
+"altitude": 4139,
+"diam": 8300,
+"type": "RC",
+"englight": "1998-12-31",
+"firstlight": ["1999-01-04", "1999-01-11"],
+"bib": "2000PASJ...52....1K"
+},
 "Spitzer": {
 "name": "Spitzer Space Telescope",
 "runame": "Космический телескоп Спитцер",
@@ -47,6 +61,25 @@
 "firstlight": "2003-12-18",
 "end": "2020-01-30",
 "url": "https://www.spitzer.caltech.edu/image/ssc2003-06a1-spitzer-irac-composite-image-of-a-dark-globule-in-ic-1396"
+},
+"Kepler": {
+"name": "Kepler space telescope",
+"diam": 950,
+"region": "Earth-trailing, Heliocentric",
+"launch": "2009-03-07",
+"firstlight": "2009-04-08",
+"url": "https://www.nasa.gov/image-article/keplers-diamond-mine-of-stars/"
+},
+"HARPS": {
+"name": "High Accuracy Radial velocity Planet Searcher",
+"telescope": "ESO 3.6-metre telescope",
+"obs": "La Silla Observatory",
+"obscode": "809",
+"region": "CHL",
+"diam": 3110,
+"area": 8.8564,
+"altitude": 2400,
+"firstlight": "2003-02-11"
 },
 "SDSS": {
 "name": "Sloan Digital Sky Survey",
