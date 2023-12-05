@@ -4,8 +4,10 @@
 "runame": "Телескоп Хейла",
 "telescope": "Hale Telescope",
 "diam": 5080,
+"area": 19.36,
 "f": 3.3,
 "obs": "Palomar Observatory",
+"alt": 1713,
 "obscode": "I41",
 "region": "US-CA",
 "firstlight": "1949-01-26"
@@ -15,8 +17,9 @@
 "runame": "Большой азимутальный телескоп Специальной астрофизической обсерватории РАН",
 "telescope": "6-m Big Telescope Alt-azimuth",
 "diam": 6050,
+"area": 26,
 "f": 4,
-"altitude": 2080,
+"alt": 2080,
 "obs": "Special Astrophysical Observatory",
 "obscode": "115",
 "region": "RU-KC",
@@ -29,10 +32,12 @@
 "telescope": "Hubble Space Telescope",
 "type": "RC",
 "diam": 2400,
+"area": 4,
 "f": 24,
 "obs": "Hubble Space Telescope",
 "obscode": "250",
 "region": "LEO",
+"alt": 537000,
 "launch": "1990-04-24",
 "firstlight": "1990-05-20"
 },
@@ -42,12 +47,112 @@
 "obs": "Mauna Kea Observatories",
 "obscode": "T09",
 "region": "US-HI",
-"altitude": 4139,
+"alt": 4139,
 "diam": 8300,
+"area": 53,
 "type": "RC",
 "englight": "1998-12-31",
 "firstlight": ["1999-01-04", "1999-01-11"],
 "bib": "2000PASJ...52....1K"
+},
+"GTC": {
+"name": "Gran Telescopio Canarias",
+"diam": 10400,
+"area": 78.54,
+"obscode": "Z18",
+"alt": 2267,
+"firstlight": "2007-07-13"
+},
+"LBT": {
+"name": "Large Binocular Telescope",
+"area": 111,
+"diam": "8400x2",
+"alt": 3221,
+"firstlight": "2005-10-12"
+},
+"LAMOST": {
+"name": "The Large Sky Area Multi-Object Fibre Spectroscopic Telescope",
+"diam": 4000,
+"area": "<18.86",
+"alt": 960,
+"firstlight": "2008-01-01"
+},
+"VLT": {
+"name": "Very Large Telescope",
+"diam": "8200x4",
+"alt": 2635,
+"obs": "Paranal Observatory",
+"obscode": 301,
+"firstlight": ["1998-05-25", "1999-03-01", "2000-01-26", "2000-09-04"]
+},
+"Keck": {
+"name": "W. M. Keck Observatory",
+"diam": "10000x2",
+"area": "75.76x2",
+"alt": 4145,
+"firstlight": ["1990-11-24", "1996-10-23"]
+},
+"Magellan": {
+"name": "Magellan Telescopes",
+"diam": "6500x2",
+"alt": 2516,
+"firstlight": ["2001-09-15", "2002-09-07"]
+},
+"Gemini": {
+"name": "Gemini Observatory",
+"diam": "8100x2",
+"obs": "Gemini Observatory",
+"alt": [4213, 2722],
+"englight": "1999-02-27",
+"firstlight": ["1999-06-25", "2000-11-01"],
+"url": "https://issuu.com/geminifocus/docs/gf_0699"
+},
+"HET-1": {
+"name": "Hobby-Eberly Telescope",
+"obs": "McDonald Observatory",
+"diam": 9200,
+"area": "<67",
+"alt": 2030,
+"firstlight": "1996-12-10"
+},
+"HET-2": {
+"name": "Hobby-Eberly Telescope",
+"obs": "McDonald Observatory",
+"diam": 10000,
+"area": "<78.5",
+"alt": 2030,
+"firstlight": "2015-07-15"
+},
+"SALT": {
+"name": "Southern African Large Telescope",
+"diam": 9200,
+"alt": 1798,
+"area": "<67",
+"firstlight": "2005-09-01"
+},
+"MMT": {
+"name": "MMT Observatory",
+"telescope": "Multiple Mirror Telescope",
+"diam": 6500,
+"alt": 2616,
+"area": "",
+"firstlight": "2000-05-13",
+"url": "https://www.mmto.org/history-of-the-telescope/"
+},
+"LZT": {
+"name": "Large Zenith Telescope",
+"diam": 6000,
+"alt": 	395,
+"firstlight": "2003-04-15",
+"end": "2016-07-15"
+},
+"WHT": {
+"name": "William Herschel Telescope",
+"obs": "Roque de los Muchachos Observatory",
+"alt": 2344,
+"diam": 4200,
+"area": "<13.85",
+"firstlight": "1987-06-01"
 },
 "Spitzer": {
 "name": "Spitzer Space Telescope",
@@ -55,20 +160,34 @@
 "obs": "Spitzer Space Telescope",
 "obscode": "245",
 "diam": 850,
+"area": "<0.56",
 "f": 12,
+"wv": [[3600, 16000], [5300, 4000], [5500, 9500]],
 "region": "Earth-trailing, Heliocentric",
 "launch": "2003-08-25",
 "firstlight": "2003-12-18",
 "end": "2020-01-30",
+"bib": "2007RScI...78a1302G",
 "url": "https://www.spitzer.caltech.edu/image/ssc2003-06a1-spitzer-irac-composite-image-of-a-dark-globule-in-ic-1396"
 },
 "Kepler": {
 "name": "Kepler space telescope",
 "diam": 950,
+"area": 0.708,
 "region": "Earth-trailing, Heliocentric",
 "launch": "2009-03-07",
-"firstlight": "2009-04-08",
+"firstlight": ["2009-04-08", "2014-05-30"],
+"end": ["2013-05-11", "2018-10-30"],
 "url": "https://www.nasa.gov/image-article/keplers-diamond-mine-of-stars/"
+},
+"TESS": {
+"name": "Transiting Exoplanet Survey Satellite",
+"diam": "10.5x4",
+"f": 1.4,
+"wv": [600, 1000],
+"region": "Highly elliptical orbit",
+"firstlight": "2018-08-07",
+"url": "https://svs.gsfc.nasa.gov/13069"
 },
 "HARPS": {
 "name": "High Accuracy Radial velocity Planet Searcher",
@@ -76,16 +195,41 @@
 "obs": "La Silla Observatory",
 "obscode": "809",
 "region": "CHL",
-"diam": 3110,
+"diam": 3566,
 "area": 8.8564,
-"altitude": 2400,
+"alt": 2400,
 "firstlight": "2003-02-11"
+},
+"CFHT": {
+"name": "Canada–France–Hawaii Telescope",
+"obs": "Mauna Kea Observatories",
+"obscode": "T09",
+"region": "US-HI",
+"diam": 3580,
+"firstlight": "1979-01-01",
+"alt": 4204
+},
+"SOAR": {
+"name": "Southern Astrophysical Research Telescope",
+"diam": 4100,
+"alt": 	2738,
+"obs": "Cerro Tololo Inter-American Observatory",
+"obscode": "I33",
+"firstlight": "2004-04-17"
+},
+"LDT": {
+"name": "Lowell Discovery Telescope",
+"diam": 4300,
+"type": "RC",
+"alt": 2360,
+"firstlight": "2012-04-30"
 },
 "SDSS": {
 "name": "Sloan Digital Sky Survey",
 "runame": "Слоановский цифровой небесный обзор",
 "telescope": "Sloan Digital Sky Survey telescope",
 "type": "RC",
+"alt": 2788,
 "diam": 2500,
 "f": 5,
 "obs": "Apache Point Observatory",
@@ -105,6 +249,7 @@
 "diam": 1244,
 "obs": "Palomar Observatory",
 "obscode": "I41",
+"alt": 1712,
 "region": "US-CA",
 "sensor": "2000x4000x12",
 "fov": 7.8,
@@ -119,6 +264,7 @@
 "diam": 1244,
 "obs": "Palomar Observatory",
 "obscode": "I41",
+"alt": 1712,
 "region": "US-CA",
 "sensor": "6144x6160x16",
 "fov": 46.725,
@@ -162,6 +308,7 @@
 "runame": "Евклид",
 "telescope": "Euclid space telescope",
 "diam": 1200,
+"area": 1.006,
 "obs": "Euclid",
 "region": "L2",
 "sensor": "4096x4132x6x6, 2040x2040x4x4",
