@@ -1,4 +1,12 @@
 {
+"Hooker": {
+"name": "100-inch Hooker telescope",
+"obs": "Mount Wilson Observatory",
+"diam": 2540,
+"alt": 1742,
+"firstlight": "1917-11-02",
+"url": "https://www.mtwilson.edu/discovering-mount-wilson-chapter-7-first-light-on-the-100-inch-telescope/"
+},
 "Hale": {
 "name": "Hale Telescope",
 "runame": "Телескоп Хейла",
@@ -26,21 +34,6 @@
 "firstlight": "1975-12-30",
 "url": "https://www.sao.ru/Doc-en/Events/2015/BTA-40/"
 },
-"HST": {
-"name": "Hubble Space Telescope",
-"runame": "Космический телескоп Хаббл",
-"telescope": "Hubble Space Telescope",
-"type": "RC",
-"diam": 2400,
-"area": 4,
-"f": 24,
-"obs": "Hubble Space Telescope",
-"obscode": "250",
-"region": "LEO",
-"alt": 537000,
-"launch": "1990-04-24",
-"firstlight": "1990-05-20"
-},
 "Subaru": {
 "name": "Subaru Telescope",
 "runame": "Субару",
@@ -59,6 +52,7 @@
 "name": "Gran Telescopio Canarias",
 "diam": 10400,
 "area": 78.54,
+"obs": "Roque de los Muchachos Observatory",
 "obscode": "Z18",
 "alt": 2267,
 "firstlight": "2007-07-13"
@@ -67,6 +61,8 @@
 "name": "Large Binocular Telescope",
 "area": 111,
 "diam": "8400x2",
+"obs": "Mount Graham International Observatory",
+"obscode": "G83",
 "alt": 3221,
 "firstlight": "2005-10-12"
 },
@@ -74,6 +70,8 @@
 "name": "The Large Sky Area Multi-Object Fibre Spectroscopic Telescope",
 "diam": 4000,
 "area": "<18.86",
+"obs": "Xinglong Station (NAOC)",
+"obscode": "327",
 "alt": 960,
 "firstlight": "2008-01-01"
 },
@@ -85,16 +83,25 @@
 "obscode": 301,
 "firstlight": ["1998-05-25", "1999-03-01", "2000-01-26", "2000-09-04"]
 },
+"VLTI": {
+"diam": 200000,
+"area": 844.962,
+"firstlight": "2001-03-17",
+"url": "https://www.eso.org/public/unitedkingdom/news/eso0111/"
+},
 "Keck": {
 "name": "W. M. Keck Observatory",
 "diam": "10000x2",
 "area": "75.76x2",
+"obs": "Mauna Kea Observatories",
 "alt": 4145,
 "firstlight": ["1990-11-24", "1996-10-23"]
 },
 "Magellan": {
 "name": "Magellan Telescopes",
 "diam": "6500x2",
+"obs": "Las Campanas Observatory",
+"obscode": "304",
 "alt": 2516,
 "firstlight": ["2001-09-15", "2002-09-07"]
 },
@@ -107,15 +114,16 @@
 "firstlight": ["1999-06-25", "2000-11-01"],
 "url": "https://issuu.com/geminifocus/docs/gf_0699"
 },
-"HET-1": {
+"HET-1996": {
 "name": "Hobby-Eberly Telescope",
 "obs": "McDonald Observatory",
 "diam": 9200,
 "area": "<67",
 "alt": 2030,
-"firstlight": "1996-12-10"
+"firstlight": "1996-12-10",
+"end": "2013-01-01"
 },
-"HET-2": {
+"HET-2015": {
 "name": "Hobby-Eberly Telescope",
 "obs": "McDonald Observatory",
 "diam": 10000,
@@ -126,16 +134,31 @@
 "SALT": {
 "name": "Southern African Large Telescope",
 "diam": 9200,
+"obs": "South African Astronomical Observatory",
+"obscode": "B31",
 "alt": 1798,
 "area": "<67",
 "firstlight": "2005-09-01"
 },
-"MMT": {
+"MMT-1979": {
+"name": "MMT Observatory",
+"telescope": "Multiple Mirror Telescope with 6 mirrors",
+"diam": 4410,
+"alt": 2616,
+"obs": "Fred Lawrence Whipple Observatory",
+"obscode": "696",
+"firstlight": "1979-05-09",
+"end": "1998-03-02",
+"bib": "2004SPIE.5489..300B",
+"url": "https://www.researchgate.net/publication/260955804_The_new_MMT"
+},
+"MMT-2000": {
 "name": "MMT Observatory",
 "telescope": "Multiple Mirror Telescope",
 "diam": 6500,
 "alt": 2616,
-"area": "",
+"obs": "Fred Lawrence Whipple Observatory",
+"obscode": "696",
 "firstlight": "2000-05-13",
 "url": "https://www.mmto.org/history-of-the-telescope/"
 },
@@ -143,8 +166,10 @@
 "name": "Large Zenith Telescope",
 "diam": 6000,
 "alt": 	395,
+"type": "liquid-mirror",
 "firstlight": "2003-04-15",
-"end": "2016-07-15"
+"end": "2016-07-15",
+"url": "https://www.atlasobscura.com/places/large-zenith-telescope"
 },
 "WHT": {
 "name": "William Herschel Telescope",
@@ -154,40 +179,16 @@
 "area": "<13.85",
 "firstlight": "1987-06-01"
 },
-"Spitzer": {
-"name": "Spitzer Space Telescope",
-"runame": "Космический телескоп Спитцер",
-"obs": "Spitzer Space Telescope",
-"obscode": "245",
-"diam": 850,
-"area": "<0.56",
-"f": 12,
-"wv": [[3600, 16000], [5300, 4000], [5500, 9500]],
-"region": "Earth-trailing, Heliocentric",
-"launch": "2003-08-25",
-"firstlight": "2003-12-18",
-"end": "2020-01-30",
-"bib": "2007RScI...78a1302G",
-"url": "https://www.spitzer.caltech.edu/image/ssc2003-06a1-spitzer-irac-composite-image-of-a-dark-globule-in-ic-1396"
-},
-"Kepler": {
-"name": "Kepler space telescope",
-"diam": 950,
-"area": 0.708,
-"region": "Earth-trailing, Heliocentric",
-"launch": "2009-03-07",
-"firstlight": ["2009-04-08", "2014-05-30"],
-"end": ["2013-05-11", "2018-10-30"],
-"url": "https://www.nasa.gov/image-article/keplers-diamond-mine-of-stars/"
-},
-"TESS": {
-"name": "Transiting Exoplanet Survey Satellite",
-"diam": "10.5x4",
-"f": 1.4,
-"wv": [600, 1000],
-"region": "Highly elliptical orbit",
-"firstlight": "2018-08-07",
-"url": "https://svs.gsfc.nasa.gov/13069"
+"ESO-3.6m": {
+"name": "ESO 3.6-metre telescope",
+"obs": "La Silla Observatory",
+"obscode": "809",
+"region": "CHL",
+"diam": 3566,
+"area": 8.8564,
+"alt": 2400,
+"firstlight": "1976-11-07",
+"url": "https://www.eso.org/public/unitedkingdom/teles-instr/lasilla/36/"
 },
 "HARPS": {
 "name": "High Accuracy Radial velocity Planet Searcher",
@@ -201,12 +202,12 @@
 "firstlight": "2003-02-11"
 },
 "CFHT": {
-"name": "Canada–France–Hawaii Telescope",
+"name": "Canada-France-Hawaii Telescope",
 "obs": "Mauna Kea Observatories",
-"obscode": "T09",
+"obscode": "T14",
 "region": "US-HI",
 "diam": 3580,
-"firstlight": "1979-01-01",
+"firstlight": "1979-08-15",
 "alt": 4204
 },
 "SOAR": {
@@ -221,8 +222,102 @@
 "name": "Lowell Discovery Telescope",
 "diam": 4300,
 "type": "RC",
+"obs": "Lowell Observatory",
 "alt": 2360,
 "firstlight": "2012-04-30"
+},
+"VISTA": {
+"name": "Visible and Infrared Survey Telescope for Astronomy",
+"diam": 4100,
+"type": "RC",
+"obs": "Paranal Observatory",
+"alt": 2518,
+"firstlight": "2009-12-01"
+},
+"Blanco": {
+"name": "Victor M. Blanco Telescope",
+"obs": "Cerro Tololo Inter-American Observatory",
+"diam": 4100,
+"area": 10.014,
+"alt": 2207,
+"type": "RC",
+"firstlight": "1976-06-15"
+},
+"ILMT": {
+"name": "International Liquid Mirror Telescope",
+"diam": 4000,
+"obs": "Devasthal Observatory",
+"alt": 2450,
+"firstlight": "2022-06-02"
+},
+"DOT": {
+"name": "3.6m Devasthal Optical Telescope",
+"diam": 3600,
+"obs": "Devasthal Observatory",
+"alt": 2540,
+"type": "RC",
+"englight": "2015-03-22",
+"firstlight": ["2016-02-15", "2016-03-31"],
+"bib": "2018BSRSL..87...29K"
+},
+"TNG": {
+"name": "Telescopio Nazionale Galileo",
+"obs": "Roque de los Muchachos Observatory",
+"diam": 3580,
+"firstlight": "1998-06-06"
+},
+"Mayall-4m": {
+"name": "Nicholas U. Mayall Telescope",
+"obs": "Kitt Peak National Observatory",
+"obscode": "695",
+"type": "RC",
+"alt": 2120,
+"diam": 4000,
+"area": 11.4,
+"firstlight": "1973-02-27"
+},
+"UKIRT": {
+"name": "United Kingdom Infrared Telescope",
+"diam": 3800,
+"obs": "Mauna Kea Observatories",
+"alt": 4194,
+"firstlight": "1979-10-15"
+},
+"Shane": {
+"name": "C. Donald Shane telescope",
+"diam": 3050,
+"obs": "Lick Observatory",
+"alt": 1283,
+"firstlight": "1959-06-15"
+},
+"Nickel-1m": {
+"name": "Anna L. Nickel telescope",
+"diam": 1000,
+"obs": "Lick Observatory",
+"firstlight": "1979-09-12",
+"url": "https://oac.cdlib.org/findaid/ark:/13030/c81z4932/entire_text/"
+},
+"AAT": {
+"name": "Anglo-Australian Telescope",
+"diam": 3900,
+"area": "<11.94",
+"alt": 1100,
+"obs": "Siding Spring Observatory",
+"firstlight": "1974-04-27"
+},
+"AEOS": {
+"name": "3.67 m Advanced Electro Optical System Telescope",
+"diam": 3670,
+"alt": 3052,
+"obs": "Haleakala Observatory",
+"firstlight": "1996-06-15"
+},
+"NASA-IRTF": {
+"name": "NASA Infrared Telescope Facility",
+"obs": "Mauna Kea Observatories",
+"alt": 4205,
+"diam": 3200,
+"firstlight": "1979-06-15"
 },
 "SDSS": {
 "name": "Sloan Digital Sky Survey",
@@ -241,6 +336,14 @@
 "url": "https://classic.sdss.org/news/releases/19980608.fl.img1.php",
 "urlimg": "https://classic.sdss.org/data/first_light.300dpi.jpg",
 "bib": "2006AJ....131.2332G"
+},
+"NTT": {
+"name": "New Technology Telescope",
+"diam": 3580,
+"obs": "La Silla Observatory",
+"alt": 2375,
+"firstlight": "1989-03-23",
+"url": "https://www.eso.org/public/unitedkingdom/news/eso8903/"
 },
 "PTF": {
 "name": "Palomar Transient Factory",
@@ -273,16 +376,114 @@
 "urlimg": "https://www.ptf.caltech.edu/system/avm_image_sqls/binaries/66/large/ptf171114a.jpg?1510678686",
 "bib": "2019PASP..131a8002B, 2020PASP..132c8001D"
 },
+"PS": {
+"name": "Pan-STARRS",
+"diam": "1800x2",
+"obs": "Haleakala Observatory",
+"alt": 3052,
+"type": "RC",
+"englight": ["2006-06-15", "2013-07-15"],
+"firstlight": ["2007-08-22", "2013-09-15"]
+},
+"2MASS": {
+"name": "The Two Micron All-Sky Survey",
+"diam": "1300x2",
+"alt": [2306, 2171],
+"monthly-photometr-fract": [0.38, 0.6],
+"obs": ["Fred Lawrence Whipple Observatory", "Cerro Tololo Inter-American Observatory"],
+"firstlight": "1997-04-17",
+"url": "https://www.umass.edu/synergy/syn_2mass.html",
+"bib": "2006AJ....131.1163S"
+},
+"SOFIA": {
+"name": "Stratospheric Observatory for Infrared Astronomy",
+"obs": "Stratospheric Observatory for Infrared Astronomy",
+"type": "airborne",
+"diam": 2500,
+"alt": 13700,
+"wv": [300, 655000],
+"firstlight": "2010-05-26",
+"end": "2022-09-29"
+},
+"HST": {
+"name": "Hubble Space Telescope",
+"runame": "Космический телескоп Хаббл",
+"telescope": "Hubble Space Telescope",
+"type": "RC",
+"diam": 2400,
+"area": 4,
+"f": 24,
+"obs": "Hubble Space Telescope",
+"obscode": "250",
+"region": "LEO",
+"alt": 537000,
+"launch": "1990-04-24",
+"firstlight": "1990-05-20"
+},
+"Spitzer": {
+"name": "Spitzer Space Telescope",
+"runame": "Космический телескоп Спитцер",
+"obs": "Spitzer Space Telescope",
+"obscode": "245",
+"diam": 850,
+"area": "<0.56",
+"f": 12,
+"type": "RC",
+"wv": {"IRAC": [3600, 8000], "IRS": [5300, 40000], "MIPS": [24000, 160000]},
+"region": "Earth-trailing, Heliocentric",
+"launch": "2003-08-25",
+"firstlight": "2003-12-18",
+"end": "2020-01-30",
+"bib": "2007RScI...78a1302G",
+"url": "https://www.spitzer.caltech.edu/image/ssc2003-06a1-spitzer-irac-composite-image-of-a-dark-globule-in-ic-1396"
+},
+"Herschel": {
+"name": "Herschel Space Observatory",
+"obs": "Herschel Space Observatory",
+"diam": 3500,
+"area": "<9.6",
+"region": "L2",
+"type": "RC",
+"wv": {"PACS": [55000, 210000], "SPIRE": [194000, 672000], "HIFI": [157000, 625000]},
+"launch": "2009-05-14",
+"firstlight": {"HIFI": "2009-06-22", "PACS": "2009-06-23", "SPIRE": "2009-06-24"},
+"end": "2013-04-29",
+"url": "https://www.cosmos.esa.int/web/herschel/first-light"
+},
+"Kepler": {
+"name": "Kepler space telescope",
+"diam": 950,
+"area": 0.708,
+"wv": [420, 900],
+"region": "Earth-trailing, Heliocentric",
+"obs": "Kepler space observatory",
+"obscode": "C55",
+"launch": "2009-03-07",
+"firstlight": ["2009-04-08", "2014-05-30"],
+"end": ["2013-05-11", "2018-10-30"],
+"url": "https://www.nasa.gov/image-article/keplers-diamond-mine-of-stars/"
+},
+"TESS": {
+"name": "Transiting Exoplanet Survey Satellite",
+"diam": "10.5x4",
+"f": 1.4,
+"wv": [600, 1000],
+"obs": "TESS space observatory",
+"obscode": "C57",
+"region": "Highly elliptical orbit",
+"firstlight": "2018-08-07",
+"url": "https://svs.gsfc.nasa.gov/13069"
+},
 "Gaia": {
 "name": "Gaia",
 "runame": "Gaia",
 "telescope": "Gaia",
-"diam": "1450x500x2",
-"area": 0.7,
-"wv": [[330, 680], [640,1050]],
+"diam": "480.3901x2",
+"area": "0.7x2",
+"wv": {"BP/RP": [330, 680], "RP": [640, 1050], "RVS": [845, 872]},
 "obs": "Gaia space observatory",
-"region": "L2",
 "obscode": "258",
+"region": "L2",
 "launch": "2013-12-19",
 "englight": "2014-01-08",
 "firstlight": "2014-02-05"
@@ -293,7 +494,7 @@
 "telescope": "James Webb Space Telescope",
 "diam": 6500,
 "area": 25.4,
-"wv": [[600, 28300]],
+"wv": {"NIRCam": [600, 5000], "NIRSpec": [600, 5300], "FGS/NIRISS": [800, 5000], "MIRI": [4900, 28800]},
 "f": 20.2,
 "obs": "James Webb Space Telescope",
 "region": "L2",
@@ -313,7 +514,7 @@
 "region": "L2",
 "sensor": "4096x4132x6x6, 2040x2040x4x4",
 "fov": "1.25x0.727",
-"wv": [[530, 920], [920, 2020]],
+"wv": {"VIS": [530, 920], "NISP": [920, 2020]},
 "launch": "2023-07-01",
 "englight": "2023-07-15",
 "firstlight": "2023-11-07",

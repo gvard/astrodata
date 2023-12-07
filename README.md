@@ -7,6 +7,14 @@ Code for collecting and visualization of astronomical data
 
 All code and description are available at [gvard.github.io](https://gvard.github.io/)
 
+## Observational astronomy
+
+* First light of notable observatories and instruments
+![First light dates of notable observatories with areas of main mirrors. Years 1990-2008](./plots/observational/first-light-1990-2008.png "First light dates of notable observatories with areas of main mirrors. Years 1990-2008")
+[Data as JSON](data/observatories.json).  
+see [First light article](https://vk.com/@planetariumvg-pervyi-svet-kak-observatorii-nachinaut-rabotu) (in Russian);
+inspired by prof. Vladimir Panchuk and his site [Астрономические телескопы](http://astrotelescope.narod.ru/) (in russian).
+
 ## Solar System objects
 
 * Near-Earth objects and Potentially Hazardous Asteroid statistics
