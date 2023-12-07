@@ -8,7 +8,7 @@
 * [Observatories data with first light dates](./observatories.json),
   see [First light article](https://vk.com/@planetariumvg-pervyi-svet-kak-observatorii-nachinaut-rabotu) (in Russian);
   inspired by prof. Vladimir Panchuk and his site [Астрономические телескопы](http://astrotelescope.narod.ru/) (in russian).  
-  ![First light dates of notable observatories with areas of main mirrors. Years 1990-2008](./plots/observational/first-light-1990-2008.png "First light dates of notable observatories with areas of main mirrors. Years 1990-2008")
+  ![First light dates of notable observatories with areas of main mirrors. Years 1990-2008](../plots/observational/first-light-1990-2008.png "First light dates of notable observatories with areas of main mirrors. Years 1990-2008")
 
 ## Manned spaceflights
 
