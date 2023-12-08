@@ -52,6 +52,8 @@
 "name": "Gran Telescopio Canarias",
 "diam": 10400,
 "area": 78.54,
+"mirror": "segmented",
+"type": "RC",
 "obs": "Roque de los Muchachos Observatory",
 "obscode": "Z18",
 "alt": 2267,
@@ -61,6 +63,7 @@
 "name": "Large Binocular Telescope",
 "area": 111,
 "diam": "8400x2",
+"mirror": "multiple",
 "obs": "Mount Graham International Observatory",
 "obscode": "G83",
 "alt": 3221,
@@ -70,6 +73,8 @@
 "name": "The Large Sky Area Multi-Object Fibre Spectroscopic Telescope",
 "diam": 4000,
 "area": "<18.86",
+"mirror": "segmented",
+"type": "Schmidt",
 "obs": "Xinglong Station (NAOC)",
 "obscode": "327",
 "alt": 960,
@@ -77,6 +82,7 @@
 },
 "VLT": {
 "name": "Very Large Telescope",
+"type": "RC",
 "diam": "8200x4",
 "alt": 2635,
 "obs": "Paranal Observatory",
@@ -84,14 +90,18 @@
 "firstlight": ["1998-05-25", "1999-03-01", "2000-01-26", "2000-09-04"]
 },
 "VLTI": {
+"name": "VLT Interferometer",
 "diam": 200000,
 "area": 844.962,
+"type": "Interferometer",
 "firstlight": "2001-03-17",
 "url": "https://www.eso.org/public/unitedkingdom/news/eso0111/"
 },
 "Keck": {
 "name": "W. M. Keck Observatory",
 "diam": "10000x2",
+"mirror": "segmented",
+"type": "RC",
 "area": "75.76x2",
 "obs": "Mauna Kea Observatories",
 "alt": 4145,
@@ -108,6 +118,7 @@
 "Gemini": {
 "name": "Gemini Observatory",
 "diam": "8100x2",
+"type": "RC",
 "obs": "Gemini Observatory",
 "alt": [4213, 2722],
 "englight": "1999-02-27",
@@ -117,6 +128,7 @@
 "HET-1996": {
 "name": "Hobby-Eberly Telescope",
 "obs": "McDonald Observatory",
+"mirror": "segmented",
 "diam": 9200,
 "area": "<67",
 "alt": 2030,
@@ -126,6 +138,7 @@
 "HET-2015": {
 "name": "Hobby-Eberly Telescope",
 "obs": "McDonald Observatory",
+"mirror": "segmented",
 "diam": 10000,
 "area": "<78.5",
 "alt": 2030,
@@ -134,6 +147,7 @@
 "SALT": {
 "name": "Southern African Large Telescope",
 "diam": 9200,
+"mirror": "segmented",
 "obs": "South African Astronomical Observatory",
 "obscode": "B31",
 "alt": 1798,
@@ -145,6 +159,7 @@
 "telescope": "Multiple Mirror Telescope with 6 mirrors",
 "diam": 4410,
 "alt": 2616,
+"mirror": "multiple",
 "obs": "Fred Lawrence Whipple Observatory",
 "obscode": "696",
 "firstlight": "1979-05-09",
@@ -166,6 +181,7 @@
 "name": "Large Zenith Telescope",
 "diam": 6000,
 "alt": 	395,
+"mirror": "liquid",
 "type": "liquid-mirror",
 "firstlight": "2003-04-15",
 "end": "2016-07-15",
@@ -184,14 +200,23 @@
 "obs": "La Silla Observatory",
 "obscode": "809",
 "region": "CHL",
+"type": "quasi-RC",
 "diam": 3566,
 "area": 8.8564,
 "alt": 2400,
 "firstlight": "1976-11-07",
 "url": "https://www.eso.org/public/unitedkingdom/teles-instr/lasilla/36/"
 },
+"MPI-CAHA": {
+"name": "MPI+CAHA",
+"obs": "Calar Alto Observatory",
+"diam": 3500,
+"alt": 2168,
+"firstlight": "1984-06-15"
+},
 "HARPS": {
 "name": "High Accuracy Radial velocity Planet Searcher",
+"type": "spectrograph",
 "telescope": "ESO 3.6-metre telescope",
 "obs": "La Silla Observatory",
 "obscode": "809",
@@ -204,16 +229,18 @@
 "CFHT": {
 "name": "Canada-France-Hawaii Telescope",
 "obs": "Mauna Kea Observatories",
+"type": "RC",
 "obscode": "T14",
 "region": "US-HI",
 "diam": 3580,
-"firstlight": "1979-08-15",
+"firstlight": "1979-08-06",
 "alt": 4204
 },
 "SOAR": {
 "name": "Southern Astrophysical Research Telescope",
 "diam": 4100,
 "alt": 	2738,
+"type": "RC",
 "obs": "Cerro Tololo Inter-American Observatory",
 "obscode": "I33",
 "firstlight": "2004-04-17"
@@ -229,13 +256,13 @@
 "VISTA": {
 "name": "Visible and Infrared Survey Telescope for Astronomy",
 "diam": 4100,
-"type": "RC",
+"type": "quasi-RC",
 "obs": "Paranal Observatory",
 "alt": 2518,
 "firstlight": "2009-12-01"
 },
 "Blanco": {
-"name": "Victor M. Blanco Telescope",
+"name": "Victor M. Blanco Telescope (VBT)",
 "obs": "Cerro Tololo Inter-American Observatory",
 "diam": 4100,
 "area": 10.014,
@@ -246,6 +273,8 @@
 "ILMT": {
 "name": "International Liquid Mirror Telescope",
 "diam": 4000,
+"mirror": "liquid",
+"type": "liquid-mirror",
 "obs": "Devasthal Observatory",
 "alt": 2450,
 "firstlight": "2022-06-02"
@@ -263,10 +292,11 @@
 "TNG": {
 "name": "Telescopio Nazionale Galileo",
 "obs": "Roque de los Muchachos Observatory",
+"type": "RC",
 "diam": 3580,
 "firstlight": "1998-06-06"
 },
-"Mayall-4m": {
+"Mayall, KPNO": {
 "name": "Nicholas U. Mayall Telescope",
 "obs": "Kitt Peak National Observatory",
 "obscode": "695",
@@ -276,12 +306,60 @@
 "area": 11.4,
 "firstlight": "1973-02-27"
 },
+"WIYN": {
+"name": "WIYN Telescope",
+"obs": "Kitt Peak National Observatory",
+"diam": 3498,
+"type": "RC",
+"area": "<9.61",
+"mount": "altaz",
+"region": "US-AZ",
+"firstlight": "1994-06-15"
+},
 "UKIRT": {
 "name": "United Kingdom Infrared Telescope",
 "diam": 3800,
 "obs": "Mauna Kea Observatories",
 "alt": 4194,
 "firstlight": "1979-10-15"
+},
+"INO": {
+"name": "Iranian National Observatory",
+"diam": 3400,
+"alt": 3600,
+"englight": "2022-10-15",
+"firstlight": "2022-10-19",
+"url": "https://ino.org.ir/en/3442-2/"
+},
+"SST": {
+"name": "Space Surveillance Telescope",
+"diam": 3500,
+"obs": "White Sands Missile Range",
+"type": "military",
+"firstlight": "2011-06-15",
+"end": "2017-06-15"
+},
+"SST-2020": {
+"name": "Space Surveillance Telescope",
+"obs": "Naval Communication Station Harold E. Holt",
+"type": "military",
+"diam": 3500,
+"alt": 65,
+"firstlight": "2020-03-05"
+},
+"ARC": {
+"name": "Astrophysical Research Consortium",
+"diam": 3480,
+"obs": "Apache Point Observatory",
+"type": "RC",
+"alt": 2788,
+"firstlight": "1994-06-15"
+},
+"Starfire OR": {
+"name": "USAF Starfire Optical Range",
+"type": "military",
+"diam": 3500,
+"firstlight": "1994-06-15"
 },
 "Shane": {
 "name": "C. Donald Shane telescope",
@@ -340,10 +418,34 @@
 "NTT": {
 "name": "New Technology Telescope",
 "diam": 3580,
+"type": "RC",
 "obs": "La Silla Observatory",
 "alt": 2375,
 "firstlight": "1989-03-23",
 "url": "https://www.eso.org/public/unitedkingdom/news/eso8903/"
+},
+"Shajn": {
+"name": "2.6-m Shajn Telescope (ZTSh)",
+"runame": "Зеркальный телескоп им. Г.А. Шайна",
+"alt": 600,
+"diam": 2640,
+"firstlight": "1961-06-15"
+},
+"Struve-2.1m": {
+"name": "Otto Struve Telescope",
+"firstlight": "1939-06-15",
+"diam": 2080
+},
+"LMT": {
+"name": "NASA Liquid Mirror Telescope",
+"diam": 3000,
+"mirror": "liquid",
+"type": "liquid-mirror",
+"obs": "NASA Orbital Debris Observatory",
+"alt": 2751,
+"firstlight": ["1994-05-15", "1995-04-15"],
+"end": "2002-06-15",
+"url": "https://web.archive.org/web/20120215235813/http://orbitaldebris.jsc.nasa.gov/newsletter/pdfs/ODQNv11i2.pdf"
 },
 "PTF": {
 "name": "Palomar Transient Factory",
@@ -389,11 +491,39 @@
 "name": "The Two Micron All-Sky Survey",
 "diam": "1300x2",
 "alt": [2306, 2171],
-"monthly-photometr-fract": [0.38, 0.6],
 "obs": ["Fred Lawrence Whipple Observatory", "Cerro Tololo Inter-American Observatory"],
-"firstlight": "1997-04-17",
+"monthly-photometr-fract": [0.38, 0.6],
+"firstlight": ["1997-04-17", "1997-04-17"],
 "url": "https://www.umass.edu/synergy/syn_2mass.html",
 "bib": "2006AJ....131.1163S"
+},
+"Terskol-2m": {
+"name": "Zeiss-2000 Terskol",
+"diam": 2000,
+"type": "RC",
+"firstlight": "1995-06-15"
+},
+"ShAO-2m": {
+"name": "2-m telescope of Shamakhi Astrophysical Observatory",
+"runame": "2м телескоп Шемахинской астрофизической обсерватории",
+"diam": 2000,
+"alt": 1500,
+"firstlight": "1969-06-15"
+},
+"Byurakan-2.6m": {
+"name": "2.6-m telescope of Byurakan Astrophysical Observatory",
+"obs": "Byurakan Astrophysical Observatory",
+"diam": 2600,
+"firstlight": "1976-06-15"
+},
+"SAI-2.5m": {
+"name": "2.5-m Telescope of the Caucasian Mountain Observatory of the Sternberg Astronomical Institute",
+"runame": "2.5м телескоп Кавказской горной обсерватории",
+"alt": 2112,
+"diam": 2500,
+"type": "RC",
+"firstlight": "2014-11-14",
+"bib": "2020gbar.conf..127S"
 },
 "SOFIA": {
 "name": "Stratospheric Observatory for Infrared Astronomy",
@@ -492,6 +622,8 @@
 "name": "James Webb Space Telescope",
 "runame": "Джеймс Уэбб",
 "telescope": "James Webb Space Telescope",
+"mirror": "segmented",
+"type": "Korsch",
 "diam": 6500,
 "area": 25.4,
 "wv": {"NIRCam": [600, 5000], "NIRSpec": [600, 5300], "FGS/NIRISS": [800, 5000], "MIRI": [4900, 28800]},
