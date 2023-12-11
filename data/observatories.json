@@ -9,8 +9,10 @@
 },
 "Struve-2.1m": {
 "name": "Otto Struve Telescope",
-"firstlight": "1939-06-15",
-"diam": 2080
+"obs": "McDonald Observatory",
+"diam": 2080,
+"alt": 2070,
+"firstlight": "1939-06-15"
 },
 "Hale": {
 "name": "Hale Telescope",
@@ -96,8 +98,10 @@
 },
 "VLTI": {
 "name": "VLT Interferometer",
+"alt": 2635,
 "diam": 200000,
 "area": 844.962,
+"obs": "Paranal Observatory",
 "type": "Interferometer",
 "firstlight": "2001-03-17",
 "url": "https://www.eso.org/public/unitedkingdom/news/eso0111/"
@@ -185,7 +189,8 @@
 "LZT": {
 "name": "Large Zenith Telescope",
 "diam": 6000,
-"alt": 	395,
+"alt": 395,
+"obs": "Malcolm Knapp Research Forest, 70 km east of Vancouver",
 "mirror": "liquid",
 "type": "liquid-mirror",
 "firstlight": "2003-04-15",
@@ -210,7 +215,8 @@
 "area": 8.8564,
 "alt": 2400,
 "firstlight": "1976-11-07",
-"url": "https://www.eso.org/public/unitedkingdom/teles-instr/lasilla/36/"
+"bib": "1990Msngr..61...27B",
+"url": ["https://www.eso.org/public/unitedkingdom/teles-instr/lasilla/36/", "http://www.eso.org/sci/libraries/historicaldocuments/Technical_Reports/ESO-TR2_A1b.pdf", "https://cds.cern.ch/record/1528777/files/Tech-Note-P21.pdf"]
 },
 "MPI-CAHA": {
 "name": "MPI+CAHA",
@@ -297,6 +303,7 @@
 "TNG": {
 "name": "Telescopio Nazionale Galileo",
 "obs": "Roque de los Muchachos Observatory",
+"alt": 2370,
 "type": "RC",
 "diam": 3580,
 "firstlight": "1998-06-06"
@@ -315,6 +322,7 @@
 "name": "WIYN Telescope",
 "obs": "Kitt Peak National Observatory",
 "diam": 3498,
+"alt": 2090,
 "type": "RC",
 "area": "<9.61",
 "mount": "altaz",
@@ -330,6 +338,7 @@
 },
 "INO": {
 "name": "Iranian National Observatory",
+"obs": "Iranian National Observatory",
 "diam": 3400,
 "alt": 3600,
 "englight": "2022-10-15",
@@ -340,6 +349,7 @@
 "name": "Space Surveillance Telescope",
 "diam": 3500,
 "obs": "White Sands Missile Range",
+"alt": 1300,
 "type": "military",
 "firstlight": "2011-06-15",
 "end": "2017-06-15"
@@ -362,6 +372,8 @@
 },
 "Starfire OR": {
 "name": "USAF Starfire Optical Range",
+"obs": "Kirtland Air Force Base",
+"alt": [1632, 1685],
 "type": "military",
 "diam": 3500,
 "firstlight": "1994-06-15"
@@ -376,6 +388,7 @@
 "Nickel-1m": {
 "name": "Anna L. Nickel telescope",
 "diam": 1000,
+"alt": 1283,
 "obs": "Lick Observatory",
 "firstlight": "1979-09-12",
 "url": "https://oac.cdlib.org/findaid/ark:/13030/c81z4932/entire_text/"
@@ -432,6 +445,7 @@
 "Shajn": {
 "name": "2.6-m Shajn Telescope (ZTSh)",
 "runame": "Зеркальный телескоп им. Г.А. Шайна",
+"obs": "Crimean astrophysical observatory",
 "alt": 600,
 "diam": 2640,
 "firstlight": "1961-06-15"
@@ -470,24 +484,31 @@
 "INT": {
 "name": "Isaac Newton Telescope",
 "obs": "Roque de los Muchachos Observatory",
+"alt": 2396,
 "diam": 2540,
 "area": 5,
 "firstlight": "1984-06-15"
 },
 "du Pont": {
 "name": "2.54m Irenee du Pont Telescope",
+"obs": "Las Campanas Observatory",
+"type": "RC",
+"alt": 2380,
 "diam": 2540,
 "firstlight": "1976-06-15"
 },
 "UBC": {
-"name": "UBC/Laval 2.7 m Liquid Mirror Telescope",
+"name": "University of British Columbia/Laval University (UBC/Laval) 2.7 m Liquid Mirror Telescope",
+"obs": "Malcolm Knapp Research Forest, 70 km east of Vancouver",
+"alt": 395,
 "diam": 2650,
+"area": 5.3898,
 "mirror": "liquid",
 "type": "liquid-mirror",
-"obs": "",
 "firstlight": "1992-06-16",
-"end": "200?",
-"url": ""
+"end": "2016-07-15",
+"url": "https://www.atlasobscura.com/places/large-zenith-telescope",
+"bib": "1990ASPC...10..265G"
 },
 "LMT": {
 "name": "NASA Liquid Mirror Telescope",
@@ -552,13 +573,16 @@
 },
 "Terskol-2m": {
 "name": "Zeiss-2000 Terskol",
+"obs": "Обсерватория Пик Терскол",
 "diam": 2000,
+"alt": 3127,
 "type": "RC",
 "firstlight": "1995-06-15"
 },
 "ShAO": {
 "name": "2-m telescope of Shamakhi Astrophysical Observatory",
 "runame": "2м телескоп Шемахинской астрофизической обсерватории",
+"obs": "Shamakhi Astrophysical Observatory",
 "diam": 2000,
 "alt": 1500,
 "firstlight": "1969-06-15"
@@ -566,6 +590,7 @@
 "SAI-2.5": {
 "name": "2.5-m Telescope of the Caucasian Mountain Observatory of the Sternberg Astronomical Institute",
 "runame": "2.5м телескоп Кавказской горной обсерватории",
+"obs": "Кавказская горная обсерватория ГАИШ МГУ",
 "alt": 2112,
 "diam": 2500,
 "type": "RC",
@@ -573,7 +598,7 @@
 "bib": "2020gbar.conf..127S"
 },
 "Hiltner": {
-"name":"Hiltner Telescope",
+"name": "Hiltner Telescope",
 "obs": "Michigan-Dartmouth-MIT (MDM) Observatory",
 "diam": 2400,
 "alt": 1938,
@@ -717,6 +742,7 @@
 },
 "HiRISE-MRO": {
 "name": "High Resolution Imaging Science Experiment camera (HiRISE) on NASA's Mars Reconnaissance Orbiter",
+"obs": "Mars Reconnaissance Orbiter",
 "launch": "2005-08-12",
 "loc": "space",
 "region": "Mars orbit",
