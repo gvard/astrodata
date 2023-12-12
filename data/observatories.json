@@ -604,6 +604,19 @@
 "alt": 1938,
 "firstlight": "1986-06-15"
 },
+"Bok": {
+"name": "90-inch Bok Telescope",
+"alt": 2100,
+"diam": 2300,
+"firstlight": "1969-06-23"
+},
+"TBL": {
+"name": "Bernard Lyot Telescope",
+"obs": "Pic du Midi Observatory",
+"diam": 2000,
+"alt": 2877,
+"firstlight": "1980-06-15"
+},
 "SOFIA": {
 "name": "Stratospheric Observatory for Infrared Astronomy",
 "obs": "Stratospheric Observatory for Infrared Astronomy",
