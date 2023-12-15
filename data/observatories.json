@@ -50,7 +50,7 @@
 "alt": 4139,
 "diam": 8300,
 "area": 53,
-"type": "RC",
+"design": "RC",
 "englight": "1998-12-31",
 "firstlight": ["1999-01-04", "1999-01-11"],
 "bib": "2000PASJ...52....1K"
@@ -60,7 +60,7 @@
 "diam": 10400,
 "area": 78.54,
 "mirror": "segmented",
-"type": "RC",
+"design": "RC",
 "obs": "Roque de los Muchachos Observatory",
 "obscode": "Z18",
 "alt": 2267,
@@ -81,7 +81,7 @@
 "diam": 4000,
 "area": "<18.86",
 "mirror": "segmented",
-"type": "Schmidt",
+"design": "Schmidt",
 "obs": "Xinglong Station (NAOC)",
 "obscode": "327",
 "alt": 960,
@@ -89,7 +89,7 @@
 },
 "VLT": {
 "name": "Very Large Telescope",
-"type": "RC",
+"design": "RC",
 "diam": "8200x4",
 "alt": 2635,
 "obs": "Paranal Observatory",
@@ -102,7 +102,7 @@
 "diam": 200000,
 "area": 844.962,
 "obs": "Paranal Observatory",
-"type": "Interferometer",
+"type": "interferometer",
 "firstlight": "2001-03-17",
 "url": "https://www.eso.org/public/unitedkingdom/news/eso0111/"
 },
@@ -110,7 +110,7 @@
 "name": "W. M. Keck Observatory",
 "diam": "10000x2",
 "mirror": "segmented",
-"type": "RC",
+"design": "RC",
 "area": "75.76x2",
 "obs": "Mauna Kea Observatories",
 "alt": 4145,
@@ -127,14 +127,14 @@
 "Gemini": {
 "name": "Gemini Observatory",
 "diam": "8100x2",
-"type": "RC",
+"design": "RC",
 "obs": "Gemini Observatory",
 "alt": [4213, 2722],
 "englight": "1999-02-27",
 "firstlight": ["1999-06-25", "2000-11-01"],
 "url": "https://issuu.com/geminifocus/docs/gf_0699"
 },
-"HET-1996": {
+"HET (1996)": {
 "name": "Hobby-Eberly Telescope",
 "obs": "McDonald Observatory",
 "mirror": "segmented",
@@ -144,7 +144,7 @@
 "firstlight": "1996-12-10",
 "end": "2013-01-01"
 },
-"HET-2015": {
+"HET (2015)": {
 "name": "Hobby-Eberly Telescope",
 "obs": "McDonald Observatory",
 "mirror": "segmented",
@@ -163,7 +163,7 @@
 "area": "<67",
 "firstlight": "2005-09-01"
 },
-"MMT-1979": {
+"MMT (1979)": {
 "name": "MMT Observatory",
 "telescope": "Multiple Mirror Telescope with 6 mirrors",
 "diam": 4410,
@@ -176,7 +176,7 @@
 "bib": "2004SPIE.5489..300B",
 "url": "https://www.researchgate.net/publication/260955804_The_new_MMT"
 },
-"MMT-2000": {
+"MMT (2000)": {
 "name": "MMT Observatory",
 "telescope": "Multiple Mirror Telescope",
 "diam": 6500,
@@ -210,7 +210,7 @@
 "obs": "La Silla Observatory",
 "obscode": "809",
 "region": "CHL",
-"type": "quasi-RC",
+"design": "quasi-RC",
 "diam": 3566,
 "area": 8.8564,
 "alt": 2400,
@@ -240,7 +240,7 @@
 "CFHT": {
 "name": "Canada-France-Hawaii Telescope",
 "obs": "Mauna Kea Observatories",
-"type": "RC",
+"design": "RC",
 "obscode": "T14",
 "region": "US-HI",
 "diam": 3580,
@@ -251,7 +251,7 @@
 "name": "Southern Astrophysical Research Telescope",
 "diam": 4100,
 "alt": 	2738,
-"type": "RC",
+"design": "RC",
 "obs": "Cerro Tololo Inter-American Observatory",
 "obscode": "I33",
 "firstlight": "2004-04-17"
@@ -259,7 +259,7 @@
 "LDT": {
 "name": "Lowell Discovery Telescope",
 "diam": 4300,
-"type": "RC",
+"design": "RC",
 "obs": "Lowell Observatory",
 "alt": 2360,
 "firstlight": "2012-04-30"
@@ -267,8 +267,9 @@
 "VISTA": {
 "name": "Visible and Infrared Survey Telescope for Astronomy",
 "diam": 4100,
-"type": "quasi-RC",
+"design": "quasi-RC",
 "obs": "Paranal Observatory",
+"wvband": ["V", "NIR"],
 "alt": 2518,
 "firstlight": "2009-12-01"
 },
@@ -278,7 +279,7 @@
 "diam": 4100,
 "area": 10.014,
 "alt": 2207,
-"type": "RC",
+"design": "RC",
 "firstlight": "1976-06-15"
 },
 "ILMT": {
@@ -295,7 +296,7 @@
 "diam": 3600,
 "obs": "Devasthal Observatory",
 "alt": 2540,
-"type": "RC",
+"design": "RC",
 "englight": "2015-03-22",
 "firstlight": ["2016-02-15", "2016-03-31"],
 "bib": "2018BSRSL..87...29K"
@@ -304,15 +305,15 @@
 "name": "Telescopio Nazionale Galileo",
 "obs": "Roque de los Muchachos Observatory",
 "alt": 2370,
-"type": "RC",
+"design": "RC",
 "diam": 3580,
 "firstlight": "1998-06-06"
 },
-"Mayall, KPNO": {
+"Mayall KPNO": {
 "name": "Nicholas U. Mayall Telescope",
 "obs": "Kitt Peak National Observatory",
 "obscode": "695",
-"type": "RC",
+"design": "RC",
 "alt": 2120,
 "diam": 4000,
 "area": 11.4,
@@ -323,7 +324,7 @@
 "obs": "Kitt Peak National Observatory",
 "diam": 3498,
 "alt": 2090,
-"type": "RC",
+"design": "RC",
 "area": "<9.61",
 "mount": "altaz",
 "region": "US-AZ",
@@ -331,6 +332,7 @@
 },
 "UKIRT": {
 "name": "United Kingdom Infrared Telescope",
+"wvband": "NIR",
 "diam": 3800,
 "obs": "Mauna Kea Observatories",
 "alt": 4194,
@@ -354,7 +356,7 @@
 "firstlight": "2011-06-15",
 "end": "2017-06-15"
 },
-"SST-2020": {
+"SST (2020)": {
 "name": "Space Surveillance Telescope",
 "obs": "Naval Communication Station Harold E. Holt",
 "type": "military",
@@ -366,7 +368,7 @@
 "name": "Astrophysical Research Consortium",
 "diam": 3480,
 "obs": "Apache Point Observatory",
-"type": "RC",
+"design": "RC",
 "alt": 2788,
 "firstlight": "1994-06-15"
 },
@@ -385,7 +387,7 @@
 "alt": 1283,
 "firstlight": "1959-06-15"
 },
-"Nickel-1m": {
+"Nickel 1m": {
 "name": "Anna L. Nickel telescope",
 "diam": 1000,
 "alt": 1283,
@@ -408,9 +410,11 @@
 "obs": "Haleakala Observatory",
 "firstlight": "1996-06-15"
 },
-"NASA-IRTF": {
+"IRTF": {
 "name": "NASA Infrared Telescope Facility",
 "obs": "Mauna Kea Observatories",
+"wvband": "NIR",
+"wv": {"SpeX": [800, 5400], "iSHELL": [1000, 5300], "MIRSI": [2200, 25000], "MORIS": [480, 900]},
 "alt": 4205,
 "diam": 3200,
 "firstlight": "1979-06-15"
@@ -419,7 +423,7 @@
 "name": "Sloan Digital Sky Survey",
 "runame": "Слоановский цифровой небесный обзор",
 "telescope": "Sloan Digital Sky Survey telescope",
-"type": "RC",
+"design": "RC",
 "alt": 2788,
 "diam": 2500,
 "f": 5,
@@ -436,7 +440,7 @@
 "NTT": {
 "name": "New Technology Telescope",
 "diam": 3580,
-"type": "RC",
+"design": "RC",
 "obs": "La Silla Observatory",
 "alt": 2375,
 "firstlight": "1989-03-23",
@@ -450,7 +454,7 @@
 "diam": 2640,
 "firstlight": "1961-06-15"
 },
-"H.Smith": {
+"H. Smith": {
 "name": "Harlan J. Smith Telescope",
 "obs": "McDonald Observatory",
 "alt": 2077,
@@ -468,7 +472,7 @@
 "NOT": {
 "name": "Nordic Optical Telescope",
 "obs": "Roque de los Muchachos Observatory",
-"type": "RC",
+"design": "RC",
 "diam": 2560,
 "alt": 2382,
 "firstlight": "1988-06-15"
@@ -476,23 +480,36 @@
 "VST": {
 "name": "VLT Survey Telescope",
 "obs": "Paranal Observatory",
-"type": "RC",
+"design": "RC",
 "alt": 2635,
 "diam": 2650,
 "firstlight": "2011-06-08"
 },
-"INT": {
+"INT (1967)": {
+"name": "Isaac Newton Telescope",
+"obs": "Royal Greenwich Observatory (RGO), Herstmonceux",
+"alt": 50,
+"diam": 2540,
+"englight": "1965-06-15",
+"inauguration": "1967-12-01",
+"firstlight": "1967-12-15",
+"end": "1979-03-15",
+"bib": "1982JHA....13....1S"
+},
+"INT (1984)": {
 "name": "Isaac Newton Telescope",
 "obs": "Roque de los Muchachos Observatory",
 "alt": 2396,
 "diam": 2540,
 "area": 5,
-"firstlight": "1984-06-15"
+"firstlight": "1984-02-13",
+"bib": "1982JHA....13....1S",
+"url": "https://www.ing.iac.es//Astronomy/telescopes/int/hist.html"
 },
 "du Pont": {
 "name": "2.54m Irenee du Pont Telescope",
 "obs": "Las Campanas Observatory",
-"type": "RC",
+"design": "RC",
 "alt": 2380,
 "diam": 2540,
 "firstlight": "1976-06-15"
@@ -525,6 +542,7 @@
 "name": "Palomar Transient Factory",
 "runame": "Паломарская фабрика транзиентов",
 "telescope": "Samuel Oschin telescope",
+"design": "Schmidt",
 "diam": 1244,
 "obs": "Palomar Observatory",
 "obscode": "I41",
@@ -540,6 +558,7 @@
 "name": "Zwicky Transient Facility",
 "runame": "Установка для поиска транзиентов имени Цвикки",
 "telescope": "Samuel Oschin telescope",
+"design": "Schmidt",
 "diam": 1244,
 "obs": "Palomar Observatory",
 "obscode": "I41",
@@ -557,7 +576,7 @@
 "diam": "1800x2",
 "obs": "Haleakala Observatory",
 "alt": 3052,
-"type": "RC",
+"design": "RC",
 "englight": ["2006-06-15", "2013-07-15"],
 "firstlight": ["2007-08-22", "2013-09-15"]
 },
@@ -566,17 +585,18 @@
 "diam": "1300x2",
 "alt": [2306, 2171],
 "obs": ["Fred Lawrence Whipple Observatory", "Cerro Tololo Inter-American Observatory"],
+"wvband": "NIR",
 "monthly-photometr-fract": [0.38, 0.6],
 "firstlight": ["1997-04-17", "1997-04-17"],
 "url": "https://www.umass.edu/synergy/syn_2mass.html",
 "bib": "2006AJ....131.1163S"
 },
-"Terskol-2m": {
+"Terskol 2m": {
 "name": "Zeiss-2000 Terskol",
 "obs": "Обсерватория Пик Терскол",
 "diam": 2000,
 "alt": 3127,
-"type": "RC",
+"design": "RC",
 "firstlight": "1995-06-15"
 },
 "ShAO": {
@@ -593,7 +613,7 @@
 "obs": "Кавказская горная обсерватория ГАИШ МГУ",
 "alt": 2112,
 "diam": 2500,
-"type": "RC",
+"design": "RC",
 "firstlight": "2014-11-14",
 "bib": "2020gbar.conf..127S"
 },
@@ -604,11 +624,45 @@
 "alt": 1938,
 "firstlight": "1986-06-15"
 },
+"Vainu Bappu": {
+"name": "Vainu Bappu Telescope",
+"obs": "Vainu Bappu Observatory",
+"alt": 700,
+"diam": 2300,
+"englight": "1985-11-02",
+"inauguration": "1986-01-06",
+"firstlight": "1986-06-15",
+"bib": "1992BASI...20..319B"
+},
+"ATT": {
+"name": "The Advanced Technology Telescope of Australian National University",
+"obs": "Siding Spring Observatory",
+"alt": 1165,
+"diam": 2300,
+"inauguration": "1984-05-16",
+"firstlight": "1984-05-16"
+},
 "Bok": {
 "name": "90-inch Bok Telescope",
+"obs": "Steward Observatory (Kitt Peak National Observatory)",
 "alt": 2100,
 "diam": 2300,
 "firstlight": "1969-06-23"
+},
+"WIRO": {
+"name": "Wyoming Infrared Observatory Telescope",
+"obs": "Wyoming Infrared Observatory",
+"wvband": "NIR",
+"alt": 2943,
+"diam": 2300,
+"firstlight": "1977-09-15"
+},
+"Hawaii 2.2": {
+"name": "University of Hawaii 2.2 m",
+"obs": "Mauna Kea Observatories",
+"alt": 4213,
+"diam": 2300,
+"firstlight": "1970-06-15"
 },
 "TBL": {
 "name": "Bernard Lyot Telescope",
@@ -617,12 +671,53 @@
 "alt": 2877,
 "firstlight": "1980-06-15"
 },
+"AJT": {
+"name": "Alfred Jensch Teleskop",
+"obs": "Karl Schwarzschild Observatory",
+"design": "Schmidt",
+"alt": 341,
+"diam": 2000,
+"aperture": 1340,
+"firstlight": "1960-06-15"
+},
+"OHP 1.93": {
+"name": "Haute-Provence Observatory 1.93m",
+"obs": "Observatoire de Haute-Provence",
+"diam": 1930,
+"alt": 650,
+"firstlight": "1958-06-15"
+},
+"ELODIE": {
+"name": "ELODIE",
+"telescope": "Haute-Provence Observatory 1.93m",
+"obs": "Observatoire de Haute-Provence",
+"alt": 650,
+"type": "spectrograph",
+"diam": 1930,
+"firstlight": "1993-06-01",
+"wvband": "V",
+"wv": [389, 681],
+"end": "2006-08-15",
+"url": "http://www.obs-hp.fr/archive/elodie-for-dummies.html"
+},
+"CORALIE": {
+"name": "CORALIE",
+"obs": "La Silla Observatory",
+"telescope": "Swiss 1.2-metre Leonhard Euler Telescope",
+"alt": 2375,
+"type": "spectrograph",
+"wvband": "V",
+"wv": [390, 680],
+"diam": 1200,
+"firstlight": "1998-05-15"
+},
 "SOFIA": {
 "name": "Stratospheric Observatory for Infrared Astronomy",
 "obs": "Stratospheric Observatory for Infrared Astronomy",
 "type": "airborne",
 "diam": 2500,
 "alt": 13700,
+"wvband": ["NIR", "IR", "FIR"],
 "wv": [300, 655000],
 "firstlight": "2010-05-26",
 "end": "2022-09-29"
@@ -632,11 +727,12 @@
 "runame": "Космический телескоп Хаббл",
 "telescope": "Hubble Space Telescope",
 "loc": "space",
-"type": "RC",
+"design": "RC",
 "diam": 2400,
 "area": 4,
 "f": 24,
 "obs": "Hubble Space Telescope",
+"wvband": ["UV", "V", "NIR"],
 "obscode": "250",
 "region": "LEO",
 "alt": 537000,
@@ -651,7 +747,8 @@
 "diam": 850,
 "area": "<0.56",
 "f": 12,
-"type": "RC",
+"design": "RC",
+"wvband": ["IR", "NIR", "FIR"],
 "wv": {"IRAC": [3600, 8000], "IRS": [5300, 40000], "MIPS": [24000, 160000]},
 "loc": "space",
 "region": "Earth-trailing, Heliocentric",
@@ -668,7 +765,8 @@
 "area": "<9.6",
 "loc": "space",
 "region": "L2",
-"type": "RC",
+"design": "RC",
+"wvband": ["IR", "FIR"],
 "wv": {"PACS": [55000, 210000], "SPIRE": [194000, 672000], "HIFI": [157000, 625000]},
 "launch": "2009-05-14",
 "firstlight": {"HIFI": "2009-06-22", "PACS": "2009-06-23", "SPIRE": "2009-06-24"},
@@ -680,6 +778,7 @@
 "diam": 950,
 "area": 0.708,
 "wv": [420, 900],
+"wvband": "V",
 "loc": "space",
 "region": "Earth-trailing, Heliocentric",
 "obs": "Kepler space observatory",
@@ -694,6 +793,7 @@
 "diam": "10.5x4",
 "f": 1.4,
 "wv": [600, 1000],
+"wvband": ["V", "NIR"],
 "obs": "TESS space observatory",
 "obscode": "C57",
 "loc": "space",
@@ -707,6 +807,7 @@
 "telescope": "Gaia",
 "diam": "480.3901x2",
 "area": "0.7x2",
+"wvband": ["V", "NIR"],
 "wv": {"BP/RP": [330, 680], "RP": [640, 1050], "RVS": [845, 872]},
 "obs": "Gaia space observatory",
 "obscode": "258",
@@ -721,9 +822,10 @@
 "runame": "Джеймс Уэбб",
 "telescope": "James Webb Space Telescope",
 "mirror": "segmented",
-"type": "Korsch",
+"design": "Korsch",
 "diam": 6500,
 "area": 25.4,
+"wvband": ["NIR", "IR"],
 "wv": {"NIRCam": [600, 5000], "NIRSpec": [600, 5300], "FGS/NIRISS": [800, 5000], "MIRI": [4900, 28800]},
 "f": 20.2,
 "obs": "James Webb Space Telescope",
@@ -746,6 +848,7 @@
 "region": "L2",
 "sensor": "4096x4132x6x6, 2040x2040x4x4",
 "fov": "1.25x0.727",
+"wvband": ["V", "NIR"],
 "wv": {"VIS": [530, 920], "NISP": [920, 2020]},
 "launch": "2023-07-01",
 "englight": "2023-07-15",
@@ -759,6 +862,8 @@
 "launch": "2005-08-12",
 "loc": "space",
 "region": "Mars orbit",
+"wvband": ["V", "NIR"],
+"wv": [[400, 600], [550, 850], [800, 1000]],
 "diam": 500,
 "englight": "2005-09-08",
 "firstlight": ["2006-03-23", "2006-09-29"],

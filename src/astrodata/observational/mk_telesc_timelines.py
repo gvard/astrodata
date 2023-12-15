@@ -20,6 +20,7 @@ areas = []
 types = []
 mirrors = []
 locs = []
+wvs = []
 for instr, dat in data.items():
     numbr = 1
     diam = dat["diam"]
@@ -27,6 +28,7 @@ for instr, dat in data.items():
     tp = dat.get("type")
     mr = dat.get("mirror")
     lc = dat.get("loc")
+    wv = dat.get("wvband")
     if isinstance(diam, str):
         diam = [eval(i) for i in diam.split("x")]
         if isinstance(fl, list) and diam[-1] == len(fl):
@@ -38,6 +40,7 @@ for instr, dat in data.items():
                 types.append(tp)
                 mirrors.append(mr)
                 locs.append(lc)
+                wvs.append(wv)
             continue
         numbr, diam = diam[1], diam[0]
     diams.append(diam)
@@ -59,6 +62,11 @@ for instr, dat in data.items():
         area = numbr * np.pi * (diam / 1000) ** 2
     areas.append(round(area, 2))
     nams.append(instr)
+    if isinstance(wv, list) and "NIR" in wv or wv == "NIR":
+        wv = "NIR"
+    else:
+        wv = ""
+    wvs.append(wv)
 
 fig, ax = plt.subplots(figsize=(16, 9))
 fig.subplots_adjust(0.048, 0.06, 0.99, 0.97)
@@ -68,35 +76,43 @@ XLIMS = (datetime(1917, 4, 10), datetime(2026, 1, 1))
 
 NAMES_DCT = {"TBL": "", "HET-1996": "HET (1996)", "HET-2015": "HET (2015)",
              "MMT-1979": "MMT (1979)", "MMT-2000": "MMT (2000)", "PS 1": "PS1",
-             "PS 2": "PS2",
+             "PS 2": "PS2", "INT (1967)": "INT", "INT (1984)": "INT", "SST (2020)": "SST-2020",
+             "Byurakan": "BAO", "Vainu Bappu": "", "ATT": "", "Hawaii 2.2": "",
+             "ELODIE": "", "2MASS 1": "2MASS", "2MASS 2": "",
              }
+SHIFT_DCT = {"Starfire OR": 60}
 if XLIMS[1] == datetime(2007, 11, 15):
-    NAMES_DCT.update({"UBC": "UBC/Laval LMT"})
+    NAMES_DCT.update({"UBC": "UBC/Laval LMT", "ELODIE": "ELODIE"})
+    SHIFT_DCT.update({"Starfire OR": 30})
     ARS_DCT = {
-        "Subaru": 9,  # 2
-        "Gemini 1": -30,  # -16,
-        "Gemini 2": -30,  # -16,
-        "VLTI": -26,
+        "VLT": -3,
+        "VLTI": -28,
+        "Subaru": 9,
+        "Gemini 1": -30,
+        "Gemini 2": -30,
         "SDSS": -8,
         "LMT": -26,
         "ARC": 14,
-        "VLT": -3,
+        "Terskol 2m": -3,
+        "ELODIE": -10
     }
     DYS_DCT = {
         "GTC": -80,
-        "VLTI": 4,
-        "PS1": -90,
+        "VLTI": 20,
+        "PS 1": -90,
         "SDSS": 15,
         "WIYN": -200,
         "ARC": -20,
         "Starfire OR": 20,
-        "UBC/Laval LMT": -30,
+        "UBC": -30,
         "MMT (2000)": -30,
+        "ELODIE": 20
     }
     _DYS, _ARS = 10, 9
 else:
     _DYS, _ARS = 10, 4
     ARS_DCT = {
+        "GTC": -7,
         "LBT": -7,
         "Subaru": 2,
         "Gemini 1": -16,
@@ -105,7 +121,7 @@ else:
         "JWST": 2,
         "SDSS": -6,
         "ESO-3.6m": -13,
-        "NASA-IRTF": -13,
+        "IRTF": -12,
         "CFHT": -10,
         "UKIRT": -4,
         "Blanco": -4,
@@ -114,33 +130,38 @@ else:
         "HARPS": -3,
         "LAMOST": 1,
         "VISTA": -10,
-        "Herschel": -12.5,
+        "Herschel": -13,
         "MPI-CAHA": 0.6,
         "Starfire OR": -13,
         "ARC": -8,
         "INO": -14,
-        "SST-2020": -2,
+        "SST (2020)": -2,
         "SST": -5,
-        "SOFIA": -1,
+        "SOFIA": -6,
         "LMT": -14,
-        "Byurakan": -10,
-        "Terskol-2m": -7,
+        "Byurakan": -6,
+        "Terskol 2m": -6,
         "VST": -6,
         "ShAO": -8,
         "SAI-2.5": -3,
         "INT": -14,
+        "INT (1967)": -7,
         "du Pont": -6,
         "HST": -14,
         "UBC": -1,
         "Hiltner": -14,
-        "Bok": -10,
-        "PS1": -6,
+        "Bok": -12,
+        "PS 1": -6,
+        "PS 2": -6,
+        "AJT": -7.5,
+        "WIRO": -12.5,
+        "2MASS 1": -6,
     }
     DYS_DCT = {
         "LBT": -990,
-        "GTC": -70,
+        "GTC": -1170,
         "VLTI": 4,
-        "Mayall, KPNO": -3000,
+        "Mayall KPNO": -2850,
         "AAT": -200,
         "ESO-3.6m": -1900,
         "CFHT": 90,
@@ -154,64 +175,95 @@ else:
         "LAMOST": -800,
         "LDT": 100,
         "VISTA": 150,
-        "Herschel": 100,
+        "Herschel": 50,
         "MPI-CAHA": -400,
         "NTT": 100,
         "ARC": -1000,
         "WIYN": -650,
         "SST": 120,
-        "SST-2020": 60,
+        "SST (2020)": 60,
         "Starfire OR": 60,
-        "Terskol-2m": 150,
-        "NASA-IRTF": 100,
+        "Terskol 2m": 100,
+        "IRTF": 100,
         "Byurakan": 120,
-        "SOFIA": -1200,
+        "SOFIA": -1450,
         "NOT": -600,
-        "H.Smith": -1200,
-        "ShAO": -1340,  # 130,
+        "H. Smith": -1200,
+        "ShAO": -1200,
         "SAI-2.5": 160,
         "INT": -500,
-        "du Pont": -1890,
+        "INT (1967)": -890,
+        "du Pont": -1800,
         "HST": -350,
         "UBC": -1000,
         "VST": 90,
         "Hiltner": -500,
-        "Bok": 150,
+        "Bok": 100,
         "MMT (2000)": -2700,
-        "PS1": 120,
+        "PS 1": 120,
+        "PS 2": 120,
+        "OHP 1.93": -1600,
+        "AJT": 90,
+        "WIRO": -380,
+        "Euclid": -800,
+        "2MASS 1": 100,
     }
 clrs_dct = {
-    "liquid-mirror": "lightgrey", "military": "salmon", "spectrograph": "limegreen",
+    "liquid-mirror": "lightgrey", "military": "#555", "spectrograph": "limegreen", "NIR": "salmon",
 }
-markers_dct = {"segmented": "h", "multiple": "$\clubsuit$", "liquid": "o"}
+markers_dct = {"segmented": "h", "multiple": "$\clubsuit$", "liquid": "o", "military": "D"}
 
 for i, ar in enumerate(areas):
     DYS, ARS = _DYS, _ARS
-    if ar > 7:  # 1.5m or bigger
+    if ar > 5 or nams[i] in ("Euclid"):
         if nams[i] == "VLTI":
             ar = 844.9628
         clr = "k"
         if types[i] in clrs_dct:
             clr = clrs_dct[types[i]]
-        if locs[i] == "space":
-            clr = "cyan"
+        if wvs[i] in clrs_dct:
+            clr = clrs_dct[wvs[i]]
         marker = "o"
         if mirrors[i] in markers_dct:
             marker = markers_dct[mirrors[i]]
-        if nams[i] in NAMES_DCT:
-            nams[i] = NAMES_DCT[nams[i]]
-        if nams[i] == "Starfire OR":
-            SFDLT = 10
-            if XLIMS[1] != datetime(2007, 11, 15):
-                SFDLT = 60
+        SFDLT = 0
+        if nams[i] in SHIFT_DCT:
+            SFDLT = SHIFT_DCT[nams[i]]
+        MS = 6
+        FS = 13
+        if ar > 227:
+            MS = 9
+            FS = 13
+        elif ar < 227 and ar >= 47.78:
+            MS = 6
+            FS = 12
+        elif ar < 47.78 and ar >= 18.095:  # 3.9-2.4
+            MS = 5.25
+            FS = 12
+        elif ar < 18.095 and ar >= 12.566:
+            MS = 4.25
+            FS = 11
+        elif ar < 12.566:
+            MS = 3.5
+            FS = 10
+        if types[i] == "spectrograph":
+            MS = 5
+            FS = 11
+        if types[i] == "military":
+            marker = markers_dct["military"]
+        if locs[i] == "space":
+            clr = "cyan"
+        ZORD = 1
+        if nams[i] in ("HST", "Herschel", "JWST"):
+            ax.plot(
+                dats[i] + timedelta(days=SFDLT), ar, marker=marker,
+                fillstyle="left", c='cyan', markerfacecoloralt='salmon',
+                markeredgecolor="black", markeredgewidth=0.5, ms=MS+1, zorder=ZORD,
+            )
+        else:
             ax.plot(
                 dats[i] + timedelta(days=SFDLT), ar, marker=marker, c=clr,
-                markeredgecolor="black", markeredgewidth=0.85, ms=6, zorder=1,
-            )
-        elif nams[i] not in ("VLT/HiRISE",):
-            ax.plot(
-                dats[i], ar, marker=marker, c=clr,
-                markeredgecolor="black", markeredgewidth=0.85, ms=6, zorder=1,
+                markeredgecolor="black", markeredgewidth=0.85, ms=MS, zorder=ZORD,
             )
         if nams[i] in ARS_DCT:
             ARS += ARS_DCT[nams[i]]
@@ -231,9 +283,6 @@ for i, ar in enumerate(areas):
             nams[i] = {"Gemini 1": "Gemini N/S", "Gemini 2": ""}[nams[i]]
         elif "Gemini" in nams[i] and XLIMS[1]:
             nams[i] = {"Gemini 1": "Gemini N", "Gemini 2": "Gemini S"}[nams[i]]
-        if nams[i] == "PS2":
-            ARS -= 6
-            DYS += 120
         if nams[i] == "Magellan 1" and XLIMS[1] != datetime(2007, 11, 15):
             nams[i] = "Magellan I/II"
             DYS -= 200
@@ -246,8 +295,11 @@ for i, ar in enumerate(areas):
         elif nams[i] == "Magellan 2":
             nams[i] = "Magellan II"
             DYS += 15
+        if nams[i] in NAMES_DCT:
+            nams[i] = NAMES_DCT[nams[i]]
         t = plt.annotate(
-            nams[i], (dats[i] + timedelta(days=DYS), ar + ARS), fontsize=12, zorder=5
+            nams[i].replace(" ", "$\,$"), (dats[i] + timedelta(days=DYS), ar + ARS), fontsize=FS,
+            zorder=5
         )
 
 if XLIMS[1] == datetime(2007, 11, 15):
@@ -280,9 +332,9 @@ t = plt.annotate("16 m", (XLIMS[0] + timedelta(days=30), 804.248 + ANDLT2),
 
 plt.xlim(XLIMS)
 if XLIMS[1] == datetime(2007, 11, 15):
-    plt.ylim(7.1, 845)
+    plt.ylim(1.3, 845)
 else:
-    plt.ylim(6.1, 454)
+    plt.ylim(2.3, 454)
 if XLIMS[1] == datetime(2007, 11, 15):
     YL, MYL = 2, 1
 else:
@@ -296,7 +348,7 @@ plt.ylabel("Площадь главных зеркал, $м^2$", fontsize=13)
 
 handles, labels = plt.gca().get_legend_handles_labels()
 
-MS = 6
+MS = 7.5
 legend_elements = [
     Line2D([0], [0], label="Segmented mirror", c="k", markeredgecolor="black",
            markeredgewidth=0.85, ms=MS, marker="H", linestyle=""),
@@ -306,10 +358,12 @@ legend_elements = [
            markeredgewidth=0.85, ms=MS, marker="o", linestyle=""),
     Line2D([0], [0], label="Space-based", c="cyan", markeredgecolor="black",
            markeredgewidth=0.85, ms=MS, marker="o", linestyle=""),
-    Line2D([0], [0], label="Military", c="salmon", markeredgecolor="black",
+    Line2D([0], [0], label="Infrared", c="salmon", markeredgecolor="black",
            markeredgewidth=0.85, ms=MS, marker="o", linestyle=""),
     Line2D([0], [0], label="Spectrograph", c="limegreen", markeredgecolor="black",
            markeredgewidth=0.85, ms=MS, marker="o", linestyle=""),
+    Line2D([0], [0], label="Military", c=clrs_dct["military"], markeredgecolor="black",
+           markeredgewidth=0.85, ms=MS-1, marker=markers_dct["military"], linestyle=""),
 ]
 handles.extend(legend_elements)
 plt.legend(handles=handles, loc="upper right", fontsize=13)
