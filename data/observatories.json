@@ -32,10 +32,12 @@
 "runame": "Большой азимутальный телескоп Специальной астрофизической обсерватории РАН",
 "telescope": "6-m Big Telescope Alt-azimuth",
 "diam": 6050,
-"area": 26,
+"area": 25.1,
 "f": 4,
 "alt": 2080,
 "obs": "Special Astrophysical Observatory",
+"wvband": ["NUV", "V", "NIR"],
+"wv": [303, 10000],
 "obscode": "115",
 "region": "RU-KC",
 "firstlight": "1975-12-30",
@@ -92,6 +94,7 @@
 "design": "RC",
 "diam": "8200x4",
 "alt": 2635,
+"wvband": ["V", "NIR"],
 "obs": "Paranal Observatory",
 "obscode": 301,
 "firstlight": ["1998-05-25", "1999-03-01", "2000-01-26", "2000-09-04"]
@@ -113,6 +116,7 @@
 "design": "RC",
 "area": "75.76x2",
 "obs": "Mauna Kea Observatories",
+"wvband": ["V", "NIR"],
 "alt": 4145,
 "firstlight": ["1990-11-24", "1996-10-23"]
 },
@@ -732,7 +736,7 @@
 "area": 4,
 "f": 24,
 "obs": "Hubble Space Telescope",
-"wvband": ["UV", "V", "NIR"],
+"wvband": ["UV", "NUV", "V", "NIR"],
 "obscode": "250",
 "region": "LEO",
 "alt": 537000,
@@ -836,6 +840,18 @@
 "cooling": "2022-04-07",
 "firstlight": "2022-06-07",
 "url": "https://www.nasa.gov/news-release/nasas-webb-reaches-alignment-milestone-optics-working-successfully/"
+},
+"GALEX": {
+"name": "Galaxy Evolution Explorer (GALEX)",
+"diam": 500,
+"design": "RC",
+"region": "LEO",
+"alt": 694000,
+"wvband": ["FUV", "UV", "NUV"],
+"wvrange": [[134.4, 178.6], [177.1, 283.1]],
+"launch": "2003-04-28",
+"firstlight": "2003-05-21",
+"end": "2013-06-28"
 },
 "Euclid": {
 "name": "Euclid",

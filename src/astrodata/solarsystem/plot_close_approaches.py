@@ -47,11 +47,12 @@ NAMSIZE = {
     "2019 NN3": "35–77",
     "2019 OD": "60–130",
     "2019 OK": "57–130",
-    "2020 LD": "140",
+    "2020 LD": "89–200",  # 140
     "2021 SG": "42–94",
-    "2023 DZ2": "70",
+    "2023 DZ2": "70–90",
+    # "2020 VZ6": "25–57",
 }
-for i, nam in enumerate(names[:9]):
+for i, nam in enumerate(names[:12]):
     if nam in NAMSIZE.keys():
         t = plt.annotate(
             f"{nam} ({NAMSIZE[nam]} м)",
@@ -84,7 +85,7 @@ t = plt.annotate(
 ax.plot(LIMITS, [35.786, 35.786], "--m", lw=3, zorder=5)
 t = plt.annotate(
     "Самый далекий пилотируемый полет ",
-    (datetime(2022, 4, 30), 3.5 + 400.171),
+    (LIMITS[1]-timedelta(days=584), 3.5 + 400.171),
     fontsize=14, zorder=6,
 )
 t.set_bbox(dict(facecolor="white", alpha=0.9, edgecolor="white", linewidth=0))
@@ -100,7 +101,7 @@ plt.xlabel("Дата", fontsize=14)
 plt.title(
     "Сближения "
     + str(COUNT)
-    + f" астероидов ($ H<30^m$) с Землей с {START.year} по 2023 годы",
+    + f" астероидов ($ H<30^m$) с Землей с {START.year} по 2024 годы",
     fontsize=14,
 )
 plt.savefig("../../../plots/solarsystem/asteroid-close-approaches-ru.png", dpi=120)

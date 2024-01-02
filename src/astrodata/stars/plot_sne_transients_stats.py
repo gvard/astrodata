@@ -298,7 +298,9 @@ title = f"Статистика открытий сверхновых по год
 plt.title(title + f" {MONTH} {YEAR} года", fontsize=16)
 plt.legend(fontsize=14, loc="upper left")
 ax.yaxis.set_minor_locator(MultipleLocator(500))
-ax.bar_label(ax.containers[-1])
+# ax.bar_label(ax.containers[-1])
+for x, y in enumerate(df.sum(axis=1)):
+    ax.annotate(int(y), (x, y + 100), ha="center")
 
 plt.savefig(tmp_pth, dpi=DPI)
 if FILE_EXT == "svg":
@@ -320,7 +322,7 @@ plt.plot(years_dt, all_sne, "ok-", label="David Bishop, Latest Supernovae Archiv
 plt.plot(total_dct.keys(), total_lst, "or-",
          label="Transient Name Server, public + CBAT SNe before 2016")
 plt.xlim(datetime(1995, 10, 1), today + timedelta(weeks=31.9))
-plt.ylim(1000, 150000)
+plt.ylim(1000, 160000)
 plt.yscale("log")
 plt.legend(fontsize=14)
 plt.title(
