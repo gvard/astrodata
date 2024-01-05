@@ -884,5 +884,16 @@
 "englight": "2005-09-08",
 "firstlight": ["2006-03-23", "2006-09-29"],
 "url": "https://en.wikipedia.org/wiki/Timeline_of_Mars_Reconnaissance_Orbiter"
+},
+"XRISM": {
+"name": "X-Ray Imaging and Spectroscopy Mission",
+"obs": "X-Ray Imaging and Spectroscopy Mission",
+"launch": "2023-09-06",
+"loc": "space",
+"region": "LEO",
+"wvband": ["Soft X-Ray"],
+"energy": [0.3, 12],
+"firstlight": "2024-01-05",
+"url": ["https://global.jaxa.jp/press/2024/01/20240105-1_e.html", "https://www.xrism.jaxa.jp/en/topics/news/980/", "https://science.nasa.gov/missions/xrism/nasa-jaxa-xrism-mission-reveals-its-first-look-at-x-ray-cosmos/"]
 }
 }
