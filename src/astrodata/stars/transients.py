@@ -63,8 +63,8 @@ def get_tns_stats():
 
 def _yrnum(elm):
     """Get data from div elements of Transient Name Server stats page."""
-    year = int(elm.find("div", {"class": "stat-row-left"}).text)
-    num = int(elm.find("div", {"class": "stat-row-right"}).text)
+    year = int(elm.find("div", {"class": "stat-row-left"}).text.replace(",", ""))
+    num = int(elm.find("div", {"class": "stat-row-right"}).text.replace(",", ""))
     return year, num
 
 
