@@ -801,9 +801,23 @@
 "obs": "TESS space observatory",
 "obscode": "C57",
 "loc": "space",
+"launch": "2018-04-18",
 "region": "Highly elliptical orbit",
 "firstlight": "2018-08-07",
 "url": "https://svs.gsfc.nasa.gov/13069"
+},
+"CHEOPS": {
+"name": "CHaracterising ExOPlanets Satellite",
+"diam": 320,
+"f": 8,
+"wv": [330, 1100],
+"wvband": "V",
+"obs": "CHEOPS space observatory",
+"loc": "space",
+"launch": "2019-12-18",
+"region": "Sun-synchronous orbit",
+"firstlight": "2020-02-07",
+"url": ["https://www.esa.int/Science_Exploration/Space_Science/Cheops/A_perfect_blur_First_image_by_exoplanet_watcher_Cheops", "https://sci.esa.int/web/cheops/-/cheops-image-of-its-first-target-star"]
 },
 "Gaia": {
 "name": "Gaia",
