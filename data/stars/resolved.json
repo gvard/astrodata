@@ -1,6 +1,6 @@
 {
 "Betelgeuse": {
-  "tags": ["sg", "SRc", "brightest"],
+  "tags": ["sg", "SRc", "brightest", "variable"],
   "name": "Betelgeuse",
   "runame": "Бетельгейзе",
   "imgnam": "Betelgeuse.jpg",
@@ -14,7 +14,7 @@
   "jmag": -3.0
 },
 "Antares": {
-  "tags": ["sg", "Lc", "brightest", "double"],
+  "tags": ["sg", "Lc", "brightest", "double", "variable"],
   "name": "Antares",
   "runame": "Антарес",
   "imgnam": "Antares.jpg",
@@ -28,7 +28,7 @@
   "jmag": -2.73
 },
 "R Doradus": {
-  "tags": ["mira"],
+  "tags": ["giant", "mira", "variable"],
   "name": "R Doradus",
   "runame": "R Золотой Рыбы",
   "imgnam": "R_Doradus.jpg",
@@ -42,7 +42,8 @@
   "jmag": -2.65
 },
 "W Hydrae": {
-  "tags": ["agb", "mira", "IRbrightest"],
+  "imgurl": "images/W_Hya.png",
+  "tags": ["agb", "giant", "mira", "IRbrightest", "variable"],
   "name": "W Hydrae",
   "runame": "W Гидры",
   "imgnam": "W_Hydrae.jpg",
@@ -56,7 +57,8 @@
   "jmag": -1.7
 },
 "Mira": {
-  "tags": ["mira"],
+  "imgurl": "images/Mira.png",
+  "tags": ["giant", "mira", "double", "variable"],
   "name": "Mira",
   "runame": "Мира",
   "imgnam": "Mira.jpg",
@@ -83,12 +85,13 @@
   "mag": "5.31-7.01",
   "jmag": -0.62
 },
-"R Sculptoris": {
+"R Scl": {
   "tags": ["agb", "SRb", "variable", "double"],
-  "name": "R Sculptoris",
+  "name": "R Scl",
   "runame": "R Скульптора",
   "imgnam": "R_Sculptoris.jpg",
   "url": "https://en.wikipedia.org/wiki/R_Sculptoris",
+  "angular": "10.2",
   "size": "355 ± 55",
   "mass": "1.3 ± 0.7",
   "sp": "C6,5ea(Np)",
@@ -98,11 +101,12 @@
   "jmag": 1.44
 },
 "T Leporis": {
-  "tags": ["mira"],
+  "tags": ["agb", "giant", "mira", "variable"],
   "name": "T Leporis",
   "runame": "T Зайца",
   "imgnam": "T_Leporis.jpg",
   "url": "https://en.wikipedia.org/wiki/T_Leporis",
+  "angular": "5.8 (15)",
   "size": 100,
   "mass": 2.7,
   "sp": "M6e–M9e",
@@ -110,8 +114,67 @@
   "mag": "7.4-14.3",
   "jmag": 1.31
 },
+"HR 5171": {
+  "tags": ["hypergiant", "variable", "animation"],
+  "name": "HR 5171",
+  "runame": "HR 5171 (V766 Центавра)",
+  "imgnam": "V766_Centauri.gif",
+  "url": "https://en.wikipedia.org/wiki/HR_5171",
+  "angular": "3.3-4.1",
+  "size": "1315-1575",
+  "mass": "27-36",
+  "sp": "K0 0-Ia",
+  "temp": "4287±760",
+  "mag": "6.1-7.5",
+  "jmag": 2.12
+},
+"RW Cephei": {
+  "imgurl": "images/RW_Cep.gif",
+  "tags": ["hypergiant", "variable", "animation"],
+  "name": "RW Cephei",
+  "runame": "RW Цефея",
+  "imgnam": "RW_Cep.png",
+  "url": "https://en.wikipedia.org/wiki/RW_Cephei",
+  "angular": "2.45",
+  "size": "900-1760",
+  "mass": 40.0,
+  "sp": "K2 0-Ia",
+  "temp": "3900-4200",
+  "mag": 6.65,
+  "jmag": 2.83
+},
+"Eta Carinae": {
+  "imgurl": "images/Eta_Carinae-big.png",
+  "tags": ["LBV", "cse", "nebula", "hypergiant", "variable"],
+  "name": "Eta Carinae",
+  "runame": "Эта Киля",
+  "imgnam": "Eta_Carinae.png",
+  "url": "https://en.wikipedia.org/wiki/Eta_Carinae",
+  "angular": "5 (0.2)",
+  "size": "60-881",
+  "mass": "100-150",
+  "sp": "LBV + O",
+  "temp": "3900-4200",
+  "mag": "-1.0 - 7.6",
+  "jmag": 1.658
+},
+"l Carinae": {
+  "imgurl": "images/l_Carinae-big.png",
+  "tags": ["sg", "cepheid", "variable"],
+  "name": "l Carinae",
+  "runame": "l Киля",
+  "imgnam": "l_Carinae.png",
+  "url": "https://en.wikipedia.org/wiki/HD_84810",
+  "angular": "2.65±0.08-3.21±0.03",
+  "size": "169±8",
+  "mass": "8.4-13",
+  "sp": "G5 Iab/Ib; F6Ib-K0Ib",
+  "temp": 5091,
+  "mag": "3.35-4.06",
+  "jmag": 1.684
+},
 "Vega": {
-  "tags": ["rot", "deltaSct"],
+  "tags": ["dwarf", "rot", "deltaSct", "variable"],
   "name": "Vega",
   "runame": "Вега",
   "imgnam": "Vega.png",
@@ -126,7 +189,7 @@
   "jmag": -0.177
 },
 "Altair": {
-  "tags": ["rot", "deltaSct", "brightest"],
+  "tags": ["dwarf", "rot", "deltaSct", "brightest", "variable"],
   "name": "Altair",
   "runame": "Альтаир",
   "imgnam": "Altair.jpg",
@@ -140,7 +203,7 @@
   "jmag": 0.35
 },
 "Beta Cassiopeiae": {
-  "tags": ["rot", "deltaSct"],
+  "tags": ["giant", "rot", "deltaSct", "variable"],
   "name": "Beta Cassiopeiae",
   "runame": "Каф (β Cas)",
   "imgnam": "Beta_Cassiopeiae.png",
@@ -153,11 +216,12 @@
   "jmag": 1.63
 },
 "Alpha Cephei": {
-  "tags": ["rot"],
+  "tags": ["rot", "dwarf"],
   "name": "Alpha Cephei",
   "runame": "Альдерамин",
   "imgnam": "Alpha_Cephei.png",
   "url": "https://en.wikipedia.org/wiki/Alpha_Cephei",
+  "angular": "1.35x1.753",
   "size": "2.3",
   "mass": 1.74,
   "sp": "A8Vn",
@@ -166,11 +230,12 @@
   "jmag": 2.15
 },
 "R Hydrae": {
-  "tags": ["mira", "low"],
+  "tags": ["agb", "giant", "mira", "bowshock", "low", "variable"],
   "name": "R Hydrae",
   "runame": "R Гидры",
   "imgnam": "R_Hydrae.png",
   "url": "https://en.wikipedia.org/wiki/R_Hydrae",
+  "angular": 400000,
   "size": "460-631",
   "mass": 2.0,
   "sp": "M6e/M9e:",
@@ -179,11 +244,13 @@
   "jmag": -1.16
 },
 "Epsilon Aurigae": {
-  "tags": ["sg", "algol"],
+  "imgurl": "images/Eps_Aur.gif",
+  "tags": ["sg", "algol", "variable", "animation"],
   "name": "Epsilon Aurigae",
   "runame": "ε Возничего",
   "imgnam": "Epsilon_Aurigae.jpg",
   "url": "https://en.wikipedia.org/wiki/Epsilon_Aurigae",
+  "angular": "1.44-2.18",
   "size": "143-358 + 3.9",
   "mass": "2.2-15 + 6-14",
   "sp": "F0 Iab + ~B5V",
@@ -192,11 +259,12 @@
   "jmag": 1.83
 },
 "Regulus": {
-  "tags": ["rot"],
+  "tags": ["subgiant", "rot"],
   "name": "Regulus",
   "runame": "Регул",
   "imgnam": "Regulus.png",
   "url": "https://en.wikipedia.org/wiki/Regulus",
+  "angular": "1.25±0.02, 1.65±0.02",
   "size": "3.09±0.15",
   "mass": 3.8,
   "sp": "B8 IVn",
@@ -205,20 +273,21 @@
   "jmag": 1.54
 },
 "Alpha Ophiuchi": {
-  "tags": ["rot", "double"],
+  "tags": ["rot", "subgiant", "dwarf", "double"],
   "name": "Alpha Ophiuchi",
   "runame": "Рас Альхаге",
   "imgnam": "Alpha_Ophiuchi.png",
   "url": "https://en.wikipedia.org/wiki/Alpha_Ophiuchi",
+  "angular": "1.8",
   "size": "2.6",
   "mass": "2.4±0.25",
-  "sp": "A5 III + K5–7 V",
+  "sp": "A5IVnn + K5–7 V",
   "temp": "7880-8050",
   "mag": 2.07,
   "jmag": 1.74
 },
 "Achernar": {
-  "tags": ["rot", "Be", "double", "brightest"],
+  "tags": ["rot", "Be", "dwarf", "double", "brightest", "variable"],
   "name": "Achernar",
   "runame": "Ахернар",
   "imgnam": "Achernar.jpg",
@@ -226,13 +295,13 @@
   "angular": "2-2.45",
   "size": "7.3×11.4",
   "mass": 6.7,
-  "sp": "B6 Vep",
+  "sp": "B3 Vpe + A1V-A3V",
   "temp": 15000,
   "mag": "0.40-0.46",
   "jmag": 0.8
 },
 "Zeta Andromedae": {
-  "tags": ["double", "giant", "RSCVn"],
+  "tags": ["double", "giant", "RSCVn", "variable"],
   "name": "Zeta Andromedae",
   "runame": "ζ Андромеды",
   "imgnam": "Zeta_Andromedae.png",
@@ -246,11 +315,12 @@
   "jmag": 2.19
 },
 "Sigma Geminorum": {
-  "tags": ["double", "RSCVn", "SB1"],
+  "tags": ["double", "giant", "RSCVn", "SB1", "variable"],
   "name": "Sigma Geminorum",
   "runame": "σ Близнецов",
   "imgnam": "Sigma_Geminorum.png",
   "url": "https://en.wikipedia.org/wiki/Sigma_Geminorum",
+  "angular": "1.64±0.15, 1.81±0.31",
   "size": "10.1±0.4",
   "mass": "1.28±0.07, 0.73",
   "sp": "K1 III + dG/K",
@@ -259,7 +329,7 @@
   "jmag": 2.35
 },
 "CE Tauri": {
-  "tags": ["sg", "SRc"],
+  "tags": ["sg", "SRc", "variable"],
   "name": "CE Tauri",
   "runame": "CE Тельца",
   "imgnam": "119_Tauri.jpg",
@@ -273,11 +343,12 @@
   "jmag": 0.31
 },
 "RS Persei": {
-  "tags": ["sg", "SRc"],
+  "tags": ["sg", "SRc", "variable"],
   "name": "RS Persei",
   "runame": "RS Персея",
   "imgnam": "RS_Persei.jpg",
   "url": "https://en.wikipedia.org/wiki/RS_Persei",
+  "angular": "3.05±0.05 (LDD)",
   "size": "770±30",
   "mass": "12-15",
   "sp": "M4Iab",
@@ -286,11 +357,12 @@
   "jmag": 3.05
 },
 "T Persei": {
-  "tags": ["sg", "SRc"],
+  "tags": ["sg", "SRc", "variable"],
   "name": "T Persei",
   "runame": "T Персея",
   "imgnam": "T_Persei.jpg",
   "url": "https://en.wikipedia.org/wiki/T_Persei",
+  "angular": "2.01±0.03 (LDD)",
   "size": "510±20",
   "mass": "9-12",
   "sp": "M2Iab",
@@ -299,7 +371,7 @@
   "jmag": 3.89
 },
 "Algol": {
-  "tags": ["double", "algol", "animation"],
+  "tags": ["double", "algol", "dwarf", "subgiant", "variable", "animation"],
   "name": "Algol",
   "runame": "Алголь",
   "imgnam": "Algol.gif",
@@ -312,7 +384,7 @@
   "jmag": 2.16
 },
 "Beta Lyrae": {
-  "tags": ["double", "betaLyr", "animation"],
+  "tags": ["double", "brightgiant", "betaLyr", "variable", "animation"],
   "name": "Beta Lyrae",
   "runame": "Бета Лиры",
   "imgnam": "Beta_Lyrae.gif",
@@ -325,11 +397,12 @@
   "jmag": 3.35
 },
 "UX Arietis": {
-  "tags": ["double", "RSCVn", "animation"],
+  "tags": ["double", "subgiant", "dwarf", "RSCVn", "variable", "animation"],
   "name": "UX Arietis",
   "runame": "UX Овна",
   "imgnam": "UX_Arietis.gif",
   "url": "https://en.wikipedia.org/wiki/UX_Arietis",
+  "angular": "0.97±0.02, 0.35±0.02",
   "size": "5.6, 1.6±0.2",
   "mass": "1.3, 1.14±0.06",
   "sp": "K0IV+G5V",
@@ -338,34 +411,39 @@
   "jmag": 4.46
 },
 "V339 Delphini": {
-  "tags": ["double", "nova", "animation"],
+  "tags": ["double", "nova", "wd", "variable", "animation"],
   "name": "V339 Delphini",
   "runame": "V339 Дельфина",
   "imgnam": "V339_Delphini.gif",
   "url": "https://en.wikipedia.org/wiki/V339_Delphini",
   "angular": 2,
   "size": "",
+  "mass": "1.04±0.02",
   "sp": "em, P Cyg",
   "desc": "Новая открыта 14.08.2013. Впервые в спектре новой обнаружены признаки производства лития.",
   "mag": "4.3-17.6"
 },
 "AZ Cyg": {
-  "tags": ["sg", "SRc", "animation"],
+  "tags": ["sg", "SRc", "variable", "animation"],
   "name": "AZ Cyg",
   "runame": "AZ Лебедя",
   "imgnam": "AZ_Cyg.gif",
-  "url": "http://simbad.u-strasbg.fr/simbad/sim-id?Ident=az+cyg",
-  "size": "",
+  "url": "https://en.wikipedia.org/wiki/AZ_Cygni",
+  "angular": "3.85 (UD) 4.05 (LDD)",
+  "size": "814-911",
+  "mass": "15-20±9",
   "sp": "M2-M4Iab",
-  "mag": 8.85,
+  "temp": "3989±117",
+  "mag": "7.8-9.6",
   "jmag": 2.64
 },
 "Mu Cephei": {
-  "tags": ["sg", "SRc", "animation"],
+  "tags": ["sg", "SRc", "variable", "animation"],
   "name": "μ Cephei",
   "runame": "μ Цефея",
   "imgnam": "Mu_Cephei.gif",
   "url": "https://en.wikipedia.org/wiki/Mu_Cephei",
+  "angular": "18.67±0.44, 20.58±0.48 (LDD)",
   "size": "1260-1650",
   "mass": "19.2 ± 0.1",
   "sp": "M2e Ia",
@@ -379,6 +457,7 @@
   "runame": "κ Андромеды",
   "imgnam": "Kappa_Andromedae.png",
   "url": "https://en.wikipedia.org/wiki/Kappa_Andromedae",
+  "angular": "0.37",
   "size": "2.29±0.06",
   "mass": "2.8±0.1",
   "sp": "B9 IVn",
@@ -387,7 +466,7 @@
   "jmag": 4.29
 },
 "R Carinae": {
-  "tags": ["AGB", "mira"],
+  "tags": ["agb", "mira", "variable"],
   "name": "R Carinae",
   "runame": "R Киля",
   "imgnam": "R_Carinae.png",
@@ -400,7 +479,7 @@
   "jmag": 0.09
 },
 "VY Canis Majoris": {
-  "tags": ["hypergiant", "Lc"],
+  "tags": ["hypergiant", "cse", "Lc", "variable"],
   "name": "VY Canis Majoris",
   "runame": "VY Большого Пса",
   "imgnam": "VY_Canis_Majoris.png",
@@ -411,5 +490,20 @@
   "temp": "3490±90",
   "mag": "6.5-9.6",
   "jmag": 1.98
+},
+"Capella": {
+  "imgurl": "images/Capella-big.png",
+  "tags": ["giant", "double"],
+  "name": "Capella",
+  "runame": "Капелла",
+  "imgnam": "Capella.png",
+  "url": "https://en.wikipedia.org/wiki/Capella",
+  "angular": "8.47±0.4, 6.24±0.23",
+  "size": "11.98±0.6, 8.8±0.3",
+  "mass": "2.569, 2.483±0.007",
+  "sp": "K0III, G1III",
+  "temp": "4970±50",
+  "mag": "0.08 (0.03-0.16)",
+  "jmag": -1.29
 }
 }
