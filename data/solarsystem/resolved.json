@@ -1257,6 +1257,20 @@
   "deltav": 12.7,
   "imgdat": "13.07.2015"
 },
+"Ivar": {
+  "imgurl": "images/Ivar-radar.png",
+  "tags": ["neo", "radar", "radarimage", "model", "numbered"],
+  "numnam": "1627 Ivar",
+  "runame": "Ивар",
+  "imgnam": "Ivar.png",
+  "number": 1627,
+  "url": "https://en.wikipedia.org/wiki/1627_Ivar",
+  "size": 4.19,
+  "date": "25.09.1929",
+  "deltav": 6.3,
+  "desc": "Первое радарное изображение астероида",
+  "imgdat": "05.07.1985"
+},
 "Daphnis": {
   "tags": ["sat", "moon", "visited"],
   "numnam": "Daphnis",
@@ -1569,6 +1583,7 @@
   "runame": "Касталия",
   "imgnam": "Castalia.gif",
   "number": 4769,
+  "des": "1989 PB",
   "url": "https://en.wikipedia.org/wiki/4769_Castalia",
   "size": 0.7,
   "date": "09.08.1989",
@@ -1675,7 +1690,8 @@
   "url": "https://en.wikipedia.org/wiki/(163899)_2003_SD220",
   "size": 0.5,
   "date": "29.09.2003",
-  "deltav": 7.884
+  "deltav": 7.884,
+  "imgdat": "17.12.2015"
 },
 "2017 YE5": {
   "tags": ["neo", "pha", "binary", "radar", "radarimage"],
@@ -1779,7 +1795,8 @@
   "url": "https://en.wikipedia.org/wiki/2015_TB145",
   "size": 0.325,
   "date": "10.10.2015",
-  "deltav": 15.747
+  "deltav": 15.747,
+  "imgdat": "30.10.2015"
 },
 "1994 CC": {
   "tags": ["neo", "pha", "havesats", "radar", "radarimage", "animation", "numbered"],
@@ -1856,7 +1873,8 @@
   "url": "https://en.wikipedia.org/wiki/(308635)_2005_YU55",
   "size": 0.18,
   "date": "28.12.2005",
-  "deltav": 6.9
+  "deltav": 6.9,
+  "imgdat": "07.11.2011"
 },
 "Itokawa": {
   "tags": ["neo", "pha", "contactbinary", "visited", "orbited", "numbered", "named", "map", "radar"],

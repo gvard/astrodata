@@ -407,6 +407,18 @@
 "obs": "Siding Spring Observatory",
 "firstlight": "1974-04-27"
 },
+"Seimei": {
+"name": "Kyoto 3.8m Seimei Telescope",
+"diam": 3780,
+"alt": 366,
+"design": "RC",
+"obs": "Okayama Observatory",
+"wvband": "V",
+"englight": " 2018-12-12",
+"firstlight": "2019-02-28",
+"bib": "2020PASJ...72...48K",
+"url": ["https://www.kwasan.kyoto-u.ac.jp/general/facilities/okayama/", "https://sites.astro.caltech.edu/~srk/Workshops/TDAMMS/Files4Facilities/KyotoSeimai.pdf"]
+},
 "AEOS": {
 "name": "3.67 m Advanced Electro Optical System Telescope",
 "diam": 3670,
