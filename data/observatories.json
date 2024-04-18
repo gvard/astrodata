@@ -7,7 +7,7 @@
 "firstlight": "1917-11-02",
 "url": "https://www.mtwilson.edu/discovering-mount-wilson-chapter-7-first-light-on-the-100-inch-telescope/"
 },
-"Struve-2.1m": {
+"Struve": {
 "name": "Otto Struve Telescope",
 "obs": "McDonald Observatory",
 "diam": 2080,
@@ -369,7 +369,7 @@
 "firstlight": "2020-03-05"
 },
 "ARC": {
-"name": "Astrophysical Research Consortium",
+"name": "Astrophysical Research Consortium Telescope",
 "diam": 3480,
 "obs": "Apache Point Observatory",
 "design": "RC",
@@ -390,14 +390,6 @@
 "obs": "Lick Observatory",
 "alt": 1283,
 "firstlight": "1959-06-15"
-},
-"Nickel 1m": {
-"name": "Anna L. Nickel telescope",
-"diam": 1000,
-"alt": 1283,
-"obs": "Lick Observatory",
-"firstlight": "1979-09-12",
-"url": "https://oac.cdlib.org/findaid/ark:/13030/c81z4932/entire_text/"
 },
 "AAT": {
 "name": "Anglo-Australian Telescope",
@@ -607,7 +599,7 @@
 "url": "https://www.umass.edu/synergy/syn_2mass.html",
 "bib": "2006AJ....131.1163S"
 },
-"Terskol 2m": {
+"Terskol": {
 "name": "Zeiss-2000 Terskol",
 "obs": "Обсерватория Пик Терскол",
 "diam": 2000,
@@ -630,8 +622,19 @@
 "alt": 2112,
 "diam": 2500,
 "design": "RC",
+"region": "RU-KC",
 "firstlight": "2014-11-14",
 "bib": "2020gbar.conf..127S"
+},
+"JST250": {
+"name": "Javalambre Survey Telescope",
+"obs": "Astrophysical Observatory of Javalambre",
+"design": "RC",
+"diam": 2550,
+"area": 3.89,
+"englight": "2014-09-25",
+"firstlight": "2017-02-20",
+"url": ["https://www.j-pas.org/news/show/141", "https://www.j-pas.org/survey/jst-t250"]
 },
 "Hiltner": {
 "name": "Hiltner Telescope",
@@ -640,11 +643,49 @@
 "alt": 1938,
 "firstlight": "1986-06-15"
 },
+"MRO-2.4": {
+"name": "MRO 2.4-meter telescope",
+"obs": "Magdalena Ridge Observatory",
+"diam": 2400,
+"alt": 3230,
+"firstlight": "2006-10-31"
+},
+"APF": {
+"name": "Automated Planet Finder Telescope",
+"obs": "Lick Observatory",
+"diam": 2400,
+"region": "US-CA",
+"alt": 1280,
+"bib": "2014PASP..126..359V",
+"firstlight": "2013-08-15"
+},
+"Lijiang": {
+"name": "Lijiang 2.4-m Telescope",
+"obs": "Yunnan Astronomical Observatory",
+"diam": 2400,
+"design": "RC",
+"alt": 3193,
+"region": "China, Yunnan",
+"obscode": "O44",
+"bib": "2019RAA....19..149W",
+"firstlight": "2008-06-15"
+},
+"TNT": {
+"name": "Thai National Telescope",
+"obs": "Thai National Observatory",
+"diam": 2400,
+"region": "Thailand",
+"design": "RC",
+"alt": 2457,
+"bib": "2014AJ....148..100R",
+"firstlight": "2013-01-15"
+},
 "Vainu Bappu": {
 "name": "Vainu Bappu Telescope",
 "obs": "Vainu Bappu Observatory",
 "alt": 700,
-"diam": 2300,
+"diam": 2340,
+"region": "India, Tamil Nadu",
 "englight": "1985-11-02",
 "inauguration": "1986-01-06",
 "firstlight": "1986-06-15",
@@ -673,12 +714,31 @@
 "diam": 2300,
 "firstlight": "1977-09-15"
 },
-"Hawaii 2.2": {
-"name": "University of Hawaii 2.2 m",
+"Aristarchos": {
+"name": "Aristarchos 2.3m Telescope",
+"obs": "Chelmos Observatory",
+"diam": 2300,
+"alt": 2340,
+"design": "RC",
+"bib": "2006ASSL..343...49C",
+"firstlight": "2005-12-15"
+},
+"UH88": {
+"name": "University of Hawaii 88-inch telescope",
 "obs": "Mauna Kea Observatories",
 "alt": 4213,
-"diam": 2300,
+"diam": 2240,
+"englight": "1968-06-15",
 "firstlight": "1970-06-15"
+},
+"HCT": {
+"name": "Himalayan Chandra Telescope",
+"obs": "Indian Astronomical Observatory",
+"diam": 2010,
+"alt": 4500,
+"design": "modified RC",
+"firstlight": "2000-09-26",
+"wvband": ["V", "NIR"]
 },
 "TBL": {
 "name": "Bernard Lyot Telescope",
@@ -696,7 +756,15 @@
 "aperture": 1340,
 "firstlight": "1960-06-15"
 },
-"OHP 1.93": {
+"Nickel 1m": {
+"name": "Anna L. Nickel telescope",
+"diam": 1000,
+"alt": 1283,
+"obs": "Lick Observatory",
+"firstlight": "1979-09-12",
+"url": "https://oac.cdlib.org/findaid/ark:/13030/c81z4932/entire_text/"
+},
+"OHP": {
 "name": "Haute-Provence Observatory 1.93m",
 "obs": "Observatoire de Haute-Provence",
 "diam": 1930,
@@ -727,13 +795,23 @@
 "diam": 1200,
 "firstlight": "1998-05-15"
 },
+"JCMT": {
+"name": "James Clerk Maxwell Telescope",
+"obs": "Mauna Kea Observatories",
+"telescope": "James Clerk Maxwell Telescope",
+"alt": 4092,
+"wvband": ["FIR", "Submm"],
+"wv": [450000, 3000000],
+"diam": 15000,
+"firstlight": "1987-06-15"
+},
 "SOFIA": {
 "name": "Stratospheric Observatory for Infrared Astronomy",
 "obs": "Stratospheric Observatory for Infrared Astronomy",
 "type": "airborne",
 "diam": 2500,
 "alt": 13700,
-"wvband": ["NIR", "IR", "FIR"],
+"wvband": ["NIR", "IR", "FIR", "Submm"],
 "wv": [300, 655000],
 "firstlight": "2010-05-26",
 "end": "2022-09-29"
@@ -869,6 +947,7 @@
 },
 "GALEX": {
 "name": "Galaxy Evolution Explorer (GALEX)",
+"obs": "GALEX spacecraft",
 "diam": 500,
 "design": "RC",
 "region": "LEO",
@@ -910,16 +989,5 @@
 "englight": "2005-09-08",
 "firstlight": ["2006-03-23", "2006-09-29"],
 "url": "https://en.wikipedia.org/wiki/Timeline_of_Mars_Reconnaissance_Orbiter"
-},
-"XRISM": {
-"name": "X-Ray Imaging and Spectroscopy Mission",
-"obs": "X-Ray Imaging and Spectroscopy Mission",
-"launch": "2023-09-06",
-"loc": "space",
-"region": "LEO",
-"wvband": ["Soft X-Ray"],
-"energy": [0.3, 12],
-"firstlight": "2024-01-05",
-"url": ["https://global.jaxa.jp/press/2024/01/20240105-1_e.html", "https://www.xrism.jaxa.jp/en/topics/news/980/", "https://science.nasa.gov/missions/xrism/nasa-jaxa-xrism-mission-reveals-its-first-look-at-x-ray-cosmos/"]
 }
 }
