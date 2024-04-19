@@ -7,6 +7,13 @@
 "firstlight": "1917-11-02",
 "url": "https://www.mtwilson.edu/discovering-mount-wilson-chapter-7-first-light-on-the-100-inch-telescope/"
 },
+"Plaskett": {
+"name": "Plaskett telescope",
+"obs": "Dominion Astrophysical Observatory",
+"diam": 1830,
+"alt": 229,
+"firstlight": "1918-05-06"
+},
 "Struve": {
 "name": "Otto Struve Telescope",
 "obs": "McDonald Observatory",
@@ -88,6 +95,14 @@
 "obscode": "327",
 "alt": 960,
 "firstlight": "2008-01-01"
+},
+"Xinglong 2.16m": {
+"name": "Xinglong 2.16m",
+"obs": "Xinglong Station (NAOC)",
+"bib": "2016PASP..128k5005F",
+"diam": 2160,
+"alt": 900,
+"firstlight": "1989-06-15"
 },
 "VLT": {
 "name": "Very Large Telescope",
@@ -222,12 +237,27 @@
 "bib": "1990Msngr..61...27B",
 "url": ["https://www.eso.org/public/unitedkingdom/teles-instr/lasilla/36/", "http://www.eso.org/sci/libraries/historicaldocuments/Technical_Reports/ESO-TR2_A1b.pdf", "https://cds.cern.ch/record/1528777/files/Tech-Note-P21.pdf"]
 },
+"MPG/ESO": {
+"name": "Max Planck Gesellschaft/European Southern Observatory 2.2m telescope",
+"obs": "La Silla Observatory",
+"diam": 2200,
+"alt": 2375,
+"url": "https://www.eso.org/public/teles-instr/lasilla/mpg22/",
+"firstlight": "1983-06-22"
+},
 "MPI-CAHA": {
-"name": "MPI+CAHA",
+"name": "MPI-CAHA 3.5m telescope",
 "obs": "Calar Alto Observatory",
 "diam": 3500,
 "alt": 2168,
 "firstlight": "1984-06-15"
+},
+"MPIA-CAHA": {
+"name": "Max Planck Institute for Astronomy - Centro Astronomico Hispano-Aleman 2.2m telescope",
+"obs": "Calar Alto Observatory",
+"diam": 2200,
+"alt": 2168,
+"firstlight": "1979-06-15"
 },
 "HARPS": {
 "name": "High Accuracy Radial velocity Planet Searcher",
@@ -254,7 +284,7 @@
 "SOAR": {
 "name": "Southern Astrophysical Research Telescope",
 "diam": 4100,
-"alt": 	2738,
+"alt": 2738,
 "design": "RC",
 "obs": "Cerro Tololo Inter-American Observatory",
 "obscode": "I33",
@@ -599,6 +629,24 @@
 "url": "https://www.umass.edu/synergy/syn_2mass.html",
 "bib": "2006AJ....131.1163S"
 },
+"Ondrejov": {
+"name": "Ondrejov Perek 2m Telescope",
+"obs": "Ondřejov Observatory",
+"diam": 2000,
+"alt": 500,
+"url": "https://stel.asu.cas.cz/~slechta/2m/",
+"inauguration": "1967-08-23",
+"firstlight": "1967-03-08"
+},
+"Rozhen 2m": {
+"name": "Ritchey-Chretien-Coude (RCC) Zeiss telescope",
+"obs": "National Astronomical Observatory (NAO) - Rozhen",
+"obscode": "071",
+"alt": 1759,
+"design": "RC",
+"diam": 2000,
+"firstlight": "1984-06-15"
+},
 "Terskol": {
 "name": "Zeiss-2000 Terskol",
 "obs": "Обсерватория Пик Терскол",
@@ -706,6 +754,13 @@
 "diam": 2300,
 "firstlight": "1969-06-23"
 },
+"KPNO 2.1": {
+"name": "Kitt Peak 2.1-m telescope",
+"obs": "Kitt Peak National Observatory",
+"diam": 2100,
+"url": "https://astronomynow.com/2015/10/13/a-sharp-eyed-future-for-historic-kitt-peak-telescope/",
+"firstlight": "1964-09-15"
+},
 "WIRO": {
 "name": "Wyoming Infrared Observatory Telescope",
 "obs": "Wyoming Infrared Observatory",
@@ -730,6 +785,53 @@
 "diam": 2240,
 "englight": "1968-06-15",
 "firstlight": "1970-06-15"
+},
+"Jorge Sahade": {
+"name": "Jorge Sahade 2.15m",
+"obs": "Leoncito Astronomical Complex",
+"design": "RC",
+"region": "Argentina, San Juan Province",
+"alt": 2483,
+"diam": 2150,
+"firstlight": "1987-06-15"
+},
+"UNAM 2.12": {
+"name": "Universidad Nacional Autonoma de Mexico 2.12m telescope",
+"obs": "National Astronomical Observatory (Mexico)",
+"obscode": "679",
+"design": "RC",
+"alt": 2800,
+"diam": 2120,
+"bib": "1981raoa.conf..133D",
+"firstlight": "1979-07-14"
+},
+"INAOE 2.12": {
+"name": "Instituto Nacional de Astrofisica, Optica y Electronica",
+"obs": "Guillermo Haro Astrophysics Observatory",
+"design": "RC",
+"diam": 2120,
+"alt": 2480,
+"bib": "1998ASPC..139..141C",
+"firstlight": "1987-09-07"
+},
+"Fraunhofer": {
+"name": "Fraunhofer-Teleskop",
+"obs": "Wendelstein Observatory",
+"alt": 1838,
+"diam": 2100,
+"url": "https://www.wendelstein-observatorium.de/",
+"inauguration": "2012-05-21",
+"firstlight": "2013-11-13"
+},
+"AST": {
+"name": "2-m Automatic Spectroscopic Telescope of Tennessee State University",
+"obs": "Fairborn Observatory, Washington Camp, Arizona",
+"bib": "2003AAS...202.3808E",
+"url": ["http://ast2.tsuniv.edu/t13/", "http://ast2.tsuniv.edu/t13/press/SPIE-5496-92.pdf"],
+"diam": 2060,
+"alt": 1737,
+"englight": "2001-10-15",
+"firstlight": "2003-05-15"
 },
 "HCT": {
 "name": "Himalayan Chandra Telescope",
