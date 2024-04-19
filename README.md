@@ -11,9 +11,9 @@ All code and description are available at [gvard.github.io](https://gvard.github
 
 * First light of notable observatories and instruments
 ![First light dates of notable observatories with areas of main mirrors. Years 1917-2022](./plots/observational/first-light-1917-2022.png)
-ee also [First light dates of notable observatories with areas of main mirrors. Years 1990-2008](./plots/observational/first-light-1990-2008.png "First light dates of notable observatories with areas of main mirrors. Years 1990-2008") and [distribution of diameters of big telescopes](./plots/observational/telescope_diameters_chart.png).  
+See also [First light dates of notable observatories with areas of main mirrors. Years 1990-2008](./plots/observational/first-light-1990-2008.png "First light dates of notable observatories with areas of main mirrors. Years 1990-2008") and [distribution of diameters of big telescopes](./plots/observational/telescope_diameters_chart.png).  
 [Data as JSON](data/observatories.json).  
-see [First light article](https://vk.com/@planetariumvg-pervyi-svet-kak-observatorii-nachinaut-rabotu) (in Russian);
+[First light article](https://vk.com/@planetariumvg-pervyi-svet-kak-observatorii-nachinaut-rabotu) (in Russian);
 inspired by prof. Vladimir Panchuk and his site [Астрономические телескопы](http://astrotelescope.narod.ru/) (in russian).
 
 ## Solar System objects
