@@ -757,7 +757,9 @@
 "KPNO 2.1": {
 "name": "Kitt Peak 2.1-m telescope",
 "obs": "Kitt Peak National Observatory",
-"diam": 2100,
+"design": "RC",
+"alt": 2096,
+"diam": 2124,
 "url": "https://astronomynow.com/2015/10/13/a-sharp-eyed-future-for-historic-kitt-peak-telescope/",
 "firstlight": "1964-09-15"
 },
@@ -858,6 +860,39 @@
 "aperture": 1340,
 "firstlight": "1960-06-15"
 },
+"Faulkes N": {
+"name": "Faulkes Telescope North",
+"obs": "Haleakala Observatory",
+"alt": 	3052,
+"diam": 2000,
+"design": "RC",
+"firstlight": "2003-08-07"
+},
+"Faulkes S": {
+"name": "Faulkes Telescope South",
+"obs": "Siding Spring Observatory",
+"alt": 	1165,
+"diam": 2000,
+"design": "RC",
+"firstlight": "2004-06-15"
+},
+"LT": {
+"name": "Liverpool Telescope",
+"obs": "Roque de los Muchachos Observatory",
+"alt": 	2363,
+"diam": 2000,
+"operation": "robotic",
+"design": "RC",
+"firstlight": "2003-07-15"
+},
+"NAYUTA": {
+"name": "NAYUTA Telescope",
+"obs": "Nishi-Harima Astronomical Observatory",
+"diam": 2000,
+"alt": 449,
+"design": "RC",
+"firstlight": "2004-11-15"
+},
 "Nickel 1m": {
 "name": "Anna L. Nickel telescope",
 "diam": 1000,
@@ -872,6 +907,38 @@
 "diam": 1930,
 "alt": 650,
 "firstlight": "1958-06-15"
+},
+"Radcliffe 1948": {
+"name": "74 inch (1.9 m) Radcliffe Telescope",
+"obs": "Radcliffe Observatory",
+"alt": 1500,
+"diam": 1880,
+"bib": "1989QJRAS..30...33G",
+"firstlight": "1948-06-15",
+"end": "1974-06-15"
+},
+"Radcliffe 1976": {
+"name": "74 inch (1.9 m) Radcliffe Telescope",
+"obs": "South African Astronomical Observatory, Sutherland",
+"alt": 1798,
+"diam": 1880,
+"firstlight": "1976-02-15"
+},
+"DDO 1.88m": {
+"name": "David Dunlap Observatory 1.88m reflector",
+"obs": "David Dunlap Observatory",
+"alt": 224,
+"diam": 1880,
+"firstlight": "1935-06-15"
+},
+"Okayama 1.88m": {
+"name": "Okayama Observatory 1.88 m telescope",
+"obs": "Okayama Astrophysical Observatory",
+"diam": 1880,
+"alt": 372,
+"design": "Cassegrain",
+"inauguration": "1960-10-19",
+"firstlight": "1960-10-19"
 },
 "ELODIE": {
 "name": "ELODIE",
