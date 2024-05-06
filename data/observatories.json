@@ -1,4 +1,11 @@
 {
+"Leviathan": {
+"name": "Leviathan of Parsonstown",
+"diam": 1830,
+"alt": 53,
+"firstlight": "1845-02-15",
+"end": "1890-06-15"
+},
 "Hooker": {
 "name": "100-inch Hooker telescope",
 "obs": "Mount Wilson Observatory",
@@ -204,6 +211,16 @@
 "obscode": "696",
 "firstlight": "2000-05-13",
 "url": "https://www.mmto.org/history-of-the-telescope/"
+},
+"TAO 6.5": {
+"name": "University of Tokyo Atacama Observatory 6.5m telescope dome",
+"obs": "University of Tokyo Atacama Observatory",
+"alt": 5640,
+"diam": 6500,
+"wvband": ["NIR", "IR", "MIR"],
+"wvrange": [900, 38000],
+"inauguration": "2024-04-30",
+"url": ["https://www.ioa.s.u-tokyo.ac.jp/TAO/en/news/20240430/", "https://22century.ru/space/118798"]
 },
 "LZT": {
 "name": "Large Zenith Telescope",
@@ -893,6 +910,24 @@
 "design": "RC",
 "firstlight": "2004-11-15"
 },
+"MAGNUM": {
+"name": "Multicolor Active Galactic Nuclei Monitoring Telescope",
+"obs": "Haleakala Observatory",
+"diam": 2000,
+"alt": 3050,
+"operation": "robotic",
+"wvband": ["NIR", "V"],
+"wv": [500, 4000],
+"englight": "2000-08-15",
+"firstlight": "2001-03-15",
+"end": "2008-06-15"
+},
+"RTT150": {
+"name": "Russian-Turkish-Telescope-150",
+"runame": "российско-турецкий 1.5-м телескоп",
+"diam": 1500,
+"firstlight": "2000-09-15"
+},
 "Nickel 1m": {
 "name": "Anna L. Nickel telescope",
 "diam": 1000,
@@ -924,7 +959,7 @@
 "diam": 1880,
 "firstlight": "1976-02-15"
 },
-"DDO 1.88m": {
+"DDO": {
 "name": "David Dunlap Observatory 1.88m reflector",
 "obs": "David Dunlap Observatory",
 "alt": 224,
@@ -939,6 +974,16 @@
 "design": "Cassegrain",
 "inauguration": "1960-10-19",
 "firstlight": "1960-10-19"
+},
+"Kottamia": {
+"name": "Kottamia telescope",
+"obs": "Kottamia Astronomical Observatory",
+"diam": 1880,
+"alt": 482,
+"loc": "Egypt",
+"design": "Cassegrain",
+"bib": "1998AfrSk...2...16H",
+"firstlight": "1964-05-15"
 },
 "ELODIE": {
 "name": "ELODIE",
@@ -1113,6 +1158,19 @@
 "cooling": "2022-04-07",
 "firstlight": "2022-06-07",
 "url": "https://www.nasa.gov/news-release/nasas-webb-reaches-alignment-milestone-optics-working-successfully/"
+},
+"ISO": {
+"name": "Infrared Space Observatory",
+"obs": "Infrared Space Observatory",
+"diam": 600,
+"design": "RC",
+"loc": "space",
+"region": "highly elliptical geocentric orbit",
+"launch": "1995-11-17",
+"firstlight": "1995-12-09",
+"end": "1998-05-16",
+"wvband": ["NIR", "IR", "FIR"],
+"wvrange": [2500, 240000]
 },
 "GALEX": {
 "name": "Galaxy Evolution Explorer (GALEX)",
