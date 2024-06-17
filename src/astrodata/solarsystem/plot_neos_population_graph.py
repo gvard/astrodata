@@ -12,6 +12,7 @@ from argparse import ArgumentParser
 
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+from matplotlib.ticker import MultipleLocator
 from scour import scour
 
 
@@ -123,6 +124,7 @@ accidents = [
     (2022, 3, 11, "2022 EB5"),
     (2022, 11, 19, "2022 WJ1"),
     (2023, 2, 12, "2023 CX1"),
+    (2024, 1, 20, "2024 BX1"),
 ]
 
 for ac in accidents:
@@ -135,6 +137,7 @@ plt.ylim(YLIM)
 plt.legend(fontsize=13)
 # plt.xlim(datetime(year=1990, month=1, day=1), datetime(year=2023, month=6, day=1))
 plt.xlim(XLIMS)
+ax.yaxis.set_minor_locator(MultipleLocator(100))
 plt.title(
     f"Динамика открытий околоземных объектов. Всего {nea_nums[0]} "
     + f"околоземных и {pha_nums[0]} потенциально опасных астероидов. {MONTH} {YEAR} года",

@@ -985,6 +985,24 @@
 "bib": "1998AfrSk...2...16H",
 "firstlight": "1964-05-15"
 },
+"Perkins": {
+"name": "72-Inch Perkins Telescope",
+"obs": "Lowell Observatory, Anderson Mesa Station",
+"obscode": "688",
+"alt": 2163,
+"diam": 1830,
+"design": "Cassegrain",
+"firstlight": "1965-06-15"
+},
+"VATT": {
+"name": "Vatican Advanced Technology Telescope",
+"obs": "Mount Graham International Observatory",
+"obscode": "290",
+"alt": 3178,
+"diam": 1830,
+"design": "Aplanatic Gregorian",
+"firstlight": "1993-09-15"
+},
 "ELODIE": {
 "name": "ELODIE",
 "telescope": "Haute-Provence Observatory 1.93m",
@@ -1158,6 +1176,18 @@
 "cooling": "2022-04-07",
 "firstlight": "2022-06-07",
 "url": "https://www.nasa.gov/news-release/nasas-webb-reaches-alignment-milestone-optics-working-successfully/"
+},
+"Astron": {
+"name": "Astron",
+"runame": "Астрон",
+"diam": 800,
+"wvband": "UV",
+"wvrange": [114, 350],
+"loc": "space",
+"region": "High Earth orbit",
+"launch": "1983-03-23",
+"firstlight": "1983-04-23",
+"end": "1991-03-23"
 },
 "ISO": {
 "name": "Infrared Space Observatory",
