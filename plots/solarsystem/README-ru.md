@@ -8,10 +8,11 @@
 ![Статистика открытий околоземных объектов с успешно предсказанными падениями на Землю](./pha_graph_predicted_impacts-2002-ru.png "Статистика открытий околоземных объектов с успешно предсказанными падениями на Землю")
 Источник данных: [NASA Center for NEO Studies and IAU Minor Planet Center, discovery statistics](https://cneos.jpl.nasa.gov/stats/)  
 Код: [python-скрипт для построения графика со статистикой околоземных объектов](../../src/astrodata/solarsystem/plot_neos_population_graph.py)
-* Сближения с Землей
-![Сближения астероидов с Землей на расстояние до 1.1 LD](./asteroid-close-approaches-1ld-ru.png)
+* Сближения с Землей и измерения радаром (названия помечены синим)
+![Сближения астероидов с Землей на расстояние до 1.79 LD](./asteroid-close-approaches-1.79ld-ru.png "Сближения астероидов с Землей на расстояние до 1.79 LD. Измерения радаром отмечены синим текстом")
 Источник данных: [Small-Body DataBase (SBDB) Close-Approach Data API](https://ssd-api.jpl.nasa.gov/doc/cad.html),
 [GET-запрос для D < 1.1 LD (lunar distances) после 2020-03-01 до H < 30, отсортированные по абсолютной величине H (mag)](https://ssd-api.jpl.nasa.gov/cad.api?dist-max=1.1LD&date-min=2020-03-01&h-max=30&sort=h).
+[Версия с расстоянием до 1.1 LD без инофрмации о радарных измерениях](./asteroid-close-approaches-1ld-ru.png)
 См. также [list of asteroid close approaches to Earth](https://en.wikipedia.org/wiki/List_of_asteroid_close_approaches_to_Earth)  
 Код: [скрипт на python для построения графика сближений астероидов с Землей](../../src/astrodata/solarsystem/plot_close_approaches.py)
 * Распределение тел Солнечной системы по среднему расстоянию до Солнца
