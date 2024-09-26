@@ -1,10 +1,38 @@
 {
+"Herschel 40-foot": {
+"name": "William Herschel 40-foot telescope",
+"diam": 1220,
+"alt": 33,
+"englight": "1787-02-19",
+"firstlight": "1789-10-15",
+"end": "1815-06-15",
+"url": "https://history.aip.org/exhibits/cosmology/tools/tools-early-reflectors.htm"
+},
 "Leviathan": {
 "name": "Leviathan of Parsonstown",
 "diam": 1830,
 "alt": 53,
 "firstlight": "1845-02-15",
-"end": "1890-06-15"
+"end": "1878-06-15"
+},
+"Great Melbourne Telescope": {
+"diam": 1220,
+"obs": "Melbourne Observatory",
+"obscode": "907",
+"name": "Great Melbourne Telescope",
+"alt": 30,
+"firstlight": "1869-04-15",
+"end": "1944-03-08",
+"bib": "2014A&G....55c3.16B"
+},
+"Great Melbourne Telescope-Mount Stromlo": {
+"diam": 1270,
+"obs": "Mount Stromlo Observatory",
+"obscode": "414",
+"name": "Great Melbourne Telescope",
+"alt": 770,
+"firstlight": "1945-06-15",
+"end": "2003-01-18"
 },
 "Hooker": {
 "name": "100-inch Hooker telescope",
