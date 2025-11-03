@@ -29,8 +29,8 @@ Data: [MPC Web Service output as JSON file](../../data/solarsystem/tno-largest.j
 For parameters of unnumbered trans-Neptunian objects see [MPC Database Search](https://minorplanetcenter.net/db_search)  
 Code: see [MPC Web Service, mpc-fetch.py](https://minorplanetcenter.net/web_service/)
 * Distribution of minor planets by delta-v and travel time
-![Distribution of minor planets by delta-v in semimajor axis range between 0.6 and 2.2](./mpcprb-deltav-a0.6-2.2-ru.png "Distribution of minor planets by delta-v in semimajor axis range between 0.6 and 2.2 with marked spacecraft targets")
-![Distribution of minor planets by travel (transit) time in semimajor axis range between 0.6 and 2.2](./mpcprb-tt-a0.6-2.2-ru.png "Distribution of minor planets by travel (transit) time in semimajor axis range between 0.6 and 2.2 with marked spacecraft targets")  
+![Distribution of minor planets by delta-v in semimajor axis range between 0.6 and 2.9](./mpcprb-deltav-a0.6-2.9-ru.png "Distribution of minor planets by delta-v in semimajor axis range between 0.6 and 2.9 with marked spacecraft targets")
+![Distribution of minor planets by travel (transit) time in semimajor axis range between 0.6 and 2.9](./mpcprb-tt-a0.6-2.9-ru.png "Distribution of minor planets by travel (transit) time in semimajor axis range between 0.6 and 2.9 with marked spacecraft targets")  
 See [Ultra-low delta-v objects and the human exploration of asteroids (2011)](https://ui.adsabs.harvard.edu/abs/2011P%26SS...59.1408E/abstract).  
 Code adapted from [A Delta-V map of the known Main Belt Asteroids (2018)](https://ui.adsabs.harvard.edu/abs/2018AcAau.146...73T/abstract),
 [pdf](https://planet4589.org/jcm/pubs/sci/papers/2018/Taylor18.pdf), see [Main_Belt_Code_V3.py file from Dataverse](https://dataverse.harvard.edu/dataverse/ElvisMBA),
