@@ -25,7 +25,7 @@
 "end": "1944-03-08",
 "bib": "2014A&G....55c3.16B"
 },
-"Great Melbourne Telescope-Mount Stromlo": {
+"Great Melbourne Telescope-Mt. Stromlo": {
 "diam": 1270,
 "obs": "Mount Stromlo Observatory",
 "obscode": "414",
@@ -120,6 +120,20 @@
 "alt": 3221,
 "firstlight": "2005-10-12"
 },
+"LSST": {
+"name": "Simonyi Survey Telescope",
+"obs": "Vera C. Rubin Observatory",
+"obscode": "X05",
+"alt": 2673,
+"diam": 8417,
+"area": 35.05,
+"aperture": 6423,
+"design": "three-mirror anastigmat",
+"wvband": ["NUV", "V", "NIR"],
+"wvrange": [320, 1060],
+"englight": "2025-04-15",
+"firstlight": "2025-06-23"
+},
 "LAMOST": {
 "name": "The Large Sky Area Multi-Object Fibre Spectroscopic Telescope",
 "diam": 4000,
@@ -203,7 +217,7 @@
 "obs": "McDonald Observatory",
 "mirror": "segmented",
 "diam": 10000,
-"area": "<78.5",
+"area": 78.5,
 "alt": 2030,
 "firstlight": "2015-07-15"
 },
@@ -214,7 +228,7 @@
 "obs": "South African Astronomical Observatory",
 "obscode": "B31",
 "alt": 1798,
-"area": "<67",
+"area": 79,
 "firstlight": "2005-09-01"
 },
 "MMT (1979)": {
@@ -348,7 +362,8 @@
 "diam": 4100,
 "design": "quasi-RC",
 "obs": "Paranal Observatory",
-"wvband": ["V", "NIR"],
+"wvband": ["NIR"],
+"wvrange": [850, 2300],
 "alt": 2518,
 "firstlight": "2009-12-01"
 },
