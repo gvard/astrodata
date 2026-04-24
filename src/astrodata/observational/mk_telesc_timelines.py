@@ -24,7 +24,10 @@ wvs = []
 for instr, dat in data.items():
     numbr = 1
     diam = dat["diam"]
-    fl = dat["firstlight"]
+    if dat.get("firstlight"):
+        fl = dat["firstlight"]
+    else:
+        continue
     tp = dat.get("type")
     mr = dat.get("mirror")
     lc = dat.get("loc")
@@ -60,7 +63,10 @@ for instr, dat in data.items():
             area = np.prod([eval(i) for i in area.split("x")])
     if True:  # not area:
         area = numbr * np.pi * (diam / 1000) ** 2
-    areas.append(round(area, 2))
+    if dat.get("effdiam"):
+        areas.append(round(np.pi * (dat.get("effdiam") / 1000) ** 2, 2))
+    else:
+        areas.append(round(area, 2))
     nams.append(instr)
     if isinstance(wv, list) and "NIR" in wv or wv == "NIR":
         wv = "NIR"
@@ -77,9 +83,16 @@ XLIMS = (datetime(1917, 4, 10), datetime(2026, 1, 1))
 NAMES_DCT = {"TBL": "", "HET-1996": "HET (1996)", "HET-2015": "HET (2015)",
              "MMT-1979": "MMT (1979)", "MMT-2000": "MMT (2000)", "PS 1": "PS1",
              "PS 2": "PS2", "INT (1967)": "INT", "INT (1984)": "INT", "SST (2020)": "SST-2020",
-             "Byurakan": "BAO", "Vainu Bappu": "", "ATT": "", "Hawaii 2.2": "",
-             "ELODIE": "", "2MASS 1": "2MASS", "2MASS 2": "",
-             }
+             "Byurakan": "BAO", "Vainu Bappu": "", "ATT": "", "UH88": "",
+             "2MASS 1": "2MASS", "2MASS 2": "", "JST250": "JST", "MRO-2.4": "", "APF": "", "TNT": "",
+             "Aristarchos": "", "Lijiang": "", "Xinglong 2.16m": "", "MPG/ESO": "", "MPG/ESO": "",
+             "Jorge Sahade": "", "UNAM 2.12": "", "MPIA-CAHA": "", "INAOE 2.12": "",
+             "Fraunhofer": "", "Ondrejov": "", "Rozhen 2m": "", "Radcliffe 1976": "",
+             "Radcliffe 1948": "Radcliffe", "Faulkes N": "", "Faulkes S": "", "NAYUTA": "",
+             "Okayama 1.88m": "", "LT": "", "RTT150": "", "MAGNUM": "", "Kottamia": "",
+             "KPNO 2.1": "KPNO", "VATT": "", "Perkins": "",
+             "Great Melbourne Telescope-Mt. Stromlo": "Great Melbourne",
+             }  # "ELODIE": "",
 SHIFT_DCT = {"Starfire OR": 60}
 if XLIMS[1] == datetime(2007, 11, 15):
     NAMES_DCT.update({"UBC": "UBC/Laval LMT", "ELODIE": "ELODIE"})
@@ -93,7 +106,7 @@ if XLIMS[1] == datetime(2007, 11, 15):
         "SDSS": -8,
         "LMT": -26,
         "ARC": 14,
-        "Terskol 2m": -3,
+        "Terskol": -3,
         "ELODIE": -10
     }
     DYS_DCT = {
@@ -112,6 +125,14 @@ if XLIMS[1] == datetime(2007, 11, 15):
 else:
     _DYS, _ARS = 10, 4
     ARS_DCT = {
+        "LSST": -14.5,
+        "Great Melbourne Telescope-Mt. Stromlo": -5.9,
+        "Radcliffe 1948": -1,
+        "KPNO 2.1": -1,
+        "HCT": -6,
+        "JST250": -12,
+        "Struve": -2,
+        "Plaskett": -1,
         "GTC": -7,
         "LBT": -7,
         "Subaru": 2,
@@ -127,6 +148,7 @@ else:
         "Blanco": -4,
         "TNG": -7,
         "2MASS": -5,
+        "ELODIE": -13,
         "HARPS": -3,
         "LAMOST": 1,
         "VISTA": -10,
@@ -137,27 +159,37 @@ else:
         "INO": -14,
         "SST (2020)": -2,
         "SST": -5,
-        "SOFIA": -6,
+        "SOFIA": -3,
         "LMT": -14,
         "Byurakan": -6,
-        "Terskol 2m": -6,
-        "VST": -6,
-        "ShAO": -8,
-        "SAI-2.5": -3,
+        "Terskol": -6,
+        "VST": -5,
+        "ShAO": -10,
+        "SAI-2.5": 0,
         "INT": -14,
         "INT (1967)": -7,
         "du Pont": -6,
         "HST": -14,
         "UBC": -1,
-        "Hiltner": -14,
-        "Bok": -12,
-        "PS 1": -6,
-        "PS 2": -6,
-        "AJT": -7.5,
+        "Hiltner": -15,
+        "Bok": -1,
+        "PS 1": -7,
+        "PS 2": -7,
+        "AJT": -4,
         "WIRO": -12.5,
         "2MASS 1": -6,
+        "OHP": -6,
+        "DDO": -1,
     }
     DYS_DCT = {
+        "LSST": -980,
+        "Great Melbourne Telescope-Mt. Stromlo": 100,
+        "Radcliffe 1948": -100,
+        "KPNO 2.1": -800,
+        "HCT": 200,
+        "DOT": -500,
+        "Struve": 120,
+        "Seimei": -500,
         "LBT": -990,
         "GTC": -1170,
         "VLTI": 4,
@@ -169,10 +201,11 @@ else:
         "Blanco": 100,
         "TNG": 100,
         "2MASS": 100,
+        "ELODIE": -600,
         "SDSS": 110,
         "HARPS": 100,
         "SOAR": -800,
-        "LAMOST": -800,
+        "LAMOST": -900,
         "LDT": 100,
         "VISTA": 150,
         "Herschel": 50,
@@ -183,46 +216,50 @@ else:
         "SST": 120,
         "SST (2020)": 60,
         "Starfire OR": 60,
-        "Terskol 2m": 100,
+        "Terskol": 100,
         "IRTF": 100,
         "Byurakan": 120,
         "SOFIA": -1450,
         "NOT": -600,
         "H. Smith": -1200,
-        "ShAO": -1200,
-        "SAI-2.5": 160,
+        "ShAO": 90,
+        "SAI-2.5": 0,
         "INT": -500,
         "INT (1967)": -890,
         "du Pont": -1800,
-        "HST": -350,
+        "HST": -280,
         "UBC": -1000,
         "VST": 90,
         "Hiltner": -500,
-        "Bok": 100,
+        "Bok": -30,
         "MMT (2000)": -2700,
         "PS 1": 120,
         "PS 2": 120,
-        "OHP 1.93": -1600,
-        "AJT": 90,
-        "WIRO": -380,
+        "OHP": -900,
+        "AJT": 70,
+        "WIRO": -500,
         "Euclid": -800,
         "2MASS 1": 100,
+        "JST250": 100,
     }
 clrs_dct = {
     "liquid-mirror": "lightgrey", "military": "#555", "spectrograph": "limegreen", "NIR": "salmon",
 }
 markers_dct = {"segmented": "h", "multiple": "$\clubsuit$", "liquid": "o", "military": "D"}
 
+all_telescopes = set()
 for i, ar in enumerate(areas):
     DYS, ARS = _DYS, _ARS
-    if ar > 5 or nams[i] in ("Euclid"):
+    if (ar > 5 and ar < 452) or nams[i] in ("Euclid"):
         if nams[i] == "VLTI":
             ar = 844.9628
+        if nams[i]:
+            all_telescopes.add(nams[i])  # .split("(")[0]
         clr = "k"
         if types[i] in clrs_dct:
             clr = clrs_dct[types[i]]
-        if wvs[i] in clrs_dct:
-            clr = clrs_dct[wvs[i]]
+        if wvs[i] == "NIR" and nams[i] != "BTA":  # or (type(wvs[i]) is list and "NIR" in wvs[i]):
+            clr = clrs_dct["NIR"]
         marker = "o"
         if mirrors[i] in markers_dct:
             marker = markers_dct[mirrors[i]]
@@ -240,10 +277,10 @@ for i, ar in enumerate(areas):
         elif ar < 47.78 and ar >= 18.095:  # 3.9-2.4
             MS = 5.25
             FS = 12
-        elif ar < 18.095 and ar >= 12.566:
+        elif ar < 18.095 and ar >= 15.2:
             MS = 4.25
             FS = 11
-        elif ar < 12.566:
+        elif ar < 15.2:
             MS = 3.5
             FS = 10
         if types[i] == "spectrograph":
@@ -251,6 +288,8 @@ for i, ar in enumerate(areas):
             FS = 11
         if types[i] == "military":
             marker = markers_dct["military"]
+        if nams[i] == "2MASS 1":
+            FS = 8.5
         if locs[i] == "space":
             clr = "cyan"
         ZORD = 1
@@ -302,14 +341,24 @@ for i, ar in enumerate(areas):
             zorder=5
         )
 
+print(all_telescopes, len(all_telescopes))
+
 if XLIMS[1] == datetime(2007, 11, 15):
     ANDLT, ANDLT2 = 5, -20
 else:
     ANDLT, ANDLT2 = 3, -12
 
+# plt.plot(XLIMS, (4.5239, 4.5239), ":", c="lightgrey", lw=1, zorder=0)
+# t = plt.annotate("1.2 m", (XLIMS[0] + timedelta(days=30), 4.6),
+#                  c="grey", fontsize=13, zorder=5)
 plt.plot(XLIMS, (12.566, 12.566), ":", c="lightgrey", lw=1, zorder=0)
+# t = plt.annotate("2 m", (XLIMS[0] + timedelta(days=30), 12.7),
+#                  c="grey", fontsize=13, zorder=5)
+# plt.plot(XLIMS, (12.566, 12.566), ":", c="lightgrey", lw=1, zorder=0)
+# t = plt.annotate("2.1 m", (XLIMS[0] + timedelta(days=30), 5.0),
+#                  c="grey", fontsize=13, zorder=5)
 plt.plot(XLIMS, (50.265, 50.265), ":", c="lightcoral", lw=1, zorder=0)
-t = plt.annotate("4 m", (XLIMS[0] + timedelta(days=30), 50.265 + ANDLT),
+t = plt.annotate("4 m", (XLIMS[0] + timedelta(days=30), 51 + ANDLT - 1),
                  c="grey", fontsize=13, zorder=5)
 plt.plot(XLIMS, (113.097, 113.097), ":", c="tomato", lw=1, zorder=0)
 t = plt.annotate("6 m", (XLIMS[0] + timedelta(days=30), 113.097 + ANDLT),
@@ -318,10 +367,10 @@ plt.plot(XLIMS, (201.062, 201.062), ":c", lw=1, zorder=0)
 t = plt.annotate("8 m", (XLIMS[0] + timedelta(days=30), 201.062 + ANDLT),
                  c="grey", fontsize=13, zorder=5)
 plt.plot(XLIMS, (314.159, 314.159), ":", c="slateblue", lw=1, zorder=0)
-t = plt.annotate("10 m", (XLIMS[0] + timedelta(days=30), 314.159 + ANDLT2),
+t = plt.annotate("10 m", (XLIMS[0] + timedelta(days=30), 314.159 + ANDLT2),  # - 15
                  c="grey", fontsize=13, zorder=5)
 plt.plot(XLIMS, (452.389, 452.389), ":", c="lightgrey", lw=1, zorder=0)
-t = plt.annotate("12 m", (XLIMS[0] + timedelta(days=30), 452.389 + ANDLT2),
+t = plt.annotate("12 m", (XLIMS[0] + timedelta(days=30), 452.389 + ANDLT2),  #  - 30
                  c="grey", fontsize=13, zorder=5)
 plt.plot(XLIMS, (615.752, 615.752), ":", c="lightgrey", lw=1, zorder=0)
 t = plt.annotate("14 m", (XLIMS[0] + timedelta(days=30), 615.752 + ANDLT2),
@@ -335,14 +384,16 @@ if XLIMS[1] == datetime(2007, 11, 15):
     plt.ylim(1.3, 845)
 else:
     plt.ylim(2.3, 454)
+    # plt.ylim(4.3, 470)
 if XLIMS[1] == datetime(2007, 11, 15):
     YL, MYL = 2, 1
 else:
     YL, MYL = 10, 2
 ax.xaxis.set_major_locator(mdates.YearLocator(YL))
 ax.xaxis.set_minor_locator(mdates.YearLocator(MYL))
+# ax.set_yscale("log")
 
-plt.title("Первый свет крупных обсерваторий и установок", fontsize=14)
+plt.title(f"Первый свет крупных обсерваторий и установок, всего более {len(all_telescopes)} дат", fontsize=14)
 plt.xlabel("Дата, годы", fontsize=13)
 plt.ylabel("Площадь главных зеркал, $м^2$", fontsize=13)
 
@@ -373,7 +424,7 @@ FILE_EXT = "png"
 if XLIMS[1] == datetime(2007, 11, 15):
     FILENAME = "first-light-1990-2008"
 else:
-    FILENAME = "first-light-1917-2022"
+    FILENAME = "first-light-1917-2025"
 tmp_pth = os.path.join(plots_dir, f"{FILENAME}_.{FILE_EXT}")
 pth = os.path.join(plots_dir, f"{FILENAME}.{FILE_EXT}")
-plt.savefig(tmp_pth, dpi=120)
+plt.savefig(tmp_pth, dpi=160)
