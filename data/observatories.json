@@ -15,6 +15,14 @@
 "firstlight": "1845-02-15",
 "end": "1878-06-15"
 },
+"Lassell": {
+"name": "William Lassell 48-inch",
+"diam": 1200,
+"alt": 10,
+"region": "Tigné Point in Sliema, Malta",
+"firstlight": "1861-01-01",
+"end": "1865-12-31"
+},
 "Great Melbourne Telescope": {
 "diam": 1220,
 "obs": "Melbourne Observatory",
@@ -126,6 +134,7 @@
 "obscode": "X05",
 "alt": 2673,
 "diam": 8417,
+"effdiam": 6420,
 "area": 35.05,
 "aperture": 6423,
 "design": "three-mirror anastigmat",
@@ -223,7 +232,7 @@
 },
 "SALT": {
 "name": "Southern African Large Telescope",
-"diam": 9200,
+"diam": 10000,
 "mirror": "segmented",
 "obs": "South African Astronomical Observatory",
 "obscode": "B31",
