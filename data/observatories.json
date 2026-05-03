@@ -42,9 +42,21 @@
 "firstlight": "1945-06-15",
 "end": "2003-01-18"
 },
+"MWO 60-inch": {
+"name": "60-inch telescope",
+"obs": "Mount Wilson Observatory",
+"obscode": "672",
+"diam": 1524,
+"alt": 1742,
+"region": "US-CA",
+"englight": "1908-12-13",
+"firstlight": "1908-12-24"
+},
 "Hooker": {
 "name": "100-inch Hooker telescope",
 "obs": "Mount Wilson Observatory",
+"obscode": "672",
+"region": "US-CA",
 "diam": 2540,
 "alt": 1742,
 "firstlight": "1917-11-02",
@@ -73,7 +85,7 @@
 "f": 3.3,
 "obs": "Palomar Observatory",
 "alt": 1713,
-"obscode": "I41",
+"obscode": "675",
 "region": "US-CA",
 "firstlight": "1949-01-26"
 },
@@ -169,7 +181,7 @@
 "alt": 2635,
 "wvband": ["V", "NIR"],
 "obs": "Paranal Observatory",
-"obscode": 301,
+"obscode": "301",
 "firstlight": ["1998-05-25", "1999-03-01", "2000-01-26", "2000-09-04"]
 },
 "VLTI": {
@@ -645,6 +657,17 @@
 "end": "2002-06-15",
 "url": "https://web.archive.org/web/20120215235813/http://orbitaldebris.jsc.nasa.gov/newsletter/pdfs/ODQNv11i2.pdf"
 },
+"48-inch Schmidt": {
+"name": "48-inch Schmidt",
+"telescope": "Samuel Oschin telescope",
+"design": "Schmidt",
+"diam": 1220,
+"obs": "Palomar Observatory",
+"obscode": "675",
+"alt": 1712,
+"region": "US-CA",
+"firstlight": "1948-09-24"
+},
 "PTF": {
 "name": "Palomar Transient Factory",
 "runame": "Паломарская фабрика транзиентов",
@@ -973,6 +996,16 @@
 "englight": "2000-08-15",
 "firstlight": "2001-03-15",
 "end": "2008-06-15"
+},
+"Copernico": {
+"name": "The Copernico 1.82m telescope",
+"obs": "INAF Astronomical Observatory of Padova, Cima Ekar Observing Station",
+"obscode": "098",
+"diam": 1820,
+"alt": 1376.2,
+"region": "Mount Ekar (Asiago), Italy",
+"firstlight": "1973-06-15",
+"url": "https://www.oapd.inaf.it/sede-di-asiago/telescopes-and-instrumentations/copernico-182cm-telescope"
 },
 "RTT150": {
 "name": "Russian-Turkish-Telescope-150",
