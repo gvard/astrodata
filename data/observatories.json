@@ -1007,6 +1007,16 @@
 "firstlight": "1973-06-15",
 "url": "https://www.oapd.inaf.it/sede-di-asiago/telescopes-and-instrumentations/copernico-182cm-telescope"
 },
+"1.8m tessellated": {
+"name": "Guido Horn d'Arturo 1.80m tessellated telescope",
+"obs": "Astronomical Observatory of the University of Bologna",
+"diam": 1800,
+"alt": 48,
+"mirror": "segmented",
+"region": "Bologna, Italy",
+"firstlight": "1952-06-15",
+"bib": "2018MmSAI..89..448B"
+},
 "RTT150": {
 "name": "Russian-Turkish-Telescope-150",
 "runame": "российско-турецкий 1.5-м телескоп",
@@ -1069,6 +1079,15 @@
 "design": "Cassegrain",
 "bib": "1998AfrSk...2...16H",
 "firstlight": "1964-05-15"
+},
+"69-inch Perkins": {
+"name": "69-Inch Perkins Telescope",
+"obs": "Perkins Observatory",
+"alt": 270,
+"diam": 1753,
+"englight": "1931-11-15",
+"firstlight": "1931-12-31",
+"end": "1969-06-15"
 },
 "Perkins": {
 "name": "72-Inch Perkins Telescope",
