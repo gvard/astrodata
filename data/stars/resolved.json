@@ -505,5 +505,20 @@
   "temp": "4970±50",
   "mag": "0.08 (0.03-0.16)",
   "jmag": -1.29
+},
+"Rho Cas": {
+  "imgurl": "images/RhoCas-sm.png",
+  "tags": ["hypergiant"],
+  "name": "ρ Cas",
+  "runame": "Ро Кассиопеи",
+  "imgnam": "RhoCas-sm.png",
+  "url": "https://en.wikipedia.org/wiki/Rho_Cassiopeiae",
+  "angular": "8.47±0.4, 6.24±0.23",
+  "size": "345-773",
+  "mass": 40,
+  "sp": "G2 0",
+  "temp": "4500-8000",
+  "mag": "4.1-6.2",
+  "jmag": 2.59
 }
 }
