@@ -493,7 +493,7 @@
 },
 "Capella": {
   "imgurl": "images/Capella-big.png",
-  "tags": ["giant", "double"],
+  "tags": ["giant", "double", "variable", "RSCVn"],
   "name": "Capella",
   "runame": "Капелла",
   "imgnam": "Capella.png",
@@ -508,17 +508,32 @@
 },
 "Rho Cas": {
   "imgurl": "images/RhoCas-sm.png",
-  "tags": ["hypergiant"],
+  "tags": ["hypergiant", "variable", "YHG"],
   "name": "ρ Cas",
   "runame": "Ро Кассиопеи",
   "imgnam": "RhoCas-sm.png",
   "url": "https://en.wikipedia.org/wiki/Rho_Cassiopeiae",
-  "angular": "8.47±0.4, 6.24±0.23",
+  "angular": "2.08",
   "size": "345-773",
   "mass": 40,
   "sp": "G2 0",
   "temp": "4500-8000",
   "mag": "4.1-6.2",
   "jmag": 2.59
+},
+"Polaris": {
+  "imgurl": "images/Polaris.png",
+  "tags": ["cepheid", "variable", "DCEPS"],
+  "name": "Polaris",
+  "runame": "Полярная",
+  "imgnam": "Polaris.png",
+  "url": "https://en.wikipedia.org/wiki/Polaris",
+  "angular": "3.123±0.008",
+  "size": "46.27±0.42",
+  "mass": "5.13±0.28",
+  "sp": "F7Ib",
+  "temp": "6015",
+  "mag": "1.86-2.13",
+  "jmag": 0.79
 }
 }
