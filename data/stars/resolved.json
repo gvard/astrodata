@@ -1,6 +1,6 @@
 {
 "Betelgeuse": {
-  "tags": ["sg", "SRc", "brightest", "variable"],
+  "tags": ["sg", "SRc", "brightest", "variable", "dimming"],
   "name": "Betelgeuse",
   "runame": "Бетельгейзе",
   "imgnam": "Betelgeuse.jpg",
@@ -100,19 +100,34 @@
   "mag": "5.72-7.41",
   "jmag": 1.44
 },
+"R Leporis": {
+  "tags": ["agb", "giant", "mira", "variable"],
+  "name": "R Leporis",
+  "runame": "R Зайца",
+  "imgurl": "images/R_Leporis-big.png",
+  "imgnam": "R_Leporis.png",
+  "url": "https://en.wikipedia.org/wiki/R_Leporis",
+  "angular": "14.2–18.1, 15.2±0.2",
+  "size": "400±90",
+  "mass": 1.49,
+  "sp": "C7,6e(N6e)",
+  "temp": 2290,
+  "mag": "5.5-11.7",
+  "jmag": 2.14
+},
 "T Leporis": {
   "tags": ["agb", "giant", "mira", "variable"],
   "name": "T Leporis",
   "runame": "T Зайца",
   "imgnam": "T_Leporis.jpg",
   "url": "https://en.wikipedia.org/wiki/T_Leporis",
-  "angular": "5.8 (15)",
+  "angular": "5.8-16",
   "size": 100,
   "mass": 2.7,
   "sp": "M6e–M9e",
   "temp": 2800,
   "mag": "7.4-14.3",
-  "jmag": 1.31
+  "jmag": 1.19
 },
 "HR 5171": {
   "tags": ["hypergiant", "variable", "animation"],
@@ -130,7 +145,7 @@
 },
 "RW Cephei": {
   "imgurl": "images/RW_Cep.gif",
-  "tags": ["hypergiant", "variable", "animation"],
+  "tags": ["hypergiant", "variable", "animation", "dimming"],
   "name": "RW Cephei",
   "runame": "RW Цефея",
   "imgnam": "RW_Cep.png",
@@ -159,10 +174,10 @@
   "jmag": 1.658
 },
 "l Carinae": {
-  "imgurl": "images/l_Carinae-big.png",
   "tags": ["sg", "cepheid", "variable"],
   "name": "l Carinae",
   "runame": "l Киля",
+  "imgurl": "images/l_Carinae-big.png",
   "imgnam": "l_Carinae.png",
   "url": "https://en.wikipedia.org/wiki/HD_84810",
   "angular": "2.65±0.08-3.21±0.03",
@@ -208,6 +223,7 @@
   "runame": "Каф (β Cas)",
   "imgnam": "Beta_Cassiopeiae.png",
   "url": "https://en.wikipedia.org/wiki/Beta_Cassiopeiae",
+  "angular": "1.70±0.04",
   "size": "3.43-3.69",
   "mass": 1.91,
   "sp": "F2 III",
@@ -216,7 +232,7 @@
   "jmag": 1.63
 },
 "Alpha Cephei": {
-  "tags": ["rot", "dwarf"],
+  "tags": ["rot", "dwarf", "variable", "deltaSct"],
   "name": "Alpha Cephei",
   "runame": "Альдерамин",
   "imgnam": "Alpha_Cephei.png",
@@ -376,6 +392,7 @@
   "runame": "Алголь",
   "imgnam": "Algol.gif",
   "url": "https://en.wikipedia.org/wiki/Algol",
+  "angular": "6.93±0.15",
   "size": "2.7±0.2, 3.5±0.3",
   "mass": "3.17±0.2, 0.7±0.1",
   "sp": "B8V + K0IV",
@@ -389,6 +406,7 @@
   "runame": "Бета Лиры",
   "imgnam": "Beta_Lyrae.gif",
   "url": "https://en.wikipedia.org/wiki/Beta_Lyrae",
+  "angular": "0.46-1",
   "size": "6, 15.2±0.2",
   "mass": "13.2±0.3, 3±0.2",
   "sp": "B8.5Ib–II",
@@ -471,6 +489,7 @@
   "runame": "R Киля",
   "imgnam": "R_Carinae.png",
   "url": "https://en.wikipedia.org/wiki/R_Carinae",
+  "angular": "10-17.7",
   "size": "241.0±35",
   "mass": "0.87±0.4",
   "sp": "M6/7pe",
@@ -479,11 +498,12 @@
   "jmag": 0.09
 },
 "VY Canis Majoris": {
-  "tags": ["hypergiant", "cse", "Lc", "variable"],
+  "tags": ["hypergiant", "cse", "Lc", "variable", "dimming"],
   "name": "VY Canis Majoris",
   "runame": "VY Большого Пса",
   "imgnam": "VY_Canis_Majoris.png",
   "url": "https://en.wikipedia.org/wiki/VY_Canis_Majoris",
+  "angular": "11.3±0.3",
   "size": "1420±120",
   "mass": "17±8",
   "sp": "M3–M4.5",
@@ -507,11 +527,10 @@
   "jmag": -1.29
 },
 "Rho Cas": {
-  "imgurl": "images/RhoCas-sm.png",
   "tags": ["hypergiant", "variable", "YHG"],
   "name": "ρ Cas",
   "runame": "Ро Кассиопеи",
-  "imgnam": "RhoCas-sm.png",
+  "imgnam": "RhoCas.png",
   "url": "https://en.wikipedia.org/wiki/Rho_Cassiopeiae",
   "angular": "2.08",
   "size": "345-773",
@@ -522,7 +541,7 @@
   "jmag": 2.59
 },
 "Polaris": {
-  "imgurl": "images/Polaris.png",
+  "imgurl": "images/Polaris-big.png",
   "tags": ["cepheid", "variable", "DCEPS"],
   "name": "Polaris",
   "runame": "Полярная",
