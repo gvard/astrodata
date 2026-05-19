@@ -1,8 +1,33 @@
 {
+"Galileo 1609": {
+"name": "Galileo's 1609 telescope",
+"diam": 15,
+"alt": 12,
+"region": "Padua, Italy",
+"englight": "1609-08-25",
+"firstlight": "1609-11-30"
+},
+"Galileo 1620": {
+"name": "Galileo's 1620 telescope",
+"diam": 38,
+"alt": 110,
+"region": "Florence, Italy",
+"firstlight": "1620-06-15"
+},
+"Michell 30-inch": {
+"name": "Reverend John Michell's Gregorian reflector",
+"diam": 750,
+"alt": 100,
+"region": "Yorkshire, Great Britain",
+"firstlight": "1780-06-15",
+"end": "1789-06-15"
+},
 "Herschel 40-foot": {
 "name": "William Herschel 40-foot telescope",
 "diam": 1220,
 "alt": 33,
+"obs": "Observatory House",
+"region": "Slough, England",
 "englight": "1787-02-19",
 "firstlight": "1789-10-15",
 "end": "1815-06-15",
@@ -23,6 +48,14 @@
 "firstlight": "1861-01-01",
 "end": "1865-12-31"
 },
+"18.5-inch Dearborn refractor": {
+"name": "18.5-inch Dearborn refractor",
+"diam": 470,
+"obs": "Dearborn Observatory",
+"obscode": "756",
+"alt": 195,
+"firstlight": "1862-01-31"
+},
 "Great Melbourne Telescope": {
 "diam": 1220,
 "obs": "Melbourne Observatory",
@@ -32,6 +65,24 @@
 "firstlight": "1869-04-15",
 "end": "1944-03-08",
 "bib": "2014A&G....55c3.16B"
+},
+"James Lick": {
+"name": "James Lick Telescope",
+"diam": 910,
+"obs": "Lick Observatory",
+"region": "US-CA",
+"obscode": "662",
+"alt": 1283,
+"firstlight": "1888-01-03"
+},
+"Yerkes Refractor": {
+"name": "Yerkes Refractor",
+"diam": 1020,
+"obs": "Yerkes Observatory",
+"obscode": "754",
+"region": "US-WI",
+"alt": 334,
+"firstlight": "1897-02-21"
 },
 "Great Melbourne Telescope-Mt. Stromlo": {
 "diam": 1270,
@@ -499,6 +550,7 @@
 "name": "C. Donald Shane telescope",
 "diam": 3050,
 "obs": "Lick Observatory",
+"region": "US-CA",
 "alt": 1283,
 "firstlight": "1959-06-15"
 },
@@ -792,8 +844,8 @@
 },
 "APF": {
 "name": "Automated Planet Finder Telescope",
-"obs": "Lick Observatory",
 "diam": 2400,
+"obs": "Lick Observatory",
 "region": "US-CA",
 "alt": 1280,
 "bib": "2014PASP..126..359V",
@@ -842,6 +894,8 @@
 "Bok": {
 "name": "90-inch Bok Telescope",
 "obs": "Steward Observatory (Kitt Peak National Observatory)",
+"wvband": ["V", "NIR"],
+"f": [9, 45],
 "alt": 2100,
 "diam": 2300,
 "firstlight": "1969-06-23"
@@ -1028,6 +1082,7 @@
 "diam": 1000,
 "alt": 1283,
 "obs": "Lick Observatory",
+"region": "US-CA",
 "firstlight": "1979-09-12",
 "url": "https://oac.cdlib.org/findaid/ark:/13030/c81z4932/entire_text/"
 },
