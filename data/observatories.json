@@ -3,7 +3,7 @@
 "name": "Galileo's 1609 telescope",
 "diam": 15,
 "alt": 12,
-"region": "Padua, Italy",
+"region": "IT-PD: Padua, Italy",
 "englight": "1609-08-25",
 "firstlight": "1609-11-30"
 },
@@ -11,14 +11,14 @@
 "name": "Galileo's 1620 telescope",
 "diam": 38,
 "alt": 110,
-"region": "Florence, Italy",
+"region": "IT-FI: Florence, Italy",
 "firstlight": "1620-06-15"
 },
 "Michell 30-inch": {
 "name": "Reverend John Michell's Gregorian reflector",
 "diam": 750,
 "alt": 100,
-"region": "Yorkshire, Great Britain",
+"region": "GB-KIR: Yorkshire, Great Britain",
 "firstlight": "1780-06-15",
 "end": "1789-06-15"
 },
@@ -27,7 +27,7 @@
 "diam": 1220,
 "alt": 33,
 "obs": "Observatory House",
-"region": "Slough, England",
+"region": "GB-SLG: Slough, England",
 "englight": "1787-02-19",
 "firstlight": "1789-10-15",
 "end": "1815-06-15",
@@ -35,6 +35,7 @@
 },
 "Leviathan": {
 "name": "Leviathan of Parsonstown",
+"region": "IE-OY: County Offaly, Leinster, Ireland",
 "diam": 1830,
 "alt": 53,
 "firstlight": "1845-02-15",
@@ -44,7 +45,7 @@
 "name": "William Lassell 48-inch",
 "diam": 1200,
 "alt": 10,
-"region": "Tigné Point in Sliema, Malta",
+"region": "MT-56: Tigné Point in Sliema, Malta",
 "firstlight": "1861-01-01",
 "end": "1865-12-31"
 },
@@ -52,6 +53,7 @@
 "name": "18.5-inch Dearborn refractor",
 "diam": 470,
 "obs": "Dearborn Observatory",
+"region": "US-IL",
 "obscode": "756",
 "alt": 195,
 "firstlight": "1862-01-31"
@@ -61,6 +63,7 @@
 "obs": "Melbourne Observatory",
 "obscode": "907",
 "name": "Great Melbourne Telescope",
+"region": "AU-VIC: Melbourne, Victoria, Australia",
 "alt": 30,
 "firstlight": "1869-04-15",
 "end": "1944-03-08",
@@ -89,6 +92,7 @@
 "obs": "Mount Stromlo Observatory",
 "obscode": "414",
 "name": "Great Melbourne Telescope",
+"region": "AU-ACT: Canberra, Australian Capital Territory, Australia",
 "alt": 770,
 "firstlight": "1945-06-15",
 "end": "2003-01-18"
@@ -116,6 +120,8 @@
 "Plaskett": {
 "name": "Plaskett telescope",
 "obs": "Dominion Astrophysical Observatory",
+"obscode": "658",
+"region": "CA-BC: Saanich, British Columbia, Canada",
 "diam": 1830,
 "alt": 229,
 "firstlight": "1918-05-06"
@@ -123,6 +129,8 @@
 "Struve": {
 "name": "Otto Struve Telescope",
 "obs": "McDonald Observatory",
+"obscode": "711",
+"region": "US-TX",
 "diam": 2080,
 "alt": 2070,
 "firstlight": "1939-06-15"
@@ -156,6 +164,33 @@
 "firstlight": "1975-12-30",
 "url": "https://www.sao.ru/Doc-en/Events/2015/BTA-40/"
 },
+"SAO 1m": {
+"name": "SAO Zeiss-1000",
+"runame": "Цейсс-1000 Специальной астрофизической обсерватории РАН",
+"telescope": "Zeiss-1000",
+"diam": 1016,
+"alt": 2080,
+"dome": 8,
+"obs": "Special Astrophysical Observatory",
+"obscode": "115",
+"wvband": ["V"],
+"region": "RU-KC",
+"firstlight": "1989-10-15",
+"bib": "2020AstBu..75..486K",
+"url": "https://www.sao.ru/Doc-en/Telescopes/small/descrip.html"
+},
+"AZT-22": {
+"name": "AZT-22 1.5m",
+"runame": "Телескоп АЗТ-22 Майданакской высокогорной обсерватории",
+"diam": 1500,
+"alt": 2593,
+"obs": "Maidanak astronomical observatory",
+"obscode": "188",
+"region": "UZ-QA: Qashqadaryo Region, Uzbekistan",
+"wvband": ["V"],
+"firstlight": "1992-06-15",
+"bib": "2011arXiv1101.2344G"
+},
 "Subaru": {
 "name": "Subaru Telescope",
 "runame": "Субару",
@@ -178,6 +213,7 @@
 "design": "RC",
 "obs": "Roque de los Muchachos Observatory",
 "obscode": "Z18",
+"region": "ES-TF: Garafía, Province of Santa Cruz de Tenerife, Canary Islands, Spain",
 "alt": 2267,
 "firstlight": "2007-07-13"
 },
@@ -187,6 +223,7 @@
 "diam": "8400x2",
 "mirror": "multiple",
 "obs": "Mount Graham International Observatory",
+"region": "US-AZ",
 "obscode": "G83",
 "alt": 3221,
 "firstlight": "2005-10-12"
@@ -195,6 +232,7 @@
 "name": "Simonyi Survey Telescope",
 "obs": "Vera C. Rubin Observatory",
 "obscode": "X05",
+"region": "CL-CO: Elqui Province, Coquimbo Region, Chile",
 "alt": 2673,
 "diam": 8417,
 "effdiam": 6420,
@@ -213,6 +251,7 @@
 "mirror": "segmented",
 "design": "Schmidt",
 "obs": "Xinglong Station (NAOC)",
+"region": "CN-HE: Hebei Province, China",
 "obscode": "327",
 "alt": 960,
 "firstlight": "2008-01-01"
@@ -220,6 +259,7 @@
 "Xinglong 2.16m": {
 "name": "Xinglong 2.16m",
 "obs": "Xinglong Station (NAOC)",
+"region": "CN-HE: Hebei Province, China",
 "bib": "2016PASP..128k5005F",
 "diam": 2160,
 "alt": 900,
@@ -233,6 +273,7 @@
 "wvband": ["V", "NIR"],
 "obs": "Paranal Observatory",
 "obscode": "301",
+"region": "CL-AN",
 "firstlight": ["1998-05-25", "1999-03-01", "2000-01-26", "2000-09-04"]
 },
 "VLTI": {
@@ -241,6 +282,7 @@
 "diam": 200000,
 "area": 844.962,
 "obs": "Paranal Observatory",
+"region": "CL-AN",
 "type": "interferometer",
 "firstlight": "2001-03-17",
 "url": "https://www.eso.org/public/unitedkingdom/news/eso0111/"
@@ -252,6 +294,7 @@
 "design": "RC",
 "area": "75.76x2",
 "obs": "Mauna Kea Observatories",
+"region": "US-HI",
 "wvband": ["V", "NIR"],
 "alt": 4145,
 "firstlight": ["1990-11-24", "1996-10-23"]
@@ -261,6 +304,7 @@
 "diam": "6500x2",
 "obs": "Las Campanas Observatory",
 "obscode": "304",
+"region": "CL-AT",
 "alt": 2516,
 "firstlight": ["2001-09-15", "2002-09-07"]
 },
@@ -269,6 +313,7 @@
 "diam": "8100x2",
 "design": "RC",
 "obs": "Gemini Observatory",
+"region": "US-HI/CL-CO",
 "alt": [4213, 2722],
 "englight": "1999-02-27",
 "firstlight": ["1999-06-25", "2000-11-01"],
@@ -277,6 +322,8 @@
 "HET (1996)": {
 "name": "Hobby-Eberly Telescope",
 "obs": "McDonald Observatory",
+"obscode": "711",
+"region": "US-TX",
 "mirror": "segmented",
 "diam": 9200,
 "area": "<67",
@@ -287,6 +334,8 @@
 "HET (2015)": {
 "name": "Hobby-Eberly Telescope",
 "obs": "McDonald Observatory",
+"obscode": "711",
+"region": "US-TX",
 "mirror": "segmented",
 "diam": 10000,
 "area": 78.5,
@@ -299,6 +348,7 @@
 "mirror": "segmented",
 "obs": "South African Astronomical Observatory",
 "obscode": "B31",
+"region": "ZA-NC",
 "alt": 1798,
 "area": 79,
 "firstlight": "2005-09-01"
@@ -311,6 +361,7 @@
 "mirror": "multiple",
 "obs": "Fred Lawrence Whipple Observatory",
 "obscode": "696",
+"region": "US-AZ",
 "firstlight": "1979-05-09",
 "end": "1998-03-02",
 "bib": "2004SPIE.5489..300B",
@@ -323,6 +374,7 @@
 "alt": 2616,
 "obs": "Fred Lawrence Whipple Observatory",
 "obscode": "696",
+"region": "US-AZ",
 "firstlight": "2000-05-13",
 "url": "https://www.mmto.org/history-of-the-telescope/"
 },
@@ -341,6 +393,7 @@
 "diam": 6000,
 "alt": 395,
 "obs": "Malcolm Knapp Research Forest, 70 km east of Vancouver",
+"region": "CA-BC",
 "mirror": "liquid",
 "type": "liquid-mirror",
 "firstlight": "2003-04-15",
@@ -350,6 +403,7 @@
 "WHT": {
 "name": "William Herschel Telescope",
 "obs": "Roque de los Muchachos Observatory",
+"region": "ES-TF",
 "alt": 2344,
 "diam": 4200,
 "area": "<13.85",
@@ -359,7 +413,7 @@
 "name": "ESO 3.6-metre telescope",
 "obs": "La Silla Observatory",
 "obscode": "809",
-"region": "CHL",
+"region": "CL-CO: Coquimbo Region, Chile",
 "design": "quasi-RC",
 "diam": 3566,
 "area": 8.8564,
@@ -371,6 +425,7 @@
 "MPG/ESO": {
 "name": "Max Planck Gesellschaft/European Southern Observatory 2.2m telescope",
 "obs": "La Silla Observatory",
+"region": "CL-CO: Coquimbo Region, Chile",
 "diam": 2200,
 "alt": 2375,
 "url": "https://www.eso.org/public/teles-instr/lasilla/mpg22/",
@@ -379,6 +434,7 @@
 "MPI-CAHA": {
 "name": "MPI-CAHA 3.5m telescope",
 "obs": "Calar Alto Observatory",
+"region": "ES-AL",
 "diam": 3500,
 "alt": 2168,
 "firstlight": "1984-06-15"
@@ -387,6 +443,7 @@
 "name": "Max Planck Institute for Astronomy - Centro Astronomico Hispano-Aleman 2.2m telescope",
 "obs": "Calar Alto Observatory",
 "diam": 2200,
+"region": "ES-AL",
 "alt": 2168,
 "firstlight": "1979-06-15"
 },
@@ -396,7 +453,7 @@
 "telescope": "ESO 3.6-metre telescope",
 "obs": "La Silla Observatory",
 "obscode": "809",
-"region": "CHL",
+"region": "CL-CO: Coquimbo Region, Chile",
 "diam": 3566,
 "area": 8.8564,
 "alt": 2400,
@@ -628,6 +685,8 @@
 "H. Smith": {
 "name": "Harlan J. Smith Telescope",
 "obs": "McDonald Observatory",
+"obscode": "711",
+"region": "US-TX",
 "alt": 2077,
 "diam": 2690,
 "firstlight": "1968-12-15"
@@ -857,7 +916,7 @@
 "diam": 2400,
 "design": "RC",
 "alt": 3193,
-"region": "China, Yunnan",
+"region": "CN-YN: Yunnan, China",
 "obscode": "O44",
 "bib": "2019RAA....19..149W",
 "firstlight": "2008-06-15"
@@ -866,7 +925,7 @@
 "name": "Thai National Telescope",
 "obs": "Thai National Observatory",
 "diam": 2400,
-"region": "Thailand",
+"region": "TH-50: Chiang Mai Province, Thailand",
 "design": "RC",
 "alt": 2457,
 "bib": "2014AJ....148..100R",
@@ -875,13 +934,24 @@
 "Vainu Bappu": {
 "name": "Vainu Bappu Telescope",
 "obs": "Vainu Bappu Observatory",
+"obscode": "220",
 "alt": 700,
 "diam": 2340,
-"region": "India, Tamil Nadu",
+"region": "IN-TN: Tamil Nadu, India",
 "englight": "1985-11-02",
 "inauguration": "1986-01-06",
 "firstlight": "1986-06-15",
 "bib": "1992BASI...20..319B"
+},
+"Vainu Bappu 1m": {
+"name": "Vainu Bappu Zeiss-1000",
+"telescope": "Zeiss-1000",
+"obs": "Vainu Bappu Observatory",
+"obscode": "220",
+"region": "IN-TN: Tamil Nadu, India",
+"alt": 700,
+"diam": 1016,
+"firstlight": "1972-06-15"
 },
 "ATT": {
 "name": "The Advanced Technology Telescope of Australian National University",
@@ -937,8 +1007,9 @@
 "Jorge Sahade": {
 "name": "Jorge Sahade 2.15m",
 "obs": "Leoncito Astronomical Complex",
+"obscode": "829",
 "design": "RC",
-"region": "Argentina, San Juan Province",
+"region": "AR-J: San Juan Province, Argentina",
 "alt": 2483,
 "diam": 2150,
 "firstlight": "1987-06-15"
@@ -1057,7 +1128,7 @@
 "obscode": "098",
 "diam": 1820,
 "alt": 1376.2,
-"region": "Mount Ekar (Asiago), Italy",
+"region": "IT-VI: Mount Ekar (Asiago), Italy",
 "firstlight": "1973-06-15",
 "url": "https://www.oapd.inaf.it/sede-di-asiago/telescopes-and-instrumentations/copernico-182cm-telescope"
 },
@@ -1067,13 +1138,18 @@
 "diam": 1800,
 "alt": 48,
 "mirror": "segmented",
-"region": "Bologna, Italy",
+"region": "IT-BO: Bologna, Italy",
 "firstlight": "1952-06-15",
 "bib": "2018MmSAI..89..448B"
 },
 "RTT150": {
 "name": "Russian-Turkish-Telescope-150",
+"telescope": "AZT-22",
 "runame": "российско-турецкий 1.5-м телескоп",
+"obs": "TÜBİTAK National Observatory",
+"obscode": "A84",
+"alt": 2450,
+"region": "TR-07: Antalya, Turkey",
 "diam": 1500,
 "firstlight": "2000-09-15"
 },
@@ -1166,6 +1242,8 @@
 "name": "ELODIE",
 "telescope": "Haute-Provence Observatory 1.93m",
 "obs": "Observatoire de Haute-Provence",
+"obscode": "511",
+"region": "FR-04: Alpes-de-Haute-Provence, Provence-Alpes-Côte d'Azur, France",
 "alt": 650,
 "type": "spectrograph",
 "diam": 1930,
@@ -1178,6 +1256,8 @@
 "CORALIE": {
 "name": "CORALIE",
 "obs": "La Silla Observatory",
+"obscode": "809",
+"region": "CL-CO: Coquimbo Region, Chile",
 "telescope": "Swiss 1.2-metre Leonhard Euler Telescope",
 "alt": 2375,
 "type": "spectrograph",
@@ -1190,6 +1270,7 @@
 "name": "James Clerk Maxwell Telescope",
 "obs": "Mauna Kea Observatories",
 "telescope": "James Clerk Maxwell Telescope",
+"region": "US-HI",
 "alt": 4092,
 "wvband": ["FIR", "Submm"],
 "wv": [450000, 3000000],
@@ -1200,6 +1281,7 @@
 "name": "Stratospheric Observatory for Infrared Astronomy",
 "obs": "Stratospheric Observatory for Infrared Astronomy",
 "type": "airborne",
+"region": "US-CA: Armstrong Flight Research Center, Palmdale Regional Airport, now US-AZ",
 "diam": 2500,
 "alt": 13700,
 "wvband": ["NIR", "IR", "FIR", "Submm"],
