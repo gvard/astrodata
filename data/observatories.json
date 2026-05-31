@@ -154,6 +154,7 @@
 "telescope": "6-m Big Telescope Alt-azimuth",
 "diam": 6050,
 "area": 25.1,
+"dome": 45,
 "f": 4,
 "alt": 2080,
 "obs": "Special Astrophysical Observatory",
@@ -381,6 +382,7 @@
 "TAO 6.5": {
 "name": "University of Tokyo Atacama Observatory 6.5m telescope dome",
 "obs": "University of Tokyo Atacama Observatory",
+"region": "CL-AN",
 "alt": 5640,
 "diam": 6500,
 "wvband": ["NIR", "IR", "MIR"],
@@ -476,6 +478,7 @@
 "design": "RC",
 "obs": "Cerro Tololo Inter-American Observatory",
 "obscode": "I33",
+"region": "CL-CO: Coquimbo Region, Chile",
 "firstlight": "2004-04-17"
 },
 "LDT": {
@@ -483,6 +486,7 @@
 "diam": 4300,
 "design": "RC",
 "obs": "Lowell Observatory",
+"region": "US-AZ",
 "alt": 2360,
 "firstlight": "2012-04-30"
 },
@@ -491,6 +495,7 @@
 "diam": 4100,
 "design": "quasi-RC",
 "obs": "Paranal Observatory",
+"region": "CL-AN",
 "wvband": ["NIR"],
 "wvrange": [850, 2300],
 "alt": 2518,
@@ -499,6 +504,7 @@
 "Blanco": {
 "name": "Victor M. Blanco Telescope (VBT)",
 "obs": "Cerro Tololo Inter-American Observatory",
+"region": "CL-CO",
 "diam": 4100,
 "area": 10.014,
 "alt": 2207,
@@ -511,6 +517,7 @@
 "mirror": "liquid",
 "type": "liquid-mirror",
 "obs": "Devasthal Observatory",
+"region": "IN-UK",
 "alt": 2450,
 "firstlight": "2022-06-02"
 },
@@ -518,6 +525,7 @@
 "name": "3.6m Devasthal Optical Telescope",
 "diam": 3600,
 "obs": "Devasthal Observatory",
+"region": "IN-UK",
 "alt": 2540,
 "design": "RC",
 "englight": "2015-03-22",
@@ -527,6 +535,7 @@
 "TNG": {
 "name": "Telescopio Nazionale Galileo",
 "obs": "Roque de los Muchachos Observatory",
+"region": "ES-TF",
 "alt": 2370,
 "design": "RC",
 "diam": 3580,
@@ -536,6 +545,7 @@
 "name": "Nicholas U. Mayall Telescope",
 "obs": "Kitt Peak National Observatory",
 "obscode": "695",
+"region": "US-AZ",
 "design": "RC",
 "alt": 2120,
 "diam": 4000,
@@ -555,6 +565,7 @@
 },
 "UKIRT": {
 "name": "United Kingdom Infrared Telescope",
+"region": "US-HI",
 "wvband": "NIR",
 "diam": 3800,
 "obs": "Mauna Kea Observatories",
@@ -562,8 +573,9 @@
 "firstlight": "1979-10-15"
 },
 "INO": {
-"name": "Iranian National Observatory",
+"name": "Iranian National Observatory 3.4m Telescope",
 "obs": "Iranian National Observatory",
+"region": "IR-10",
 "diam": 3400,
 "alt": 3600,
 "englight": "2022-10-15",
@@ -574,6 +586,7 @@
 "name": "Space Surveillance Telescope",
 "diam": 3500,
 "obs": "White Sands Missile Range",
+"region": "US-NM",
 "alt": 1300,
 "type": "military",
 "firstlight": "2011-06-15",
@@ -581,7 +594,8 @@
 },
 "SST (2020)": {
 "name": "Space Surveillance Telescope",
-"obs": "Naval Communication Station Harold E. Holt",
+"obs": "Harold E. Holt Naval Communication Station",
+"region": "AU-WA",
 "type": "military",
 "diam": 3500,
 "alt": 65,
@@ -591,6 +605,7 @@
 "name": "Astrophysical Research Consortium Telescope",
 "diam": 3480,
 "obs": "Apache Point Observatory",
+"region": "US-NM",
 "design": "RC",
 "alt": 2788,
 "firstlight": "1994-06-15"
@@ -598,6 +613,7 @@
 "Starfire OR": {
 "name": "USAF Starfire Optical Range",
 "obs": "Kirtland Air Force Base",
+"region": "US-NM",
 "alt": [1632, 1685],
 "type": "military",
 "diam": 3500,
@@ -617,6 +633,7 @@
 "area": "<11.94",
 "alt": 1100,
 "obs": "Siding Spring Observatory",
+"region": "AU-NSW",
 "firstlight": "1974-04-27"
 },
 "Seimei": {
@@ -625,6 +642,7 @@
 "alt": 366,
 "design": "RC",
 "obs": "Okayama Observatory",
+"region": "JP-33",
 "wvband": "V",
 "englight": " 2018-12-12",
 "firstlight": "2019-02-28",
@@ -632,15 +650,17 @@
 "url": ["https://www.kwasan.kyoto-u.ac.jp/general/facilities/okayama/", "https://sites.astro.caltech.edu/~srk/Workshops/TDAMMS/Files4Facilities/KyotoSeimai.pdf"]
 },
 "AEOS": {
-"name": "3.67 m Advanced Electro Optical System Telescope",
+"name": "3.67m Advanced Electro Optical System Telescope",
 "diam": 3670,
 "alt": 3052,
 "obs": "Haleakala Observatory",
+"region": "US-HI",
 "firstlight": "1996-06-15"
 },
 "IRTF": {
 "name": "NASA Infrared Telescope Facility",
 "obs": "Mauna Kea Observatories",
+"region": "US-HI",
 "wvband": "NIR",
 "wv": {"SpeX": [800, 5400], "iSHELL": [1000, 5300], "MIRSI": [2200, 25000], "MORIS": [480, 900]},
 "alt": 4205,
@@ -651,13 +671,13 @@
 "name": "Sloan Digital Sky Survey",
 "runame": "Слоановский цифровой небесный обзор",
 "telescope": "Sloan Digital Sky Survey telescope",
+"obs": "Apache Point Observatory",
+"obscode": "645",
+"region": "US-NM",
 "design": "RC",
 "alt": 2788,
 "diam": 2500,
 "f": 5,
-"obs": "Apache Point Observatory",
-"obscode": "645",
-"region": "US-NM",
 "fov": 3,
 "englight": "1998-05-09",
 "firstlight": "1998-05-27",
@@ -670,6 +690,7 @@
 "diam": 3580,
 "design": "RC",
 "obs": "La Silla Observatory",
+"region": "CL-CO",
 "alt": 2375,
 "firstlight": "1989-03-23",
 "url": "https://www.eso.org/public/unitedkingdom/news/eso8903/"
@@ -678,6 +699,7 @@
 "name": "2.6-m Shajn Telescope (ZTSh)",
 "runame": "Зеркальный телескоп им. Г.А. Шайна",
 "obs": "Crimean astrophysical observatory",
+"region": "UA-43",
 "alt": 600,
 "diam": 2640,
 "firstlight": "1961-06-15"
@@ -694,6 +716,7 @@
 "Byurakan": {
 "name": "2.6-m telescope of Byurakan Astrophysical Observatory (ZTA)",
 "obs": "Byurakan Astrophysical Observatory",
+"region": "AM-AG",
 "diam": 2600,
 "alt": 1406,
 "firstlight": "1976-06-15",
@@ -702,6 +725,7 @@
 "NOT": {
 "name": "Nordic Optical Telescope",
 "obs": "Roque de los Muchachos Observatory",
+"region": "ES-TF",
 "design": "RC",
 "diam": 2560,
 "alt": 2382,
@@ -710,6 +734,7 @@
 "VST": {
 "name": "VLT Survey Telescope",
 "obs": "Paranal Observatory",
+"region": "CL-AN",
 "design": "RC",
 "alt": 2635,
 "diam": 2650,
@@ -718,6 +743,7 @@
 "INT (1967)": {
 "name": "Isaac Newton Telescope",
 "obs": "Royal Greenwich Observatory (RGO), Herstmonceux",
+"region": "GB-ESX",
 "alt": 50,
 "diam": 2540,
 "englight": "1965-06-15",
@@ -729,6 +755,7 @@
 "INT (1984)": {
 "name": "Isaac Newton Telescope",
 "obs": "Roque de los Muchachos Observatory",
+"region": "ES-TF",
 "alt": 2396,
 "diam": 2540,
 "area": 5,
@@ -739,14 +766,16 @@
 "du Pont": {
 "name": "2.54m Irenee du Pont Telescope",
 "obs": "Las Campanas Observatory",
+"region": "CL-AT",
 "design": "RC",
 "alt": 2380,
 "diam": 2540,
 "firstlight": "1976-06-15"
 },
 "UBC": {
-"name": "University of British Columbia/Laval University (UBC/Laval) 2.7 m Liquid Mirror Telescope",
+"name": "University of British Columbia/Laval University (UBC/Laval) 2.7m Liquid Mirror Telescope",
 "obs": "Malcolm Knapp Research Forest, 70 km east of Vancouver",
+"region": "CA-BC",
 "alt": 395,
 "diam": 2650,
 "area": 5.3898,
@@ -763,6 +792,7 @@
 "mirror": "liquid",
 "type": "liquid-mirror",
 "obs": "NASA Orbital Debris Observatory",
+"region": "US-NM",
 "alt": 2751,
 "firstlight": ["1994-05-15", "1995-04-15"],
 "end": "2002-06-15",
@@ -816,6 +846,7 @@
 "name": "Pan-STARRS",
 "diam": "1800x2",
 "obs": "Haleakala Observatory",
+"region": "US-HI",
 "alt": 3052,
 "design": "RC",
 "englight": ["2006-06-15", "2013-07-15"],
@@ -826,6 +857,7 @@
 "diam": "1300x2",
 "alt": [2306, 2171],
 "obs": ["Fred Lawrence Whipple Observatory", "Cerro Tololo Inter-American Observatory"],
+"region": "US-AZ/CL-CO",
 "wvband": "NIR",
 "monthly-photometr-fract": [0.38, 0.6],
 "firstlight": ["1997-04-17", "1997-04-17"],
@@ -835,6 +867,8 @@
 "Ondrejov": {
 "name": "Ondrejov Perek 2m Telescope",
 "obs": "Ondřejov Observatory",
+"obscode": "557",
+"region": "CZ-20",
 "diam": 2000,
 "alt": 500,
 "url": "https://stel.asu.cas.cz/~slechta/2m/",
@@ -845,6 +879,7 @@
 "name": "Ritchey-Chretien-Coude (RCC) Zeiss telescope",
 "obs": "National Astronomical Observatory (NAO) - Rozhen",
 "obscode": "071",
+"region": "BG-21",
 "alt": 1759,
 "design": "RC",
 "diam": 2000,
@@ -853,15 +888,17 @@
 "Terskol": {
 "name": "Zeiss-2000 Terskol",
 "obs": "Обсерватория Пик Терскол",
+"region": "RU-KB",
 "diam": 2000,
 "alt": 3127,
 "design": "RC",
 "firstlight": "1995-06-15"
 },
 "ShAO": {
-"name": "2-m telescope of Shamakhi Astrophysical Observatory",
+"name": "2m telescope of Shamakhi Astrophysical Observatory",
 "runame": "2м телескоп Шемахинской астрофизической обсерватории",
 "obs": "Shamakhi Astrophysical Observatory",
+"region": "AZ-SMI",
 "diam": 2000,
 "alt": 1500,
 "firstlight": "1969-06-15"
@@ -870,6 +907,7 @@
 "name": "2.5-m Telescope of the Caucasian Mountain Observatory of the Sternberg Astronomical Institute",
 "runame": "2.5м телескоп Кавказской горной обсерватории",
 "obs": "Кавказская горная обсерватория ГАИШ МГУ",
+"dome": 10,
 "alt": 2112,
 "diam": 2500,
 "design": "RC",
@@ -880,6 +918,7 @@
 "JST250": {
 "name": "Javalambre Survey Telescope",
 "obs": "Astrophysical Observatory of Javalambre",
+"region": "ES-TE",
 "design": "RC",
 "diam": 2550,
 "area": 3.89,
@@ -890,6 +929,7 @@
 "Hiltner": {
 "name": "Hiltner Telescope",
 "obs": "Michigan-Dartmouth-MIT (MDM) Observatory",
+"region": "US-AZ",
 "diam": 2400,
 "alt": 1938,
 "firstlight": "1986-06-15"
@@ -897,6 +937,7 @@
 "MRO-2.4": {
 "name": "MRO 2.4-meter telescope",
 "obs": "Magdalena Ridge Observatory",
+"region": "US-NM",
 "diam": 2400,
 "alt": 3230,
 "firstlight": "2006-10-31"
@@ -911,7 +952,7 @@
 "firstlight": "2013-08-15"
 },
 "Lijiang": {
-"name": "Lijiang 2.4-m Telescope",
+"name": "Lijiang 2.4m Telescope",
 "obs": "Yunnan Astronomical Observatory",
 "diam": 2400,
 "design": "RC",
@@ -956,6 +997,7 @@
 "ATT": {
 "name": "The Advanced Technology Telescope of Australian National University",
 "obs": "Siding Spring Observatory",
+"region": "AU-NSW",
 "alt": 1165,
 "diam": 2300,
 "inauguration": "1984-05-16",
@@ -964,6 +1006,7 @@
 "Bok": {
 "name": "90-inch Bok Telescope",
 "obs": "Steward Observatory (Kitt Peak National Observatory)",
+"region": "US-AZ",
 "wvband": ["V", "NIR"],
 "f": [9, 45],
 "alt": 2100,
@@ -971,8 +1014,9 @@
 "firstlight": "1969-06-23"
 },
 "KPNO 2.1": {
-"name": "Kitt Peak 2.1-m telescope",
+"name": "Kitt Peak 2.1m telescope",
 "obs": "Kitt Peak National Observatory",
+"region": "US-AZ",
 "design": "RC",
 "alt": 2096,
 "diam": 2124,
@@ -982,6 +1026,7 @@
 "WIRO": {
 "name": "Wyoming Infrared Observatory Telescope",
 "obs": "Wyoming Infrared Observatory",
+"region": "US-WY",
 "wvband": "NIR",
 "alt": 2943,
 "diam": 2300,
@@ -990,6 +1035,7 @@
 "Aristarchos": {
 "name": "Aristarchos 2.3m Telescope",
 "obs": "Chelmos Observatory",
+"region": "GR-G",
 "diam": 2300,
 "alt": 2340,
 "design": "RC",
@@ -999,6 +1045,7 @@
 "UH88": {
 "name": "University of Hawaii 88-inch telescope",
 "obs": "Mauna Kea Observatories",
+"region": "US-HI",
 "alt": 4213,
 "diam": 2240,
 "englight": "1968-06-15",
@@ -1017,6 +1064,7 @@
 "UNAM 2.12": {
 "name": "Universidad Nacional Autonoma de Mexico 2.12m telescope",
 "obs": "National Astronomical Observatory (Mexico)",
+"region": "MX-BCN",
 "obscode": "679",
 "design": "RC",
 "alt": 2800,
@@ -1027,6 +1075,7 @@
 "INAOE 2.12": {
 "name": "Instituto Nacional de Astrofisica, Optica y Electronica",
 "obs": "Guillermo Haro Astrophysics Observatory",
+"region": "MX-SON",
 "design": "RC",
 "diam": 2120,
 "alt": 2480,
@@ -1036,6 +1085,7 @@
 "Fraunhofer": {
 "name": "Fraunhofer-Teleskop",
 "obs": "Wendelstein Observatory",
+"region": "DE-BY",
 "alt": 1838,
 "diam": 2100,
 "url": "https://www.wendelstein-observatorium.de/",
@@ -1043,8 +1093,9 @@
 "firstlight": "2013-11-13"
 },
 "AST": {
-"name": "2-m Automatic Spectroscopic Telescope of Tennessee State University",
+"name": "2m Automatic Spectroscopic Telescope of Tennessee State University",
 "obs": "Fairborn Observatory, Washington Camp, Arizona",
+"region": "US-AZ",
 "bib": "2003AAS...202.3808E",
 "url": ["http://ast2.tsuniv.edu/t13/", "http://ast2.tsuniv.edu/t13/press/SPIE-5496-92.pdf"],
 "diam": 2060,
@@ -1055,6 +1106,7 @@
 "HCT": {
 "name": "Himalayan Chandra Telescope",
 "obs": "Indian Astronomical Observatory",
+"region": "IN-LA",
 "diam": 2010,
 "alt": 4500,
 "design": "modified RC",
@@ -1064,6 +1116,7 @@
 "TBL": {
 "name": "Bernard Lyot Telescope",
 "obs": "Pic du Midi Observatory",
+"region": "FR-OCC",
 "diam": 2000,
 "alt": 2877,
 "firstlight": "1980-06-15"
@@ -1071,6 +1124,8 @@
 "AJT": {
 "name": "Alfred Jensch Teleskop",
 "obs": "Karl Schwarzschild Observatory",
+"obscode": "033",
+"region": "DE-TH",
 "design": "Schmidt",
 "alt": 341,
 "diam": 2000,
@@ -1080,6 +1135,7 @@
 "Faulkes N": {
 "name": "Faulkes Telescope North",
 "obs": "Haleakala Observatory",
+"region": "US-HI",
 "alt": 	3052,
 "diam": 2000,
 "design": "RC",
@@ -1088,6 +1144,7 @@
 "Faulkes S": {
 "name": "Faulkes Telescope South",
 "obs": "Siding Spring Observatory",
+"region": "AU-NSW",
 "alt": 	1165,
 "diam": 2000,
 "design": "RC",
@@ -1096,6 +1153,7 @@
 "LT": {
 "name": "Liverpool Telescope",
 "obs": "Roque de los Muchachos Observatory",
+"region": "ES-TF",
 "alt": 	2363,
 "diam": 2000,
 "operation": "robotic",
@@ -1105,6 +1163,7 @@
 "NAYUTA": {
 "name": "NAYUTA Telescope",
 "obs": "Nishi-Harima Astronomical Observatory",
+"region": "JP-28",
 "diam": 2000,
 "alt": 449,
 "design": "RC",
@@ -1113,6 +1172,7 @@
 "MAGNUM": {
 "name": "Multicolor Active Galactic Nuclei Monitoring Telescope",
 "obs": "Haleakala Observatory",
+"region": "US-HI",
 "diam": 2000,
 "alt": 3050,
 "operation": "robotic",
@@ -1165,13 +1225,15 @@
 "OHP": {
 "name": "Haute-Provence Observatory 1.93m",
 "obs": "Observatoire de Haute-Provence",
+"region": "FR-04: Alpes-de-Haute-Provence, Provence-Alpes-Côte d'Azur, France",
 "diam": 1930,
 "alt": 650,
 "firstlight": "1958-06-15"
 },
 "Radcliffe 1948": {
-"name": "74 inch (1.9 m) Radcliffe Telescope",
+"name": "74 inch (1.9m) Radcliffe Telescope",
 "obs": "Radcliffe Observatory",
+"region": "ZA-GT: Pretoria, South Africa",
 "alt": 1500,
 "diam": 1880,
 "bib": "1989QJRAS..30...33G",
@@ -1179,8 +1241,9 @@
 "end": "1974-06-15"
 },
 "Radcliffe 1976": {
-"name": "74 inch (1.9 m) Radcliffe Telescope",
-"obs": "South African Astronomical Observatory, Sutherland",
+"name": "74 inch (1.9m) Radcliffe Telescope",
+"obs": "South African Astronomical Observatory",
+"region": "ZA-NC: Sutherland, Northern Cape, South Africa",
 "alt": 1798,
 "diam": 1880,
 "firstlight": "1976-02-15"
@@ -1188,13 +1251,15 @@
 "DDO": {
 "name": "David Dunlap Observatory 1.88m reflector",
 "obs": "David Dunlap Observatory",
+"region": "CA-ON",
 "alt": 224,
 "diam": 1880,
 "firstlight": "1935-06-15"
 },
 "Okayama 1.88m": {
-"name": "Okayama Observatory 1.88 m telescope",
+"name": "Okayama Observatory 1.88m telescope",
 "obs": "Okayama Astrophysical Observatory",
+"region": "JP-33",
 "diam": 1880,
 "alt": 372,
 "design": "Cassegrain",
@@ -1204,9 +1269,9 @@
 "Kottamia": {
 "name": "Kottamia telescope",
 "obs": "Kottamia Astronomical Observatory",
+"region": "EG-C",
 "diam": 1880,
 "alt": 482,
-"loc": "Egypt",
 "design": "Cassegrain",
 "bib": "1998AfrSk...2...16H",
 "firstlight": "1964-05-15"
@@ -1214,6 +1279,7 @@
 "69-inch Perkins": {
 "name": "69-Inch Perkins Telescope",
 "obs": "Perkins Observatory",
+"region": "US-OH",
 "alt": 270,
 "diam": 1753,
 "englight": "1931-11-15",
@@ -1224,6 +1290,7 @@
 "name": "72-Inch Perkins Telescope",
 "obs": "Lowell Observatory, Anderson Mesa Station",
 "obscode": "688",
+"region": "US-AZ",
 "alt": 2163,
 "diam": 1830,
 "design": "Cassegrain",
@@ -1233,6 +1300,7 @@
 "name": "Vatican Advanced Technology Telescope",
 "obs": "Mount Graham International Observatory",
 "obscode": "290",
+"region": "US-AZ",
 "alt": 3178,
 "diam": 1830,
 "design": "Aplanatic Gregorian",
