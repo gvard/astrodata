@@ -7,12 +7,40 @@
 "englight": "1609-08-25",
 "firstlight": "1609-11-30"
 },
+"Galileo 1612": {
+"name": "Galileo's 1612 telescope",
+"diam": 26,
+"alt": 12,
+"region": "IT-FI: Florence, Italy",
+"firstlight": "1612-12-28"
+},
 "Galileo 1620": {
 "name": "Galileo's 1620 telescope",
 "diam": 38,
 "alt": 110,
 "region": "IT-FI: Florence, Italy",
 "firstlight": "1620-06-15"
+},
+"Hevelius Scheiner's helioscope": {
+"name": "Hevelius Scheiner's helioscope",
+"diam": 60,
+"alt": 11,
+"region": "PL-22: Gdańsk (Danzig), Poland",
+"firstlight": "1638-06-15"
+},
+"Hevelius 4.7-inch refractor": {
+"name": "Hevelius 4.7-inch refractor",
+"diam": 120,
+"alt": 11,
+"region": "PL-22: Gdańsk (Danzig), Poland",
+"firstlight": "1645-06-15"
+},
+"Christiaan Huygens 210-foot refractor": {
+"name": "Christiaan Huygens 210-foot refractor",
+"diam": 190,
+"alt": 3,
+"region": "NL-ZH: Voorburg, The Hague, Netherlands",
+"firstlight": "1686-06-15"
 },
 "Michell 30-inch": {
 "name": "Reverend John Michell's Gregorian reflector",
