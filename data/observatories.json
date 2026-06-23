@@ -3,6 +3,8 @@
 "name": "Galileo's 1609 telescope",
 "diam": 15,
 "alt": 12,
+"type": "refractor",
+"design": "Galilean",
 "region": "IT-PD: Padua, Italy",
 "englight": "1609-08-25",
 "firstlight": "1609-11-30"
@@ -11,6 +13,8 @@
 "name": "Galileo's 1612 telescope",
 "diam": 26,
 "alt": 12,
+"type": "refractor",
+"design": "Galilean",
 "region": "IT-FI: Florence, Italy",
 "firstlight": "1612-12-28"
 },
@@ -18,6 +22,7 @@
 "name": "Galileo's 1620 telescope",
 "diam": 38,
 "alt": 110,
+"type": "refractor",
 "region": "IT-FI: Florence, Italy",
 "firstlight": "1620-06-15"
 },
@@ -25,6 +30,7 @@
 "name": "Hevelius Scheiner's helioscope",
 "diam": 60,
 "alt": 11,
+"type": "refractor",
 "region": "PL-22: Gdańsk (Danzig), Poland",
 "firstlight": "1638-06-15"
 },
@@ -32,20 +38,46 @@
 "name": "Hevelius 4.7-inch refractor",
 "diam": 120,
 "alt": 11,
+"type": "refractor",
 "region": "PL-22: Gdańsk (Danzig), Poland",
 "firstlight": "1645-06-15"
+},
+"Newton 1.3-inch reflector": {
+"name": "Newton reflector",
+"diam": 33,
+"alt": 15,
+"design": "Newtonian",
+"type": "reflector",
+"mirror": "Speculum metal",
+"region": "GB-CAM: Cambridge University",
+"inauguration": "1669-02-23",
+"firstlight": "1668-12-01"
 },
 "Christiaan Huygens 210-foot refractor": {
 "name": "Christiaan Huygens 210-foot refractor",
 "diam": 190,
 "alt": 3,
+"type": "refractor: aerial",
 "region": "NL-ZH: Voorburg, The Hague, Netherlands",
 "firstlight": "1686-06-15"
+},
+"Lomonosov 10-cm": {
+"name": "Lomonosov reflector",
+"diam": 100,
+"alt": 10,
+"region": "RU-SPE: Bolshaya Morskaya St./Moyka River Emb. and Kunstkamera, Saint Petersburg, Russia",
+"design": "Herschelian",
+"type": "reflector",
+"englight": "1762-04-26",
+"firstlight": "1762-05-24",
+"comm": "Observations of actual celestial objects began in August 1762"
 },
 "Michell 30-inch": {
 "name": "Reverend John Michell's Gregorian reflector",
 "diam": 750,
 "alt": 100,
+"design": "Gregorian",
+"type": "reflector",
 "region": "GB-KIR: Yorkshire, Great Britain",
 "firstlight": "1780-06-15",
 "end": "1789-06-15"
@@ -56,6 +88,8 @@
 "alt": 33,
 "obs": "Observatory House",
 "region": "GB-SLG: Slough, England",
+"design": "Herschelian",
+"type": "reflector",
 "englight": "1787-02-19",
 "firstlight": "1789-10-15",
 "end": "1815-06-15",
@@ -64,6 +98,9 @@
 "Leviathan": {
 "name": "Leviathan of Parsonstown",
 "region": "IE-OY: County Offaly, Leinster, Ireland",
+"design": "Newtonian",
+"type": "reflector",
+"mirror": "Speculum metal",
 "diam": 1830,
 "alt": 53,
 "firstlight": "1845-02-15",
@@ -73,6 +110,10 @@
 "name": "William Lassell 48-inch",
 "diam": 1200,
 "alt": 10,
+"design": "Newtonian",
+"type": "reflector",
+"mirror": "Speculum metal",
+"mount": "Equatorial: Open fork",
 "region": "MT-56: Tigné Point in Sliema, Malta",
 "firstlight": "1861-01-01",
 "end": "1865-12-31"
@@ -80,6 +121,7 @@
 "18.5-inch Dearborn refractor": {
 "name": "18.5-inch Dearborn refractor",
 "diam": 470,
+"type": "refractor",
 "obs": "Dearborn Observatory",
 "region": "US-IL",
 "obscode": "756",
@@ -92,6 +134,8 @@
 "obscode": "907",
 "name": "Great Melbourne Telescope",
 "region": "AU-VIC: Melbourne, Victoria, Australia",
+"design": "Cassegrain",
+"type": "reflector",
 "alt": 30,
 "firstlight": "1869-04-15",
 "end": "1944-03-08",
@@ -109,6 +153,7 @@
 "Yerkes Refractor": {
 "name": "Yerkes Refractor",
 "diam": 1020,
+"type": "refractor",
 "obs": "Yerkes Observatory",
 "obscode": "754",
 "region": "US-WI",
@@ -140,6 +185,7 @@
 "obs": "Mount Wilson Observatory",
 "obscode": "672",
 "region": "US-CA",
+"mount": "Equatorial: English",
 "diam": 2540,
 "alt": 1742,
 "firstlight": "1917-11-02",
@@ -173,6 +219,7 @@
 "obs": "Palomar Observatory",
 "alt": 1713,
 "obscode": "675",
+"mount": "Equatorial: Horseshoe",
 "region": "US-CA",
 "firstlight": "1949-01-26"
 },
@@ -181,6 +228,7 @@
 "runame": "Большой азимутальный телескоп Специальной астрофизической обсерватории РАН",
 "telescope": "6-m Big Telescope Alt-azimuth",
 "diam": 6050,
+"mount": "Alt-az",
 "area": 25.1,
 "dome": 45,
 "f": 4,
@@ -587,7 +635,7 @@
 "alt": 2090,
 "design": "RC",
 "area": "<9.61",
-"mount": "altaz",
+"mount": "Alt-az",
 "region": "US-AZ",
 "firstlight": "1994-06-15"
 },
