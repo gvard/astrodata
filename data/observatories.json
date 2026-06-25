@@ -68,6 +68,7 @@
 "region": "RU-SPE: Bolshaya Morskaya St./Moyka River Emb. and Kunstkamera, Saint Petersburg, Russia",
 "design": "Herschelian",
 "type": "reflector",
+"mirror": "Speculum metal",
 "englight": "1762-04-26",
 "firstlight": "1762-05-24",
 "comm": "Observations of actual celestial objects began in August 1762"
@@ -78,6 +79,7 @@
 "alt": 100,
 "design": "Gregorian",
 "type": "reflector",
+"mirror": "Speculum metal",
 "region": "GB-KIR: Yorkshire, Great Britain",
 "firstlight": "1780-06-15",
 "end": "1789-06-15"
@@ -90,6 +92,7 @@
 "region": "GB-SLG: Slough, England",
 "design": "Herschelian",
 "type": "reflector",
+"mirror": "Speculum metal",
 "englight": "1787-02-19",
 "firstlight": "1789-10-15",
 "end": "1815-06-15",
@@ -130,6 +133,7 @@
 },
 "Great Melbourne Telescope": {
 "diam": 1220,
+"mirror": "Speculum metal",
 "obs": "Melbourne Observatory",
 "obscode": "907",
 "name": "Great Melbourne Telescope",
@@ -144,6 +148,7 @@
 "James Lick": {
 "name": "James Lick Telescope",
 "diam": 910,
+"type": "refractor: achromat",
 "obs": "Lick Observatory",
 "region": "US-CA",
 "obscode": "662",
@@ -153,7 +158,7 @@
 "Yerkes Refractor": {
 "name": "Yerkes Refractor",
 "diam": 1020,
-"type": "refractor",
+"type": "refractor: achromat",
 "obs": "Yerkes Observatory",
 "obscode": "754",
 "region": "US-WI",
@@ -162,6 +167,7 @@
 },
 "Great Melbourne Telescope-Mt. Stromlo": {
 "diam": 1270,
+"mirror": "Pyrex",
 "obs": "Mount Stromlo Observatory",
 "obscode": "414",
 "name": "Great Melbourne Telescope",
@@ -175,6 +181,7 @@
 "obs": "Mount Wilson Observatory",
 "obscode": "672",
 "diam": 1524,
+"mount": "Equatorial: Open fork",
 "alt": 1742,
 "region": "US-CA",
 "englight": "1908-12-13",
@@ -197,6 +204,7 @@
 "obscode": "658",
 "region": "CA-BC: Saanich, British Columbia, Canada",
 "diam": 1830,
+"mount": "Equatorial: Modified English",
 "alt": 229,
 "firstlight": "1918-05-06"
 },
@@ -213,6 +221,7 @@
 "name": "Hale Telescope",
 "runame": "Телескоп Хейла",
 "telescope": "Hale Telescope",
+"mirror": "Pyrex",
 "diam": 5080,
 "area": 19.36,
 "f": 3.3,
@@ -276,6 +285,7 @@
 "region": "US-HI",
 "alt": 4139,
 "diam": 8300,
+"mount": "Alt-az",
 "area": 53,
 "design": "RC",
 "englight": "1998-12-31",
@@ -942,6 +952,8 @@
 },
 "Ondrejov": {
 "name": "Ondrejov Perek 2m Telescope",
+"telescope": "Zeiss 2m",
+"design": "RC",
 "obs": "Ondřejov Observatory",
 "obscode": "557",
 "region": "CZ-20",
@@ -953,16 +965,33 @@
 },
 "Rozhen 2m": {
 "name": "Ritchey-Chretien-Coude (RCC) Zeiss telescope",
+"telescope": "Zeiss 2m",
 "obs": "National Astronomical Observatory (NAO) - Rozhen",
 "obscode": "071",
 "region": "BG-21",
 "alt": 1759,
 "design": "RC",
 "diam": 2000,
+"url": "https://nao-rozhen.org/",
 "firstlight": "1984-06-15"
+},
+"Rozhen AZ1500": {
+"name": "NAO Rozhen 1.5m AZ1500 Telescope",
+"telescope": "AZ1500",
+"obs": "National Astronomical Observatory (NAO) - Rozhen",
+"obscode": "071",
+"region": "BG-21",
+"alt": 1759,
+"design": "RC",
+"diam": 1500,
+"mount": "Alt-az",
+"bib": "2024CoSka..54b..15M",
+"url": "https://www.bas.bg/?p=63345",
+"firstlight": "2023-07-01"
 },
 "Terskol": {
 "name": "Zeiss-2000 Terskol",
+"telescope": "Zeiss-2000",
 "obs": "Обсерватория Пик Терскол",
 "region": "RU-KB",
 "diam": 2000,
@@ -973,6 +1002,7 @@
 "ShAO": {
 "name": "2m telescope of Shamakhi Astrophysical Observatory",
 "runame": "2м телескоп Шемахинской астрофизической обсерватории",
+"telescope": "Zeiss-2000",
 "obs": "Shamakhi Astrophysical Observatory",
 "region": "AZ-SMI",
 "diam": 2000,
@@ -1068,6 +1098,7 @@
 "region": "IN-TN: Tamil Nadu, India",
 "alt": 700,
 "diam": 1016,
+"design": "RC",
 "firstlight": "1972-06-15"
 },
 "ATT": {
