@@ -1,0 +1,14 @@
+.gitattributes text eol=lf
+
+* text=auto
+
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.svg text eol=lf
+
+*.gif -text
+*.jpg -text
+*.png -text
+*.webp -text
+*.avif -text
