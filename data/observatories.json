@@ -158,6 +158,8 @@
 "Yerkes Refractor": {
 "name": "Yerkes Refractor",
 "diam": 1020,
+"f": 19,
+"dome": 27.4,
 "type": "refractor: achromat",
 "obs": "Yerkes Observatory",
 "obscode": "754",
@@ -223,6 +225,7 @@
 "telescope": "Hale Telescope",
 "mirror": "Pyrex",
 "diam": 5080,
+"dome": 41.7,
 "area": 19.36,
 "f": 3.3,
 "obs": "Palomar Observatory",
@@ -380,6 +383,7 @@
 "mirror": "segmented",
 "design": "RC",
 "area": "75.76x2",
+"dome": 36,
 "obs": "Mauna Kea Observatories",
 "region": "US-HI",
 "wvband": ["V", "NIR"],
@@ -802,11 +806,26 @@
 "Byurakan": {
 "name": "2.6-m telescope of Byurakan Astrophysical Observatory (ZTA)",
 "obs": "Byurakan Astrophysical Observatory",
+"obscode": "123",
 "region": "AM-AG",
 "diam": 2600,
 "alt": 1406,
 "firstlight": "1976-06-15",
 "url": "https://www.bao.am/telescopes/2.6m/"
+},
+"Byurakan 1m Schmidt": {
+"name": "1-m Schmidt telescope of Byurakan Astrophysical Observatory",
+"obs": "Byurakan Astrophysical Observatory",
+"obscode": "123",
+"region": "AM-AG",
+"diam": 1320,
+"alt": 1397,
+"design": "Schmidt",
+"mirror": "Pyrex",
+"mount": "Equatorial: English fork",
+"inauguration": "1961-05-08",
+"firstlight": "1961-06-15",
+"url": "https://www.bao.am/telescopes/1mschmidt.php"
 },
 "NOT": {
 "name": "Nordic Optical Telescope",
@@ -1238,6 +1257,17 @@
 "diam": 2000,
 "aperture": 1340,
 "firstlight": "1960-06-15"
+},
+"JGT": {
+"name": "James Gregory Telescope",
+"obs": "University of St Andrews Observatory",
+"obscode": "482",
+"region": "GB-STG",
+"design": "Schmidt-Cassegrain",
+"alt": 30,
+"diam": 940,
+"firstlight": "1962-04-15",
+"url": "https://observatory.wp.st-andrews.ac.uk/images/"
 },
 "Faulkes N": {
 "name": "Faulkes Telescope North",
