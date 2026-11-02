@@ -1,202 +1,91 @@
-"""Plot parameters of Solar system bodies
-"""
+"""Plot parameters of Solar system bodies"""
+
+from dataclasses import dataclass
+from typing import Final
 
 import matplotlib.pyplot as plt
 
+Y_OFFSET_MULTIPLIER = 0.011
 
-PL = {
-    "me": {"n": "Меркурий", "a": 0.387, "e": 0.206, "i": 7},
-    "ve": {"n": "Венера", "a": 0.723, "e": 0.007, "i": 3.4},
-    "ea": {"n": "Земля", "a": 1, "e": 0.016, "i": 0},
-    "ma": {"n": "Марс", "a": 1.524, "e": 0.093, "i": 1.85},
-    "ju": {"n": "Юпитер", "a": 5.204, "e": 0.049, "i": 1.3},
-    "sa": {"n": "Сатурн", "a": 9.583, "e": 0.057, "i": 2.49},
-    "ur": {"n": "Уран", "a": 19.219, "e": 0.046, "i": 0.77},
-    "ne": {"n": "Нептун", "a": 30.07, "e": 0.01, "i": 1.77},
-    "ce": {"n": "Церера", "a": 2.77, "e": 0.076, "i": 10.6},
-    "pl": {"n": "Плутон, 2:3", "a": 39.48, "e": 0.249, "i": 17.16},
-    "ha": {"n": "Хаумеа", "a": 43.12, "e": 0.196, "i": 28.2},
-    "mk": {"n": "Макемаке", "a": 45.43, "e": 0.161, "i": 29},
-    "er": {"n": "Эрида", "a": 67.86, "e": 0.436, "i": 44.04},
-    "go": {"n": "Гун-гун", "a": 67.485, "e": 0.499, "i": 30.6},
-    "se": {"n": "Седна", "a": 491.5, "e": 0.845, "i": 11.93},
+@dataclass(frozen=True, slots=True)
+class BodyParams:
+    name: str
+    runame: str
+    a: float
+    e: float
+    i: float
+    color: str = "grey"
+    line_style: str = "--"
+    line_width: float = 2
+    is_planet: bool = True
+
+PL: Final[dict[str, BodyParams]] = {
+    "me": BodyParams("Mercury", "Меркурий", 0.387, 0.206, 7, color="orange"),
+    "ve": BodyParams("Venus", "Венера", 0.723, 0.007, 3.4, color="c"),
+    "ea": BodyParams("Earth", "Земля", 1.0, 0.016, 0, color="b"),
+    "ma": BodyParams("Mars", "Марс", 1.524, 0.093, 1.85, color="r"),
+    "ju": BodyParams("Jupiter", "Юпитер", 5.204, 0.049, 1.3, color="brown"),
+    "sa": BodyParams("Saturn", "Сатурн", 9.583, 0.057, 2.49, color="y"),
+    "ur": BodyParams("Uranus", "Уран", 19.219, 0.046, 0.77, color="c"),
+    "ne": BodyParams("Neptune", "Нептун", 30.07, 0.01, 1.77, color="#00b"),
+    "ce": BodyParams("Ceres", "Церера", 2.7656, 0.07958, 10.5879, color="m"),
+    "ves": BodyParams("Vesta", "Веста", 2.3614, 0.0901, 7.14395, color="m", is_planet=False),
+    "hy": BodyParams("Hygiea", "Гигея", 3.14759, 0.108224, 3.83294, color="m", is_planet=False),
+    "pl": BodyParams("Pluto", "Плутон, 2:3", 39.33986, 0.24707, 17.1758, color="#808"),
+    "ha": BodyParams("Haumea", "Хаумеа", 43.006, 0.1958, 28.208, color="#808"),
+    "mk": BodyParams("Makemake", "Макемаке", 45.4497, 0.1619, 29.0339, color="#808"),
+    "er": BodyParams("Eris", "Эрида", 67.997, 0.43697, 43.869, color="#808"),
+    "go": BodyParams("Gonggong", "Гун-гун", 66.8951, 0.5032, 30.8664, line_width=1.5, is_planet=False),
+    "qu": BodyParams("Quaoar", "Квавар", 43.1629, 0.03664, 7.991, line_width=1.5, is_planet=False),
+    "or": BodyParams("Orcus", "Орк", 39.2892, 0.22314, 20.5555, line_width=1.5, is_planet=False),
+    "sal": BodyParams("Salacia", "Салация", 42.1154, 0.1034, 23.9271, line_width=1.5, is_planet=False),
+    "se": BodyParams("Sedna", "Седна", 506.0, 0.85, 11.93, line_width=1.5, is_planet=False),
 }
 
 
-def plot_vert_pla(b1, b2, off=0.6, ash=0.02, veroff=10, ve=True):
-    """Plot vertical lines and its text descriptions for planets, dwarf planets
-    and largest tran-Neptunian objects.
-    """
-    dark_magenta = "#808"
-    plt.plot([PL["ve"]["a"], PL["ve"]["a"]], [b1, b2], "--c")
-    plt.text(
-        PL["ve"]["a"] + ash,
-        b2 - veroff,
-        PL["ve"]["n"],
-        c="c",
-        rotation="vertical",
-        va="top",
-        fontsize=14,
-    )
-    plt.plot([PL["ea"]["a"], PL["ea"]["a"]], [b1, b2], "--b")
-    plt.text(
-        PL["ea"]["a"] + ash,
-        b2 - veroff,
-        PL["ea"]["n"],
-        c="b",
-        rotation="vertical",
-        va="top",
-        fontsize=14,
-    )
-    plt.plot([PL["ma"]["a"], PL["ma"]["a"]], [b1, b2], "--r")
-    plt.text(
-        PL["ma"]["a"] + ash,
-        b2 - veroff,
-        PL["ma"]["n"],
-        c="r",
-        rotation="vertical",
-        va="top",
-        fontsize=14,
-    )
-    if ve:
+def plot_vert_pla(b1: float, b2: float, show_inner_asteroids: bool = True) -> None:
+    """Plots vertical lines and text descriptions for planets and large SSOs."""
+    y_text_top = b2 - (b2 * Y_OFFSET_MULTIPLIER)
+
+    for key, body in PL.items():
+        if key in {"ce", "ves", "hy"} and not show_inner_asteroids:
+            continue
+
+        plt.plot([body.a, body.a], [b1, b2], c=body.color, ls=body.line_style, lw=body.line_width)
+
+        x_offset = 0.02
+        if key in {"go", "qu", "or", "sal", "se"}:
+            x_offset = -0.72
+        elif key in {"ves", "ce", "hy"}:
+            x_offset = -0.075
+        elif body.is_planet and body.a < 10:
+            x_offset = 0.02
+        elif (body.is_planet and body.a > 20) or not body.is_planet:
+            x_offset = 0.15
+
+        text_color = "black" if body.color == "#808" else body.color
+
         plt.text(
-            1.89,
-            500,
-            "Семейство Венгрии",
-            c="#45714E",
-            rotation="vertical",
-            va="top",
-            fontsize=14,
+            body.a + x_offset, y_text_top, body.runame,
+            c=text_color, rotation="vertical", va="top", fontsize=15 if body.line_width == 1 else 16
         )
-    plt.plot([PL["ce"]["a"], PL["ce"]["a"]], [b1, b2], "--m")
-    plt.text(
-        PL["ce"]["a"] - 0.07,
-        b2 - veroff,
-        PL["ce"]["n"],
-        c="m",
-        rotation="vertical",
-        va="top",
-        fontsize=14,
-    )
-    plt.plot([PL["ju"]["a"], PL["ju"]["a"]], [b1, b2], "--", color="brown")
-    plt.text(
-        PL["ju"]["a"] + 0.02,
-        b2 - veroff,
-        PL["ju"]["n"],
-        c="brown",
-        rotation="vertical",
-        va="top",
-        fontsize=14,
-    )
-    plt.plot([PL["sa"]["a"], PL["sa"]["a"]], [b1, b2], "--y")
-    plt.plot([PL["ur"]["a"], PL["ur"]["a"]], [b1, b2], "--c")
-    plt.plot([PL["ne"]["a"], PL["ne"]["a"]], [b1, b2], "--", color="#00b", lw=2.3)
-    plt.text(
-        PL["ne"]["a"] + 0.15,
-        b2 - off,
-        PL["ne"]["n"],
-        color="#00b",
-        rotation="vertical",
-        va="top",
-        fontsize=16,
-    )
-    plt.plot([PL["pl"]["a"], PL["pl"]["a"]], [b1, b2], "--", color=dark_magenta, lw=2.3)
-    plt.text(
-        PL["pl"]["a"] + 0.15,
-        b2 - off,
-        PL["pl"]["n"],
-        c="black",
-        rotation="vertical",
-        va="top",
-        fontsize=16,
-    )
-    plt.plot([PL["er"]["a"], PL["er"]["a"]], [b1, b2], "--", color=dark_magenta, lw=2.3)
-    plt.text(
-        PL["er"]["a"] + 0.15,
-        b2 - off,
-        PL["er"]["n"],
-        c="black",
-        rotation="vertical",
-        va="top",
-        fontsize=16,
-    )
-    plt.plot([PL["ha"]["a"], PL["ha"]["a"]], [b1, b2], "--", color=dark_magenta, lw=2.3)
-    plt.text(
-        PL["ha"]["a"] + 0.15,
-        b2 - off,
-        PL["ha"]["n"],
-        c="black",
-        rotation="vertical",
-        va="top",
-        fontsize=16,
-    )
-    plt.plot([PL["mk"]["a"], PL["mk"]["a"]], [b1, b2], "--", color=dark_magenta, lw=2.3)
-    plt.text(
-        PL["mk"]["a"] + 0.15,
-        b2 - off,
-        PL["mk"]["n"],
-        c="black",
-        rotation="vertical",
-        va="top",
-        fontsize=16,
-    )
-    plt.plot([PL["go"]["a"], PL["go"]["a"]], [b1, b2], "--", color="grey")
-    plt.text(
-        PL["go"]["a"] - 0.75,
-        b2 - off,
-        PL["go"]["n"],
-        c="grey",
-        rotation="vertical",
-        va="top",
-        fontsize=16,
-    )
-    plt.plot([PL["se"]["a"], PL["se"]["a"]], [b1, b2], "--", color="grey")
-    plt.text(
-        PL["se"]["a"] + 0.15,
-        b2 - off,
-        PL["se"]["n"],
-        c="grey",
-        rotation="vertical",
-        va="top",
-        fontsize=16,
-    )
 
+    if show_inner_asteroids:
+        plt.text(1.89, b2 * 0.43, "Семейство Венгрии", c="#45714E", rotation="vertical", va="top", fontsize=14)
 
-def plot_vert_resonances(b1, b2, off=0.6, veroff=10, lw=0.7, plot_tno=False):
-    """Plot vertical lines and its text descriptions for Kirkwood gaps and other
-    resonanses with Solar system planets.
-    """
-    for a, b in (
-        (1.78, "5:1"),
-        (2.065, "4:1"),
-        (2.502, "3:1"),
-        (2.825, "5:2"),
-        (2.958, "7:3"),
-        (3.279, "2:1"),
-        (3.972, "Семейство Хильды, 3:2"),
-    ):
-        plt.plot([a, a], [b1, b2], "--k", lw=lw)
-        plt.text(a + 0.02, b2 - veroff, b, rotation="vertical", va="top", fontsize=14)
+def plot_vert_resonances(b1: float, b2: float, lw: float = 0.7, plot_tno: bool = False) -> None:
+    """Plots Kirkwood gaps and planetary resonances."""
+    y_text_top = b2 - (b2 * Y_OFFSET_MULTIPLIER)
+
+    resonances = [
+        (1.78, "5:1"), (2.065, "4:1"), (2.502, "3:1"),
+        (2.825, "5:2"), (2.958, "7:3"), (3.279, "2:1"),
+        (3.972, "Семейство Хильды, 3:2")
+    ]
     if plot_tno:
-        for a, b in ((36.5, "3:4"), (43.92, "4:7"), (47.8, "1:2"), (55.4, "2:5")):
-            plt.plot([a, a], [b1, b2], "--k", lw=lw)
-            plt.text(a + 0.15, b2 - off, b, rotation="vertical", va="top", fontsize=14)
+        resonances.extend([(36.5, "3:4"), (43.92, "4:7"), (47.8, "1:2"), (55.4, "2:5")])
 
-
-def planets_ae(mode="e"):
-    """Plot points for Solar system planets in a-e plane."""
-    plt.plot(0, 0, "oy", ms=12)
-    plt.plot(PL["me"]["a"], PL["me"][mode], "o", color="orange", ms=6)
-    plt.plot(PL["ve"]["a"], PL["ve"][mode], "oc", ms=6)
-    plt.plot(1, PL["ea"][mode], "ob", ms=6)
-    plt.plot(PL["ma"]["a"], PL["ma"][mode], "or", ms=6)
-    plt.plot(PL["ju"]["a"], PL["ju"][mode], "o", color="brown", ms=6)
-    plt.plot(PL["sa"]["a"], PL["sa"][mode], "oy", ms=6)
-    plt.plot(PL["ur"]["a"], PL["ur"][mode], "oc", ms=6)
-    plt.plot(PL["ne"]["a"], PL["ne"][mode], "ob", ms=6)
-    plt.plot(PL["ce"]["a"], PL["ce"][mode], "om", ms=6)
-    plt.plot(PL["pl"]["a"], PL["pl"][mode], "om", ms=6)
-    plt.plot(PL["ha"]["a"], PL["ha"][mode], "om", ms=6)
-    plt.plot(PL["mk"]["a"], PL["mk"][mode], "om", ms=6)
-    plt.plot(PL["er"]["a"], PL["er"][mode], "om", ms=6)
-    plt.plot(PL["go"]["a"], PL["go"][mode], "o", color="grey", ms=6)
+    for a, name in resonances:
+        x_offset = 0.15 if a > 20 else 0.016
+        plt.plot([a, a], [b1, b2], "--k", lw=lw)
+        plt.text(a + x_offset, y_text_top, name, rotation="vertical", va="top", fontsize=14)
