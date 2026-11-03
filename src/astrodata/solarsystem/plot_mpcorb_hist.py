@@ -46,23 +46,12 @@ class MPCOrbParser:
     )
 
     def __init__(self, use_columns: list[str]):
-        """
-        Инициализация парсера под конкретный набор колонок.
-        Динамически собирает Си-строку формата для struct.unpack.
-        """
         self.use_columns = use_columns
 
-        # Генерируем маску типов данных только для запрашиваемых колонок
-        self.dtype = np.dtype(
-            [
-                (name, npy_type)
-                for name, _, npy_type in self.FULL_LAYOUT
-                if name in use_columns
-            ]
-        )
+        self.dtype = np.dtype([
+            (name, npy_type) for name, _, npy_type in self.FULL_LAYOUT if name in use_columns
+        ])
 
-        # Строим форматную строку для struct
-        # "s" - читать байты, "x" - пропустить байты (skip)
         fmt_parts = []
         for name, width, _ in self.FULL_LAYOUT:
             if name in use_columns:
@@ -73,32 +62,40 @@ class MPCOrbParser:
         self._struct_unpacker = struct.Struct("".join(fmt_parts)).unpack_from
 
     def parse(self, file_path: Path) -> np.ndarray:
-        """Проход по файлу. Парсит только выбранные столбцы."""
+        """Полный проход по файлу с динамическим обновлением орбит крупных ТНО."""
+        from plot_sso_supply import PL  # Импортируем наш глобальный словарь планет
+
+        # Создаем карту поиска: ищем точное совпадение по строке названия (например, "(1) Ceres")
+        mpc_lookup = {body.mpc_id: body for body in PL.values() if body.mpc_id}
 
         def _line_generator() -> Generator[tuple, None, None]:
             with gzip.open(file_path, "rb") as f:
-                # Пропускаем первые 43 строки заголовка
                 for _ in range(43):
                     f.readline()
 
                 for line in f:
-                    # Игнорируем пустые строки и комментарии
                     if not line.strip() or line.startswith(b"#"):
                         continue
                     try:
-                        # Распаковка выбранных столбцов в байты
+                        # 1. Быстрый Си-парсинг только тех колонок, которые запросил пользователь
                         raw_parts = self._struct_unpacker(line)
-                        # Декодируем и очищаем от пробелов только то, что запрошено
-                        yield tuple(
-                            part.decode("utf-8", errors="ignore").strip()
-                            for part in raw_parts
-                        )
-                    except (struct.error, UnicodeDecodeError):
+                        decoded = [part.decode('utf-8', errors='ignore').strip() for part in raw_parts]
+
+                        # 2. Динамическое обновление ТНО через прямой срез байт строки
+                        # Поле Desig по спецификации MPC находится в байтах 166:194
+                        line_desig = line[166:194].decode('utf-8', errors='ignore').strip()
+
+                        if line_desig in mpc_lookup:
+                            # Поле 'a' (большая полуось) всегда находится в байтах 91:105
+                            line_a = float(line[91:105].decode('utf-8', errors='ignore').strip())
+                            # Перезаписываем полуось в объекте конфигурации
+                            mpc_lookup[line_desig].a = line_a
+
+                        yield tuple(decoded)
+                    except (struct.error, ValueError, UnicodeDecodeError):
                         continue
 
-        # fromiter собирает массив NumPy напрямую из Си-генератора
         return np.fromiter(_line_generator(), dtype=self.dtype)
-
 
 parser = ArgumentParser(description="Graph plotter script with distribution of Solar system objects")
 parser.add_argument("-t", "--translate", action="store_true",
@@ -144,8 +141,8 @@ for a1, a2, b1, b2, bins, xmal, plot_tno, objs_nam in plot_configs:
 
     plt.hist(filtered_data["a"], bins=bins)
 
-    plot_vert_pla(b1, b2, show_inner_asteroids=not plot_tno)
-    plot_vert_resonances(b1, b2, plot_tno=plot_tno)
+    plot_vert_pla(ax, b1, b2, show_inner_asteroids=not plot_tno)
+    plot_vert_resonances(ax, b1, b2, plot_tno=plot_tno)
 
     plt.xlim(a1, a2)
     plt.ylim(b1, b2)
