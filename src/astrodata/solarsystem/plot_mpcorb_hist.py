@@ -31,7 +31,7 @@ class MPCOrbParser:
         ("e", 11, "f8"),
         ("n", 12, "f8"),
         ("a", 14, "f8"),
-        ("U", 2, "U1"),
+        ("U", 2, "i4"),
         ("Ref", 10, "U10"),
         ("Obs", 6, "i4"),
         ("Opp", 4, "i4"),
@@ -48,9 +48,13 @@ class MPCOrbParser:
     def __init__(self, use_columns: list[str]):
         self.use_columns = use_columns
 
-        self.dtype = np.dtype([
-            (name, npy_type) for name, _, npy_type in self.FULL_LAYOUT if name in use_columns
-        ])
+        self.dtype = np.dtype(
+            [
+                (name, npy_type)
+                for name, _, npy_type in self.FULL_LAYOUT
+                if name in use_columns
+            ]
+        )
 
         fmt_parts = []
         for name, width, _ in self.FULL_LAYOUT:
@@ -63,9 +67,9 @@ class MPCOrbParser:
 
     def parse(self, file_path: Path) -> np.ndarray:
         """Полный проход по файлу с динамическим обновлением орбит крупных ТНО."""
-        from plot_sso_supply import PL  # Импортируем наш глобальный словарь планет
+        from plot_sso_supply import PL
 
-        # Создаем карту поиска: ищем точное совпадение по строке названия (например, "(1) Ceres")
+        # Создаем карту поиска: ищем точное совпадение по строке названия
         mpc_lookup = {body.mpc_id: body for body in PL.values() if body.mpc_id}
 
         def _line_generator() -> Generator[tuple, None, None]:
@@ -77,17 +81,31 @@ class MPCOrbParser:
                     if not line.strip() or line.startswith(b"#"):
                         continue
                     try:
-                        # 1. Быстрый Си-парсинг только тех колонок, которые запросил пользователь
+                        # Быстрый Си-парсинг только тех колонок, которые запросил пользователь
                         raw_parts = self._struct_unpacker(line)
-                        decoded = [part.decode('utf-8', errors='ignore').strip() for part in raw_parts]
+                        decoded = [
+                            part.decode("utf-8", errors="ignore").strip()
+                            for part in raw_parts
+                        ]
 
-                        # 2. Динамическое обновление ТНО через прямой срез байт строки
+                        # Если колонка 'U' была запрошена, преобразуем её в число
+                        if "U" in self.use_columns:
+                            u_idx = self.use_columns.index("U")
+                            u_val = decoded[u_idx]
+                            # Проверяем, является ли символ цифрой. Если нет (пробел/буква), ставим -1
+                            decoded[u_idx] = int(u_val) if u_val.isdigit() else -1
+
+                        # Динамическое обновление через прямой срез байт строки
                         # Поле Desig по спецификации MPC находится в байтах 166:194
-                        line_desig = line[166:194].decode('utf-8', errors='ignore').strip()
+                        line_desig = (
+                            line[166:194].decode("utf-8", errors="ignore").strip()
+                        )
 
                         if line_desig in mpc_lookup:
-                            # Поле 'a' (большая полуось) всегда находится в байтах 91:105
-                            line_a = float(line[91:105].decode('utf-8', errors='ignore').strip())
+                            # Большая полуось 'a' находится в байтах 91:105
+                            line_a = float(
+                                line[91:105].decode("utf-8", errors="ignore").strip()
+                            )
                             # Перезаписываем полуось в объекте конфигурации
                             mpc_lookup[line_desig].a = line_a
 
@@ -97,7 +115,10 @@ class MPCOrbParser:
 
         return np.fromiter(_line_generator(), dtype=self.dtype)
 
-parser = ArgumentParser(description="Graph plotter script with distribution of Solar system objects")
+
+parser = ArgumentParser(
+    description="Graph plotter script with distribution of Solar system objects"
+)
 parser.add_argument("-t", "--translate", action="store_true",
                     help="translate all inscriptions into Russian")
 
@@ -119,7 +140,7 @@ data_file = data_dir / "MPCORB.DAT.gz"
 if not data_file.exists():
     raise FileNotFoundError(f"Missing data file: {data_file}")
 
-USE_COLUMNS = ["a"]
+USE_COLUMNS = ["a", "U"]
 
 parser = MPCOrbParser(use_columns=USE_COLUMNS)
 data = parser.parse(data_file)
@@ -130,7 +151,12 @@ plot_configs = [
 ]
 
 for a1, a2, b1, b2, bins, xmal, plot_tno, objs_nam in plot_configs:
-    filtered_data = data[(data["a"] >= a1) & (data["a"] <= a2)]
+    filtered_data = data[
+        (data["a"] >= a1) &
+        (data["a"] <= a2) &
+        (data["U"] < 9) &
+        (data["U"] >= 0)
+    ]
 
     fig, ax = plt.subplots(figsize=(16, 9))
     fig.subplots_adjust(0.048, 0.06, 0.99, 0.97)
