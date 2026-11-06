@@ -36,7 +36,8 @@ parser.add_argument("-t", "--translate", action="store_true",
 
 args = parser.parse_args()
 
-CSV_PTH = "../../../data/Discovery StatisticsPrintDownload.csv"
+CSV_PTH = "../../../data/solarsystem/Discovery Statistics.csv"
+DPI = 160
 
 with open(CSV_PTH, "r") as csvfile:
     reader = csv.DictReader(csvfile)
@@ -62,7 +63,7 @@ COLORS = plt.rcParams["axes.prop_cycle"].by_key()["color"]
 XLIMS = datetime(year=2002, month=1, day=1), today + timedelta(weeks=9)
 
 fig, ax = plt.subplots(figsize=(16, 9))
-fig.subplots_adjust(0.048, 0.06, 0.99, 0.97)
+fig.subplots_adjust(0.05, 0.06, 0.99, 0.97)
 years = mdates.YearLocator(1)
 ax.xaxis.set_major_locator(years)
 ax.xaxis.set_minor_locator(mdates.MonthLocator(7))
@@ -97,7 +98,7 @@ FILENAME = "neo_pha_graph-2002"
 plots_dir = os.path.join(os.pardir, os.pardir, os.pardir, "plots", "solarsystem")
 tmp_pth = os.path.join(plots_dir, f"{FILENAME}{LOC}_.{FILE_EXT}")
 pth = os.path.join(plots_dir, f"{FILENAME}{LOC}.{FILE_EXT}")
-plt.savefig(tmp_pth, dpi=120)
+plt.savefig(tmp_pth, dpi=DPI)
 
 if FILE_EXT == "svg":
     optimize_svg(tmp_pth, pth)
@@ -125,6 +126,11 @@ accidents = [
     (2022, 11, 19, "2022 WJ1"),
     (2023, 2, 12, "2023 CX1"),
     (2024, 1, 20, "2024 BX1"),
+    (2024, 9, 4, "2024 RW1"),
+    (2024, 10, 22, "2024 UQ"),
+    (2024, 12, 3, "2024 XA1"),
+    (2026, 5, 15, "2026 JN4"),
+    (2026, 9, 6, "2026 RW1"),
 ]
 
 for ac in accidents:
@@ -151,7 +157,7 @@ FILE_EXT = "png"
 FILENAME = "pha_graph_predicted_impacts-2002"
 tmp_pth = os.path.join(plots_dir, f"{FILENAME}{LOC}_.{FILE_EXT}")
 pth = os.path.join(plots_dir, f"{FILENAME}{LOC}.{FILE_EXT}")
-plt.savefig(tmp_pth, dpi=120)
+plt.savefig(tmp_pth, dpi=DPI)
 
 if FILE_EXT == "svg":
     optimize_svg(tmp_pth, pth)
