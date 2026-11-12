@@ -16,6 +16,7 @@ from dataclasses import dataclass, field
 from typing import Final
 
 import matplotlib.pyplot as plt
+from matplotlib.axes import Axes
 
 Y_OFFSET_MULTIPLIER = 0.011
 
@@ -42,8 +43,7 @@ class BodyParams:
     tt: float = 0
     is_planet: bool = False  # True for both major and dwarf planets.
 
-    plot_configs: dict[str, PlotConfig] = field(default_factory=dict)
-
+    plot_configs: dict[str | tuple[str, float, float], PlotConfig] = field(default_factory=dict)
 
 PL: Final[dict[str, BodyParams]] = {
     "me": BodyParams("Mercury", "Меркурий", a=0.3871, e=0.2056, i=7.0050, is_planet=True,
@@ -107,165 +107,262 @@ PL: Final[dict[str, BodyParams]] = {
 VISITED: Final[dict[str, BodyParams]] = {
     "ce": BodyParams("Ceres", "Церера", mpc_id="(1) Ceres", is_planet=True,
         plot_configs={
-            "deltav": PlotConfig(dx=-0.05, dy=640, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=-0.05, dy=-11, color="white", bg_color="none")
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.05, dy=640, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.07, dy=640, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.05, dy=-11, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.15, dy=19, color="white", bg_color="none"),
         },
     ),
     "ves": BodyParams("Vesta", "Веста", mpc_id="(4) Vesta",
         plot_configs={
-            "deltav": PlotConfig(dx=0.014, dy=200, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=0.014, dy=6, color="white", bg_color="none"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=0.014, dy=200, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.014, dy=130, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.014, dy=6, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.025, dy=4, color="white", bg_color="none"),
+        },
+    ),
+    "ps": BodyParams("Psyche", "Психея", mpc_id="(16) Psyche",
+        plot_configs={
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.09, dy=640, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.017, dy=360, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.09, dy=12, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.02, dy=20, color="white", bg_color="none"),
         },
     ),
     "lu": BodyParams("Lutetia", "Лютеция", mpc_id="(21) Lutetia",
         plot_configs={
-            "deltav": PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.1, dy=26, color="white", bg_color="none"),
         },
     ),
     "id": BodyParams("Ida", "Ида", mpc_id="(243) Ida",
         plot_configs={
-            "deltav": PlotConfig(dx=-0.065, dy=0, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=-0.065, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.065, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.13, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.065, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.027, dy=0, color="white", bg_color="none"),
         },
     ),
     "ma": BodyParams("Mathilde", "Матильда", mpc_id="(253) Mathilde",
         plot_configs={
-            "deltav": PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.029, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.12, dy=-24, color="white", bg_color="none"),
         },
     ),
     "er": BodyParams("Eros", "Эрос", mpc_id="(433) Eros",
         plot_configs={
-            "deltav": PlotConfig(dx=-0.015, dy=590, color="black", bg_color="white"),
-            "tt": PlotConfig(dx=-0.015, dy=11, color="black", bg_color="white"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.015, dy=590, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.015, dy=590, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.015, dy=11, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.025, dy=20, color="black", bg_color="white"),
         },
     ),
     "ga": BodyParams("Gaspra", "Гаспра", mpc_id="(951) Gaspra",
         plot_configs={
-            "deltav": PlotConfig(dx=0.013, dy=100, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=0.013, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=0.013, dy=100, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.06, dy=440, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.013, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.09, dy=21, color="white", bg_color="none"),
         },
     ),
     "st": BodyParams("Steins", "Штейнс", mpc_id="(2867) Steins",
         plot_configs={
-            "deltav": PlotConfig(dx=0.016, dy=200, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=0.016, dy=200, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.012, dy=330, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.025, dy=0, color="white", bg_color="none"),
         },
     ),
     "to": BodyParams("Toutatis", "Таутатис", mpc_id="(4179) Toutatis",
         plot_configs={
-            "deltav": PlotConfig(dx=-0.12, dy=-300, color="black", bg_color="white"),
-            "tt": PlotConfig(dx=-0.12, dy=-3, color="black", bg_color="white"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.12, dy=-300, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.017, dy=330, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.13, dy=-3, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.13, dy=30, color="black", bg_color="white"),
         },
     ),
     "an": BodyParams("Annefrank", "Аннафранк", mpc_id="(5535) Annefrank",
         plot_configs={
-            "deltav": PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=0.016, dy=-2, color="white", bg_color="none"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.15, dy=-480, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.016, dy=-2, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.025, dy=-8, color="white", bg_color="none"),
         },
     ),
     "br": BodyParams("Braille", "Брайль", mpc_id="(9969) Braille",
         plot_configs={
-            "deltav": PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=0.016, dy=0, color="black", bg_color="white"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=0.016, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.027, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.016, dy=0, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.02, dy=20, color="black", bg_color="white"),
         },
     ),
     "it": BodyParams("Itokawa", "Итокава", mpc_id="(25143) Itokawa",
         plot_configs={
-            "deltav": PlotConfig(dx=-0.01, dy=540, color="black", bg_color="white"),
-            "tt": PlotConfig(dx=-0.01, dy=11, color="black", bg_color="white"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.01, dy=540, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.02, dy=540, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.01, dy=11, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.11, dy=26, color="black", bg_color="white"),
         },
     ),
     "do": BodyParams("Donaldjohanson", "Дональдджохансон", mpc_id="(52246) Donaldjohanson",
         plot_configs={
-            "deltav": PlotConfig(dx=0.009, dy=-400, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=0.009, dy=10, color="white", bg_color="none"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=0.009, dy=-400, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.05, dy=-380, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.013, dy=3, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.019, dy=-7, color="white", bg_color="none"),
         },
     ),
     "di": BodyParams("Didymos", "Дидим", mpc_id="(65803) Didymos",
         plot_configs={
-            "deltav": PlotConfig(dx=-0.015, dy=590, color="black", bg_color="white"),
-            "tt": PlotConfig(dx=-0.015, dy=11, color="black", bg_color="white"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.015, dy=590, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.015, dy=590, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.015, dy=11, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.02, dy=20, color="black", bg_color="white"),
         },
     ),
     "tor": BodyParams("Torifune", "Торифунэ", mpc_id="(98943) Torifune",
         plot_configs={
-            "deltav": PlotConfig(dx=0.018, dy=0, color="black", bg_color="white"),
-            "tt": PlotConfig(dx=0.018, dy=0, color="black", bg_color="white"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=0.018, dy=0, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.027, dy=0, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.018, dy=0, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.018, dy=-18, color="black", bg_color="white"),
         },
     ),
     "be": BodyParams("Bennu", "Бенну", mpc_id="(101955) Bennu",
         plot_configs={
-            "deltav": PlotConfig(dx=-0.025, dy=540, color="black", bg_color="white"),
-            "tt": PlotConfig(dx=-0.029, dy=11, color="black", bg_color="white"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.025, dy=540, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.025, dy=540, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.035, dy=11, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.033, dy=11, color="black", bg_color="white"),
         },
     ),
     "pl": BodyParams("Pluto", "Плутон", mpc_id="(134340) Pluto", is_planet=True,
         plot_configs={
-            "deltav": PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
         },
     ),
     "din": BodyParams("Dinkinesh", "Динкинеш", mpc_id="(152830) Dinkinesh",
         plot_configs={
-            "deltav": PlotConfig(dx=-0.14, dy=-400, color="black", bg_color="white"),
-            "tt": PlotConfig(dx=-0.14, dy=-8, color="black", bg_color="white"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.14, dy=-400, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.29, dy=0, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.14, dy=-8, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.14, dy=-24, color="black", bg_color="white"),
         },
     ),
     "se": BodyParams("Selam", "Селам", mpc_id="(152830) Selam",
         plot_configs={
-            "deltav": PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
         },
     ),
     "ry": BodyParams("Ryugu", "Рюгу", mpc_id="(162173) Ryugu",
         plot_configs={
-            "deltav": PlotConfig(dx=-0.015, dy=500, color="black", bg_color="white"),
-            "tt": PlotConfig(dx=-0.015, dy=11, color="black", bg_color="white"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.015, dy=500, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.016, dy=300, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.031, dy=13, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.068, dy=29, color="black", bg_color="white"),
         },
     ),
     "ka": BodyParams("Kamo`oalewa", "Камоалева", mpc_id="(469219) Kamo`oalewa",
         plot_configs={
-            "deltav": PlotConfig(dx=-0.05, dy=640, color="black", bg_color="white"),
-            "tt": PlotConfig(dx=0.01, dy=-12, color="black", bg_color="white"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.05, dy=640, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.05, dy=640, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.01, dy=-12, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.018, dy=-18, color="black", bg_color="white"),
         },
     ),
     "ar": BodyParams("Arrokoth", "Аррокот", mpc_id="(486958) Arrokoth",
         plot_configs={
-            "deltav": PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
-            "tt": PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.0, dy=0, color="white", bg_color="none"),
+        },
+    ),
+    "ph": BodyParams("Phaethon", "Фаэтон", mpc_id="(3200) Phaethon",
+        plot_configs={
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.05, dy=640, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.05, dy=640, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.05, dy=12, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.21, dy=12, color="black", bg_color="white"),
+        },
+    ),
+    "eu": BodyParams("Eurybates", "Эврибат", mpc_id="(3548) Eurybates",
+        plot_configs={
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.2, dy=-640, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.19, dy=-630, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.2, dy=-12, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.24, dy=-15, color="black", bg_color="white"),
+        },
+    ),
+    "po": BodyParams("Polymele", "Полимела", mpc_id="(15094) Polymele",
+        plot_configs={
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.2, dy=640, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.26, dy=615, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.2, dy=12, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.28, dy=12, color="black", bg_color="white"),
         },
     ),
     "ap": BodyParams("Apophis", "Апофис", mpc_id="(99942) Apophis",
         plot_configs={
-            "deltav": PlotConfig(dx=-0.05, dy=640, color="black", bg_color="white"),
-            "tt": PlotConfig(dx=-0.05, dy=12, color="black", bg_color="white"),
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.05, dy=640, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.19, dy=640, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.05, dy=12, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=-0.15, dy=12, color="black", bg_color="white"),
+        },
+    ),
+    "apl": BodyParams("APL", "APL", mpc_id="(132524) APL",
+        plot_configs={
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.05, dy=580, color="white", bg_color="none"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=0.01, dy=360, color="white", bg_color="none"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=-0.05, dy=12, color="white", bg_color="none"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.019, dy=21, color="white", bg_color="none"),
+        },
+    ),
+    "ky": BodyParams("1998 KY26", "1998 KY26", mpc_id="1998 KY26",
+        plot_configs={
+            ("deltav", 0.59, 2.9): PlotConfig(dx=-0.05, dy=640, color="black", bg_color="white"),
+            ("deltav", 0.59, 5.3): PlotConfig(dx=-0.19, dy=640, color="black", bg_color="white"),
+            ("tt", 0.59, 2.9): PlotConfig(dx=0.015, dy=12, color="black", bg_color="white"),
+            ("tt", 0.59, 5.3): PlotConfig(dx=0.027, dy=7, color="black", bg_color="white"),
         },
     ),
 }
 
 
 def plot_vert_pla(
-    ax: plt.Axes,
-    b1: float,
-    b2: float,
+    ax: Axes,
+    xlim: tuple[float, float],
+    ylim: tuple[float, float],
     xoff: float = 0,
     show_inner_asteroids: bool = True,
 ) -> None:
     """Plots vertical lines and text descriptions for planets and large SSOs."""
-    y_text_top = b2 - (b2 * Y_OFFSET_MULTIPLIER)
+    y_text_top = ylim[1] - (ylim[1] * Y_OFFSET_MULTIPLIER)
 
     for key, body in PL.items():
-        y_text_offset = 0
+        y_text_offset: float = 0
         if key in {"ce", "ves", "pa", "hy", "in"} and not show_inner_asteroids:
+            continue
+
+        if body.a < xlim[0] or body.a > xlim[1]:
             continue
 
         cfg = body.plot_configs.get("line", PlotConfig(color="grey"))
 
         ax.plot(
             [body.a, body.a],
-            [b1, b2],
+            [ylim[0], ylim[1]],
             c=cfg.color,
             ls=cfg.line_style,
             lw=cfg.line_width,
@@ -330,7 +427,7 @@ def plot_vert_pla(
     if show_inner_asteroids:
         ax.text(
             1.89,
-            b2 * 0.46,
+            ylim[1] * 0.46,
             "Семейство Венгрии",
             c="#45714E",
             rotation="vertical",
@@ -339,7 +436,7 @@ def plot_vert_pla(
         )
         ax.text(
             2.856,
-            b2 * 0.73,
+            ylim[1] * 0.73,
             "Семейство Корониды",
             c="#45714E",
             rotation="vertical",
@@ -348,7 +445,7 @@ def plot_vert_pla(
         )
         ax.text(
             3.39,
-            b2 * 0.46,
+            ylim[1] * 0.46,
             "Семейство Кибелы",
             c="#45714E",
             rotation="vertical",
@@ -358,7 +455,7 @@ def plot_vert_pla(
 
 
 def plot_vert_resonances(
-    ax: plt.Axes, b1: float, b2: float, lw: float = 0.7, plot_tno: bool = False
+    ax: Axes, b1: float, b2: float, lw: float = 0.7, plot_tno: bool = False
 ) -> None:
     """Plots Kirkwood gaps and planetary resonances."""
     y_text_top = b2 - (b2 * Y_OFFSET_MULTIPLIER)

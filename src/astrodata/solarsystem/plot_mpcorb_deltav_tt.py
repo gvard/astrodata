@@ -17,6 +17,7 @@ from deltav import (
     Travel3Array,
     best,
 )
+from plot_config import PLOT_PRESETS
 from plot_sso_supply import PL, VISITED, plot_vert_pla
 
 
@@ -97,7 +98,7 @@ class MPCOrbParser:
                         # Создаем словарь {ИмяКолонки: Значение} для удобного обращения по имени
                         row_dict = {
                             name: part.decode("utf-8", errors="ignore").strip()
-                            for name, part in zip(self._all_column_names, raw_parts)
+                            for name, part in zip(self._all_column_names, raw_parts, strict=True)
                         }
 
                         # Безопасная обработка колонки "U" по её имени, а не по индексу
@@ -157,7 +158,6 @@ def do_calcs(data_matrix: np.ndarray, alim: float = 5.0) -> np.ndarray:
         W_TOF_NASA = 0.05  # Для Пояса Койпера и ТНО
 
 
-
     MinResult = np.apply_along_axis(best, 1, ResultTable, w_tof=W_TOF_NASA)
     FullResultTable = np.hstack((ResultTable, MinResult))
 
@@ -166,10 +166,6 @@ def do_calcs(data_matrix: np.ndarray, alim: float = 5.0) -> np.ndarray:
 
 def DeltaVCalc(DVArray, InputData):
     return np.apply_along_axis(DVArray, 1, InputData)
-
-
-def plot_vert_scatter(b1, b2):
-    plt.plot([67.9, 67.9], [b1, b2], "--k")  # Eris
 
 
 def npappend(data, arr):
@@ -213,29 +209,26 @@ USE_COLUMNS = ["Names", "U", "p2", "Peri", "i", "e", "a", "Desig"]
 parser = MPCOrbParser(use_columns=USE_COLUMNS)
 rawdata = parser.parse(data_file)
 
-PARAMS = 0, 123, (5.4, 70.4)  # 64.5
-PARAMS = 0, 1000, (0.7, 5.4)
-PARAMS = 0, 149, (0.56, 2.08)
-PARAMS = 0, 149, (0.588, 2.865)  # (0.57, 2.215)
-b1, b2, xlim = PARAMS
-
+# alim = (0.592, 2.928)
+alim = (0.592, 5.299)
+requested_plots = [("deltav", 0.59, 2.9), ("tt", 0.59, 2.9), ("deltav", 0.59, 5.3), ("tt", 0.59, 5.3)]
 
 Filtered = rawdata[
     (rawdata["U"] < 7)
 ]
 Filtered = Filtered[Filtered["Names"] != "\n"]
 
-a_shift = 0.09
+a_shift = 0.0
 Filtered = Filtered[
-    (Filtered["a"] >= xlim[0] - a_shift) &
-    (Filtered["a"] <= xlim[1] + a_shift)
+    (Filtered["a"] >= alim[0] - a_shift) &
+    (Filtered["a"] <= alim[1] + a_shift)
 ]
 print(f"Objects after filtering: {len(Filtered)}")
 
 ind = np.argsort(Filtered["a"])
 Filtered = Filtered[ind]
 
-indices = np.where(Filtered["a"] >= xlim[1] + 0.1)[0]
+indices = np.where(Filtered["a"] >= alim[1] + 0.1)[0]
 a1 = int(indices.min()) if indices.size > 0 else len(Filtered)
 a0 = 0
 data = Filtered["a"][a0:a1]
@@ -245,15 +238,15 @@ print(f"Data length when filtered {a0}:{a1}", len(data))
 NAMES = np.array(Filtered[["Names", "U"]].tolist())
 DATA = np.array(Filtered[["Peri", "i", "e", "a"]].tolist())
 
-FullResultTable = do_calcs(DATA, alim=xlim[1])
+FullResultTable = do_calcs(DATA, alim=alim[1])
 
 visited_mpc_ids = [body.mpc_id for body in VISITED.values() if body.mpc_id]
 visited_mask_global = np.isin(Filtered["Desig"], visited_mpc_ids)
 FullResultTable_visited = FullResultTable[visited_mask_global]
 # Фильтруем, оставляя только те тела, которые попадают в текущий диапазон xlim
 # Колонка 3 в FullResultTable — это большая полуось "a"
-in_xlim_mask = (FullResultTable_visited[:, 3] >= xlim[0]) & (
-    FullResultTable_visited[:, 3] <= xlim[1]
+in_xlim_mask = (FullResultTable_visited[:, 3] >= alim[0]) & (
+    FullResultTable_visited[:, 3] <= alim[1]
 )
 FullResultTable_visited = FullResultTable_visited[in_xlim_mask]
 
@@ -265,7 +258,7 @@ if PRINT_EXTREME:
         print(header)
         print("-" * len(header))
 
-        for row_res, row_filt in zip(table_matrix, filtered_matrix):
+        for row_res, row_filt in zip(table_matrix, filtered_matrix, strict=True):
             # Safe extraction of designations and names from MPC structured records
             obj_desig = row_filt["Desig"].strip()
             # obj_name = row_filt["Names"].strip()
@@ -338,34 +331,41 @@ data = FullResultTable[a0:a1]
 ind = np.argsort(data[:, 8])
 data = data[ind]
 
-for mode in ("tt", "deltav"):
+# MOON_FLIGHT_DV_LOWEST: Final[int] = 3100
+# MOON_FLIGHT_DV: Final[int] = 3140
+MARS_FLIGHT_DV: Final[int] = 3600
+MOON_LOW_ORBIT_DV: Final[int] = 3959
+MARS_LOW_ORBIT_DV: Final[int] = 5776
+MOON_LANDING_DV: Final[int] = 5897
+MARS_TRIP_TT: Final[int] = 244
+POLYAKOV_FLIGHT_DURATION: Final[float] = 437.749
+
+for mode, min_a, max_a in requested_plots:
+    plot_cfg = PLOT_PRESETS.get((mode, min_a, max_a))
+    if not plot_cfg:
+        print(f"Конфигурация для {mode} при a={max_a} не найдена.")
+        continue
 
     fig, ax = plt.subplots(figsize=(16, 9))
     fig.subplots_adjust(0.054, 0.06, 0.99, 0.97)  # 0.055, 0.048
-    ax.xaxis.set_major_locator(MultipleLocator(0.1))
-    ax.xaxis.set_minor_locator(AutoMinorLocator())
-    ax.yaxis.set_minor_locator(AutoMinorLocator())
 
-    if mode == "deltav":
-        # MOON_FLIGHT_DV_LOWEST: Final[int] = 3100
-        # MOON_FLIGHT_DV: Final[int] = 3140
-        MARS_FLIGHT_DV: Final[int] = 3600
-        MOON_LOW_ORBIT_DV: Final[int] = 3959
-        MARS_LOW_ORBIT_DV: Final[int] = 5776
-        MOON_LANDING_DV: Final[int] = 5897
+    if plot_cfg.mode == "deltav":
+        ax.xaxis.set_major_locator(MultipleLocator(plot_cfg.x_maj_loc))
+        ax.xaxis.set_minor_locator(AutoMinorLocator())
+        ax.yaxis.set_minor_locator(AutoMinorLocator())
 
-        under_limit_idx = np.where(data[:, 8] <= MARS_LOW_ORBIT_DV)[0]
+        under_limit_idx = np.where(data[:, 8] <= plot_cfg.threshold_value)[0]
         c0 = int(under_limit_idx.max()) if under_limit_idx.size > 0 else 0
         plt.plot(data[:, 3], data[:, 8], ".", ms=2, color="#555")  # "grey"
         print("length of delta v data:", len(data[:, 3]), len(NAMES))
 
         plt.plot(data[:c0, 3], data[:c0, 8], ".k", ms=2)
-        # plt.plot(xlim, (MOON_FLIGHT_DV_LOWEST, MOON_FLIGHT_DV_LOWEST), "--m", lw=0.8)
-        # plt.plot(xlim, (MOON_FLIGHT_DV, MOON_FLIGHT_DV), "--m", lw=0.8)
-        plt.plot(xlim, (MOON_LOW_ORBIT_DV, MOON_LOW_ORBIT_DV), "--m")
-        plt.plot(xlim, (MOON_LANDING_DV, MOON_LANDING_DV), "--m", lw=0.8)
-        plt.plot(xlim, (MARS_FLIGHT_DV, MARS_FLIGHT_DV), "--r", lw=0.8)
-        plt.plot(xlim, (MARS_LOW_ORBIT_DV, MARS_LOW_ORBIT_DV), "--r")
+        # plt.plot(plot_cfg.xlim, (MOON_FLIGHT_DV_LOWEST, MOON_FLIGHT_DV_LOWEST), "--m", lw=0.8)
+        # plt.plot(plot_cfg.xlim, (MOON_FLIGHT_DV, MOON_FLIGHT_DV), "--m", lw=0.8)
+        plt.plot(plot_cfg.xlim, (MOON_LOW_ORBIT_DV, MOON_LOW_ORBIT_DV), "--m")
+        plt.plot(plot_cfg.xlim, (MOON_LANDING_DV, MOON_LANDING_DV), "--m", lw=0.8)
+        plt.plot(plot_cfg.xlim, (MARS_FLIGHT_DV, MARS_FLIGHT_DV), "--r", lw=0.8)
+        plt.plot(plot_cfg.xlim, (MARS_LOW_ORBIT_DV, MARS_LOW_ORBIT_DV), "--r")
 
         ax.text(
             0.6,
@@ -414,12 +414,12 @@ for mode in ("tt", "deltav"):
             if body_obj is None:
                 continue
 
-            dx = 0.013
-            dy = 640
+            dx: float = 0.013
+            dy: float = 400
             text_color, bg_color = "black", "white"
-            if mode in body_obj.plot_configs:
-                cfg = body_obj.plot_configs[mode]
-                dx, dy, text_color, bg_color = cfg.dx, cfg.dy, cfg.color, cfg.bg_color
+            if (mode, min_a, max_a) in body_obj.plot_configs:
+                body_cfg = body_obj.plot_configs[(mode, min_a, max_a)]
+                dx, dy, text_color, bg_color = body_cfg.dx, body_cfg.dy, body_cfg.color, body_cfg.bg_color
 
             ax.text(
                 body_a + dx,
@@ -436,17 +436,20 @@ for mode in ("tt", "deltav"):
                 },
             )
 
-        plt.ylabel("Δv, м/с", fontsize=14)
+        plt.ylabel(plot_cfg.ylabel, fontsize=14)
         desc = "характеристической скорости"
-        b1, b2 = 3260, 33000  # 36260
         print("Filtered by 9", c0)
         plt.title(
             f"Характеристическая скорость орбитального маневра для {len(data[:c0, 9])} из {len(data[:, 3])} астероидов. {MONTH} {YEAR} года",
             fontsize=15,
         )
-        plt.legend(loc="upper right")
+        plt.legend(loc=plot_cfg.legend_loc)
 
-    elif mode == "tt":
+    elif plot_cfg.mode == "tt":
+        ax.xaxis.set_major_locator(MultipleLocator(plot_cfg.x_maj_loc))
+        ax.xaxis.set_minor_locator(AutoMinorLocator())
+        ax.yaxis.set_minor_locator(AutoMinorLocator())
+
         # Автоматические подписи с индивидуальными поправками (Time of Flight)
         for row in FullResultTable_visited:
             body_a, body_val = row[3], row[9]  # Извлекаем "a" и "tt"
@@ -455,13 +458,13 @@ for mode in ("tt", "deltav"):
                 continue
 
             # Задаем значения по умолчанию для текущего режима (например, mode = "deltav")
-            dx, dy = 0.01, 150
+            dx, dy = 0.01, 20
             text_color, bg_color = "black", "white"
 
             # Ищем конфигурацию внутри объекта небесного тела
-            if mode in body_obj.plot_configs:
-                cfg = body_obj.plot_configs[mode]
-                dx, dy, text_color, bg_color = cfg.dx, cfg.dy, cfg.color, cfg.bg_color
+            if (mode, min_a, max_a) in body_obj.plot_configs:
+                body_cfg = body_obj.plot_configs[(mode, min_a, max_a)]
+                dx, dy, text_color, bg_color = body_cfg.dx, body_cfg.dy, body_cfg.color, body_cfg.bg_color
 
             ax.text(
                 body_a + dx,
@@ -477,10 +480,8 @@ for mode in ("tt", "deltav"):
                     "pad": 0.0,
                 },
             )
-        MARS_TRIP_TT: Final[int] = 244
-        POLYAKOV_FLIGHT_DURATION: Final[float] = 437.749
 
-        greys = data[data[:, 9] <= MARS_TRIP_TT]
+        greys = data[data[:, 9] <= plot_cfg.threshold_value]
         plt.plot(data[:, 3], data[:, 9], ".", ms=2, color="#555")
         plt.plot(greys[:, 3], greys[:, 9], ".k", ms=2)
         plt.plot(
@@ -495,9 +496,8 @@ for mode in ("tt", "deltav"):
             zorder=9,
         )
         print(f"only if tt < {MARS_TRIP_TT} d: {len(greys)}, len: {len(data[:, 3])}")
-        plt.ylabel("Время полета, дни", fontsize=14)
+        plt.ylabel(plot_cfg.ylabel, fontsize=14)
         desc = "времени полета"
-        b1, b2 = 138, 790
         plt.title(
             f"Время полета для {len(greys)} из {len(data[:, 3])} астероидов. {MONTH} {YEAR} года",
             fontsize=15,
@@ -539,21 +539,21 @@ for mode in ("tt", "deltav"):
                 "pad": 0,
             },
         )
-        plt.plot(xlim, (MARS_TRIP_TT, MARS_TRIP_TT), "--m")
-        plt.plot(xlim, (POLYAKOV_FLIGHT_DURATION / 2, POLYAKOV_FLIGHT_DURATION / 2), "--m", lw=1)
-        plt.plot(xlim, (POLYAKOV_FLIGHT_DURATION, POLYAKOV_FLIGHT_DURATION), "--m", lw=0.8)
-        plt.legend(loc="lower right")
+        plt.plot(plot_cfg.xlim, (MARS_TRIP_TT, MARS_TRIP_TT), "--m")
+        plt.plot(plot_cfg.xlim, (POLYAKOV_FLIGHT_DURATION / 2, POLYAKOV_FLIGHT_DURATION / 2), "--m", lw=1)
+        plt.plot(plot_cfg.xlim, (POLYAKOV_FLIGHT_DURATION, POLYAKOV_FLIGHT_DURATION), "--m", lw=0.8)
+        plt.legend(loc=plot_cfg.legend_loc)
 
-    print(mode, "xlim", xlim, "ylim", b1, b2)
+    print(mode, "xlim", plot_cfg.xlim, "ylim", plot_cfg.ylim)
 
-    plot_vert_pla(ax, b1, b2, xoff=0.009, show_inner_asteroids=False)
+    plot_vert_pla(ax, plot_cfg.xlim, plot_cfg.ylim, xoff=0.009, show_inner_asteroids=False)
 
-    plt.xlim(xlim)
-    plt.ylim(b1, b2)
+    plt.xlim(plot_cfg.xlim)
+    plt.ylim(plot_cfg.ylim)
     plt.xlabel("Большая полуось орбиты, а.е.", fontsize=14)
     lang_suffix = "-ru" if args.translate else ""
     plt.savefig(
-        plots_dir / f"mpcprb-{mode}-a{round(xlim[0], 1)}-{round(xlim[1], 1)}{lang_suffix}-.png",
+        plots_dir / f"mpcprb-{mode}-a{round(plot_cfg.xlim[0], 1)}-{round(plot_cfg.xlim[1], 1)}{lang_suffix}-.png",
         dpi=160,
     )
     plt.close(fig)
