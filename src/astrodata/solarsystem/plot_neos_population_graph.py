@@ -4,11 +4,12 @@ List of successfully predicted asteroid impacts:
 https://en.wikipedia.org/wiki/Asteroid_impact_prediction#List_of_successfully_predicted_asteroid_impacts
 """
 
-from datetime import datetime, timedelta
-import locale
-import os
 import csv
+import locale
 from argparse import ArgumentParser
+from dataclasses import dataclass
+from datetime import datetime, timedelta
+from pathlib import Path
 
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
@@ -30,16 +31,32 @@ def optimize_svg(tmp_pth, pth):
         scour.start(options, inputfile, outputfile)
 
 
+def save_plot(fig, filename: str, loc_suffix: str, ext: str = "png", dpi: int = 160):
+    PLOTS_DIR.mkdir(parents=True, exist_ok=True)
+    final_pth = PLOTS_DIR / f"{filename}{loc_suffix}.{ext}"
+
+    if ext == "svg":
+        tmp_pth = PLOTS_DIR / f"{filename}{loc_suffix}_.{ext}"
+        fig.savefig(tmp_pth, dpi=dpi)
+        optimize_svg(tmp_pth, final_pth)
+        tmp_pth.unlink()
+    else:
+        fig.savefig(final_pth, dpi=dpi)
+
+    plt.close(fig)
+
+
 parser = ArgumentParser(description="Graph plotter script with statistics of near-Earth objects")
 parser.add_argument("-t", "--translate", action="store_true",
                     help="translate all inscriptions into Russian")
 
 args = parser.parse_args()
 
+PLOTS_DIR = Path("../../../plots/solarsystem")
 CSV_PTH = "../../../data/solarsystem/Discovery Statistics.csv"
 DPI = 160
 
-with open(CSV_PTH, "r") as csvfile:
+with open(CSV_PTH) as csvfile:
     reader = csv.DictReader(csvfile)
     dats, pha_nums, phakm_nums, nea_nums, neo_nums = [], [], [], [], []
     neakm_nums, nea140_nums = [], []
@@ -52,15 +69,15 @@ with open(CSV_PTH, "r") as csvfile:
         nea140_nums.append(int(row["NEA-140m"]))
         neo_nums.append(int(row["NEO"]))
 
-LOC = "en_US"
+LOCALE = "en_US"
 if args.translate:
-    LOC = "ru_RU"
-locale.setlocale(locale.LC_ALL, LOC)
+    LOCALE = "ru_RU"
+locale.setlocale(locale.LC_ALL, LOCALE)
 today = datetime.now()
 MONTH, YEAR = today.strftime("%B"), today.year
 CROP = -12
 COLORS = plt.rcParams["axes.prop_cycle"].by_key()["color"]
-XLIMS = datetime(year=2002, month=1, day=1), today + timedelta(weeks=9)
+XLIM = datetime(year=2002, month=1, day=1), today + timedelta(weeks=7)
 
 fig, ax = plt.subplots(figsize=(16, 9))
 fig.subplots_adjust(0.05, 0.06, 0.99, 0.97)
@@ -68,97 +85,106 @@ years = mdates.YearLocator(1)
 ax.xaxis.set_major_locator(years)
 ax.xaxis.set_minor_locator(mdates.MonthLocator(7))
 
-plt.plot(dats[:CROP], neo_nums[:CROP], ".-", label="Околоземные объекты", ms=2, lw=1)
-plt.plot(dats[:CROP], nea_nums[:CROP], ".-", label="Околоземные астероиды", ms=2, lw=1)
-plt.plot(dats[:CROP], nea140_nums[:CROP], ".-", label="Околоземные астероиды от 140 м",
+ax.plot(dats[:CROP], neo_nums[:CROP], ".-", label="Околоземные объекты", ms=2, lw=1)
+ax.plot(dats[:CROP], nea_nums[:CROP], ".-", label="Околоземные астероиды", ms=2, lw=1)
+ax.plot(dats[:CROP], nea140_nums[:CROP], ".-", label="Околоземные астероиды от 140 м",
          ms=5, lw=2)
-plt.plot(dats[:CROP], pha_nums[:CROP], ".-k", label="Потенциально опасные астероиды",
+ax.plot(dats[:CROP], pha_nums[:CROP], ".-k", label="Потенциально опасные астероиды",
          ms=5, lw=2)
-plt.plot(dats[:CROP], neakm_nums[:CROP], ".-", color=COLORS[4],
+ax.plot(dats[:CROP], neakm_nums[:CROP], ".-", color=COLORS[4],
          label="Околоземные астероиды от 1 км", ms=5, lw=2)
-plt.plot(dats[:CROP], phakm_nums[:CROP], ".-", color=COLORS[3],
+ax.plot(dats[:CROP], phakm_nums[:CROP], ".-", color=COLORS[3],
          label="Потенциально опасные астероиды от 1 км", ms=5, lw=2)
 
 YLIM = (0, neo_nums[0] + 700)
-plt.ylim(YLIM)
-plt.legend(fontsize=13)
-plt.xlim(XLIMS)
-plt.title(
+ax.set_ylim(YLIM)
+ax.legend(fontsize=13)
+ax.set_xlim(XLIM)
+ax.set_title(
     f"Динамика открытий околоземных объектов. Всего {nea_nums[0]} "
     + f"околоземных и {pha_nums[0]} потенциально опасных астероидов. {MONTH} {YEAR} года",
     fontsize=14,
 )
-plt.xlabel("Дата открытия, годы", fontsize=13)
-plt.ylabel("Совокупное количество открытых объектов", fontsize=13)
-plt.grid(linestyle="dotted")
+ax.set_xlabel("Дата открытия, годы", fontsize=13)
+ax.set_ylabel("Количество объектов", fontsize=13, labelpad=1)
+ax.grid(linestyle="dotted")
 
-LOC = "-ru" if args.translate else ""
+LANG_SUFFIX = "-ru" if args.translate else ""
 FILE_EXT = "png"
 FILENAME = "neo_pha_graph-2002"
-plots_dir = os.path.join(os.pardir, os.pardir, os.pardir, "plots", "solarsystem")
-tmp_pth = os.path.join(plots_dir, f"{FILENAME}{LOC}_.{FILE_EXT}")
-pth = os.path.join(plots_dir, f"{FILENAME}{LOC}.{FILE_EXT}")
-plt.savefig(tmp_pth, dpi=DPI)
 
-if FILE_EXT == "svg":
-    optimize_svg(tmp_pth, pth)
-    os.remove(tmp_pth)
-
+save_plot(fig, FILENAME, LANG_SUFFIX, FILE_EXT, DPI)
 
 fig, ax = plt.subplots(figsize=(16, 9))
 fig.subplots_adjust(0.048, 0.06, 0.99, 0.97)
 ax.xaxis.set_major_locator(years)
 ax.xaxis.set_minor_locator(mdates.MonthLocator(7))
 
-plt.plot(dats[:CROP], pha_nums[:CROP], ".-k", label="Потенциально опасные астероиды",
+ax.plot(dats[:CROP], pha_nums[:CROP], ".-k", label="Потенциально опасные астероиды",
          ms=5, lw=2)
-plt.plot(dats[:CROP], neakm_nums[:CROP], ".-", color=COLORS[4],
+ax.plot(dats[:CROP], neakm_nums[:CROP], ".-", color=COLORS[4],
          label="Околоземные астероиды от 1 км", ms=5, lw=2)
-plt.plot(dats[:CROP], phakm_nums[:CROP], ".-", color=COLORS[3],
+ax.plot(dats[:CROP], phakm_nums[:CROP], ".-", color=COLORS[3],
          label="Потенциально опасные астероиды от 1 км", ms=5, lw=2)
 
+@dataclass(frozen=True, slots=True)
+class Accident:
+    name: str
+    date_discovery: datetime
+    date_impact: datetime
+    x_shift_weeks: float = 14.5
+    y_shift: int = 2180
+
+
+yshift = 2480
+
 accidents = [
-    (2008, 10, 6, "2008 TC3"),
-    (2014, 1, 1, "2014 AA"),
-    (2018, 6, 2, "2018 LA"),
-    (2019, 6, 22, "2019 MO"),
-    (2022, 3, 11, "2022 EB5"),
-    (2022, 11, 19, "2022 WJ1"),
-    (2023, 2, 12, "2023 CX1"),
-    (2024, 1, 20, "2024 BX1"),
-    (2024, 9, 4, "2024 RW1"),
-    (2024, 10, 22, "2024 UQ"),
-    (2024, 12, 3, "2024 XA1"),
-    (2026, 5, 15, "2026 JN4"),
-    (2026, 9, 6, "2026 RW1"),
+    Accident("2008 TC3", datetime(2008, 10, 6), datetime(2008, 10, 7, 2, 46), y_shift=2120),
+    Accident("2014 AA", datetime(2014, 1, 1), datetime(2014, 1, 2, 3, 4), y_shift=yshift),
+    Accident("2018 LA", datetime(2018, 6, 2), datetime(2018, 6, 2, 16, 45), y_shift=yshift),
+    Accident("2019 MO", datetime(2019, 6, 22), datetime(2019, 6, 22, 21, 26), y_shift=yshift),
+    Accident("2022 EB5", datetime(2022, 3, 11), datetime(2022, 3, 11, 21, 22)),
+    Accident("2022 WJ1", datetime(2022, 11, 19), datetime(2022, 11, 19, 8, 26)),
+    Accident("2023 CX1", datetime(2023, 2, 12), datetime(2023, 2, 13, 2, 59), x_shift_weeks=-6),
+    Accident("2024 BX1", datetime(2024, 1, 20), datetime(2024, 1, 21, 0, 32)),
+    Accident("2024 RW1", datetime(2024, 9, 4), datetime(2024, 9, 4, 16, 39), x_shift_weeks=27),
+    Accident("2024 UQ", datetime(2024, 10, 22), datetime(2024, 10, 22, 10, 54), x_shift_weeks=21),
+    Accident("2024 XA1", datetime(2024, 12, 3), datetime(2024, 12, 3, 16, 14), x_shift_weeks=-4),
+    Accident("2026 JN4", datetime(2026, 5, 15), datetime(2026, 5, 15, 13, 39)),
+    Accident("2026 RW1", datetime(2026, 9, 6), datetime(2026, 9, 6, 16, 7)),
 ]
 
-for ac in accidents:
-    dat = datetime(year=ac[0], month=ac[1], day=ac[2])
-    plt.plot((dat, dat), YLIM, "--g")
-plt.plot((dat, dat), YLIM, "--g", label="Успешно предсказанные столкновения с Землей")
+for i, ac in enumerate(accidents):
+    label = "Успешно предсказанные столкновения с Землей" if i == 0 else None
+    # ax.axvline(ac.date_discovery, color="g", linestyle="--", label=label)
+    ax.axvline(ac.date_impact, color="g", linestyle="--", label=label)
+
+    text_x = ac.date_impact - timedelta(weeks=ac.x_shift_weeks)
+    ax.text(
+        text_x,
+        ac.y_shift,
+        ac.name,
+        color="#444",
+        rotation="vertical",
+        va="top",
+        fontsize=13,
+    )
 
 YLIM = (0, pha_nums[0] + 70)
-plt.ylim(YLIM)
-plt.legend(fontsize=13)
-# plt.xlim(datetime(year=1990, month=1, day=1), datetime(year=2023, month=6, day=1))
-plt.xlim(XLIMS)
+ax.set_ylim(YLIM)
+ax.legend(fontsize=13)
+ax.set_xlim(XLIM)
 ax.yaxis.set_minor_locator(MultipleLocator(100))
-plt.title(
+ax.set_title(
     f"Динамика открытий околоземных объектов. Всего {nea_nums[0]} "
-    + f"околоземных и {pha_nums[0]} потенциально опасных астероидов. {MONTH} {YEAR} года",
+    + f"околоземных и {pha_nums[0]} потенциально опасных астероида. {MONTH} {YEAR} года",
     fontsize=14,
 )
-plt.xlabel("Дата открытия, годы", fontsize=13)
-plt.ylabel("Совокупное количество открытых объектов", fontsize=13)
-plt.grid(linestyle="dotted")
+ax.set_xlabel("Дата открытия, годы", fontsize=13)
+ax.set_ylabel("Количество объектов", fontsize=13)
+# ax.grid(linestyle="dotted", axis='x')
 
 FILE_EXT = "png"
 FILENAME = "pha_graph_predicted_impacts-2002"
-tmp_pth = os.path.join(plots_dir, f"{FILENAME}{LOC}_.{FILE_EXT}")
-pth = os.path.join(plots_dir, f"{FILENAME}{LOC}.{FILE_EXT}")
-plt.savefig(tmp_pth, dpi=DPI)
 
-if FILE_EXT == "svg":
-    optimize_svg(tmp_pth, pth)
-    os.remove(tmp_pth)
+save_plot(fig, FILENAME, LANG_SUFFIX, FILE_EXT, DPI)
