@@ -167,7 +167,9 @@ for a1, a2, b1, b2, bins, xmal, plot_tno, objs_nam in plot_configs:
 
     plt.hist(filtered_data["a"], bins=bins)
 
-    plot_vert_pla(ax, b1, b2, show_inner_asteroids=not plot_tno)
+    xlim = (a1, a2)
+    ylim = (b1, b2)
+    plot_vert_pla(ax, xlim, ylim, xoff=0.0, show_inner_asteroids=not plot_tno)
     plot_vert_resonances(ax, b1, b2, plot_tno=plot_tno)
 
     plt.xlim(a1, a2)

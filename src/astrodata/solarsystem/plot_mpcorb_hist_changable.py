@@ -109,8 +109,10 @@ class MainWindow(QMainWindow):
         # print(bins)
         self.n, self.bins_edges, self.patches = self.ax.hist(Filtered["a"], bins=bins)
 
-        plot_vert_pla(b1, b2)
-        plot_vert_resonances(b1, b2, plot_tno=plot_tno)
+        xlim = (a1, a2)
+        ylim = (b1, b2)
+        plot_vert_pla(self.ax, xlim, ylim, xoff=0.0, show_inner_asteroids=not plot_tno)
+        plot_vert_resonances(self.ax, b1, b2, plot_tno=plot_tno)
 
         # Устанавливаем начальные лимиты, сетку и заголовки
         self.ax.xaxis.set_major_locator(MultipleLocator(xmal))
